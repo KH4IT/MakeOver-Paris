@@ -16,5 +16,36 @@ namespace MakeOver_Paris
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            MakeOver_Paris.DAO.InvoiceDAO dao = new MakeOver_Paris.DAO.InvoiceDAO();
+            MakeOver_Paris.DTO.Invoice inv = new MakeOver_Paris.DTO.Invoice();
+            System.Collections.ArrayList arr = new System.Collections.ArrayList();
+
+            for (int i = 0; i < 3; i++)
+            {
+                MakeOver_Paris.DTO.InvoiceDetail detail = new MakeOver_Paris.DTO.InvoiceDetail();
+                MakeOver_Paris.DTO.Product p = new MakeOver_Paris.DTO.Product();
+                p.Productid = 20+i;
+                detail.Product = p;
+                detail.Pricein = 100;
+                detail.Priceout = 1000;
+                detail.Quantity = 11;
+                arr.Add(detail);
+            }
+
+            MakeOver_Paris.DTO.Member m = new DTO.Member();
+            m.Memberid = 1;
+
+            DTO.Staff s = new DTO.Staff();
+            s.Staffid = 2;
+
+            inv.Member = m;
+            inv.Staff = s;
+            inv.InvoiceDetail = arr;
+
+            dao.addInvoice(inv);
+        }
     }
 }
