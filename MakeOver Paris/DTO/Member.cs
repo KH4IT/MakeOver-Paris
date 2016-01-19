@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace POS.DTO
+namespace MakeOver_Paris.DTO
 {
     class Member
     {
