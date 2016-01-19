@@ -7,3 +7,6 @@ C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver P
 C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.csproj.GenerateResource.Cache
 C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.exe
 C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.pdb
+E:\workspace\MakeOver-Paris\MakeOver Paris\bin\Debug\MakeOver Paris.exe.config
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.exe
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.pdb
