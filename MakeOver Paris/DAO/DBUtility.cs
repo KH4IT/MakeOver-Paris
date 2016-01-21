@@ -26,6 +26,5 @@ namespace MakeOver_Paris.DAO
             }
             return con;
         }
-
     }
 }

@@ -47,8 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\CategoryDAO.cs" />
     <Compile Include="DAO\DBUtility.cs" />
     <Compile Include="DAO\InvoiceDAO.cs" />
+    <Compile Include="DAO\TransactionDAO.cs" />
     <Compile Include="DTO\Category.cs" />
     <Compile Include="DTO\Invoice.cs" />
     <Compile Include="DTO\InvoiceDetail.cs" />
