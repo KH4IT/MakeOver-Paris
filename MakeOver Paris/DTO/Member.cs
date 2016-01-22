@@ -65,6 +65,13 @@ namespace MakeOver_Paris.DTO
             get { return discountrate; }
             set { discountrate = value; }
         }
+        private String membercode;
+
+        public String Membercode
+        {
+            get { return membercode; }
+            set { membercode = value; }
+        }
 
     }
 }

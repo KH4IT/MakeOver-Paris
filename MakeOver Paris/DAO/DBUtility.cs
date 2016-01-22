@@ -27,5 +27,15 @@ namespace MakeOver_Paris.DAO
             return con;
         }
 
+        public static String SafeGetString(MySqlDataReader reader, String columnname)
+        {
+            int colIndex = reader.GetOrdinal(columnname);
+            if (!reader.IsDBNull(colIndex))
+                return reader.GetString(colIndex);
+            else
+                return String.Empty;
+        }
+
+
     }
 }
