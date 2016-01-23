@@ -43,5 +43,63 @@ namespace MakeOver_Paris.DAO
             return false;
         }
 
+        public bool UpdateTransaction(Transaction transaction)
+        {
+            MySqlConnection cnn = DBUtility.getConnection();
+            if (cnn != null)
+            {
+                MySqlTransaction trans = cnn.BeginTransaction();
+                try
+                {
+                    cnn.Open();
+                    const string SQL = "UPDATE transaction SET ";
+                    MySqlCommand command = new MySqlCommand(SQL, cnn);
+                    command.Prepare();
+                    // ADD PARAM
+                    if (command.ExecuteNonQuery() > 0)
+                    {
+                        trans.Commit();
+                        return true;
+                    }
+                }
+                catch (MySqlException e)
+                {
+                    Console.WriteLine(e);
+                    trans.Rollback();
+                }
+                finally
+                {
+                    cnn.Close();
+                }
+            }
+            return false;
+        }
+
+        public Transaction GetTransaction()
+        {
+            Transaction transaction = null;
+            MySqlConnection cnn = DBUtility.getConnection();
+            if (cnn != null)
+            {
+                try
+                {
+                    cnn.Open();
+                    const string SQL = "SELECT FROM transaction;";
+                    MySqlCommand command = new MySqlCommand(SQL, cnn);
+
+
+                }
+                catch (MySqlException e)
+                {
+                    Console.WriteLine(e);
+                }
+                finally
+                {
+                    cnn.Close();
+                }
+            }
+            return transaction;
+        }
+
     }
 }
