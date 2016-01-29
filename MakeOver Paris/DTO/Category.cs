@@ -8,24 +8,29 @@ namespace MakeOver_Paris.DTO
 {
     class Category
     {
-
         private int categoryid;
+        private String categoryname;
 
+        public Category()
+        {
+
+        }
+
+        public Category(int categoryid, String categoryName)
+        {
+            this.categoryid = categoryid;
+            this.categoryname = categoryName;
+        }
         public int Categoryid
         {
             get { return categoryid; }
             set { categoryid = value; }
         }
 
-        private String categoryname;
-
         public String Categoryname
         {
             get { return categoryname; }
             set { categoryname = value; }
         }
-
-        
-
     }
 }
