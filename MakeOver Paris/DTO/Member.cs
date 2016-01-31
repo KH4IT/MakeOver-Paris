@@ -23,6 +23,15 @@ namespace MakeOver_Paris.DTO
             get { return membername; }
             set { membername = value; }
         }
+
+        private String memberCode;
+
+        public String MemberCode
+        {
+            get { return memberCode; }
+            set { memberCode = value; }
+        }
+
         private String phonenumber;
 
         public String Phonenumber
