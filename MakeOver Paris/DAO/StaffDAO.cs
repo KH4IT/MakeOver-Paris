@@ -14,7 +14,7 @@ namespace MakeOver_Paris.DAO
         public bool AddStaff(Staff staff)
         {
             MySqlConnection cnn = DBUtility.getConnection();
-            if(cnn != null)
+            if (cnn != null)
             {
                 MySqlTransaction transaction = cnn.BeginTransaction();
                 try
@@ -23,7 +23,7 @@ namespace MakeOver_Paris.DAO
                     const string SQL = "INSERT INTO staff() VALUES(@staffname, @staffpassword, @stafftype, @lastlogin, @comissionrate);";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
-                    command.Parameters.AddWithValue("@staffname",staff.Staffname);
+                    command.Parameters.AddWithValue("@staffname", staff.Staffname);
                     command.Parameters.AddWithValue("@staffpassword", staff.Staffpassword);
                     command.Parameters.AddWithValue("@stafftype", staff.Stafftype);
                     command.Parameters.AddWithValue("@lastlogin", staff.Lastlogin);
@@ -51,7 +51,7 @@ namespace MakeOver_Paris.DAO
         public bool DeleteStaff(int id)
         {
             MySqlConnection cnn = DBUtility.getConnection();
-            if (cnn != null) 
+            if (cnn != null)
             {
                 try
                 {
@@ -59,7 +59,7 @@ namespace MakeOver_Paris.DAO
                     const string SQL = "DELETE FROM staff WHERE staffid = @staffid";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
-                    command.Parameters.AddWithValue("@staffid",id);
+                    command.Parameters.AddWithValue("@staffid", id);
                     if (command.ExecuteNonQuery() > 0)
                     {
                         return true;
@@ -125,7 +125,7 @@ namespace MakeOver_Paris.DAO
                     Staff staff = null;
                     while (reader.Read())
                     {
-                        staff = new Staff(reader.GetInt16("staffid") ,reader.GetString("staffname"), 
+                        staff = new Staff(reader.GetInt16("staffid"), reader.GetString("staffname"),
                                           reader.GetString("staffpassword"), reader.GetString("stafftype"),
                                           reader.GetDateTime("lastlogin"), reader.GetDecimal("comissionrate"));
                         staffs.Add(staffs);
@@ -141,7 +141,7 @@ namespace MakeOver_Paris.DAO
                     cnn.Close();
                 }
             }
-            
+
             return null;
         }
     }
