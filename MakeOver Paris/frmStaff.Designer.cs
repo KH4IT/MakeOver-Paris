@@ -186,7 +186,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Image = global::MakeOver_Paris.Properties.Resources.delete24;
+           
             this.btnCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancel.Location = new System.Drawing.Point(626, 233);
             this.btnCancel.Name = "btnCancel";
@@ -199,7 +199,7 @@
             // btnSave
             // 
             this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSave.Image = global::MakeOver_Paris.Properties.Resources.add_user24;
+        
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.Location = new System.Drawing.Point(772, 231);
             this.btnSave.Name = "btnSave";
