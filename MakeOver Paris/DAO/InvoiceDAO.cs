@@ -122,6 +122,7 @@ namespace MakeOver_Paris.DAO
                         inv.Staff = staff;
                         inv.Member = member;
                     }
+                    inv.InvoiceDetail = arrInvDetail;
                     return inv;
                 }
                 catch (MySqlException e)
