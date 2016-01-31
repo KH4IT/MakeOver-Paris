@@ -11,7 +11,6 @@ namespace MakeOver_Paris.DAO
 {
     class StaffDAO
     {
-
         public bool AddStaff(Staff staff)
         {
             MySqlConnection cnn = DBUtility.getConnection();
