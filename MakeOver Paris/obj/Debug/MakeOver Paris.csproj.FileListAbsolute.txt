@@ -29,3 +29,6 @@ D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Properties.Resou
 D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.csproj.GenerateResource.Cache
 D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmSplash.resources
 D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmMain.resources
+C:\Users\EAGLESBR\Desktop\Microsoft Project\MakeOver-Paris\MakeOver Paris\bin\Debug\MakeOver Paris.exe.config
+C:\Users\EAGLESBR\Desktop\Microsoft Project\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.exe
+C:\Users\EAGLESBR\Desktop\Microsoft Project\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.pdb
