@@ -12,13 +12,11 @@ namespace MakeOver_Paris
 {
     public partial class frmStaff : Form
     {
-
-        public frmStaff() {
-
+        public frmStaff()
+        {
             InitializeComponent();
-
-        
         }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             MakeOver_Paris.DAO.InvoiceDAO dao = new MakeOver_Paris.DAO.InvoiceDAO();
@@ -29,7 +27,7 @@ namespace MakeOver_Paris
             {
                 MakeOver_Paris.DTO.InvoiceDetail detail = new MakeOver_Paris.DTO.InvoiceDetail();
                 MakeOver_Paris.DTO.Product p = new MakeOver_Paris.DTO.Product();
-                p.Productid = 20 + i;
+                p.Productid = 20+i;
                 detail.Product = p;
                 detail.Pricein = 100;
                 detail.Priceout = 1000;
@@ -54,11 +52,5 @@ namespace MakeOver_Paris
         {
 
         }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }
