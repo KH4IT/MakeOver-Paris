@@ -10,6 +10,12 @@ using System.Data;
 
 namespace MakeOver_Paris.DAO
 {
+    // TODO: THIS CLASS WE USE FOR MANIPULATE DATA WITH DATABASE
+    // CREATED DATE:    31-01-2016
+    // CREATED BY:      DARA PENHCHET
+    // UPDATED DATE:    31-01-2016
+    // UPDATED BY:      DARA PENHCHET
+    // REVISION : V.001
     class MemberDAO
     {
         // TODO: TO ADD NEW MEMBER

@@ -30,7 +30,10 @@ namespace MakeOver_Paris.DAO
             return con;
         }
 
-        public static bool ExecuteNonQuery(string sql, params object[] fields)
+        // TODO: TO USE FOR ALL EexcuteNonQuery
+        // EXAMPLE: 
+        //      DBUtility.ExecuteNonQuery("INSERT INTO tables VALUE(@p1,@p2,@p3)" ,1 ,2 ,3);
+        public static Boolean ExecuteNonQuery(string sql, params object[] fields)
         {  
             using (MySqlConnection cnn = new MySqlConnection(cs))
             {
@@ -56,44 +59,51 @@ namespace MakeOver_Paris.DAO
                     {
                         return true;
                     }
-                    else
-                    {
-                        return false;
-                    }
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
                     transaction.Rollback();
-                    return false;
                 }
                 finally
                 {
                     cmd.Dispose();
                 }
+                return false;
             }
         }
 
+        // TODO: TO USE FOR ExecuteQuery
+        // EXAMPLE: 
+        //      DBUtility.ExecuteQuery("SELECT field1 FROM table1 WHERE id= @p1", id);
         public static DataSet ExecuteQuery(string sql, params object[] fields)
         {
             DataSet dataset = new DataSet();
             using (MySqlConnection con = new MySqlConnection(cs))
             {
-                con.Open();
-                MySqlCommand cmd = new MySqlCommand();
-                cmd.CommandText = sql;
-                cmd.Connection = con;
-
-                int i = 1;
-                foreach (var field in fields)
+                try
                 {
-                    cmd.Parameters.AddWithValue("@p" + i, field);
-                    i++;
-                }
+                    con.Open();
+                    MySqlCommand cmd = new MySqlCommand();
+                    cmd.CommandText = sql;
+                    cmd.Connection = con;
 
-                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
-                adapter.Fill(dataset);
-                return dataset;
+                    int i = 1;
+                    foreach (var field in fields)
+                    {
+                        cmd.Parameters.AddWithValue("@p" + i, field);
+                        i++;
+                    }
+
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                    adapter.Fill(dataset);
+                    return dataset;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                    return null;
+                }
             }
         }
     }
