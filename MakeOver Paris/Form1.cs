@@ -47,5 +47,10 @@ namespace MakeOver_Paris
 
             dao.addInvoice(inv);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
