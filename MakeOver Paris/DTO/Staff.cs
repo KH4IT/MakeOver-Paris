@@ -56,6 +56,17 @@ namespace MakeOver_Paris.DTO
             set { commisionrate = value; }
         }
 
+        public Staff() { }
+
+        public Staff(int staffid, string staffname, string staffpassword, string stafftype, DateTime lastlogin, decimal comisionrate)
+        {
+            this.staffid = staffid;
+            this.staffname = staffname;
+            this.staffpassword = staffpassword;
+            this.stafftype = stafftype;
+            this.lastlogin = lastlogin;
+            this.commisionrate = comisionrate;
+        }
 
 
     }
