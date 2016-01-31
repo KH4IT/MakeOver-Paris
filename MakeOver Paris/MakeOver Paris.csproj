@@ -104,18 +104,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -128,8 +128,21 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="images\logo.png" />
-    <None Include="Resources\add_user241.png" />
-    <None Include="Resources\delete241.png" />
+    <None Include="Resources\vuthea.png" />
+    <None Include="Resources\save24.png" />
+    <None Include="Resources\new.png" />
+    <None Include="Resources\add_user24.png" />
+    <None Include="Resources\delete24.png" />
+    <None Include="Resources\edit24.png" />
+    <None Include="Resources\1454270140_logout.png" />
+    <None Include="Resources\1454270359_MB__home.png" />
+    <None Include="Resources\1395956021_Shopping cart.png" />
+    <None Include="Resources\1395955911_add-address.png" />
+    <None Include="Resources\1395956434_clipboard.png" />
+    <None Include="Resources\addressreport.png" />
+    <None Include="Resources\1454271800_package.png" />
+    <None Include="Resources\1454271826_empty-shopping-cart.png" />
+    <None Include="Resources\1454271912_addressbook.png" />
     <Content Include="Resources\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
