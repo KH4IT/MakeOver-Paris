@@ -17,3 +17,15 @@ E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.csprojResolv
 E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Form1.resources
 E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Properties.Resources.resources
 E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.csproj.GenerateResource.Cache
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\bin\Debug\MakeOver Paris.exe.config
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.exe
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.pdb
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\bin\Debug\MakeOver Paris.exe
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\bin\Debug\MakeOver Paris.pdb
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\bin\Debug\MySql.Data.dll
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.csprojResolveAssemblyReference.cache
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Form1.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Properties.Resources.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.csproj.GenerateResource.Cache
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmSplash.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmMain.resources
