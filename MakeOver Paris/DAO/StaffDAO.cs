@@ -85,7 +85,7 @@ namespace MakeOver_Paris.DAO
                 try
                 {
                     cnn.Open();
-                    const string SQL = "UPDATE";
+                    const string SQL = "UPDATE staf SET staffname = @staffname, staffpassword = @staffpassword";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
                     command.Parameters.AddWithValue("@staffname", staff.Staffname);
@@ -120,7 +120,17 @@ namespace MakeOver_Paris.DAO
                     cnn.Open();
                     const string SQL = "SELECT staffid, staffname, staffpassword, stafftype, lastlogin, comissionrate FROM staff";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
-
+                    MySqlDataReader reader = command.ExecuteReader();
+                    ArrayList staffs = new ArrayList();
+                    Staff staff = null;
+                    while (reader.Read())
+                    {
+                        staff = new Staff(reader.GetInt16("staffid") ,reader.GetString("staffname"), 
+                                          reader.GetString("staffpassword"), reader.GetString("stafftype"),
+                                          reader.GetDateTime("lastlogin"), reader.GetDecimal("comissionrate"));
+                        staffs.Add(staffs);
+                    }
+                    return staffs;
                 }
                 catch (MySqlException e)
                 {

@@ -54,6 +54,7 @@
     <Compile Include="DAO\DBUtility.cs" />
     <Compile Include="DAO\InvoiceDAO.cs" />
     <Compile Include="DAO\MemberDAO.cs" />
+    <Compile Include="DAO\StaffDAO.cs" />
     <Compile Include="DAO\TransactionDAO.cs" />
     <Compile Include="DTO\Category.cs" />
     <Compile Include="DTO\Invoice.cs" />
