@@ -32,5 +32,6 @@ namespace MakeOver_Paris.DTO
             get { return categoryname; }
             set { categoryname = value; }
         }
+
     }
 }

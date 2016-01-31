@@ -110,7 +110,6 @@ namespace MakeOver_Paris.DAO
         public ArrayList GetAllCategories()
         {
             MySqlConnection cnn = DBUtility.getConnection();
-            ArrayList categories = new ArrayList();
             if (cnn != null)
             {
                 try
@@ -118,8 +117,17 @@ namespace MakeOver_Paris.DAO
                     cnn.Open();
                     const string SQL = "SELECT categoryid, categoryname FROM category;";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
-                    
-                    
+                    MySqlDataReader reader = command.ExecuteReader();
+                    ArrayList categories = new ArrayList();
+                    Category category = null;
+                    while(reader.Read())
+                    {
+                        category = new Category();
+                        category.Categoryid = reader.GetInt16("categoryid");
+                        category.Categoryname = reader.GetString("categoryname");
+                        categories.Add(category);
+                    }
+                    return categories;
                 }
                 catch (MySqlException e)
                 {
@@ -130,7 +138,13 @@ namespace MakeOver_Paris.DAO
                     cnn.Close();
                 }
             }
-            return categories;
+            return null;
+        }
+
+        public Category GetCategory(int id)
+        {
+            MySqlConnection cnn = DBUtility.getConnection();
+            return null;
         }
     }
 }
