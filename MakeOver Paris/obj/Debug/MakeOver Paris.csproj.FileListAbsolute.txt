@@ -42,3 +42,7 @@ D:\Make OverParis\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmSpla
 D:\Make OverParis\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Properties.Resources.resources
 D:\Make OverParis\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.csproj.GenerateResource.Cache
 D:\Make OverParis\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmStaff.resources
+D:\Make OverParis\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmProduct.resources
+D:\Make OverParis\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmCategory.resources
+D:\Make OverParis\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmMember.resources
+D:\Make OverParis\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmSetting.resources

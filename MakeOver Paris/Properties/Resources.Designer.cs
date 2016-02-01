@@ -173,6 +173,16 @@ namespace MakeOver_Paris.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Bookmark_add {
+            get {
+                object obj = ResourceManager.GetObject("Bookmark_add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete24 {
             get {
                 object obj = ResourceManager.GetObject("delete24", resourceCulture);
@@ -206,6 +216,16 @@ namespace MakeOver_Paris.Properties {
         internal static System.Drawing.Bitmap save24 {
             get {
                 object obj = ResourceManager.GetObject("save24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settings_big_1x {
+            get {
+                object obj = ResourceManager.GetObject("settings_big_1x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
