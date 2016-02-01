@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MakeOver_Paris
 {
-    public partial class frmStaff : Form
+    public partial class frmProduct : Form
     {
-        public frmStaff()
+        public frmProduct()
         {
             InitializeComponent();
         }
