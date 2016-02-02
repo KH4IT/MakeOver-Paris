@@ -19,6 +19,7 @@ namespace MakeOver_Paris
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             MakeOver_Paris.DAO.InvoiceDAO dao = new MakeOver_Paris.DAO.InvoiceDAO();
             MakeOver_Paris.DTO.Invoice inv = new MakeOver_Paris.DTO.Invoice();
             System.Collections.ArrayList arr = new System.Collections.ArrayList();
