@@ -14,7 +14,7 @@ using System.Collections;
 
 namespace MakeOver_Paris.DAO
 {
-    class ProductDao
+    class SettingDao
     {
         public bool addSetting(Setting setting)
         {
