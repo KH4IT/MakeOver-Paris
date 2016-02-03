@@ -60,46 +60,106 @@ namespace MakeOver_Paris
 
         private void button1_Click(object sender, EventArgs e)
         {
-            frmMain frm = new frmMain();
-
-            frm.Show();
+            frmParent parent = new frmParent();
+            parent.Show();
+            this.Dispose();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             frmProduct frm = new frmProduct();
-            frm.MdiParent = this;
-            frm.Show();
+            changePanelForm(frm);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             frmCategory frm = new frmCategory();
-            frm.MdiParent = this;
-            frm.Show();
+            changePanelForm(frm);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             frmMember frm = new frmMember();
+            foreach (Form child in this.MdiChildren)
+                if (child.Name == frm.Name)
+                {
+                    child.BringToFront();
+                    return;
+                }
             frm.MdiParent = this;
             frm.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
+            
             frmStaff frmStaffs = new frmStaff();
-            frmStaffs.MdiParent = this;
-            frmStaffs.Show();
+            changePanelForm(frmStaffs);
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             frmSetting frm = new frmSetting();
+            foreach (Form child in this.MdiChildren)
+                if (child.Name == frm.Name)
+                {
+                    child.BringToFront();
+                    return;
+                }
             frm.MdiParent = this;
             frm.Show();
         }
 
+        public void changePanelForm(Form frm)
+        {
+            panel4.Dispose();
+            foreach (Form child in this.MdiChildren)
+                if (child.Name == frm.Name)
+                {
+                    child.BringToFront();
+                    return;
+                }
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void btnRegistration_Click(object sender, EventArgs e)
+        {
+            frmParent parent = new frmParent();
+            parent.Show();
+            this.Dispose();
+        }
+
+        private void btnManageCourse_Click(object sender, EventArgs e)
+        {
+            frmProduct frm = new frmProduct();
+            changePanelForm(frm);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            frmMember frm = new frmMember();
+            changePanelForm(frm);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            frmStaff frmStaffs = new frmStaff();
+            changePanelForm(frmStaffs);
+        }
+
+        private void btnStaff_Click(object sender, EventArgs e)
+        {
+            frmCategory frm = new frmCategory();
+            changePanelForm(frm);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            frmSetting frm = new frmSetting();
+            changePanelForm(frm);
+        }
        
     }
 }
