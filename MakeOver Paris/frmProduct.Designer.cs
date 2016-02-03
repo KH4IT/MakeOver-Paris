@@ -65,7 +65,7 @@
             this.groupBox1.Size = new System.Drawing.Size(989, 290);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "ព័ត៌មានបុគ្គលិក";
+            this.groupBox1.Text = "ព័ត៌មានផលិតផល";
             // 
             // btnCancel
             // 
@@ -161,7 +161,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(989, 292);
             this.dataGridView1.TabIndex = 3;
             // 
-            // frmStaff
+            // frmProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -171,7 +171,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmStaff";
+            this.Name = "frmProduct";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);

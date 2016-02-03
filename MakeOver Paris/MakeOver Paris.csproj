@@ -173,6 +173,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="images\logo.png" />
+    <None Include="Resources\User-icon1.png" />
     <None Include="Resources\settings_big_1x.png" />
     <None Include="Resources\vuthea.png" />
     <None Include="Resources\save24.png" />
@@ -190,6 +191,10 @@
     <None Include="Resources\1454271826_empty-shopping-cart.png" />
     <None Include="Resources\1454271912_addressbook.png" />
     <None Include="Resources\Bookmark-add.png" />
+    <None Include="Resources\bg.jpg" />
+    <None Include="Resources\loginfrm.png" />
+    <None Include="Resources\btnLogin.png" />
+    <None Include="Resources\lock_and_key.png" />
     <Content Include="Resources\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

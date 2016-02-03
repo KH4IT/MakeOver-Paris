@@ -173,9 +173,29 @@ namespace MakeOver_Paris.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bg {
+            get {
+                object obj = ResourceManager.GetObject("bg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bookmark_add {
             get {
                 object obj = ResourceManager.GetObject("Bookmark_add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnLogin {
+            get {
+                object obj = ResourceManager.GetObject("btnLogin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,6 +216,26 @@ namespace MakeOver_Paris.Properties {
         internal static System.Drawing.Bitmap edit24 {
             get {
                 object obj = ResourceManager.GetObject("edit24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lock_and_key {
+            get {
+                object obj = ResourceManager.GetObject("lock_and_key", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loginfrm {
+            get {
+                object obj = ResourceManager.GetObject("loginfrm", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -226,6 +266,16 @@ namespace MakeOver_Paris.Properties {
         internal static System.Drawing.Bitmap settings_big_1x {
             get {
                 object obj = ResourceManager.GetObject("settings_big_1x", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("User_icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

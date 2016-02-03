@@ -33,13 +33,22 @@ namespace MakeOver_Paris
 
         private void btnStaff_Click(object sender, EventArgs e)
         {
-           frmStaff frm= new frmStaff();
-           frm.Show();
+           
+            frmParent parent = new frmParent();
+            parent.Show();
+           
         }
 
         private void pnMain_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            
+            frmParent parent = new frmParent();
+            parent.Show();
         }
     }
 }
