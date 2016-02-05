@@ -19,6 +19,7 @@ namespace MakeOver_Paris
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             MakeOver_Paris.DAO.InvoiceDAO dao = new MakeOver_Paris.DAO.InvoiceDAO();
             MakeOver_Paris.DTO.Invoice inv = new MakeOver_Paris.DTO.Invoice();
             System.Collections.ArrayList arr = new System.Collections.ArrayList();
@@ -52,5 +53,48 @@ namespace MakeOver_Paris
         {
 
         }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmMain frm = new frmMain();
+            frm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmProduct frm = new frmProduct();
+            frm.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            frmCategory frm = new frmCategory();
+            frm.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmMember frm = new frmMember();
+            frm.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmStaff frm = new frmStaff();
+            frm.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            frmSetting frm = new frmSetting();
+            frm.Show();
+        }
+
+       
     }
 }

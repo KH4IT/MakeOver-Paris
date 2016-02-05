@@ -6,72 +6,78 @@ using System.Threading.Tasks;
 
 namespace MakeOver_Paris.DTO
 {
+
     class Product
     {
         private int productid;
+        private String productcode;
+        private String barcode;
+        private String productname;
+        private decimal quantity;
+        private String description;
+        private decimal pricein;
+        private decimal priceout;
+        private decimal returnquantity;
+        private String remark;
+        private DateTime createddate;
+        private Staff createdby;
+        private DateTime updateddate;
+        private Staff updatedby;
+        private Category category;
 
         public int Productid
         {
             get { return productid; }
             set { productid = value; }
         }
-        private String productcode;
 
         public String Productcode
         {
             get { return productcode; }
             set { productcode = value; }
         }
-        private String barcode;
 
         public String Barcode
         {
             get { return barcode; }
             set { barcode = value; }
         }
-        private String productname;
 
         public String Productname
         {
             get { return productname; }
             set { productname = value; }
         }
-        private decimal quantity;
 
         public decimal Quantity
         {
             get { return quantity; }
             set { quantity = value; }
         }
-        private String description;
 
         public String Description
         {
             get { return description; }
             set { description = value; }
         }
-        private decimal pricein;
 
         public decimal Pricein
         {
             get { return pricein; }
             set { pricein = value; }
         }
-        private decimal priceout;
 
         public decimal Priceout
         {
             get { return priceout; }
             set { priceout = value; }
         }
-        private decimal returnquantity;
 
         public decimal Returnquantity
         {
             get { return returnquantity; }
             set { returnquantity = value; }
         }
-        private String remark;
 
         public String Remark1
         {
@@ -84,35 +90,29 @@ namespace MakeOver_Paris.DTO
             get { return Remark1; }
             set { Remark1 = value; }
         }
-        private DateTime createddate;
 
         public DateTime Createddate
         {
             get { return createddate; }
             set { createddate = value; }
         }
-        private Staff createdby;
-
         internal Staff Createdby
         {
             get { return createdby; }
             set { createdby = value; }
         }
-        private DateTime updateddate;
 
         public DateTime Updateddate
         {
             get { return updateddate; }
             set { updateddate = value; }
         }
-        private Staff updatedby;
 
         internal Staff Updatedby
         {
             get { return updatedby; }
             set { updatedby = value; }
         }
-        private Category category;
 
         internal Category Category
         {

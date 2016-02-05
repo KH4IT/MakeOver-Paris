@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSplash));
             this.pnlSplashScreen = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlSplashScreen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,30 +48,18 @@
             this.pnlSplashScreen.Name = "pnlSplashScreen";
             this.pnlSplashScreen.Size = new System.Drawing.Size(1184, 303);
             this.pnlSplashScreen.TabIndex = 0;
+            this.pnlSplashScreen.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSplashScreen_Paint);
             // 
-            // label1
+            // label3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Light", 48F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(305, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(757, 86);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "POS Management System";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Light", 36F, System.Drawing.FontStyle.Italic);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(458, 95);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(467, 65);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Make Over Paris Shop";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Italic);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(827, 275);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(365, 25);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "This software has been developed by KH4IT.";
             // 
             // pictureBox1
             // 
@@ -84,16 +72,29 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.WaitOnLoad = true;
             // 
-            // label3
+            // label2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Italic);
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(827, 275);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(354, 25);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "This software has been developed by KH4IT.";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Light", 36F, System.Drawing.FontStyle.Italic);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(458, 95);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(474, 65);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Make Over Paris Shop";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Light", 48F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(305, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(757, 86);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "POS Management System";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // frmSplash
             // 

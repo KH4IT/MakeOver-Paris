@@ -11,9 +11,10 @@ using System.Collections;
  * Tola
  */
 
+
 namespace MakeOver_Paris.DAO
 {
-    class SettingDAO
+    class SettingDao
     {
         public bool addSetting(Setting setting)
         {
@@ -143,34 +144,38 @@ namespace MakeOver_Paris.DAO
             return null;
         }
 
-        public Setting getSetting(int settingId)
-        {
-            try
-            {
-                Setting setting = new Setting();
 
-                MySqlConnection cnn = DBUtility.getConnection();
-                cnn.Open();
-                if (cnn != null)
-                {
-                    MySqlTransaction transaction = cnn.BeginTransaction();
-                    try
-                    {
-                        String sql = "";
-                        MySqlCommand invCommand = new MySqlCommand(sql, cnn);
-                        transaction.Commit();
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.ToString());
-                        transaction.Rollback();
-                    }
-                }
-                return setting;
-            }
-            catch (Exception ex)
+        public Setting getSetting(int productid)
+        {
+            MySqlConnection cnn = DBUtility.getConnection();
+            if (cnn != null)
             {
-                Console.WriteLine("CONNECTION CATCH :  " + ex.ToString());
+                try
+                {
+                    cnn.Open();
+                    const string SQL = "SELECT settingid, title , value FROM settings WHERE productid=@productid;";
+                    MySqlCommand command = new MySqlCommand(SQL, cnn);
+                    command.Prepare();
+                    command.Parameters.AddWithValue("@productid", productid);
+                    MySqlDataReader reader = command.ExecuteReader();
+                    Setting setting = null;
+                    while (reader.Read())
+                    {
+                        setting = new Setting();
+                        setting.Settingid = reader.GetInt16("settingid");
+                        setting.Title = reader.GetString("title");
+                        setting.Value = reader.GetString("value");
+                    }
+                    return setting;
+                }
+                catch (MySqlException e)
+                {
+                    Console.WriteLine(e);
+                }
+                finally
+                {
+                    cnn.Close();
+                }
             }
             return null;
         }

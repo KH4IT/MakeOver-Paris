@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace MakeOver_Paris
 {
@@ -14,7 +15,9 @@ namespace MakeOver_Paris
     {
         public frmMain()
         {
+            
             InitializeComponent();
+           
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -26,6 +29,26 @@ namespace MakeOver_Paris
         private void button4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnStaff_Click(object sender, EventArgs e)
+        {
+           
+            frmParent parent = new frmParent();
+            parent.Show();
+           
+        }
+
+        private void pnMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            
+            frmParent parent = new frmParent();
+            parent.Show();
         }
     }
 }

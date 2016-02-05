@@ -64,6 +64,36 @@
     <Compile Include="DTO\Setting.cs" />
     <Compile Include="DTO\Staff.cs" />
     <Compile Include="DTO\Transaction.cs" />
+    <Compile Include="frmParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmParent.Designer.cs">
+      <DependentUpon>frmParent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCategory.Designer.cs">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMember.Designer.cs">
+      <DependentUpon>frmMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProduct.Designer.cs">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSetting.Designer.cs">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmStaff.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +120,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmParent.resx">
+      <DependentUpon>frmParent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCategory.resx">
+      <DependentUpon>frmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMember.resx">
+      <DependentUpon>frmMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProduct.resx">
+      <DependentUpon>frmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSetting.resx">
+      <DependentUpon>frmSetting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmStaff.resx">
       <DependentUpon>frmStaff.cs</DependentUpon>
     </EmbeddedResource>
@@ -104,18 +149,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -128,8 +173,28 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="images\logo.png" />
-    <None Include="Resources\add_user241.png" />
-    <None Include="Resources\delete241.png" />
+    <None Include="Resources\User-icon1.png" />
+    <None Include="Resources\settings_big_1x.png" />
+    <None Include="Resources\vuthea.png" />
+    <None Include="Resources\save24.png" />
+    <None Include="Resources\new.png" />
+    <None Include="Resources\add_user24.png" />
+    <None Include="Resources\delete24.png" />
+    <None Include="Resources\edit24.png" />
+    <None Include="Resources\1454270140_logout.png" />
+    <None Include="Resources\1454270359_MB__home.png" />
+    <None Include="Resources\1395956021_Shopping cart.png" />
+    <None Include="Resources\1395955911_add-address.png" />
+    <None Include="Resources\1395956434_clipboard.png" />
+    <None Include="Resources\addressreport.png" />
+    <None Include="Resources\1454271800_package.png" />
+    <None Include="Resources\1454271826_empty-shopping-cart.png" />
+    <None Include="Resources\1454271912_addressbook.png" />
+    <None Include="Resources\Bookmark-add.png" />
+    <None Include="Resources\bg.jpg" />
+    <None Include="Resources\loginfrm.png" />
+    <None Include="Resources\btnLogin.png" />
+    <None Include="Resources\lock_and_key.png" />
     <Content Include="Resources\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
