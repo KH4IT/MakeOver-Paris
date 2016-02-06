@@ -7,14 +7,9 @@ using MakeOver_Paris.DTO;
 using MySql.Data.MySqlClient;
 using System.Collections;
 
-/*
- * Tola
- */
-
-
 namespace MakeOver_Paris.DAO
 {
-    class SettingDao
+    class SettingDAO
     {
         public bool addSetting(Setting setting)
         {
@@ -81,7 +76,7 @@ namespace MakeOver_Paris.DAO
         public bool updateSetting(Setting setting)
         {
             MySqlConnection cnn = DBUtility.getConnection();
-            if(cnn != null)
+            if (cnn != null)
             {
                 try
                 {
@@ -122,7 +117,7 @@ namespace MakeOver_Paris.DAO
                     MySqlDataReader reader = command.ExecuteReader();
                     ArrayList settings = new ArrayList();
                     Setting setting = null;
-                    while(reader.Read())
+                    while (reader.Read())
                     {
                         setting = new Setting();
                         setting.Settingid = reader.GetInt16("settingid");

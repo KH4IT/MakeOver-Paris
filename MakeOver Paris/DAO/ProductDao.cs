@@ -7,16 +7,11 @@ using MakeOver_Paris.DTO;
 using MySql.Data.MySqlClient;
 using System.Collections;
 
-/*
- * Tola
- */
-
-
 namespace MakeOver_Paris.DAO
 {
-
-    class ProductDao
+    class ProductDAO
     {
+
         public bool addProduct(Product product)
         {
             MySqlConnection cnn = DBUtility.getConnection();
@@ -26,7 +21,7 @@ namespace MakeOver_Paris.DAO
                 try
                 {
                     cnn.Open();
-                    const string SQL = "INSERT INTO products VALUES(productcode,barcode,productname,quantity,description,pricein,priceout,returnquantity,remark,createddate,createdby,updateddate,updatedby,categoryid)"+
+                    const string SQL = "INSERT INTO products VALUES(productcode,barcode,productname,quantity,description,pricein,priceout,returnquantity,remark,createddate,createdby,updateddate,updatedby,categoryid)" +
                                        "VALUES(@productcode,@barcode,@productname,@quantity,@description,@pricein,@priceout,@returnquantity,@remark,@createddate,@createdby,@updateddate,@updatedby,@categoryid)";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
@@ -95,12 +90,12 @@ namespace MakeOver_Paris.DAO
         public bool updateProduct(Product product)
         {
             MySqlConnection cnn = DBUtility.getConnection();
-            if(cnn != null)
+            if (cnn != null)
             {
                 try
                 {
                     cnn.Open();
-                    const string SQL = "UPDATE settings SET productcode = @productcode ,"+
+                    const string SQL = "UPDATE settings SET productcode = @productcode ," +
                                                            "barcode=@barcode, " +
                                                            "productname=@productname " +
                                                            "quantity=@quantity, " +
@@ -161,7 +156,7 @@ namespace MakeOver_Paris.DAO
                     MySqlDataReader reader = command.ExecuteReader();
                     ArrayList products = new ArrayList();
                     Product product = null;
-                    while(reader.Read())
+                    while (reader.Read())
                     {
                         product = new Product();
                         product.Productid = reader.GetInt16("productid");
@@ -240,5 +235,6 @@ namespace MakeOver_Paris.DAO
             }
             return null;
         }
+
     }
 }
