@@ -30,6 +30,15 @@ namespace MakeOver_Paris.DAO
             return con;
         }
 
+        public static String SafeGetString(MySqlDataReader reader, String columnname)
+        {
+            int colIndex = reader.GetOrdinal(columnname);
+            if (!reader.IsDBNull(colIndex))
+                return reader.GetString(colIndex);
+            else
+                return String.Empty;
+        }
+
         // TODO: TO USE FOR ALL EexcuteNonQuery
         // EXAMPLE: 
         //      DBUtility.ExecuteNonQuery("INSERT INTO tables VALUE(@p1,@p2,@p3)" ,1 ,2 ,3);
