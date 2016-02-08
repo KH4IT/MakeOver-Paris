@@ -160,6 +160,12 @@ namespace MakeOver_Paris
             frmSetting frm = new frmSetting();
             changePanelForm(frm);
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            frmSale frm = new frmSale();
+            changePanelForm(frm);
+        }
        
     }
 }
