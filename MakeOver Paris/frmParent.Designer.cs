@@ -29,16 +29,24 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblFormName = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
@@ -47,26 +55,19 @@
             this.btnStaff = new System.Windows.Forms.Button();
             this.btnManageCourse = new System.Windows.Forms.Button();
             this.btnRegistration = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -90,6 +91,20 @@
             this.panel1.Size = new System.Drawing.Size(245, 675);
             this.panel1.TabIndex = 0;
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox8.Image = global::MakeOver_Paris.Properties.Resources.Bookmark_add;
+            this.pictureBox8.InitialImage = global::MakeOver_Paris.Properties.Resources.vuthea;
+            this.pictureBox8.Location = new System.Drawing.Point(12, 231);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(58, 51);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 13;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.WaitOnLoad = true;
+            // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.White;
@@ -105,6 +120,20 @@
             this.button6.Text = "ប្រភេទ";
             this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox7.Image = global::MakeOver_Paris.Properties.Resources.settings_big_1x;
+            this.pictureBox7.InitialImage = global::MakeOver_Paris.Properties.Resources.vuthea;
+            this.pictureBox7.Location = new System.Drawing.Point(3, 451);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(67, 51);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 11;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.WaitOnLoad = true;
             // 
             // button5
             // 
@@ -122,6 +151,20 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox6.Image = global::MakeOver_Paris.Properties.Resources.addressreport;
+            this.pictureBox6.InitialImage = global::MakeOver_Paris.Properties.Resources.vuthea;
+            this.pictureBox6.Location = new System.Drawing.Point(12, 378);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(58, 51);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 9;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.WaitOnLoad = true;
+            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.White;
@@ -137,6 +180,20 @@
             this.button4.Text = "បុគ្គលិក";
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox5.Image = global::MakeOver_Paris.Properties.Resources._1454271912_addressbook;
+            this.pictureBox5.InitialImage = global::MakeOver_Paris.Properties.Resources.vuthea;
+            this.pictureBox5.Location = new System.Drawing.Point(12, 305);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(58, 51);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 7;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.WaitOnLoad = true;
             // 
             // button3
             // 
@@ -154,6 +211,20 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox4.Image = global::MakeOver_Paris.Properties.Resources._1454271826_empty_shopping_cart;
+            this.pictureBox4.InitialImage = global::MakeOver_Paris.Properties.Resources.vuthea;
+            this.pictureBox4.Location = new System.Drawing.Point(12, 158);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(58, 51);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 5;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.WaitOnLoad = true;
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.White;
@@ -169,6 +240,20 @@
             this.button2.Text = "ផលិតផល";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox3.Image = global::MakeOver_Paris.Properties.Resources._1454270359_MB__home;
+            this.pictureBox3.InitialImage = global::MakeOver_Paris.Properties.Resources.vuthea;
+            this.pictureBox3.Location = new System.Drawing.Point(12, 85);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(58, 51);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 3;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.WaitOnLoad = true;
             // 
             // button1
             // 
@@ -232,129 +317,6 @@
             this.lblFormName.TabIndex = 3;
             this.lblFormName.Text = "ប្រព័ន្ធគ្រប់គ្រងការលក់";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(868, 11);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 22);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Vuthea";
-            // 
-            // panel4
-            // 
-            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel4.Controls.Add(this.button8);
-            this.panel4.Controls.Add(this.button9);
-            this.panel4.Controls.Add(this.button10);
-            this.panel4.Controls.Add(this.btnStaff);
-            this.panel4.Controls.Add(this.btnManageCourse);
-            this.panel4.Controls.Add(this.btnRegistration);
-            this.panel4.Location = new System.Drawing.Point(245, 46);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1020, 626);
-            this.panel4.TabIndex = 3;
-            // 
-            // button8
-            // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("NiDA Bayon", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(657, 266);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(290, 108);
-            this.button8.TabIndex = 36;
-            this.button8.Text = "ការកំណត់";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("NiDA Bayon", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(361, 266);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(290, 108);
-            this.button9.TabIndex = 35;
-            this.button9.Text = "បុគ្គលិក";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("NiDA Bayon", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(65, 266);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(290, 108);
-            this.button10.TabIndex = 34;
-            this.button10.Text = "សមាជិក";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
-            // 
-            // btnStaff
-            // 
-            this.btnStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
-            this.btnStaff.FlatAppearance.BorderSize = 0;
-            this.btnStaff.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
-            this.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStaff.Font = new System.Drawing.Font("NiDA Bayon", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStaff.ForeColor = System.Drawing.Color.White;
-            this.btnStaff.Location = new System.Drawing.Point(657, 137);
-            this.btnStaff.Name = "btnStaff";
-            this.btnStaff.Size = new System.Drawing.Size(290, 108);
-            this.btnStaff.TabIndex = 32;
-            this.btnStaff.Text = "ប្រភេទ";
-            this.btnStaff.UseVisualStyleBackColor = false;
-            this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
-            // 
-            // btnManageCourse
-            // 
-            this.btnManageCourse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
-            this.btnManageCourse.FlatAppearance.BorderSize = 0;
-            this.btnManageCourse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
-            this.btnManageCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnManageCourse.Font = new System.Drawing.Font("NiDA Bayon", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnManageCourse.ForeColor = System.Drawing.Color.White;
-            this.btnManageCourse.Location = new System.Drawing.Point(361, 137);
-            this.btnManageCourse.Name = "btnManageCourse";
-            this.btnManageCourse.Size = new System.Drawing.Size(290, 108);
-            this.btnManageCourse.TabIndex = 31;
-            this.btnManageCourse.Text = "ផលិតផល";
-            this.btnManageCourse.UseVisualStyleBackColor = false;
-            this.btnManageCourse.Click += new System.EventHandler(this.btnManageCourse_Click);
-            // 
-            // btnRegistration
-            // 
-            this.btnRegistration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
-            this.btnRegistration.FlatAppearance.BorderSize = 0;
-            this.btnRegistration.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
-            this.btnRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistration.Font = new System.Drawing.Font("NiDA Bayon", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistration.ForeColor = System.Drawing.Color.White;
-            this.btnRegistration.Location = new System.Drawing.Point(65, 137);
-            this.btnRegistration.Name = "btnRegistration";
-            this.btnRegistration.Size = new System.Drawing.Size(290, 108);
-            this.btnRegistration.TabIndex = 30;
-            this.btnRegistration.Text = "ទំព័រដើម";
-            this.btnRegistration.UseVisualStyleBackColor = false;
-            this.btnRegistration.Click += new System.EventHandler(this.btnRegistration_Click);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -383,89 +345,145 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.WaitOnLoad = true;
             // 
-            // pictureBox8
+            // label6
             // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox8.Image = global::MakeOver_Paris.Properties.Resources.Bookmark_add;
-            this.pictureBox8.InitialImage = global::MakeOver_Paris.Properties.Resources.vuthea;
-            this.pictureBox8.Location = new System.Drawing.Point(12, 231);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(58, 51);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 13;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.WaitOnLoad = true;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(868, 11);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 22);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Vuthea";
             // 
-            // pictureBox7
+            // panel4
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox7.Image = global::MakeOver_Paris.Properties.Resources.settings_big_1x;
-            this.pictureBox7.InitialImage = global::MakeOver_Paris.Properties.Resources.vuthea;
-            this.pictureBox7.Location = new System.Drawing.Point(3, 451);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(67, 51);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 11;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.WaitOnLoad = true;
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.Controls.Add(this.button7);
+            this.panel4.Controls.Add(this.button8);
+            this.panel4.Controls.Add(this.button9);
+            this.panel4.Controls.Add(this.button10);
+            this.panel4.Controls.Add(this.btnStaff);
+            this.panel4.Controls.Add(this.btnManageCourse);
+            this.panel4.Controls.Add(this.btnRegistration);
+            this.panel4.Location = new System.Drawing.Point(245, 46);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1020, 626);
+            this.panel4.TabIndex = 3;
             // 
-            // pictureBox6
+            // button8
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox6.Image = global::MakeOver_Paris.Properties.Resources.addressreport;
-            this.pictureBox6.InitialImage = global::MakeOver_Paris.Properties.Resources.vuthea;
-            this.pictureBox6.Location = new System.Drawing.Point(12, 378);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(58, 51);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 9;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.WaitOnLoad = true;
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.button8.FlatAppearance.BorderSize = 0;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button8.Font = new System.Drawing.Font("NiDA Bayon", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.White;
+            this.button8.Location = new System.Drawing.Point(657, 192);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(290, 108);
+            this.button8.TabIndex = 36;
+            this.button8.Text = "ការកំណត់";
+            this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // pictureBox5
+            // button9
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox5.Image = global::MakeOver_Paris.Properties.Resources._1454271912_addressbook;
-            this.pictureBox5.InitialImage = global::MakeOver_Paris.Properties.Resources.vuthea;
-            this.pictureBox5.Location = new System.Drawing.Point(12, 305);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(58, 51);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 7;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.WaitOnLoad = true;
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("NiDA Bayon", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Location = new System.Drawing.Point(361, 192);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(290, 108);
+            this.button9.TabIndex = 35;
+            this.button9.Text = "បុគ្គលិក";
+            this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // pictureBox4
+            // button10
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox4.Image = global::MakeOver_Paris.Properties.Resources._1454271826_empty_shopping_cart;
-            this.pictureBox4.InitialImage = global::MakeOver_Paris.Properties.Resources.vuthea;
-            this.pictureBox4.Location = new System.Drawing.Point(12, 158);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(58, 51);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 5;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.WaitOnLoad = true;
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("NiDA Bayon", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Location = new System.Drawing.Point(65, 192);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(290, 108);
+            this.button10.TabIndex = 34;
+            this.button10.Text = "សមាជិក";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
-            // pictureBox3
+            // btnStaff
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox3.Image = global::MakeOver_Paris.Properties.Resources._1454270359_MB__home;
-            this.pictureBox3.InitialImage = global::MakeOver_Paris.Properties.Resources.vuthea;
-            this.pictureBox3.Location = new System.Drawing.Point(12, 85);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(58, 51);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 3;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.WaitOnLoad = true;
+            this.btnStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnStaff.FlatAppearance.BorderSize = 0;
+            this.btnStaff.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
+            this.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStaff.Font = new System.Drawing.Font("NiDA Bayon", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStaff.ForeColor = System.Drawing.Color.White;
+            this.btnStaff.Location = new System.Drawing.Point(657, 63);
+            this.btnStaff.Name = "btnStaff";
+            this.btnStaff.Size = new System.Drawing.Size(290, 108);
+            this.btnStaff.TabIndex = 32;
+            this.btnStaff.Text = "ប្រភេទ";
+            this.btnStaff.UseVisualStyleBackColor = false;
+            this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
+            // 
+            // btnManageCourse
+            // 
+            this.btnManageCourse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnManageCourse.FlatAppearance.BorderSize = 0;
+            this.btnManageCourse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
+            this.btnManageCourse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageCourse.Font = new System.Drawing.Font("NiDA Bayon", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageCourse.ForeColor = System.Drawing.Color.White;
+            this.btnManageCourse.Location = new System.Drawing.Point(361, 63);
+            this.btnManageCourse.Name = "btnManageCourse";
+            this.btnManageCourse.Size = new System.Drawing.Size(290, 108);
+            this.btnManageCourse.TabIndex = 31;
+            this.btnManageCourse.Text = "ផលិតផល";
+            this.btnManageCourse.UseVisualStyleBackColor = false;
+            this.btnManageCourse.Click += new System.EventHandler(this.btnManageCourse_Click);
+            // 
+            // btnRegistration
+            // 
+            this.btnRegistration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnRegistration.FlatAppearance.BorderSize = 0;
+            this.btnRegistration.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
+            this.btnRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistration.Font = new System.Drawing.Font("NiDA Bayon", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistration.ForeColor = System.Drawing.Color.White;
+            this.btnRegistration.Location = new System.Drawing.Point(65, 63);
+            this.btnRegistration.Name = "btnRegistration";
+            this.btnRegistration.Size = new System.Drawing.Size(290, 108);
+            this.btnRegistration.TabIndex = 30;
+            this.btnRegistration.Text = "ទំព័រដើម";
+            this.btnRegistration.UseVisualStyleBackColor = false;
+            this.btnRegistration.Click += new System.EventHandler(this.btnRegistration_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("NiDA Bayon", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(65, 323);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(882, 108);
+            this.button7.TabIndex = 37;
+            this.button7.Text = "លក់";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // frmParent
             // 
@@ -485,19 +503,19 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -531,6 +549,7 @@
         internal System.Windows.Forms.Button btnStaff;
         internal System.Windows.Forms.Button btnManageCourse;
         internal System.Windows.Forms.Button btnRegistration;
+        internal System.Windows.Forms.Button button7;
     }
 }
 

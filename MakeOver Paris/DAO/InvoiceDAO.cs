@@ -56,9 +56,9 @@ namespace MakeOver_Paris.DAO
                         updateProductCommand.Parameters.AddWithValue("@productid" + i, ((InvoiceDetail)invoice.InvoiceDetail[i]).Product.Productid);
                         updateProductCommand.ExecuteNonQuery();
 
-                        Product p = new ProductDao().getProduct(((InvoiceDetail)invoice.InvoiceDetail[i]).Product.Productid);
-                        p.Quantity -= ((InvoiceDetail)invoice.InvoiceDetail[i]).Quantity;
-                        new ProductDao().updateProduct(p);
+                        //Product p = new ProductDao().getProduct(((InvoiceDetail)invoice.InvoiceDetail[i]).Product.Productid);
+                        //p.Quantity -= ((InvoiceDetail)invoice.InvoiceDetail[i]).Quantity;
+                        //new ProductDao().updateProduct(p);
 
                     }
                     invDetailCommand.ExecuteNonQuery();

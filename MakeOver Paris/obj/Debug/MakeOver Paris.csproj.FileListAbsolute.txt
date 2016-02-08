@@ -47,3 +47,4 @@ D:\Make OverParis\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmCate
 D:\Make OverParis\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmMember.resources
 D:\Make OverParis\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmSetting.resources
 D:\Make OverParis\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmParent.resources
+D:\Make OverParis\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmSale.resources
