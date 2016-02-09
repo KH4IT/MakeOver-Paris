@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MakeOver_Paris.DAO;
+using MakeOver_Paris.DTO;
+using System.Collections;
 
 namespace MakeOver_Paris
 {
@@ -19,7 +22,7 @@ namespace MakeOver_Paris
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            /*
             MakeOver_Paris.DAO.InvoiceDAO dao = new MakeOver_Paris.DAO.InvoiceDAO();
             MakeOver_Paris.DTO.Invoice inv = new MakeOver_Paris.DTO.Invoice();
             System.Collections.ArrayList arr = new System.Collections.ArrayList();
@@ -47,6 +50,10 @@ namespace MakeOver_Paris
             inv.InvoiceDetail = arr;
 
             dao.addInvoice(inv);
+             * */
+            ArrayList categories = new CategoryDAO().GetAllCategories();
+            categoryGV.DataSource = categories;
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -93,6 +100,38 @@ namespace MakeOver_Paris
         {
             frmSetting frm = new frmSetting();
             frm.Show();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (txtName.Text == "")
+            {
+                MessageBox.Show("Can not empty");
+            }
+            else
+            {
+                Category category = new Category(txtName.Text);
+                if (new CategoryDAO().AddCategory(category))
+                {
+                    txtName.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Transaction fail!!!");
+                }
+            }
+        }
+
+        /*
+         * Enter key event when adding product 
+         */
+
+        private void txtName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+               btnSave_Click(sender, e);
+            }
         }
 
        
