@@ -67,3 +67,14 @@ C:\Users\EAGLESBR\Desktop\Microsoft Project\MakeOver-Paris\MakeOver Paris\obj\De
 C:\Users\EAGLESBR\Desktop\Microsoft Project\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmSplash.resources
 C:\Users\EAGLESBR\Desktop\Microsoft Project\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Properties.Resources.resources
 C:\Users\EAGLESBR\Desktop\Microsoft Project\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.csproj.GenerateResource.Cache
+C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\bin\Debug\MySql.Data.dll
+C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmParent.resources
+C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmCategory.resources
+C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmMember.resources
+C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmSale.resources
+C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmProduct.resources
+C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmSetting.resources
+C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmStaff.resources
+C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Form1.resources
+C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmMain.resources
+C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmSplash.resources

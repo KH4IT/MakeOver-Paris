@@ -50,5 +50,33 @@ namespace MakeOver_Paris
             frmParent parent = new frmParent();
             parent.Show();
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox2_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                frmParent parent = new frmParent();
+                parent.Show();
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void textBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                frmParent parent = new frmParent();
+                parent.Show();
+            }
+        }
     }
 }

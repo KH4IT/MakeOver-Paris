@@ -22,37 +22,7 @@ namespace MakeOver_Paris
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            /*
-            MakeOver_Paris.DAO.InvoiceDAO dao = new MakeOver_Paris.DAO.InvoiceDAO();
-            MakeOver_Paris.DTO.Invoice inv = new MakeOver_Paris.DTO.Invoice();
-            System.Collections.ArrayList arr = new System.Collections.ArrayList();
-
-            for (int i = 0; i < 3; i++)
-            {
-                MakeOver_Paris.DTO.InvoiceDetail detail = new MakeOver_Paris.DTO.InvoiceDetail();
-                MakeOver_Paris.DTO.Product p = new MakeOver_Paris.DTO.Product();
-                p.Productid = 20+i;
-                detail.Product = p;
-                detail.Pricein = 100;
-                detail.Priceout = 1000;
-                detail.Quantity = 11;
-                arr.Add(detail);
-            }
-
-            MakeOver_Paris.DTO.Member m = new DTO.Member();
-            m.Memberid = 1;
-
-            DTO.Staff s = new DTO.Staff();
-            s.Staffid = 2;
-
-            inv.Member = m;
-            inv.Staff = s;
-            inv.InvoiceDetail = arr;
-
-            dao.addInvoice(inv);
-             * */
-            ArrayList categories = new CategoryDAO().GetAllCategories();
-            categoryGV.DataSource = categories;
+          
             
         }
 
@@ -134,6 +104,37 @@ namespace MakeOver_Paris
             }
         }
 
+        /*
+         * Add data to gridview
+         */
+
+        private void addToGrid()
+        {
+          /*  int row = checkInGrid(category.Categoryid);
+            if (row == -1)
+            {
+                categoryGV.Rows.Add(categoryGV.RowCount + 1, category.Categoryid, category.Categoryname);
+            }
+            else
+            {
+                categoryGV.Rows[row].Cells[2].Value = int.Parse(categoryGV.Rows[row].Cells[2].Value.ToString()) + 1;
+            }
+           * */
+        }
+
+        private int checkInGrid(int productid)
+        {
+            int row = -1;
+            for (int i = 0; i < categoryGV.RowCount; i++)
+            {
+                if (categoryGV.Rows[i].Cells[6].Value.ToString() == (productid + ""))
+                {
+                    row = i;
+                    break;
+                }
+            }
+            return row;
+        }
        
     }
 }

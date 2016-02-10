@@ -34,6 +34,8 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.categoryGV = new System.Windows.Forms.DataGridView();
+            this.categoryid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoryname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.categoryGV)).BeginInit();
             this.SuspendLayout();
@@ -98,10 +100,27 @@
             // categoryGV
             // 
             this.categoryGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.categoryGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.categoryid,
+            this.categoryname});
             this.categoryGV.Location = new System.Drawing.Point(23, 226);
             this.categoryGV.Name = "categoryGV";
             this.categoryGV.Size = new System.Drawing.Size(989, 411);
             this.categoryGV.TabIndex = 3;
+            // 
+            // categoryid
+            // 
+            this.categoryid.FillWeight = 250F;
+            this.categoryid.HeaderText = "ល.រ";
+            this.categoryid.Name = "categoryid";
+            this.categoryid.Width = 200;
+            // 
+            // categoryname
+            // 
+            this.categoryname.FillWeight = 300F;
+            this.categoryname.HeaderText = "ឈ្មោះប្រភេទ";
+            this.categoryname.Name = "categoryname";
+            this.categoryname.Width = 400;
             // 
             // frmCategory
             // 
@@ -131,6 +150,8 @@
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView categoryGV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categoryname;
     }
 }
 
