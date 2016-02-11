@@ -69,5 +69,12 @@ namespace MakeOver_Paris.Forms.Member
             frmUpdateMember.Show();
             this.Hide();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Forms.FrmMain frmMain = new Forms.FrmMain();
+            frmMain.Show();
+            this.Close();
+        }
     }
 }

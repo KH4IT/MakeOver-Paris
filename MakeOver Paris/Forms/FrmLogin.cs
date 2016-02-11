@@ -29,14 +29,11 @@ namespace MakeOver_Paris.Forms
             Application.Exit();
         }
 
-        private void lblLogin_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
+            Forms.FrmMain frmMain = new Forms.FrmMain();
+            frmMain.Show();
+            this.Hide();
         }
 
     }

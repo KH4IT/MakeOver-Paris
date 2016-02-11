@@ -78,3 +78,21 @@ C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver P
 C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Form1.resources
 C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmMain.resources
 C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmSplash.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.FrmLogin.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Member.FrmAddMember.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Member.FrmUpdateMember.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmParent.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmCategory.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmMember.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmSale.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmProduct.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmSetting.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmStaff.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.frmSplash.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.FrmMain.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Staff.FrmStaff.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Member.FrmMembers.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Category.FrmCategory.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Setting.FrmSetting.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Product.FrmProduct.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.FrmSale.resources

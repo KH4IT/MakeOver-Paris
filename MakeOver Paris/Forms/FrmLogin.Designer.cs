@@ -60,11 +60,11 @@
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Font = new System.Drawing.Font("Segoe UI Symbol", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.Font = new System.Drawing.Font("Khmer OS Content", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.ForeColor = System.Drawing.Color.White;
             this.Label1.Location = new System.Drawing.Point(104, 8);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(842, 86);
+            this.Label1.Size = new System.Drawing.Size(764, 116);
             this.Label1.TabIndex = 7;
             this.Label1.Text = "ប្រព័ន្ធគ្រប់គ្រងការលក់ទំនិញ";
             // 
@@ -78,7 +78,6 @@
             this.lblLogin.Size = new System.Drawing.Size(262, 36);
             this.lblLogin.TabIndex = 6;
             this.lblLogin.Text = "សូមបញ្ជូលនូវគណនីរបស់អ្នក";
-            this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
             // 
             // btnExit
             // 

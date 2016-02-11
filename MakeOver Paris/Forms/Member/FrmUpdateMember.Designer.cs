@@ -253,7 +253,7 @@
             this.Panel5.Controls.Add(this.btnUpdateMember);
             this.Panel5.Controls.Add(this.btnAddMember);
             this.Panel5.Controls.Add(this.btnMemberList);
-            this.Panel5.Location = new System.Drawing.Point(1, 84);
+            this.Panel5.Location = new System.Drawing.Point(9, 104);
             this.Panel5.Name = "Panel5";
             this.Panel5.Size = new System.Drawing.Size(1007, 30);
             this.Panel5.TabIndex = 3;
@@ -302,7 +302,7 @@
             this.Panel2.Controls.Add(this.btnBack);
             this.Panel2.Controls.Add(this.Label1);
             this.Panel2.Controls.Add(this.Panel3);
-            this.Panel2.Location = new System.Drawing.Point(-8, -14);
+            this.Panel2.Location = new System.Drawing.Point(0, 6);
             this.Panel2.Name = "Panel2";
             this.Panel2.Size = new System.Drawing.Size(1024, 60);
             this.Panel2.TabIndex = 2;
@@ -336,7 +336,7 @@
             this.Panel4.Controls.Add(this.Label2);
             this.Panel4.Controls.Add(this.txtID);
             this.Panel4.ForeColor = System.Drawing.Color.White;
-            this.Panel4.Location = new System.Drawing.Point(1, 84);
+            this.Panel4.Location = new System.Drawing.Point(9, 104);
             this.Panel4.Name = "Panel4";
             this.Panel4.Size = new System.Drawing.Size(1007, 490);
             this.Panel4.TabIndex = 4;
@@ -349,7 +349,7 @@
             this.Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panel1.Location = new System.Drawing.Point(0, 0);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(1008, 561);
+            this.Panel1.Size = new System.Drawing.Size(1024, 600);
             this.Panel1.TabIndex = 4;
             // 
             // FrmUpdateMember
@@ -358,7 +358,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1008, 561);
+            this.ClientSize = new System.Drawing.Size(1024, 600);
             this.Controls.Add(this.Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmUpdateMember";
