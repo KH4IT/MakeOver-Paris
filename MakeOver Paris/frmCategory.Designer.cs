@@ -36,6 +36,7 @@
             this.categoryGV = new System.Windows.Forms.DataGridView();
             this.categoryid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.categoryname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.action = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.categoryGV)).BeginInit();
             this.SuspendLayout();
@@ -102,7 +103,8 @@
             this.categoryGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.categoryGV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.categoryid,
-            this.categoryname});
+            this.categoryname,
+            this.action});
             this.categoryGV.Location = new System.Drawing.Point(23, 226);
             this.categoryGV.Name = "categoryGV";
             this.categoryGV.Size = new System.Drawing.Size(989, 411);
@@ -121,6 +123,12 @@
             this.categoryname.HeaderText = "ឈ្មោះប្រភេទ";
             this.categoryname.Name = "categoryname";
             this.categoryname.Width = 400;
+            // 
+            // action
+            // 
+            this.action.HeaderText = "សកម្មភាព";
+            this.action.Name = "action";
+            this.action.Width = 250;
             // 
             // frmCategory
             // 
@@ -152,6 +160,7 @@
         private System.Windows.Forms.DataGridView categoryGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryid;
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn action;
     }
 }
 

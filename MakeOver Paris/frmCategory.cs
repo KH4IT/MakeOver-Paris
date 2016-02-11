@@ -22,7 +22,9 @@ namespace MakeOver_Paris
 
         private void Form1_Load(object sender, EventArgs e)
         {
-          
+            ArrayList categories = new CategoryDAO().GetAllCategories();
+            addToGrid(categories);
+            
             
         }
 
@@ -84,6 +86,9 @@ namespace MakeOver_Paris
                 if (new CategoryDAO().AddCategory(category))
                 {
                     txtName.Clear();
+                    categoryGV.Rows.Clear();
+                    ArrayList categories = new CategoryDAO().GetAllCategories();
+                    addToGrid(categories);
                 }
                 else
                 {
@@ -108,33 +113,19 @@ namespace MakeOver_Paris
          * Add data to gridview
          */
 
-        private void addToGrid()
+        private void addToGrid(ArrayList categories)
         {
-          /*  int row = checkInGrid(category.Categoryid);
-            if (row == -1)
+
+            for (int i = 0; i < categories.Count; i++)
             {
-                categoryGV.Rows.Add(categoryGV.RowCount + 1, category.Categoryid, category.Categoryname);
+                Category category = (Category)categories[i];
+                categoryGV.Rows.Add(category.Categoryid, category.Categoryname);
             }
-            else
-            {
-                categoryGV.Rows[row].Cells[2].Value = int.Parse(categoryGV.Rows[row].Cells[2].Value.ToString()) + 1;
-            }
-           * */
+            
+         
         }
 
-        private int checkInGrid(int productid)
-        {
-            int row = -1;
-            for (int i = 0; i < categoryGV.RowCount; i++)
-            {
-                if (categoryGV.Rows[i].Cells[6].Value.ToString() == (productid + ""))
-                {
-                    row = i;
-                    break;
-                }
-            }
-            return row;
-        }
+       
        
     }
 }
