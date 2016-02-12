@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MakeOver_Paris.DTO;
 using MySql.Data.MySqlClient;
 using System.Collections;
+using System.Data;
 
 /*
  * BUNRONG LEANG
@@ -21,14 +22,20 @@ namespace MakeOver_Paris.DAO
             MySqlConnection cnn = DBUtility.getConnection();
             if (cnn != null)
             {
+                cnn.Open();
                 MySqlTransaction transaction = cnn.BeginTransaction();
                 try
                 {
-                    cnn.Open();
-                    const string SQL = "INSERT INTO category VALUES(categoryname) VALUES(@categoryname)";
+                    const string SQL = @"INSERT INTO 
+											categories(
+												categoryname
+											) 
+										VALUES(
+											@categoryname
+										);";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
-                    command.Parameters.AddWithValue("@categoryname", category.Categoryid);
+                    command.Parameters.AddWithValue("@categoryname", category.Categoryname);
                     if (command.ExecuteNonQuery() > 0)
                     {
                         transaction.Commit();
@@ -56,7 +63,10 @@ namespace MakeOver_Paris.DAO
                 try
                 {
                     cnn.Open();
-                    const string SQL = "DELETE FROM category WHERE categoryid = @categoryid";
+                    const string SQL = @"DELETE FROM 
+											categories 
+										WHERE 
+											categoryid = @categoryid";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
                     command.Parameters.AddWithValue("@categoryid", categoryId);
@@ -85,7 +95,12 @@ namespace MakeOver_Paris.DAO
                 try
                 {
                     cnn.Open();
-                    const string SQL = "UPDATE category SET categoryname = @categoryname WHERE categoryid = @categoryid";
+                    const string SQL = @"UPDATE 
+											categories 
+										SET 
+											categoryname = @categoryname 
+										WHERE 
+											categoryid = @categoryid";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
                     command.Parameters.AddWithValue("@categoryname", category.Categoryname);
@@ -107,44 +122,22 @@ namespace MakeOver_Paris.DAO
             return false;
         }
 
-        public ArrayList GetAllCategories()
+        public DataSet GetAllCategories()
         {
-            MySqlConnection cnn = DBUtility.getConnection();
-            if (cnn != null)
+            try
             {
-                try
-                {
-                    cnn.Open();
-                    const string SQL = "SELECT categoryid, categoryname FROM category;";
-                    MySqlCommand command = new MySqlCommand(SQL, cnn);
-                    MySqlDataReader reader = command.ExecuteReader();
-                    ArrayList categories = new ArrayList();
-                    Category category = null;
-                    while(reader.Read())
-                    {
-                        category = new Category();
-                        category.Categoryid = reader.GetInt16("categoryid");
-                        category.Categoryname = reader.GetString("categoryname");
-                        categories.Add(category);
-                    }
-                    return categories;
-                }
-                catch (MySqlException e)
-                {
-                    Console.WriteLine(e);
-                }
-                finally
-                {
-                    cnn.Close();
-                }
+                List<Member> members = new List<Member>();
+                String sql = @"SELECT categoryid
+                                , categoryname
+                            FROM categories";
+                DataSet ds = DBUtility.ExecuteQuery(sql);
+                return ds;
             }
-            return null;
-        }
-
-        public Category GetCategory(int id)
-        {
-            MySqlConnection cnn = DBUtility.getConnection();
-            return null;
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
         }
     }
 }

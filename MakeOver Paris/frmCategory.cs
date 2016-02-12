@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MakeOver_Paris.DAO;
+using MakeOver_Paris.DTO;
+using System.Collections;
 
 namespace MakeOver_Paris
 {
@@ -19,34 +22,10 @@ namespace MakeOver_Paris
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //ArrayList categories = new CategoryDAO().GetAllCategories();
+            //addToGrid(categories);
             
-            MakeOver_Paris.DAO.InvoiceDAO dao = new MakeOver_Paris.DAO.InvoiceDAO();
-            MakeOver_Paris.DTO.Invoice inv = new MakeOver_Paris.DTO.Invoice();
-            System.Collections.ArrayList arr = new System.Collections.ArrayList();
-
-            for (int i = 0; i < 3; i++)
-            {
-                MakeOver_Paris.DTO.InvoiceDetail detail = new MakeOver_Paris.DTO.InvoiceDetail();
-                MakeOver_Paris.DTO.Product p = new MakeOver_Paris.DTO.Product();
-                p.Productid = 20+i;
-                detail.Product = p;
-                detail.Pricein = 100;
-                detail.Priceout = 1000;
-                detail.Quantity = 11;
-                arr.Add(detail);
-            }
-
-            MakeOver_Paris.DTO.Member m = new DTO.Member();
-            m.Memberid = 1;
-
-            DTO.Staff s = new DTO.Staff();
-            s.Staffid = 2;
-
-            inv.Member = m;
-            inv.Staff = s;
-            inv.InvoiceDetail = arr;
-
-            dao.addInvoice(inv);
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -95,6 +74,37 @@ namespace MakeOver_Paris
             frm.Show();
         }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        /*
+         * Enter key event when adding product 
+         */
+
+        private void txtName_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+        }
+
+        /*
+         * Add data to gridview
+         */
+
+        private void addToGrid(ArrayList categories)
+        {
+
+            for (int i = 0; i < categories.Count; i++)
+            {
+                Category category = (Category)categories[i];
+                categoryGV.Rows.Add(category.Categoryid, category.Categoryname);
+            }
+            
+         
+        }
+
+       
        
     }
 }

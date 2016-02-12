@@ -48,7 +48,6 @@
             this.pnlSplashScreen.Name = "pnlSplashScreen";
             this.pnlSplashScreen.Size = new System.Drawing.Size(1184, 303);
             this.pnlSplashScreen.TabIndex = 0;
-            this.pnlSplashScreen.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSplashScreen_Paint);
             // 
             // label3
             // 
@@ -82,7 +81,6 @@
             this.label2.Size = new System.Drawing.Size(474, 65);
             this.label2.TabIndex = 1;
             this.label2.Text = "Make Over Paris Shop";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -94,7 +92,6 @@
             this.label1.Size = new System.Drawing.Size(757, 86);
             this.label1.TabIndex = 0;
             this.label1.Text = "POS Management System";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // frmSplash
             // 

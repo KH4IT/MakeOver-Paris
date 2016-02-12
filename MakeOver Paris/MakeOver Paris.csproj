@@ -64,6 +64,78 @@
     <Compile Include="DTO\Setting.cs" />
     <Compile Include="DTO\Staff.cs" />
     <Compile Include="DTO\Transaction.cs" />
+    <Compile Include="Forms\Category\FrmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Category\FrmCategory.Designer.cs">
+      <DependentUpon>FrmCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmSplash.Designer.cs">
+      <DependentUpon>FrmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Member\FrmAddMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Member\FrmAddMember.Designer.cs">
+      <DependentUpon>FrmAddMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Member\FrmMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Member\FrmMembers.designer.cs">
+      <DependentUpon>FrmMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Member\FrmUpdateMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Member\FrmUpdateMember.designer.cs">
+      <DependentUpon>FrmUpdateMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Product\FrmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Product\FrmProduct.Designer.cs">
+      <DependentUpon>FrmProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sale\FrmSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sale\FrmSale.Designer.cs">
+      <DependentUpon>FrmSale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Setting\FrmSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Setting\FrmSetting.Designer.cs">
+      <DependentUpon>FrmSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Staff\FrmStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Staff\FrmStaff.Designer.cs">
+      <DependentUpon>FrmStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transaction\frmTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transaction\frmTransaction.Designer.cs">
+      <DependentUpon>frmTransaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmParent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +198,43 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility.cs" />
+    <EmbeddedResource Include="Forms\Category\FrmCategory.resx">
+      <DependentUpon>FrmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmSplash.resx">
+      <DependentUpon>FrmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Member\FrmAddMember.resx">
+      <DependentUpon>FrmAddMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Member\FrmMembers.resx">
+      <DependentUpon>FrmMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Member\FrmUpdateMember.resx">
+      <DependentUpon>FrmUpdateMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Product\FrmProduct.resx">
+      <DependentUpon>FrmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sale\FrmSale.resx">
+      <DependentUpon>FrmSale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Setting\FrmSetting.resx">
+      <DependentUpon>FrmSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Staff\FrmStaff.resx">
+      <DependentUpon>FrmStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transaction\frmTransaction.resx">
+      <DependentUpon>frmTransaction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmParent.resx">
       <DependentUpon>frmParent.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +291,7 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="images\logo.png" />
+    <None Include="Resources\shop.png" />
     <None Include="Resources\User-icon1.png" />
     <None Include="Resources\settings_big_1x.png" />
     <None Include="Resources\vuthea.png" />

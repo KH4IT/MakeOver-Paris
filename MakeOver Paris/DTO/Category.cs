@@ -21,6 +21,11 @@ namespace MakeOver_Paris.DTO
             this.categoryid = categoryid;
             this.categoryname = categoryName;
         }
+
+        public Category(String categoryName)
+        {
+            this.categoryname = categoryName;
+        }
         public int Categoryid
         {
             get { return categoryid; }

@@ -30,25 +30,29 @@ namespace MakeOver_Paris.DAO
                     MySqlTransaction transaction = cnn.BeginTransaction();
                     try
                     {
-                        String sql = @"INSERT INTO members 
+                        String sql = @"INSERT INTO members(
+                                              membername
+                                            , membercode
+                                            , phonenumber
+                                            , createddate
+                                            , createdby
+                                            , discountrate)             
                                        VALUES(@memberName
                                             , @memberCode
                                             , @phoneNumber
-                                            , @createdDate
+                                            , NOW()
                                             , @createdBy
-                                            , @updatedDate
-                                            , @updatedBy
                                             , @discountRate)";
                         MySqlCommand cmd = new MySqlCommand(sql, cnn);
                         cmd.Prepare();
                         cmd.Parameters.AddWithValue("@memberName", member.Membername);
                         cmd.Parameters.AddWithValue("@memberCode", member.MemberCode);
                         cmd.Parameters.AddWithValue("@phoneNumber", member.Phonenumber);
-                        cmd.Parameters.AddWithValue("@createdDate", member.Createddate);
-                        cmd.Parameters.AddWithValue("@createdBy", member.Createdby);
-                        cmd.Parameters.AddWithValue("@updatedDate", member.Updateddate);
-                        cmd.Parameters.AddWithValue("@updatedBy", member.Updatedby);
-                        cmd.Parameters.AddWithValue("@discountRete", member.Discountrate);
+                        //cmd.Parameters.AddWithValue("@createdDate", member.Createddate);
+                        cmd.Parameters.AddWithValue("@createdBy", member.Createdby.Staffid);
+                        //cmd.Parameters.AddWithValue("@updatedDate", member.Updateddate);
+                        //.Parameters.AddWithValue("@updatedBy", member.Updatedby);
+                        cmd.Parameters.AddWithValue("@discountRate", member.Discountrate);
                         int result = cmd.ExecuteNonQuery();
                         transaction.Commit();
                         if (result != 0)
@@ -63,6 +67,7 @@ namespace MakeOver_Paris.DAO
                     catch (Exception ex)
                     {
                         Console.WriteLine(ex.ToString());
+                        
                         transaction.Rollback();
                     }
                     finally
@@ -87,11 +92,11 @@ namespace MakeOver_Paris.DAO
                                 SET membername = @p1
                                     , membercode = @p2
                                     , phonenumber = @p3
-                                    , updateddate = @p4
-                                    , updatedby = @p5
-                                    , discountrate = @p6
-                                WHERE memberid = @p7";
-                return DBUtility.ExecuteNonQuery(sql, member.Membername, member.MemberCode, member.Phonenumber, member.Updateddate, member.Updatedby, member.Discountrate, member.Memberid);
+                                    , updateddate = NOW()
+                                    , updatedby = @p4
+                                    , discountrate = @p5
+                                WHERE memberid = @p6";
+                return DBUtility.ExecuteNonQuery(sql, member.Membername, member.MemberCode, member.Phonenumber, member.Updatedby.Staffid, member.Discountrate, member.Memberid);
             }
             catch (Exception ex)
             {
@@ -188,5 +193,33 @@ namespace MakeOver_Paris.DAO
                 return null;
             }
         }
+
+        // TODO: TO GET ALL MEMBERS WITH DATASET
+        public DataSet getAllMembersWithDataSet()
+        {
+            try
+            {
+                List<Member> members = new List<Member>();
+                String sql = @"SELECT memberid
+                                , membercode
+                                , membername
+                                , phonenumber
+                                , discountrate
+                                , createddate
+                                , (SELECT staffname FROM staffs WHERE staffs.staffid = members.createdby) AS createdby
+                                , updateddate
+                                , (SELECT staffname FROM staffs WHERE staffs.staffid = members.updatedby) AS updatedby
+                               
+                            FROM members";
+                DataSet ds = DBUtility.ExecuteQuery(sql);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+        }
+
     }
 }
