@@ -22,8 +22,8 @@ namespace MakeOver_Paris
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ArrayList categories = new CategoryDAO().GetAllCategories();
-            addToGrid(categories);
+            //ArrayList categories = new CategoryDAO().GetAllCategories();
+            //addToGrid(categories);
             
             
         }
@@ -76,25 +76,7 @@ namespace MakeOver_Paris
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtName.Text == "")
-            {
-                MessageBox.Show("Can not empty");
-            }
-            else
-            {
-                Category category = new Category(txtName.Text);
-                if (new CategoryDAO().AddCategory(category))
-                {
-                    txtName.Clear();
-                    categoryGV.Rows.Clear();
-                    ArrayList categories = new CategoryDAO().GetAllCategories();
-                    addToGrid(categories);
-                }
-                else
-                {
-                    MessageBox.Show("Transaction fail!!!");
-                }
-            }
+            
         }
 
         /*
@@ -103,10 +85,7 @@ namespace MakeOver_Paris
 
         private void txtName_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-               btnSave_Click(sender, e);
-            }
+           
         }
 
         /*

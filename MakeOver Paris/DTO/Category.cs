@@ -16,6 +16,12 @@ namespace MakeOver_Paris.DTO
 
         }
 
+        public Category(int categoryid, String categoryName)
+        {
+            this.categoryid = categoryid;
+            this.categoryname = categoryName;
+        }
+
         public Category(String categoryName)
         {
             this.categoryname = categoryName;

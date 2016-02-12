@@ -76,5 +76,10 @@ namespace MakeOver_Paris.Forms.Member
             frmMain.Show();
             this.Close();
         }
+
+        private void dgvMember_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MakeOver_Paris.DTO;
 using MySql.Data.MySqlClient;
 using System.Collections;
+using System.Data;
 
 /*
  * BUNRONG LEANG
@@ -106,7 +107,7 @@ namespace MakeOver_Paris.DAO
             }
             return false;
         }
-
+/*
         public ArrayList GetAllCategories()
         {
             MySqlConnection cnn = DBUtility.getConnection();
@@ -139,6 +140,24 @@ namespace MakeOver_Paris.DAO
                 }
             }
             return null;
+        }
+        */
+        public DataSet GetAllCategories()
+        {
+            try
+            {
+                List<Member> members = new List<Member>();
+                String sql = @"SELECT categoryid
+                                , categoryname
+                            FROM categories";
+                DataSet ds = DBUtility.ExecuteQuery(sql);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
         }
 
         public Category GetCategory(int id)
