@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MakeOver_Paris
 {
@@ -27,6 +28,22 @@ namespace MakeOver_Paris
             for (int i = 0; i < headers.Length; i++)
             {
                 grid.Columns[i].Width = System.Convert.ToInt32(headers[i]);
+            }
+        }
+
+        // ALLOW ONLY NUMBER AND DOT SIGN
+        public static void AllowOnlyDecimalNumber(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if (e.KeyChar == '.'
+                && (sender as TextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true;
             }
         }
     }

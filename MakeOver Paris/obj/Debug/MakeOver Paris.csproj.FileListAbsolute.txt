@@ -108,3 +108,15 @@ C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver P
 C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Setting.FrmSetting.resources
 C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Staff.FrmStaff.resources
 C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Transaction.frmTransaction.resources
+C:\Users\EAGLESBR\Desktop\Microsoft Project\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Category.FrmCategory.resources
+C:\Users\EAGLESBR\Desktop\Microsoft Project\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.FrmLogin.resources
+C:\Users\EAGLESBR\Desktop\Microsoft Project\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.FrmMain.resources
+C:\Users\EAGLESBR\Desktop\Microsoft Project\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.FrmSplash.resources
+C:\Users\EAGLESBR\Desktop\Microsoft Project\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Member.FrmAddMember.resources
+C:\Users\EAGLESBR\Desktop\Microsoft Project\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Member.FrmMembers.resources
+C:\Users\EAGLESBR\Desktop\Microsoft Project\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Member.FrmUpdateMember.resources
+C:\Users\EAGLESBR\Desktop\Microsoft Project\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Product.FrmProduct.resources
+C:\Users\EAGLESBR\Desktop\Microsoft Project\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.FrmSale.resources
+C:\Users\EAGLESBR\Desktop\Microsoft Project\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Setting.FrmSetting.resources
+C:\Users\EAGLESBR\Desktop\Microsoft Project\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Staff.FrmStaff.resources
+C:\Users\EAGLESBR\Desktop\Microsoft Project\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Transaction.frmTransaction.resources
