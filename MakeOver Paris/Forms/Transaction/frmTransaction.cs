@@ -17,5 +17,12 @@ namespace MakeOver_Paris.Forms.Transaction
             InitializeComponent();
         }
 
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Forms.FrmMain frmMain = new Forms.FrmMain();
+            frmMain.Show();
+            this.Close();
+        }
+
     }
 }

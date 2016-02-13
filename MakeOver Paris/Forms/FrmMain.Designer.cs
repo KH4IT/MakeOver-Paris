@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnMain = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSale = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
             this.btnSetting = new System.Windows.Forms.Button();
@@ -40,7 +41,7 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnTransaction = new System.Windows.Forms.Button();
             this.pnMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,6 +49,7 @@
             // pnMain
             // 
             this.pnMain.AutoSize = true;
+            this.pnMain.Controls.Add(this.btnTransaction);
             this.pnMain.Controls.Add(this.pictureBox1);
             this.pnMain.Controls.Add(this.btnSale);
             this.pnMain.Controls.Add(this.btnProduct);
@@ -65,6 +67,17 @@
             this.pnMain.Size = new System.Drawing.Size(1306, 660);
             this.pnMain.TabIndex = 14;
             this.pnMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnMain_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MakeOver_Paris.Properties.Resources.shop;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(57, 67);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 41;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.WaitOnLoad = true;
             // 
             // btnSale
             // 
@@ -213,16 +226,21 @@
             this.Label2.TabIndex = 14;
             this.Label2.Text = "Version 1.0";
             // 
-            // pictureBox1
+            // btnTransaction
             // 
-            this.pictureBox1.Image = global::MakeOver_Paris.Properties.Resources.shop;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 41;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.WaitOnLoad = true;
+            this.btnTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnTransaction.FlatAppearance.BorderSize = 0;
+            this.btnTransaction.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
+            this.btnTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransaction.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransaction.ForeColor = System.Drawing.Color.White;
+            this.btnTransaction.Location = new System.Drawing.Point(656, 284);
+            this.btnTransaction.Name = "btnTransaction";
+            this.btnTransaction.Size = new System.Drawing.Size(290, 108);
+            this.btnTransaction.TabIndex = 42;
+            this.btnTransaction.Text = "ប្រតិបត្តិការ";
+            this.btnTransaction.UseVisualStyleBackColor = false;
+            this.btnTransaction.Click += new System.EventHandler(this.btnTransaction_Click);
             // 
             // FrmMain
             // 
@@ -259,5 +277,6 @@
         internal System.Windows.Forms.Button btnProduct;
         internal System.Windows.Forms.Button btnSale;
         private System.Windows.Forms.PictureBox pictureBox1;
+        internal System.Windows.Forms.Button btnTransaction;
     }
 }

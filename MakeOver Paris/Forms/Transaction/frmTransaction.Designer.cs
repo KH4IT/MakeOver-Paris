@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSave = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtExpenseAmount = new System.Windows.Forms.TextBox();
             this.btnDelete = new System.Windows.Forms.Button();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtIncomeAmount = new System.Windows.Forms.TextBox();
             this.Panel1 = new System.Windows.Forms.Panel();
             this.Panel2 = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.PictureBox();
@@ -45,14 +48,15 @@
             this.Panel4 = new System.Windows.Forms.Panel();
             this.Label2 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.dgvCategory = new System.Windows.Forms.DataGridView();
+            this.dgvTransaction = new System.Windows.Forms.DataGridView();
+            this.txtRemark = new System.Windows.Forms.TextBox();
             this.panel6.SuspendLayout();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.Panel5.SuspendLayout();
             this.Panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
@@ -81,27 +85,63 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.label3.Location = new System.Drawing.Point(102, 17);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 19);
+            this.label3.Size = new System.Drawing.Size(139, 19);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Name:";
+            this.label3.Text = "Income Amount:";
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.txtRemark);
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Controls.Add(this.label4);
+            this.panel6.Controls.Add(this.txtExpenseAmount);
             this.panel6.Controls.Add(this.btnDelete);
             this.panel6.Controls.Add(this.btnSave);
             this.panel6.Controls.Add(this.label3);
-            this.panel6.Controls.Add(this.txtName);
+            this.panel6.Controls.Add(this.txtIncomeAmount);
             this.panel6.Location = new System.Drawing.Point(4, 5);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1001, 197);
             this.panel6.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label5.Location = new System.Drawing.Point(102, 83);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 19);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Remark:";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label4.Location = new System.Drawing.Point(102, 50);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(143, 19);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "Expense Amount:";
+            // 
+            // txtExpenseAmount
+            // 
+            this.txtExpenseAmount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtExpenseAmount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtExpenseAmount.Location = new System.Drawing.Point(247, 46);
+            this.txtExpenseAmount.Name = "txtExpenseAmount";
+            this.txtExpenseAmount.Size = new System.Drawing.Size(431, 27);
+            this.txtExpenseAmount.TabIndex = 20;
             // 
             // btnDelete
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDelete.BackColor = System.Drawing.Color.Red;
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDelete.Enabled = false;
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -115,14 +155,14 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             // 
-            // txtName
+            // txtIncomeAmount
             // 
-            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(178, 12);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(300, 27);
-            this.txtName.TabIndex = 3;
+            this.txtIncomeAmount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtIncomeAmount.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIncomeAmount.Location = new System.Drawing.Point(247, 13);
+            this.txtIncomeAmount.Name = "txtIncomeAmount";
+            this.txtIncomeAmount.Size = new System.Drawing.Size(431, 27);
+            this.txtIncomeAmount.TabIndex = 3;
             // 
             // Panel1
             // 
@@ -158,6 +198,7 @@
             this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnBack.TabIndex = 1;
             this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // Label1
             // 
@@ -212,7 +253,7 @@
             this.Panel4.Controls.Add(this.panel6);
             this.Panel4.Controls.Add(this.Label2);
             this.Panel4.Controls.Add(this.txtSearch);
-            this.Panel4.Controls.Add(this.dgvCategory);
+            this.Panel4.Controls.Add(this.dgvTransaction);
             this.Panel4.ForeColor = System.Drawing.Color.White;
             this.Panel4.Location = new System.Drawing.Point(8, 77);
             this.Panel4.Name = "Panel4";
@@ -240,35 +281,45 @@
             this.txtSearch.Size = new System.Drawing.Size(300, 27);
             this.txtSearch.TabIndex = 1;
             // 
-            // dgvCategory
+            // dgvTransaction
             // 
-            this.dgvCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvCategory.BackgroundColor = System.Drawing.Color.White;
-            this.dgvCategory.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.HotPink;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCategory.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvCategory.Location = new System.Drawing.Point(5, 280);
-            this.dgvCategory.Name = "dgvCategory";
-            this.dgvCategory.ReadOnly = true;
-            this.dgvCategory.RowHeadersVisible = false;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            this.dgvCategory.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvCategory.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvCategory.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.dgvCategory.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
-            this.dgvCategory.RowTemplate.Height = 30;
-            this.dgvCategory.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCategory.Size = new System.Drawing.Size(1000, 376);
-            this.dgvCategory.TabIndex = 0;
+            this.dgvTransaction.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvTransaction.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTransaction.BackgroundColor = System.Drawing.Color.White;
+            this.dgvTransaction.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.HotPink;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTransaction.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvTransaction.Location = new System.Drawing.Point(5, 280);
+            this.dgvTransaction.Name = "dgvTransaction";
+            this.dgvTransaction.ReadOnly = true;
+            this.dgvTransaction.RowHeadersVisible = false;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            this.dgvTransaction.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvTransaction.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvTransaction.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.dgvTransaction.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.dgvTransaction.RowTemplate.Height = 30;
+            this.dgvTransaction.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTransaction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvTransaction.Size = new System.Drawing.Size(1000, 376);
+            this.dgvTransaction.TabIndex = 0;
+            // 
+            // txtRemark
+            // 
+            this.txtRemark.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtRemark.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRemark.Location = new System.Drawing.Point(247, 83);
+            this.txtRemark.Multiline = true;
+            this.txtRemark.Name = "txtRemark";
+            this.txtRemark.Size = new System.Drawing.Size(431, 95);
+            this.txtRemark.TabIndex = 24;
             // 
             // frmTransaction
             // 
@@ -289,7 +340,7 @@
             this.Panel5.ResumeLayout(false);
             this.Panel4.ResumeLayout(false);
             this.Panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -310,7 +361,11 @@
         internal System.Windows.Forms.Panel Panel4;
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.TextBox txtSearch;
-        internal System.Windows.Forms.DataGridView dgvCategory;
-        internal System.Windows.Forms.TextBox txtName;
+        internal System.Windows.Forms.DataGridView dgvTransaction;
+        internal System.Windows.Forms.TextBox txtIncomeAmount;
+        internal System.Windows.Forms.Label label5;
+        internal System.Windows.Forms.Label label4;
+        internal System.Windows.Forms.TextBox txtExpenseAmount;
+        internal System.Windows.Forms.TextBox txtRemark;
     }
 }

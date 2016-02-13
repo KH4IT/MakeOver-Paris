@@ -118,11 +118,6 @@ namespace MakeOver_Paris.Forms.Category
             
         }
 
-        private void dgvCategory_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             BindingSource bs = new BindingSource();

@@ -126,5 +126,12 @@ namespace MakeOver_Paris.Forms
             frmSale.Show();
             this.Close();
         }
+
+        private void btnTransaction_Click(object sender, EventArgs e)
+        {
+            Forms.Transaction.frmTransaction frmTransaction = new Forms.Transaction.frmTransaction();
+            frmTransaction.Show();
+            this.Close();
+        }
     }
 }

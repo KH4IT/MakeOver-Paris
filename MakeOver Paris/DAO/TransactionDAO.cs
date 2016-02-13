@@ -74,9 +74,9 @@ namespace MakeOver_Paris.DAO
 											incomeamount = @incomeamount
 											, expenseamount = @expenseamount
 											, createdby = @createdby
-											, remark = @remark"
+											, remark = @remark
 										WHERE
-											transactionid = @transactionid;
+											transactionid = @transactionid;";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
                     command.Parameters.AddWithValue("@incomeamount", transaction.Incomeamount);
