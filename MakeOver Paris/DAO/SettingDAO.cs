@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 using MakeOver_Paris.DTO;
 using MySql.Data.MySqlClient;
 using System.Collections;
+using System.Data;
 
 namespace MakeOver_Paris.DAO
 {
-    class SettingDAO
+    class SettingDao
     {
         public bool addSetting(Setting setting)
         {
@@ -24,7 +25,7 @@ namespace MakeOver_Paris.DAO
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
                     command.Parameters.AddWithValue("@title", setting.Title);
-                    command.Parameters.AddWithValue("@title", setting.Value);
+                    command.Parameters.AddWithValue("@value", setting.Value);
                     if (command.ExecuteNonQuery() > 0)
                     {
                         transaction.Commit();
@@ -104,6 +105,21 @@ namespace MakeOver_Paris.DAO
             return false;
         }
 
+        public DataSet getAllSettingDS()
+        {
+            try
+            {
+                String sql = @"SELECT settingid, title , value FROM settings;";
+                DataSet ds = DBUtility.ExecuteQuery(sql);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+        }
+
         public ArrayList getAllSetting()
         {
             MySqlConnection cnn = DBUtility.getConnection();
@@ -174,5 +190,6 @@ namespace MakeOver_Paris.DAO
             }
             return null;
         }
+
     }
 }

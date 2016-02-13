@@ -9,9 +9,8 @@ using System.Collections;
 
 namespace MakeOver_Paris.DAO
 {
-    class ProductDAO
+    class ProductDao
     {
-
         public bool addProduct(Product product)
         {
             MySqlConnection cnn = DBUtility.getConnection();
