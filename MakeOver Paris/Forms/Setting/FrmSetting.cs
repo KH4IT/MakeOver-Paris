@@ -26,6 +26,7 @@ namespace MakeOver_Paris.Forms.Setting
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("Title can't be empty");
             Forms.FrmMain frmMain = new Forms.FrmMain();
             frmMain.Show();
             this.Close();
