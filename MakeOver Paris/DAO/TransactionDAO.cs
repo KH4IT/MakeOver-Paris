@@ -7,6 +7,7 @@ using MakeOver_Paris.DTO;
 using MySql.Data.MySqlClient;
 using System.Collections;
 using System.Data;
+using System.Windows.Forms;
 
 namespace MakeOver_Paris.DAO
 {
@@ -23,13 +24,15 @@ namespace MakeOver_Paris.DAO
                 {
                     const string SQL = @"INSERT INTO 
 											transactions(
-												incomeamount
+                                                transactiondate
+												, incomeamount
 												, expenseamount
 												, createdby
 												, remark
 											) 
 										VALUES(
-											@incomeamount
+											CURRENT_TIMESTAMP()
+                                            , @incomeamount
 											, @expenseamount
 											, @createdby
 											, @remark
@@ -38,17 +41,19 @@ namespace MakeOver_Paris.DAO
                     command.Prepare();
                     command.Parameters.AddWithValue("@incomeamount", transaction.Incomeamount);
 					command.Parameters.AddWithValue("@expenseamount", transaction.Expenseamount);
-					command.Parameters.AddWithValue("@createdby", transaction.Createdby);
+					command.Parameters.AddWithValue("@createdby", transaction.Createdby.Staffid);
 					command.Parameters.AddWithValue("@remark", transaction.Remark);
                     if (command.ExecuteNonQuery() > 0)
                     {
                         tran.Commit();
+                      //  MessageBox.Show("True");
                         return true;
                     }
                 }
                 catch (MySqlException e)
                 {
                     Console.WriteLine(e);
+                    MessageBox.Show(e.ToString());
                     tran.Rollback();
                 }
                 finally
@@ -81,7 +86,7 @@ namespace MakeOver_Paris.DAO
                     command.Prepare();
                     command.Parameters.AddWithValue("@incomeamount", transaction.Incomeamount);
 					command.Parameters.AddWithValue("@expenseamount", transaction.Expenseamount);
-					command.Parameters.AddWithValue("@createdby", transaction.Createdby);
+					command.Parameters.AddWithValue("@createdby", transaction.Createdby.Staffid);
 					command.Parameters.AddWithValue("@remark", transaction.Remark);
 					command.Parameters.AddWithValue("@transactionid", transaction.Transactionid);
                     if (command.ExecuteNonQuery() > 0)

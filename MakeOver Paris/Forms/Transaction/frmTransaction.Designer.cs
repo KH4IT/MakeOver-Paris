@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSave = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -47,6 +47,8 @@
             this.Panel5 = new System.Windows.Forms.Panel();
             this.btnMemberList = new System.Windows.Forms.Button();
             this.Panel4 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtSearchByDate = new System.Windows.Forms.TextBox();
             this.Label2 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvTransaction = new System.Windows.Forms.DataGridView();
@@ -74,7 +76,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 30);
             this.btnSave.TabIndex = 18;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "រក្សាទុក";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -86,9 +88,9 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.label3.Location = new System.Drawing.Point(102, 17);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 19);
+            this.label3.Size = new System.Drawing.Size(87, 19);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Income Amount:";
+            this.label3.Text = "ប្រាក់ចំណូល:";
             // 
             // panel6
             // 
@@ -123,9 +125,9 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.label5.Location = new System.Drawing.Point(102, 83);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 19);
+            this.label5.Size = new System.Drawing.Size(100, 19);
             this.label5.TabIndex = 23;
-            this.label5.Text = "Remark:";
+            this.label5.Text = "ការកត់សម្គាល់:";
             // 
             // label4
             // 
@@ -135,9 +137,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.label4.Location = new System.Drawing.Point(102, 50);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(143, 19);
+            this.label4.Size = new System.Drawing.Size(96, 19);
             this.label4.TabIndex = 21;
-            this.label4.Text = "Expense Amount:";
+            this.label4.Text = "ប្រាក់ចំណាយ :";
             // 
             // txtExpenseAmount
             // 
@@ -147,12 +149,16 @@
             this.txtExpenseAmount.Name = "txtExpenseAmount";
             this.txtExpenseAmount.Size = new System.Drawing.Size(431, 27);
             this.txtExpenseAmount.TabIndex = 20;
+            this.txtExpenseAmount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtExpenseAmount_KeyDown);
+            this.txtExpenseAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExpenseAmount_KeyPress);
+            this.txtExpenseAmount.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtExpenseAmount_KeyUp);
             // 
             // btnDelete
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDelete.BackColor = System.Drawing.Color.Red;
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDelete.Enabled = false;
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -165,6 +171,8 @@
             this.btnDelete.TabIndex = 19;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Visible = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // txtIncomeAmount
             // 
@@ -174,6 +182,9 @@
             this.txtIncomeAmount.Name = "txtIncomeAmount";
             this.txtIncomeAmount.Size = new System.Drawing.Size(431, 27);
             this.txtIncomeAmount.TabIndex = 3;
+            this.txtIncomeAmount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtIncomeAmount_KeyDown);
+            this.txtIncomeAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIncomeAmount_KeyPress);
+            this.txtIncomeAmount.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtIncomeAmount_KeyUp);
             // 
             // Panel1
             // 
@@ -217,9 +228,9 @@
             this.Label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.Location = new System.Drawing.Point(62, 12);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(321, 30);
+            this.Label1.Size = new System.Drawing.Size(249, 30);
             this.Label1.TabIndex = 1;
-            this.Label1.Text = "Transaction Management";
+            this.Label1.Text = "ការគ្រប់គ្រងប្រតិបត្តិការ";
             // 
             // Panel3
             // 
@@ -253,14 +264,16 @@
             this.btnMemberList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMemberList.Location = new System.Drawing.Point(0, 0);
             this.btnMemberList.Name = "btnMemberList";
-            this.btnMemberList.Size = new System.Drawing.Size(216, 30);
+            this.btnMemberList.Size = new System.Drawing.Size(128, 30);
             this.btnMemberList.TabIndex = 1;
-            this.btnMemberList.Text = "Category Information &List";
+            this.btnMemberList.Text = "បញ្ជីប្រតិបត្តិការ";
             this.btnMemberList.UseVisualStyleBackColor = false;
             // 
             // Panel4
             // 
             this.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Panel4.Controls.Add(this.label6);
+            this.Panel4.Controls.Add(this.txtSearchByDate);
             this.Panel4.Controls.Add(this.panel6);
             this.Panel4.Controls.Add(this.Label2);
             this.Panel4.Controls.Add(this.txtSearch);
@@ -271,27 +284,48 @@
             this.Panel4.Size = new System.Drawing.Size(1008, 659);
             this.Panel4.TabIndex = 4;
             // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label6.Location = new System.Drawing.Point(492, 251);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(183, 19);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "ការស្វែងរកតាមកាលបរិច្ឆេទ:";
+            // 
+            // txtSearchByDate
+            // 
+            this.txtSearchByDate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSearchByDate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchByDate.Location = new System.Drawing.Point(681, 247);
+            this.txtSearchByDate.Name = "txtSearchByDate";
+            this.txtSearchByDate.Size = new System.Drawing.Size(300, 27);
+            this.txtSearchByDate.TabIndex = 6;
+            // 
             // Label2
             // 
             this.Label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.Label2.Location = new System.Drawing.Point(41, 251);
+            this.Label2.Location = new System.Drawing.Point(34, 251);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(67, 19);
+            this.Label2.Size = new System.Drawing.Size(141, 19);
             this.Label2.TabIndex = 2;
-            this.Label2.Text = "Search:";
+            this.Label2.Text = "ការស្វែងរកតាមឈ្មោះ:";
             // 
             // txtSearch
             // 
             this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(128, 247);
+            this.txtSearch.Location = new System.Drawing.Point(182, 247);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(300, 27);
             this.txtSearch.TabIndex = 1;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearchByName_TextChanged);
             // 
             // dgvTransaction
             // 
@@ -300,20 +334,20 @@
             this.dgvTransaction.BackgroundColor = System.Drawing.Color.White;
             this.dgvTransaction.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.HotPink;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTransaction.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.HotPink;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTransaction.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvTransaction.Location = new System.Drawing.Point(5, 280);
             this.dgvTransaction.Name = "dgvTransaction";
             this.dgvTransaction.ReadOnly = true;
             this.dgvTransaction.RowHeadersVisible = false;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            this.dgvTransaction.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            this.dgvTransaction.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvTransaction.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvTransaction.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.dgvTransaction.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
@@ -322,6 +356,7 @@
             this.dgvTransaction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTransaction.Size = new System.Drawing.Size(1000, 376);
             this.dgvTransaction.TabIndex = 0;
+            this.dgvTransaction.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellDoubleClick);
             // 
             // frmTransaction
             // 
@@ -372,5 +407,7 @@
         internal System.Windows.Forms.Label label4;
         internal System.Windows.Forms.TextBox txtExpenseAmount;
         internal System.Windows.Forms.TextBox txtRemark;
+        internal System.Windows.Forms.Label label6;
+        internal System.Windows.Forms.TextBox txtSearchByDate;
     }
 }

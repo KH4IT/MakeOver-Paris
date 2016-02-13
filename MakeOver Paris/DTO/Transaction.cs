@@ -55,6 +55,14 @@ namespace MakeOver_Paris.DTO
 
         public Transaction() { }
 
+        public Transaction(decimal incomeamount, decimal expenseamount, Staff createdby, string remark)
+        {
+            this.incomeamount = incomeamount;
+            this.expenseamount = expenseamount;
+            this.createdby = createdby;
+            this.remark = remark;
+        }
+
         public Transaction(int transactionid, DateTime transactiondate, decimal incomeamount, decimal expenseamount, Staff createdby, string remark)
         {
             this.transactionid = transactionid;
