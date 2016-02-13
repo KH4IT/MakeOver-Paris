@@ -26,7 +26,13 @@ namespace MakeOver_Paris.DAO
                 MySqlTransaction transaction = cnn.BeginTransaction();
                 try
                 {
-                    const string SQL = "INSERT INTO categories(categoryname) VALUES(@categoryname)";
+                    const string SQL = @"INSERT INTO 
+											categories(
+												categoryname
+											) 
+										VALUES(
+											@categoryname
+										);";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
                     command.Parameters.AddWithValue("@categoryname", category.Categoryname);
@@ -57,7 +63,10 @@ namespace MakeOver_Paris.DAO
                 try
                 {
                     cnn.Open();
-                    const string SQL = "DELETE FROM categories WHERE categoryid = @categoryid";
+                    const string SQL = @"DELETE FROM 
+											categories 
+										WHERE 
+											categoryid = @categoryid";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
                     command.Parameters.AddWithValue("@categoryid", categoryId);
@@ -86,7 +95,12 @@ namespace MakeOver_Paris.DAO
                 try
                 {
                     cnn.Open();
-                    const string SQL = "UPDATE categories SET categoryname = @categoryname WHERE categoryid = @categoryid";
+                    const string SQL = @"UPDATE 
+											categories 
+										SET 
+											categoryname = @categoryname 
+										WHERE 
+											categoryid = @categoryid";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
                     command.Parameters.AddWithValue("@categoryname", category.Categoryname);
@@ -107,41 +121,7 @@ namespace MakeOver_Paris.DAO
             }
             return false;
         }
-/*
-        public ArrayList GetAllCategories()
-        {
-            MySqlConnection cnn = DBUtility.getConnection();
-            if (cnn != null)
-            {
-                try
-                {
-                    cnn.Open();
-                    const string SQL = "SELECT categoryid, categoryname FROM categories;";
-                    MySqlCommand command = new MySqlCommand(SQL, cnn);
-                    MySqlDataReader reader = command.ExecuteReader();
-                    ArrayList categories = new ArrayList();
-                    Category category = null;
-                    while(reader.Read())
-                    {
-                        category = new Category();
-                        category.Categoryid = reader.GetInt16("categoryid");
-                        category.Categoryname = reader.GetString("categoryname");
-                        categories.Add(category);
-                    }
-                    return categories;
-                }
-                catch (MySqlException e)
-                {
-                    Console.WriteLine(e);
-                }
-                finally
-                {
-                    cnn.Close();
-                }
-            }
-            return null;
-        }
-        */
+
         public DataSet GetAllCategories()
         {
             try
@@ -158,12 +138,6 @@ namespace MakeOver_Paris.DAO
                 Console.WriteLine(ex.ToString());
                 return null;
             }
-        }
-
-        public Category GetCategory(int id)
-        {
-            MySqlConnection cnn = DBUtility.getConnection();
-            return null;
         }
     }
 }
