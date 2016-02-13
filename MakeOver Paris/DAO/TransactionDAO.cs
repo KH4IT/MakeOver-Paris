@@ -113,9 +113,12 @@ namespace MakeOver_Paris.DAO
                                 , transactiondate
 								, incomeamount
 								, expenseamount
-								, createdby
+								, staffname
 								, remark
-                            FROM transactions";
+                            FROM transactions
+                            INNER JOIN 
+                                staffs
+                            ON staffs.staffid = transactions.createdby";
                 DataSet ds = DBUtility.ExecuteQuery(sql);
                 return ds;
             }

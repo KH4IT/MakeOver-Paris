@@ -66,7 +66,7 @@
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(904, 161);
+            this.btnSave.Location = new System.Drawing.Point(880, 71);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 30);
             this.btnSave.TabIndex = 18;
@@ -80,7 +80,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label3.Location = new System.Drawing.Point(102, 17);
+            this.label3.Location = new System.Drawing.Point(84, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 19);
             this.label3.TabIndex = 4;
@@ -90,7 +90,7 @@
             // 
             this.txtName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(178, 12);
+            this.txtName.Location = new System.Drawing.Point(160, 15);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(300, 27);
             this.txtName.TabIndex = 3;
@@ -104,7 +104,7 @@
             this.panel6.Controls.Add(this.txtName);
             this.panel6.Location = new System.Drawing.Point(4, 5);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1001, 197);
+            this.panel6.Size = new System.Drawing.Size(1001, 112);
             this.panel6.TabIndex = 5;
             // 
             // btnDelete
@@ -119,7 +119,7 @@
             this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(798, 161);
+            this.btnDelete.Location = new System.Drawing.Point(774, 71);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 30);
             this.btnDelete.TabIndex = 19;
@@ -187,7 +187,7 @@
             this.Panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
             this.Panel5.Controls.Add(this.btnMemberList);
-            this.Panel5.Location = new System.Drawing.Point(8, 279);
+            this.Panel5.Location = new System.Drawing.Point(8, 195);
             this.Panel5.Name = "Panel5";
             this.Panel5.Size = new System.Drawing.Size(1007, 30);
             this.Panel5.TabIndex = 3;
@@ -229,7 +229,7 @@
             this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.Label2.Location = new System.Drawing.Point(41, 251);
+            this.Label2.Location = new System.Drawing.Point(41, 162);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(67, 19);
             this.Label2.TabIndex = 2;
@@ -239,7 +239,7 @@
             // 
             this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(128, 247);
+            this.txtSearch.Location = new System.Drawing.Point(128, 158);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(300, 27);
             this.txtSearch.TabIndex = 1;
@@ -260,7 +260,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCategory.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvCategory.Location = new System.Drawing.Point(5, 280);
+            this.dgvCategory.Location = new System.Drawing.Point(5, 204);
             this.dgvCategory.Name = "dgvCategory";
             this.dgvCategory.ReadOnly = true;
             this.dgvCategory.RowHeadersVisible = false;
@@ -272,7 +272,7 @@
             this.dgvCategory.RowTemplate.Height = 30;
             this.dgvCategory.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCategory.Size = new System.Drawing.Size(1000, 376);
+            this.dgvCategory.Size = new System.Drawing.Size(1000, 452);
             this.dgvCategory.TabIndex = 0;
             this.dgvCategory.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategory_CellDoubleClick);
             // 
