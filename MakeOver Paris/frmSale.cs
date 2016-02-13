@@ -19,82 +19,119 @@ namespace MakeOver_Paris
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-            MakeOver_Paris.DAO.InvoiceDAO dao = new MakeOver_Paris.DAO.InvoiceDAO();
-            MakeOver_Paris.DTO.Invoice inv = new MakeOver_Paris.DTO.Invoice();
-            System.Collections.ArrayList arr = new System.Collections.ArrayList();
-
-            for (int i = 0; i < 3; i++)
-            {
-                MakeOver_Paris.DTO.InvoiceDetail detail = new MakeOver_Paris.DTO.InvoiceDetail();
-                MakeOver_Paris.DTO.Product p = new MakeOver_Paris.DTO.Product();
-                p.Productid = 20+i;
-                detail.Product = p;
-                detail.Pricein = 100;
-                detail.Priceout = 1000;
-                detail.Quantity = 11;
-                arr.Add(detail);
-            }
-
-            MakeOver_Paris.DTO.Member m = new DTO.Member();
-            m.Memberid = 1;
-
-            DTO.Staff s = new DTO.Staff();
-            s.Staffid = 2;
-
-            inv.Member = m;
-            inv.Staff = s;
-            inv.InvoiceDetail = arr;
-
-            dao.addInvoice(inv);
-
             txtCode.Focus();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        int count_enter = 0;
+        private void txtCode_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txtCode.Text != "")
+                {
+                    count_enter = 0;
+                    DTO.Product product = new DAO.ProductDAO().getProduct(int.Parse(txtCode.Text));//replace by productcode as a overload method
+                    addToGrid(product);
+                    txtCode.Clear();
+                }
+                else
+                {
+                    count_enter += 1;
+                }
+                if (count_enter >= 2)
+                {
+                    if (print())
+                    {
+                        grdItems.Rows.Clear();
+                        rpt_saleinvoice rpt = new rpt_saleinvoice();
+                        rpt.SetParameterValue("p_invoiceid", 25);
+
+
+                        //rpt.PrintToPrinter(1, false, 1, 1);
+                    }
+                    count_enter = 0;
+                }
+            }
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void addToGrid(DTO.Product product)
         {
-            Application.Exit();
+            int row = checkInGrid(product.Productid);
+            if (row == -1)
+            {
+                grdItems.Rows.Add(grdItems.RowCount + 1, product.Productname, 1, product.Priceout, product.Priceout, "-", product.Productid, product.Pricein);
+            }
+            else
+            {
+                grdItems.Rows[row].Cells[2].Value = int.Parse(grdItems.Rows[row].Cells[2].Value.ToString())+1;
+            }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private int checkInGrid(int productid)
         {
-            frmMain frm = new frmMain();
-            frm.Show();
+            int row = -1;
+            for (int i = 0; i < grdItems.RowCount; i++)
+            {
+                if (grdItems.Rows[i].Cells[6].Value.ToString() == (productid+""))
+                {
+                    row = i;
+                    break;
+                }
+            }
+            return row;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+
+        private void btnPrint_Click(object sender, EventArgs e)
         {
-            frmProduct frm = new frmProduct();
-            frm.Show();
+            if (print())
+            {
+                grdItems.Rows.Clear();
+                rpt_saleinvoice rpt = new rpt_saleinvoice();
+                rpt.SetParameterValue("p_invoiceid", 25);
+
+
+                //rpt.PrintToPrinter(1, false, 1, 1);
+            }
+            count_enter = 0;
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void grdItems_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmCategory frm = new frmCategory();
-            frm.Show();
+            if(e.ColumnIndex == 5){
+                grdItems.Rows.RemoveAt(e.RowIndex);
+                for(int i = 1; i<grdItems.RowCount; i++){
+                    grdItems.Rows[i - 1].Cells[0].Value = i;
+                }
+            }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private bool print()
         {
-            frmMember frm = new frmMember();
-            frm.Show();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            frmStaff frm = new frmStaff();
-            frm.Show();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            frmSetting frm = new frmSetting();
-            frm.Show();
+            DTO.Invoice invoice = new DTO.Invoice();
+            System.Collections.ArrayList details = new System.Collections.ArrayList();
+            for (int i = 0; i < grdItems.Rows.Count; i++)
+            {
+                DTO.InvoiceDetail d = new DTO.InvoiceDetail();
+                DTO.Product p = new DTO.Product();
+                p.Productid = int.Parse(grdItems.Rows[i].Cells[6].Value.ToString());
+                d.Quantity = int.Parse(grdItems.Rows[i].Cells[2].Value.ToString());
+                d.Priceout = decimal.Parse(grdItems.Rows[i].Cells[3].Value.ToString());
+                d.Pricein = decimal.Parse(grdItems.Rows[i].Cells[7].Value.ToString());
+                d.Product = p;
+                details.Add(d);
+            }
+            Data.user = new DTO.Staff();
+            Data.user.Staffid = 2;
+            DTO.Member member = new DTO.Member();
+            member.Memberid = 1;
+            invoice.Staff = Data.user;
+            invoice.Member = member;
+            invoice.Remark = "";
+            invoice.Discount = 10;
+            invoice.InvoiceDetail = details;
+            return new DAO.InvoiceDAO().addInvoice(invoice);
         }
 
        
