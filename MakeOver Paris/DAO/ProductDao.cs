@@ -6,22 +6,24 @@ using System.Threading.Tasks;
 using MakeOver_Paris.DTO;
 using MySql.Data.MySqlClient;
 using System.Collections;
+using System.Data;
 
 namespace MakeOver_Paris.DAO
 {
-    class ProductDao
+    class ProductDAO
     {
         public bool addProduct(Product product)
         {
             MySqlConnection cnn = DBUtility.getConnection();
             if (cnn != null)
             {
+                cnn.Open();
                 MySqlTransaction transaction = cnn.BeginTransaction();
                 try
                 {
-                    cnn.Open();
-                    const string SQL = "INSERT INTO products VALUES(productcode,barcode,productname,quantity,description,pricein,priceout,returnquantity,remark,createddate,createdby,updateddate,updatedby,categoryid)" +
-                                       "VALUES(@productcode,@barcode,@productname,@quantity,@description,@pricein,@priceout,@returnquantity,@remark,@createddate,@createdby,@updateddate,@updatedby,@categoryid)";
+                   
+                    const string SQL = @"INSERT INTO products (productcode,barcode,productname,quantity,description,pricein,priceout,returnquantity,remark,createdby,categoryid)" +
+                                       "VALUES(@productcode,@barcode,@productname,@quantity,@description,@pricein,@priceout,@returnquantity,@remark,@createdby,@categoryid)";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
                     command.Parameters.AddWithValue("@productcode", product.Productcode);
@@ -33,10 +35,7 @@ namespace MakeOver_Paris.DAO
                     command.Parameters.AddWithValue("@priceout", product.Priceout);
                     command.Parameters.AddWithValue("@returnquantity", product.Returnquantity);
                     command.Parameters.AddWithValue("@remark", product.Remark);
-                    command.Parameters.AddWithValue("@createddate", product.Createddate);
                     command.Parameters.AddWithValue("@createdby", product.Createdby);
-                    command.Parameters.AddWithValue("@updateddate", product.Updateddate);
-                    command.Parameters.AddWithValue("@updatedby", product.Updatedby);
                     command.Parameters.AddWithValue("@categoryid", product.Category.Categoryid);
                     if (command.ExecuteNonQuery() > 0)
                     {
@@ -46,6 +45,7 @@ namespace MakeOver_Paris.DAO
                 }
                 catch (MySqlException e)
                 {
+     
                     Console.WriteLine(e);
                     transaction.Rollback();
                 }
@@ -94,17 +94,15 @@ namespace MakeOver_Paris.DAO
                 try
                 {
                     cnn.Open();
-                    const string SQL = "UPDATE settings SET productcode = @productcode ," +
+                    const string SQL = @"UPDATE products SET productcode = @productcode ," +
                                                            "barcode=@barcode, " +
-                                                           "productname=@productname " +
+                                                           "productname=@productname, " +
                                                            "quantity=@quantity, " +
-                                                           "description=@description " +
+                                                           "description=@description, " +
                                                            "pricein=@pricein, " +
-                                                           "priceout=@priceout " +
-                                                           "returnquantity=@remark, " +
-                                                           "createddate=@createddate " +
-                                                           "createdby=@createdby, " +
-                                                           "updateddate=@updateddate " +
+                                                           "priceout=@priceout, " +
+                                                           "returnquantity=@returnquantity, " +
+                                                           "remark=@remark," +
                                                            "updatedby=@updatedby, " +
                                                            "categoryid=@categoryid " +
                                                            "WHERE productid = @productid";
@@ -119,9 +117,6 @@ namespace MakeOver_Paris.DAO
                     command.Parameters.AddWithValue("@priceout", product.Priceout);
                     command.Parameters.AddWithValue("@returnquantity", product.Returnquantity);
                     command.Parameters.AddWithValue("@remark", product.Remark);
-                    command.Parameters.AddWithValue("@createddate", product.Createddate);
-                    command.Parameters.AddWithValue("@createdby", product.Createdby);
-                    command.Parameters.AddWithValue("@updateddate", product.Updateddate);
                     command.Parameters.AddWithValue("@updatedby", product.Updatedby);
                     command.Parameters.AddWithValue("@categoryid", product.Category.Categoryid);
                     command.Parameters.AddWithValue("@productid", product.Productid);
@@ -142,7 +137,37 @@ namespace MakeOver_Paris.DAO
             return false;
         }
 
-        public ArrayList getAllSetting()
+        public DataSet getAllProductDS()
+        {
+            try
+            {
+                const string SQL = @"SELECT productid,productcode,barcode,productname,quantity,description,pricein,priceout,returnquantity,remark,createddate,createdby,updateddate,updatedby,categoryid FROM products;";
+                DataSet ds = DBUtility.ExecuteQuery(SQL);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+        }
+
+        public DataSet searchProductDS(String productname)
+        {
+            try
+            {
+                const string SQL = @"SELECT productid,productcode,barcode,productname,quantity,description,pricein,priceout,returnquantity,remark,createddate,createdby,updateddate,updatedby,categoryid FROM products where productname like;";
+                DataSet ds = DBUtility.ExecuteQuery(SQL);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+        }
+
+        public ArrayList getAllProduct()
         {
             MySqlConnection cnn = DBUtility.getConnection();
             if (cnn != null)
