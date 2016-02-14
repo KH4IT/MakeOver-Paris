@@ -48,16 +48,16 @@ namespace MakeOver_Paris.DTO
             set { lastlogin = value; }
         }
 
-        private decimal commisionrate;
+        private int commisionrate;
 
-        public decimal Commisionrate
+        public int Commisionrate
         {
             get { return commisionrate; }
             set { commisionrate = value; }
         }
         public Staff() { }
 
-        public Staff(int staffid, string staffname, string staffpassword, string stafftype, DateTime lastlogin, decimal comisionrate)
+        public Staff(int staffid, string staffname, string staffpassword, string stafftype, DateTime lastlogin, int comisionrate)
         {
             this.staffid = staffid;
             this.staffname = staffname;

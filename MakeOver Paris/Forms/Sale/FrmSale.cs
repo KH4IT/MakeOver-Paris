@@ -58,8 +58,8 @@ namespace MakeOver_Paris.Forms.Sale
             if (print())
             {
                 grdItems.Rows.Clear();
-                rpt_saleinvoice rpt = new rpt_saleinvoice();
-                rpt.SetParameterValue("p_invoiceid", 25);
+             //   rpt_saleinvoice rpt = new rpt_saleinvoice();
+              //  rpt.SetParameterValue("p_invoiceid", 25);
 
 
                 //rpt.PrintToPrinter(1, false, 1, 1);
@@ -87,8 +87,8 @@ namespace MakeOver_Paris.Forms.Sale
                     if (print())
                     {
                         grdItems.Rows.Clear();
-                        rpt_saleinvoice rpt = new rpt_saleinvoice();
-                        rpt.SetParameterValue("p_invoiceid", 25);
+                      //  rpt_saleinvoice rpt = new rpt_saleinvoice();
+                     //   rpt.SetParameterValue("p_invoiceid", 25);
 
 
                         //rpt.PrintToPrinter(1, false, 1, 1);
