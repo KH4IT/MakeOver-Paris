@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSave = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtTitle = new System.Windows.Forms.TextBox();
@@ -45,8 +45,6 @@
             this.Panel5 = new System.Windows.Forms.Panel();
             this.btnMemberList = new System.Windows.Forms.Button();
             this.Panel4 = new System.Windows.Forms.Panel();
-            this.Label2 = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvSetting = new System.Windows.Forms.DataGridView();
             this.panel6.SuspendLayout();
             this.Panel1.SuspendLayout();
@@ -109,6 +107,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1001, 197);
             this.panel6.TabIndex = 5;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // label4
             // 
@@ -136,6 +135,7 @@
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDelete.BackColor = System.Drawing.Color.Red;
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDelete.Enabled = false;
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -147,8 +147,7 @@
             this.btnDelete.Size = new System.Drawing.Size(100, 30);
             this.btnDelete.TabIndex = 19;
             this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Visible = false;
+            this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // Panel1
@@ -161,6 +160,7 @@
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(1024, 749);
             this.Panel1.TabIndex = 5;
+            this.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // Panel2
             // 
@@ -238,35 +238,12 @@
             // 
             this.Panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Panel4.Controls.Add(this.panel6);
-            this.Panel4.Controls.Add(this.Label2);
-            this.Panel4.Controls.Add(this.txtSearch);
             this.Panel4.Controls.Add(this.dgvSetting);
             this.Panel4.ForeColor = System.Drawing.Color.White;
             this.Panel4.Location = new System.Drawing.Point(8, 77);
             this.Panel4.Name = "Panel4";
             this.Panel4.Size = new System.Drawing.Size(1008, 659);
             this.Panel4.TabIndex = 4;
-            // 
-            // Label2
-            // 
-            this.Label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Label2.AutoSize = true;
-            this.Label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.Label2.Location = new System.Drawing.Point(41, 251);
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(67, 19);
-            this.Label2.TabIndex = 2;
-            this.Label2.Text = "Search:";
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(128, 247);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(300, 27);
-            this.txtSearch.TabIndex = 1;
             // 
             // dgvSetting
             // 
@@ -275,19 +252,19 @@
             this.dgvSetting.BackgroundColor = System.Drawing.Color.White;
             this.dgvSetting.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvSetting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.HotPink;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSetting.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvSetting.Location = new System.Drawing.Point(5, 280);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.HotPink;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSetting.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvSetting.Location = new System.Drawing.Point(5, 258);
             this.dgvSetting.Name = "dgvSetting";
             this.dgvSetting.RowHeadersVisible = false;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            this.dgvSetting.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            this.dgvSetting.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSetting.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvSetting.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.dgvSetting.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
@@ -296,6 +273,7 @@
             this.dgvSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSetting.Size = new System.Drawing.Size(1000, 376);
             this.dgvSetting.TabIndex = 0;
+            this.dgvSetting.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSetting_CellDoubleClick);
             // 
             // FrmSetting
             // 
@@ -316,11 +294,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.Panel5.ResumeLayout(false);
             this.Panel4.ResumeLayout(false);
-            this.Panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSetting)).EndInit();
             this.ResumeLayout(false);
 
         }
+
+        //private void dgvSetting_CellContentDoubleClick(object sender, System.Windows.Forms.DataGridViewCellEventArgs e)
+        //{
+        //    throw new System.NotImplementedException();
+        //}
 
         #endregion
 
@@ -337,8 +319,6 @@
         internal System.Windows.Forms.Panel Panel5;
         internal System.Windows.Forms.Button btnMemberList;
         internal System.Windows.Forms.Panel Panel4;
-        internal System.Windows.Forms.Label Label2;
-        internal System.Windows.Forms.TextBox txtSearch;
         internal System.Windows.Forms.DataGridView dgvSetting;
         internal System.Windows.Forms.Label label4;
         internal System.Windows.Forms.TextBox txtValue;

@@ -21,12 +21,12 @@ namespace MakeOver_Paris.Forms.Setting
         public FrmSetting()
         {
             InitializeComponent();
+            dgvSetting.DataSource = new DAO.SettingDao().getAllSettingDS().Tables[0];
         }
 
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Title can't be empty");
             Forms.FrmMain frmMain = new Forms.FrmMain();
             frmMain.Show();
             this.Close();
@@ -34,7 +34,6 @@ namespace MakeOver_Paris.Forms.Setting
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Title can't be empty");
             if (id == 0)
             {
                 if (txtTitle.Text.Trim() == "")
@@ -65,10 +64,41 @@ namespace MakeOver_Paris.Forms.Setting
             }
             else
             {
-                DTO.Setting setting = new DTO.Setting();
-                setting.Title = txtTitle.Text.Trim();
-                setting.Value = txtValue.Text.Trim();
-                if (new DAO.SettingDao().updateSetting(setting))
+                if (txtTitle.Text.Trim() == "")
+                {
+                    MessageBox.Show("Title can't be empty");
+                }
+                    else if (txtValue.Text.Trim() == "")
+                    {
+                        MessageBox.Show("Value can't be empty");
+                    }
+                    else
+                    {
+                        DTO.Setting setting = new DTO.Setting();
+                        setting.Title = txtTitle.Text.Trim();
+                        setting.Value = txtValue.Text.Trim();
+                        setting.Settingid = id;
+                        if (new DAO.SettingDao().updateSetting(setting))
+                        {
+                            txtTitle.Clear();
+                            txtValue.Clear();
+                            dgvSetting.DataSource = new DAO.SettingDao().getAllSettingDS().Tables[0];
+                            id = 0;
+                            btnDelete.Enabled = false;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Transaction fail!!!");
+                        }
+                    }
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure to delete this item?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (new SettingDao().deleteSetting(id))
                 {
                     txtTitle.Clear();
                     txtValue.Clear();
@@ -78,14 +108,31 @@ namespace MakeOver_Paris.Forms.Setting
                 }
                 else
                 {
-
+                    MessageBox.Show("Transaction fail!!");
                 }
             }
+            else
+            {
+                // user clicked no
+            }
+
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void Panel1_Paint(object sender, PaintEventArgs e)
         {
-            MessageBox.Show("Title can't be empty");
+
+        }
+
+        private void dgvSetting_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnDelete.Enabled = true;
+            id = System.Convert.ToInt32(dgvSetting.CurrentRow.Cells[0].Value);
+            txtTitle.Text = dgvSetting.CurrentRow.Cells[1].Value.ToString();
+            txtValue.Text = dgvSetting.CurrentRow.Cells[2].Value.ToString();
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
 
         }
 

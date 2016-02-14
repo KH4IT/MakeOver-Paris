@@ -15,20 +15,20 @@ namespace MakeOver_Paris.DAO
         public bool addSetting(Setting setting)
         {
             MySqlConnection cnn = DBUtility.getConnection();
+            cnn.Open();
             if (cnn != null)
             {
                 MySqlTransaction transaction = cnn.BeginTransaction();
                 try
                 {
-                    cnn.Open();
-                    const string SQL = "INSERT INTO settings VALUES(title,value) VALUES(@title,@value)";
+                    const string SQL = @"INSERT INTO settings (title,value) VALUES(@title,@value)";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
                     command.Parameters.AddWithValue("@title", setting.Title);
                     command.Parameters.AddWithValue("@value", setting.Value);
+                    transaction.Commit();
                     if (command.ExecuteNonQuery() > 0)
                     {
-                        transaction.Commit();
                         return true;
                     }
                 }
@@ -48,12 +48,12 @@ namespace MakeOver_Paris.DAO
         public bool deleteSetting(int settingId)
         {
             MySqlConnection cnn = DBUtility.getConnection();
+            cnn.Open();
             if (cnn != null)
             {
                 try
                 {
-                    cnn.Open();
-                    const string SQL = "DELETE FROM settings WHERE settingid = @settingId";
+                    const string SQL = @"DELETE FROM settings WHERE settingid = @settingId";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
                     command.Parameters.AddWithValue("@settingId", settingId);
@@ -79,10 +79,10 @@ namespace MakeOver_Paris.DAO
             MySqlConnection cnn = DBUtility.getConnection();
             if (cnn != null)
             {
+                cnn.Open();
                 try
                 {
-                    cnn.Open();
-                    const string SQL = "UPDATE settings SET title = @title , value=@value WHERE settingid = @settingid";
+                    const string SQL = @"UPDATE settings SET title = @title , value=@value WHERE settingid = @settingid";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
                     command.Parameters.AddWithValue("@title", setting.Title);
@@ -123,11 +123,11 @@ namespace MakeOver_Paris.DAO
         public ArrayList getAllSetting()
         {
             MySqlConnection cnn = DBUtility.getConnection();
+            cnn.Open();
             if (cnn != null)
             {
                 try
                 {
-                    cnn.Open();
                     const string SQL = "SELECT settingid, title , value FROM settings;";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     MySqlDataReader reader = command.ExecuteReader();
@@ -159,11 +159,11 @@ namespace MakeOver_Paris.DAO
         public Setting getSetting(int productid)
         {
             MySqlConnection cnn = DBUtility.getConnection();
+            cnn.Open();
             if (cnn != null)
             {
                 try
                 {
-                    cnn.Open();
                     const string SQL = "SELECT settingid, title , value FROM settings WHERE productid=@productid;";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
