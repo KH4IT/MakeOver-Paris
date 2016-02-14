@@ -74,7 +74,7 @@ namespace MakeOver_Paris.Forms.Sale
                 if (txtCode.Text != "")
                 {
                     count_enter = 0;
-                    DTO.Product product = new DAO.ProductDao().getProduct(int.Parse(txtCode.Text));//replace by productcode as a overload method
+                    DTO.Product product = new DAO.ProductDAO().getProduct(int.Parse(txtCode.Text));//replace by productcode as a overload method
                     addToGrid(product);
                     txtCode.Clear();
                 }

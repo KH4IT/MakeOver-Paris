@@ -145,3 +145,34 @@ C:\Users\tolapheng\Documents\GitHub\MakeOver-Paris\MakeOver Paris\obj\Debug\Make
 C:\Users\tolapheng\Documents\GitHub\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Properties.Resources.resources
 C:\Users\tolapheng\Documents\GitHub\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.csproj.GenerateResource.Cache
 C:\Users\tolapheng\Documents\GitHub\MakeOver-Paris\MakeOver Paris\bin\Debug\MakeOver Paris.exe.config
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\bin\Debug\MakeOver Paris.exe.config
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.csprojResolveAssemblyReference.cache
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Category.FrmCategory.resources
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.FrmLogin.resources
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.FrmMain.resources
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.FrmSplash.resources
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Member.FrmAddMember.resources
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Member.FrmMembers.resources
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Member.FrmUpdateMember.resources
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Product.FrmProduct.resources
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.FrmSale.resources
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Setting.FrmSetting.resources
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Staff.FrmStaff.resources
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Transaction.frmTransaction.resources
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmParent.resources
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmCategory.resources
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmMember.resources
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmSale.resources
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmProduct.resources
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmSetting.resources
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmStaff.resources
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Form1.resources
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmMain.resources
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.frmSplash.resources
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Properties.Resources.resources
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.csproj.GenerateResource.Cache
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\bin\Debug\MakeOver Paris.exe
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\bin\Debug\MakeOver Paris.pdb
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.exe
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.pdb
+D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\bin\Debug\MySql.Data.dll

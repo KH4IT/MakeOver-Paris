@@ -29,7 +29,7 @@ namespace MakeOver_Paris.DAO
                     command.Parameters.AddWithValue("@staffpassword", staff.Staffpassword);
                     command.Parameters.AddWithValue("@stafftype", staff.Stafftype);
                     command.Parameters.AddWithValue("@lastlogin", staff.Lastlogin);
-                    command.Parameters.AddWithValue("@comissionrate", staff.Commisionrate);
+                    command.Parameters.AddWithValue("@commisionrate", staff.Commisionrate);
                     if (command.ExecuteNonQuery() > 0)
                     {
                         transaction.Commit();
@@ -87,14 +87,14 @@ namespace MakeOver_Paris.DAO
                 try
                 {
                     cnn.Open();
-                    const string SQL = "UPDATE staffs SET staffname = @staffname, staffpassword = @staffpassword";
+                    const string SQL = "UPDATE staffs SET staffname = @staffname, staffpassword = @staffpassword, stafftype= @stafftype, commisionrate= @commisionrate where staffid= @staffid";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
                     command.Parameters.AddWithValue("@staffname", staff.Staffname);
                     command.Parameters.AddWithValue("@staffpassword", staff.Staffpassword);
-                    command.Parameters.AddWithValue("@stafftype", staff.Stafftype);
-                    command.Parameters.AddWithValue("@lastlogin", staff.Lastlogin);
+                    command.Parameters.AddWithValue("@stafftype", staff.Stafftype);                    
                     command.Parameters.AddWithValue("@commisionrate", staff.Commisionrate);
+                    command.Parameters.AddWithValue("@staffid", staff.Staffid);
                     if (command.ExecuteNonQuery() > 0)
                     {
                         return true;
