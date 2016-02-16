@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MakeOver_Paris.DAO;
+using MakeOver_Paris.DTO;
 
 namespace MakeOver_Paris.Forms
 {
@@ -26,14 +28,58 @@ namespace MakeOver_Paris.Forms
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Do you want to close the program?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            Forms.FrmMain frmMain = new Forms.FrmMain();
-            frmMain.Show();
-            this.Hide();
+            if (txtPassword.Text == "" || txtUsername.Text == "")
+            {
+                MessageBox.Show("Username and password are required!!");
+            }
+            else
+            {
+                DTO.Staff staff = new StaffDAO().Login(txtUsername.Text, txtPassword.Text);
+                if (staff != null)
+                {
+                    UserSession.Session.Staff = staff;
+                    if (UserSession.Session.Staff.Stafftype == "admin")
+                    {
+                        Forms.FrmMain frmMain = new Forms.FrmMain();
+                        frmMain.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("I am Saler");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Username and password are invalid!!");
+                }
+            }
+        }
+
+        private void txtUsername_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(sender, e);
+            }
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(sender, e);
+            }
+            
         }
 
     }

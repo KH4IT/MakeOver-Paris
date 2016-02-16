@@ -82,7 +82,10 @@ namespace MakeOver_Paris.Forms
 
         private void Label5_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            UserSession.Session.Staff = null;
+            Forms.FrmLogin form = new Forms.FrmLogin();
+            form.Show();
+            this.Close();
         }
 
         private void btnMember_Click(object sender, EventArgs e)

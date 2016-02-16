@@ -159,5 +159,53 @@ namespace MakeOver_Paris.DAO
                 return null;
             }
         }
+
+        public Staff Login(string username, string password)
+        {
+            MySqlConnection cnn = DBUtility.getConnection();
+            Staff staff = null;
+            try
+            {
+                if (cnn != null)
+                {
+                    cnn.Open();
+                    const string SQL = @"SELECT 
+                                            staffid
+                                            , staffname
+                                            , staffpassword
+                                            , stafftype
+                                            , lastlogin
+                                         FROM
+                                            staffs
+                                         WHERE
+                                            staffname = @staffname
+                                         AND
+                                            staffpassword = @staffpassword";
+                    MySqlCommand command = new MySqlCommand(SQL, cnn);
+                    command.Prepare();
+                    command.Parameters.AddWithValue("@staffname", username);
+                    command.Parameters.AddWithValue(@"staffpassword", password);
+                    MySqlDataReader reader = command.ExecuteReader();
+                    while(reader.Read())
+                    {
+                        staff = new Staff();
+                        staff.Staffid = reader.GetInt16("staffid");
+                        staff.Staffname = reader.GetString("staffname");
+                        staff.Staffpassword = reader.GetString("staffpassword");
+                        staff.Stafftype = reader.GetString("stafftype");
+                        staff.Lastlogin = reader.GetDateTime("lastlogin");
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+            }
+            finally
+            {
+                cnn.Close();
+            }
+            return staff;
+        }
     }
 }

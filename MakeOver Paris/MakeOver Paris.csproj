@@ -201,6 +201,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserSession.cs" />
     <Compile Include="Utility.cs" />
     <EmbeddedResource Include="Forms\Category\FrmCategory.resx">
       <DependentUpon>FrmCategory.cs</DependentUpon>
