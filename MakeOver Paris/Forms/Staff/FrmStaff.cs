@@ -60,7 +60,7 @@ namespace MakeOver_Paris.Forms.Staff
                     staff.Staffname = txtName.Text;
                     staff.Staffpassword = txtPassword.Text;
                     staff.Stafftype = txtType.Text;
-                    staff.Commisionrate = int.Parse(txtCommission.Text);
+                    staff.Commisionrate = System.Convert.ToDecimal(txtCommission.Text);
                     staff.Lastlogin = System.DateTime.Today;
                     if (new StaffDAO().AddStaff(staff))
                     {
@@ -152,6 +152,16 @@ namespace MakeOver_Paris.Forms.Staff
             bs.DataSource = dgvStaff.DataSource;
             bs.Filter = "staffname LIKE '%" + txtSearch.Text + "%'";
             dgvStaff.DataSource = bs;
+        }
+
+        private void txtCommission_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void txtCommission_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.AllowOnlyDecimalNumber(sender, e);
         }
 
         

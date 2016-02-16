@@ -48,9 +48,9 @@ namespace MakeOver_Paris.DTO
             set { lastlogin = value; }
         }
 
-        private int commisionrate;
+        private decimal commisionrate;
 
-        public int Commisionrate
+        public decimal Commisionrate
         {
             get { return commisionrate; }
             set { commisionrate = value; }

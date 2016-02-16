@@ -25,6 +25,7 @@ namespace MakeOver_Paris.Forms
             this.pnMain.Left = (this.Width - this.pnMain.Width) / 2;
             this.pnMain.Top = (this.Height - this.pnMain.Height) / 2;
             lblDateAndTime.Text = DateTime.Now.ToString("HH:mm:ss tt");
+            lblUsername.Text = "Welcome to, " + UserSession.Session.Staff.Staffname;
         }
 
         private void button4_Click(object sender, EventArgs e)
