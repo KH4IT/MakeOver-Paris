@@ -226,6 +226,21 @@ namespace MakeOver_Paris.Forms.Product
             dgvProduct.DataSource = bs;
         }
 
+        private void txtPriceIn_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.AllowOnlyDecimalNumber(sender, e);
+        }
+
+        private void txtPriceOut_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.AllowOnlyDecimalNumber(sender, e);
+        }
+
+        private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.AllowOnlyNumber(sender, e);
+        }
+
       
 
     }
