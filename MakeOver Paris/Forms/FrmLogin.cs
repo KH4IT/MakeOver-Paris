@@ -43,7 +43,7 @@ namespace MakeOver_Paris.Forms
             }
             else
             {
-                DTO.Staff staff = new StaffDAO().Login(txtUsername.Text, txtPassword.Text);
+                DTO.Staff staff = new StaffDAO().Login(txtUsername.Text.Trim(), txtPassword.Text.Trim());
                 if (staff != null)
                 {
                     UserSession.Session.Staff = staff;

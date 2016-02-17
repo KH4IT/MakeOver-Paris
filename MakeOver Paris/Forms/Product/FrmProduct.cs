@@ -12,7 +12,6 @@ namespace MakeOver_Paris.Forms.Product
 {
     public partial class FrmProduct : Form
     {
-
         int id;
 
         public FrmProduct()
@@ -75,9 +74,9 @@ namespace MakeOver_Paris.Forms.Product
                 else
                 {
                     DTO.Staff staff = new DTO.Staff();
-                    staff.Staffid = 1;// Data.user.Staffid;
+                    staff.Staffid = UserSession.Session.Staff.Staffid;// Data.user.Staffid;
                     DTO.Category cate = new DTO.Category();
-                    cate.Categoryid = 1;//(int)cboCategory.SelectedValue;
+                    cate.Categoryid = (int)cboCategory.SelectedValue;
                     DTO.Product product = new DTO.Product(0, txtProductCode.Text.Trim(), txtBarcode.Text.Trim(), txtName.Text.Trim(), Decimal.Parse(txtQuantity.Text.Trim()), txtDescription.Text.Trim(),
                        Decimal.Parse(txtPriceIn.Text.Trim()), Decimal.Parse(txtPriceOut.Text.Trim()), Decimal.Parse(txtReturnQuantity.Text.Trim()), txtRemark.Text.Trim(), staff, staff, cate);
                     if (new DAO.ProductDAO().addProduct(product))
@@ -106,9 +105,9 @@ namespace MakeOver_Paris.Forms.Product
                 else
                 {
                     DTO.Staff staff = new DTO.Staff();
-                    staff.Staffid = 1;// Data.user.Staffid;
+                    staff.Staffid = UserSession.Session.Staff.Staffid;// Data.user.Staffid;
                     DTO.Category cate = new DTO.Category();
-                    cate.Categoryid = 1;//(int)cboCategory.SelectedValue;
+                    cate.Categoryid = (int)cboCategory.SelectedValue;
                     DTO.Product product = new DTO.Product(id, txtProductCode.Text.Trim(), txtBarcode.Text.Trim(), txtName.Text.Trim(), Decimal.Parse(txtQuantity.Text.Trim()), txtDescription.Text.Trim(),
                        Decimal.Parse(txtPriceIn.Text.Trim()), Decimal.Parse(txtPriceOut.Text.Trim()), Decimal.Parse(txtReturnQuantity.Text.Trim()), txtRemark.Text.Trim(), staff, staff, cate);
                     if (new DAO.ProductDAO().updateProduct(product))
@@ -170,20 +169,27 @@ namespace MakeOver_Paris.Forms.Product
 
         private void dgvProduct_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnDelete.Enabled = true;
-            id = System.Convert.ToInt32(dgvProduct.CurrentRow.Cells[0].Value);
-            txtProductCode.Text = dgvProduct.CurrentRow.Cells[1].Value.ToString();
-            txtBarcode.Text = dgvProduct.CurrentRow.Cells[2].Value.ToString();
-            txtName.Text = dgvProduct.CurrentRow.Cells[3].Value.ToString();
-            txtQuantity.Text = dgvProduct.CurrentRow.Cells[4].Value.ToString();
-            txtDescription.Text = dgvProduct.CurrentRow.Cells[5].Value.ToString();
-            txtPriceIn.Text = dgvProduct.CurrentRow.Cells[6].Value.ToString();
-            txtPriceOut.Text = dgvProduct.CurrentRow.Cells[7].Value.ToString();
-            txtReturnQuantity.Text = dgvProduct.CurrentRow.Cells[8].Value.ToString();
-            txtRemark.Text = dgvProduct.CurrentRow.Cells[9].Value.ToString();
-
-            //txtBarcode.Text = dgvProduct.CurrentRow.Cells[14].Value.ToString();;
-
+            try
+            {
+                id = System.Convert.ToInt32(dgvProduct.CurrentRow.Cells[0].Value);
+                txtProductCode.Text = dgvProduct.CurrentRow.Cells[1].Value.ToString();
+                txtBarcode.Text = dgvProduct.CurrentRow.Cells[2].Value.ToString();
+                txtName.Text = dgvProduct.CurrentRow.Cells[3].Value.ToString();
+                txtQuantity.Text = dgvProduct.CurrentRow.Cells[4].Value.ToString();
+                txtDescription.Text = dgvProduct.CurrentRow.Cells[11].Value.ToString();
+                txtPriceIn.Text = dgvProduct.CurrentRow.Cells[5].Value.ToString();
+                txtPriceOut.Text = dgvProduct.CurrentRow.Cells[6].Value.ToString();
+                txtReturnQuantity.Text = dgvProduct.CurrentRow.Cells[7].Value.ToString();
+                txtRemark.Text = dgvProduct.CurrentRow.Cells[12].Value.ToString();
+                cboCategory.SelectedValue = dgvProduct.CurrentRow.Cells[14].Value.ToString();
+                btnDelete.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+         
+                Console.Write(ex);
+            }
+            
 
 
         }
@@ -198,11 +204,11 @@ namespace MakeOver_Paris.Forms.Product
                     txtBarcode.Text = dgvProduct.CurrentRow.Cells[2].Value.ToString();
                     txtName.Text = dgvProduct.CurrentRow.Cells[3].Value.ToString();
                     txtQuantity.Text = dgvProduct.CurrentRow.Cells[4].Value.ToString();
-                    txtDescription.Text = dgvProduct.CurrentRow.Cells[5].Value.ToString();
+                    txtDescription.Text = dgvProduct.CurrentRow.Cells[11].Value.ToString();
                     txtPriceIn.Text = dgvProduct.CurrentRow.Cells[6].Value.ToString();
                     txtPriceOut.Text = dgvProduct.CurrentRow.Cells[7].Value.ToString();
                     txtReturnQuantity.Text = dgvProduct.CurrentRow.Cells[8].Value.ToString();
-                    txtRemark.Text = dgvProduct.CurrentRow.Cells[9].Value.ToString();
+                    txtRemark.Text = dgvProduct.CurrentRow.Cells[12].Value.ToString();
                     id = 0;
                     btnDelete.Enabled = false;
                     dgvProduct.DataSource = new DAO.ProductDAO().getAllProductDS().Tables[0];
@@ -239,6 +245,29 @@ namespace MakeOver_Paris.Forms.Product
         private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
         {
             Utility.AllowOnlyNumber(sender, e);
+        }
+
+        private void txtReturnQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.AllowOnlyNumber(sender, e);
+        }
+
+        private void FrmProduct_Load(object sender, EventArgs e)
+        {
+            // GET CATEGORIES
+            DataSet da = new DAO.CategoryDAO().GetAllCategories();
+            cboCategory.DataSource = da.Tables[0];
+            cboCategory.DisplayMember = "categoryname";
+            cboCategory.ValueMember = "categoryid";
+            //CUSTOM GRID
+            Utility.setGridHeaderText("ល.រ|លេខទំនិញ|បារកូដ|ឈ្មោះ|បរិមាណ|តម្លៃទិញចូល $|តម្លៃលក់ចេញ $|បរិមាណប្តូរវិញ|បង្កើតដោយ|កែប្រែដោយ", dgvProduct);
+            Utility.setGridHeaderWidth("30", dgvProduct);
+            dgvProduct.Columns[10].Visible = false;
+            dgvProduct.Columns[11].Visible = false;
+            dgvProduct.Columns[12].Visible = false;
+            dgvProduct.Columns[13].Visible = false;
+            dgvProduct.Columns[14].Visible = false;
+ 
         }
 
       

@@ -81,7 +81,7 @@ namespace MakeOver_Paris.Forms.Staff
                 staff.Staffname = txtName.Text;
                 staff.Staffpassword = txtPassword.Text;
                 staff.Stafftype = txtType.Text;
-                staff.Commisionrate = int.Parse(txtCommission.Text);
+                staff.Commisionrate = System.Convert.ToDecimal(txtCommission.Text);
                 if (new StaffDAO().UpdateStaff(staff))
                 {
                     clearForm();

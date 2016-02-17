@@ -12,8 +12,10 @@ namespace MakeOver_Paris.DAO
 {
     class ProductDAO
     {
+
         public bool addProduct(Product product)
         {
+            
             MySqlConnection cnn = DBUtility.getConnection();
             if (cnn != null)
             {
@@ -141,7 +143,22 @@ namespace MakeOver_Paris.DAO
         {
             try
             {
-                const string SQL = @"SELECT productid,productcode,barcode,productname,quantity,description,pricein,priceout,returnquantity,remark,createddate,createdby,updateddate,updatedby,categoryid FROM products;";
+                const string SQL = @"SELECT productid
+                                          , productcode
+                                          , barcode
+                                          , productname
+                                          , quantity
+                                          , pricein
+                                          , priceout
+                                          , returnquantity
+                                          , (SELECT staffname FROM staffs WHERE staffs.staffid = products.createdby) AS createdby
+                                          , (SELECT staffname FROM staffs WHERE staffs.staffid = products.updatedby) AS createdby
+                                          , createddate
+                                          , description 
+                                          , remark
+                                          , updateddate
+                                          , categoryid 
+                                    FROM products ";
                 DataSet ds = DBUtility.ExecuteQuery(SQL);
                 return ds;
             }

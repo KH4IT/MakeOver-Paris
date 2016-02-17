@@ -76,7 +76,7 @@ namespace MakeOver_Paris.Forms.Transaction
             {
                 DTO.Staff staff = new DTO.Staff();
                 // GET FROM USER SESSION
-                staff.Staffid = 1;
+                staff.Staffid = UserSession.Session.Staff.Staffid;
                 // CONVERTING VALIDATION
                 decimal incomeAmount = 0;
                 decimal expenseAmount = 0;
