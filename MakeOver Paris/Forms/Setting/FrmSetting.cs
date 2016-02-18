@@ -149,6 +149,14 @@ namespace MakeOver_Paris.Forms.Setting
             Utility.setGridHeaderWidth("80",dgvSetting);
         }
 
+        private void FrmSetting_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                btnBack_Click(sender, e);
+            }
+        }
+
         
     }
 }

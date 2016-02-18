@@ -270,6 +270,14 @@ namespace MakeOver_Paris.Forms.Product
  
         }
 
+        private void FrmProduct_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                btnBack_Click(sender, e);
+            }
+        }
+
       
 
     }

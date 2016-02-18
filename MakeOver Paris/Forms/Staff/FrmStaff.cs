@@ -164,6 +164,14 @@ namespace MakeOver_Paris.Forms.Staff
             Utility.AllowOnlyDecimalNumber(sender, e);
         }
 
+        private void FrmStaff_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                btnBack_Click(sender, e);
+            }
+        }
+
         
 
     }

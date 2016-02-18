@@ -366,11 +366,13 @@
             this.ClientSize = new System.Drawing.Size(1024, 749);
             this.Controls.Add(this.Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "frmTransaction";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTransaction";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmTransaction_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmTransaction_KeyDown);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.Panel1.ResumeLayout(false);

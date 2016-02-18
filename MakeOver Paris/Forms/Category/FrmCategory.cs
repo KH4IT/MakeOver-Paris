@@ -135,7 +135,7 @@ namespace MakeOver_Paris.Forms.Category
 
         private void FrmCategory_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Back)
+            if (e.KeyCode == Keys.Escape)
             {
                 btnBack_Click(sender, e);
             }

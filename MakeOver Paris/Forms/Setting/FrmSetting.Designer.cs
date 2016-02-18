@@ -284,10 +284,12 @@
             this.ClientSize = new System.Drawing.Size(1024, 749);
             this.Controls.Add(this.Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "FrmSetting";
             this.Text = "FrmSetting";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmSetting_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmSetting_KeyDown);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.Panel1.ResumeLayout(false);
