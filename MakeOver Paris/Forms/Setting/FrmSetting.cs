@@ -38,11 +38,11 @@ namespace MakeOver_Paris.Forms.Setting
             {
                 if (txtTitle.Text.Trim() == "")
                 {
-                    MessageBox.Show("Title can't be empty");
+                    MessageBox.Show("សូមបំពេញពត៏មានឲ្យបានត្រឹមត្រូវ!!!");
                 }
                 else if (txtValue.Text.Trim() == "")
                 {
-                    MessageBox.Show("Value can't be empty");
+                    MessageBox.Show("សូមបំពេញពត៏មានឲ្យបានត្រឹមត្រូវ!!!");
                 }
                 else
                 {
@@ -58,7 +58,7 @@ namespace MakeOver_Paris.Forms.Setting
                     }
                     else
                     {
-                        MessageBox.Show("Transaction fail!!!");
+                        MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
                     }
                 }
             }
@@ -66,11 +66,11 @@ namespace MakeOver_Paris.Forms.Setting
             {
                 if (txtTitle.Text.Trim() == "")
                 {
-                    MessageBox.Show("Title can't be empty");
+                    MessageBox.Show("សូមបំពេញពត៏មានឲ្យបានត្រឹមត្រូវ!!!");
                 }
                     else if (txtValue.Text.Trim() == "")
                     {
-                        MessageBox.Show("Value can't be empty");
+                        MessageBox.Show("សូមបំពេញពត៏មានឲ្យបានត្រឹមត្រូវ!!!");
                     }
                     else
                     {
@@ -88,7 +88,7 @@ namespace MakeOver_Paris.Forms.Setting
                         }
                         else
                         {
-                            MessageBox.Show("Transaction fail!!!");
+                            MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
                         }
                     }
             }
@@ -96,7 +96,7 @@ namespace MakeOver_Paris.Forms.Setting
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure to delete this item?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("តើអ្នកពិតជាចង់លុបទិន្នន័យនេះមែនទេ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (new SettingDao().deleteSetting(id))
                 {
@@ -108,7 +108,7 @@ namespace MakeOver_Paris.Forms.Setting
                 }
                 else
                 {
-                    MessageBox.Show("Transaction fail!!");
+                    MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
                 }
             }
             else
@@ -125,15 +125,28 @@ namespace MakeOver_Paris.Forms.Setting
 
         private void dgvSetting_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnDelete.Enabled = true;
-            id = System.Convert.ToInt32(dgvSetting.CurrentRow.Cells[0].Value);
-            txtTitle.Text = dgvSetting.CurrentRow.Cells[1].Value.ToString();
-            txtValue.Text = dgvSetting.CurrentRow.Cells[2].Value.ToString();
+            try
+            {
+                id = System.Convert.ToInt32(dgvSetting.CurrentRow.Cells[0].Value);
+                txtTitle.Text = dgvSetting.CurrentRow.Cells[1].Value.ToString();
+                txtValue.Text = dgvSetting.CurrentRow.Cells[2].Value.ToString();
+                btnDelete.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void FrmSetting_Load(object sender, EventArgs e)
+        {
+            Utility.setGridHeaderText("ល.រ|ឈ្មោះ|តម្លៃ",dgvSetting);
+            Utility.setGridHeaderWidth("80",dgvSetting);
         }
 
         

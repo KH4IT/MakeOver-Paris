@@ -33,7 +33,7 @@ namespace MakeOver_Paris.Forms.Transaction
             {
                 if (txtExpenseAmount.Text == "" && txtIncomeAmount.Text == "")
                 {
-                    MessageBox.Show("Can not empty");
+                    MessageBox.Show("សូមបំពេញពត៏មានឲ្យបានត្រឹមត្រូវ!!!");
                 }
                 else
                 {
@@ -68,7 +68,7 @@ namespace MakeOver_Paris.Forms.Transaction
                     }
                     else
                     {
-                        MessageBox.Show("Transaction fail!!!");
+                        MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
                     }
                 }
             }
@@ -172,19 +172,18 @@ namespace MakeOver_Paris.Forms.Transaction
 
         private void dgvTransaction_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnDelete.Enabled = true;
-            //if (System.Convert.ToInt32(dgvTransaction.CurrentRow.Cells[2].Value) != 0.0)
-            //    txtIncomeAmount.Enabled = true;
-            //else
-            //    txtIncomeAmount.Enabled = false;
-            //if (System.Convert.ToInt32(dgvTransaction.CurrentRow.Cells[3].Value) != 0.0)
-            //    txtExpenseAmount.Enabled = true;
-            //else
-            //    txtExpenseAmount.Enabled = false;
-            id = System.Convert.ToInt32(dgvTransaction.CurrentRow.Cells[0].Value.ToString());
-            txtIncomeAmount.Text = dgvTransaction.CurrentRow.Cells[2].Value.ToString();
-            txtExpenseAmount.Text = dgvTransaction.CurrentRow.Cells[3].Value.ToString();
-            txtRemark.Text = dgvTransaction.CurrentRow.Cells[5].Value.ToString();
+            try
+            {
+                id = System.Convert.ToInt32(dgvTransaction.CurrentRow.Cells[0].Value.ToString());
+                txtIncomeAmount.Text = dgvTransaction.CurrentRow.Cells[2].Value.ToString();
+                txtExpenseAmount.Text = dgvTransaction.CurrentRow.Cells[3].Value.ToString();
+                txtRemark.Text = dgvTransaction.CurrentRow.Cells[5].Value.ToString();
+                btnDelete.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

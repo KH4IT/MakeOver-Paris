@@ -44,15 +44,15 @@ namespace MakeOver_Paris.Forms.Staff
             {
                 if (txtName.Text == "")
                 {
-                    MessageBox.Show("Name cannot be empty");
+                    MessageBox.Show("សូមបំពេញពត៏មានឲ្យបានត្រឹមត្រូវ!!!");
                 }
                 else if (txtPassword.Text == "")
                 {
-                    MessageBox.Show("Password cannot be empty");
+                    MessageBox.Show("សូមបំពេញពត៏មានឲ្យបានត្រឹមត្រូវ!!!");
                 }
                 else if (txtCommission.Text == "")
                 {
-                    MessageBox.Show("Commision Rate cannot be empty");
+                    MessageBox.Show("សូមបំពេញពត៏មានឲ្យបានត្រឹមត្រូវ!!!");
                 }
                 else
                 {
@@ -70,7 +70,7 @@ namespace MakeOver_Paris.Forms.Staff
                     }
                     else
                     {
-                        MessageBox.Show("Transaction Failed");
+                        MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
                     }
                 }
             }
@@ -91,7 +91,7 @@ namespace MakeOver_Paris.Forms.Staff
                 }
                 else
                 {
-                    MessageBox.Show("Transaction Failed");
+                    MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
                 }
             }
         }
@@ -126,7 +126,7 @@ namespace MakeOver_Paris.Forms.Staff
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure to delete this item?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("តើអ្នកពិតជាចង់លុបទិន្នន័យនេះមែនទេ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (new StaffDAO().DeleteStaff(id))
                 {
@@ -137,7 +137,7 @@ namespace MakeOver_Paris.Forms.Staff
                 }
                 else
                 {
-                    MessageBox.Show("Transaction fail!!");
+                    MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
                 }
             }
             else

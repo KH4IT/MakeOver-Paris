@@ -28,7 +28,7 @@ namespace MakeOver_Paris.Forms
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Do you want to close the program?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("តើអ្នកពិតជាចង់ចាកចេញពិកម្មវិធីនេះមែនទេ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Application.Exit();
             }
@@ -39,7 +39,7 @@ namespace MakeOver_Paris.Forms
         {
             if (txtPassword.Text == "" || txtUsername.Text == "")
             {
-                MessageBox.Show("Username and password are required!!");
+                MessageBox.Show("សូមបំពេញពត៏មានឲ្យបានត្រឹមត្រូវ!!!");
             }
             else
             {
@@ -60,7 +60,7 @@ namespace MakeOver_Paris.Forms
                 }
                 else
                 {
-                    MessageBox.Show("Username and password are invalid!!");
+                    MessageBox.Show("សូមបំពេញពត៏មានឲ្យបានត្រឹមត្រូវ!!!");
                 }
             }
         }

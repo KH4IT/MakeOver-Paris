@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.pnMain = new System.Windows.Forms.Panel();
+            this.btnTransaction = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSale = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
@@ -41,7 +42,7 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
-            this.btnTransaction = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +50,7 @@
             // pnMain
             // 
             this.pnMain.AutoSize = true;
+            this.pnMain.Controls.Add(this.button1);
             this.pnMain.Controls.Add(this.btnTransaction);
             this.pnMain.Controls.Add(this.pictureBox1);
             this.pnMain.Controls.Add(this.btnSale);
@@ -68,6 +70,22 @@
             this.pnMain.TabIndex = 14;
             this.pnMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnMain_Paint);
             // 
+            // btnTransaction
+            // 
+            this.btnTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnTransaction.FlatAppearance.BorderSize = 0;
+            this.btnTransaction.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
+            this.btnTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransaction.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransaction.ForeColor = System.Drawing.Color.White;
+            this.btnTransaction.Location = new System.Drawing.Point(656, 284);
+            this.btnTransaction.Name = "btnTransaction";
+            this.btnTransaction.Size = new System.Drawing.Size(290, 108);
+            this.btnTransaction.TabIndex = 42;
+            this.btnTransaction.Text = "ប្រតិបត្តិការ";
+            this.btnTransaction.UseVisualStyleBackColor = false;
+            this.btnTransaction.Click += new System.EventHandler(this.btnTransaction_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MakeOver_Paris.Properties.Resources.shop;
@@ -85,7 +103,7 @@
             this.btnSale.FlatAppearance.BorderSize = 0;
             this.btnSale.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
             this.btnSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSale.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSale.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSale.ForeColor = System.Drawing.Color.White;
             this.btnSale.Location = new System.Drawing.Point(360, 284);
             this.btnSale.Name = "btnSale";
@@ -101,7 +119,7 @@
             this.btnProduct.FlatAppearance.BorderSize = 0;
             this.btnProduct.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
             this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProduct.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProduct.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProduct.ForeColor = System.Drawing.Color.White;
             this.btnProduct.Location = new System.Drawing.Point(64, 284);
             this.btnProduct.Name = "btnProduct";
@@ -117,7 +135,7 @@
             this.btnSetting.FlatAppearance.BorderSize = 0;
             this.btnSetting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSetting.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSetting.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetting.ForeColor = System.Drawing.Color.White;
             this.btnSetting.Location = new System.Drawing.Point(952, 170);
             this.btnSetting.Name = "btnSetting";
@@ -133,7 +151,7 @@
             this.btnCategory.FlatAppearance.BorderSize = 0;
             this.btnCategory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
             this.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCategory.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategory.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategory.ForeColor = System.Drawing.Color.White;
             this.btnCategory.Location = new System.Drawing.Point(656, 170);
             this.btnCategory.Name = "btnCategory";
@@ -149,7 +167,7 @@
             this.btnStaff.FlatAppearance.BorderSize = 0;
             this.btnStaff.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
             this.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStaff.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStaff.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStaff.ForeColor = System.Drawing.Color.White;
             this.btnStaff.Location = new System.Drawing.Point(360, 170);
             this.btnStaff.Name = "btnStaff";
@@ -165,7 +183,7 @@
             this.btnMember.FlatAppearance.BorderSize = 0;
             this.btnMember.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
             this.btnMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMember.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMember.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMember.ForeColor = System.Drawing.Color.White;
             this.btnMember.Location = new System.Drawing.Point(64, 170);
             this.btnMember.Name = "btnMember";
@@ -226,21 +244,20 @@
             this.Label2.TabIndex = 14;
             this.Label2.Text = "Version 1.0";
             // 
-            // btnTransaction
+            // button1
             // 
-            this.btnTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
-            this.btnTransaction.FlatAppearance.BorderSize = 0;
-            this.btnTransaction.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
-            this.btnTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTransaction.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTransaction.ForeColor = System.Drawing.Color.White;
-            this.btnTransaction.Location = new System.Drawing.Point(656, 284);
-            this.btnTransaction.Name = "btnTransaction";
-            this.btnTransaction.Size = new System.Drawing.Size(290, 108);
-            this.btnTransaction.TabIndex = 42;
-            this.btnTransaction.Text = "ប្រតិបត្តិការ";
-            this.btnTransaction.UseVisualStyleBackColor = false;
-            this.btnTransaction.Click += new System.EventHandler(this.btnTransaction_Click);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(952, 284);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(290, 108);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "របាយការណ៍";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // FrmMain
             // 
@@ -278,5 +295,6 @@
         internal System.Windows.Forms.Button btnSale;
         private System.Windows.Forms.PictureBox pictureBox1;
         internal System.Windows.Forms.Button btnTransaction;
+        internal System.Windows.Forms.Button button1;
     }
 }

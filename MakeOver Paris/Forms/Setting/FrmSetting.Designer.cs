@@ -63,14 +63,14 @@
             this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.Location = new System.Drawing.Point(904, 161);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 30);
             this.btnSave.TabIndex = 18;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "រក្សាទុក";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -78,13 +78,13 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.label3.Location = new System.Drawing.Point(120, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 19);
+            this.label3.Size = new System.Drawing.Size(49, 24);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Title:";
+            this.label3.Text = "ឈ្មោះ:";
             // 
             // txtTitle
             // 
@@ -113,13 +113,13 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label4.Location = new System.Drawing.Point(103, 49);
+            this.label4.Location = new System.Drawing.Point(120, 49);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 19);
+            this.label4.Size = new System.Drawing.Size(40, 24);
             this.label4.TabIndex = 21;
-            this.label4.Text = "Value:";
+            this.label4.Text = "តម្លៃ:";
             // 
             // txtValue
             // 
@@ -139,14 +139,14 @@
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.Location = new System.Drawing.Point(798, 161);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 30);
             this.btnDelete.TabIndex = 19;
-            this.btnDelete.Text = "Delete";
+            this.btnDelete.Text = "លុប";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -190,12 +190,12 @@
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.Font = new System.Drawing.Font("Khmer OS Content", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.Location = new System.Drawing.Point(62, 12);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(266, 30);
+            this.Label1.Size = new System.Drawing.Size(166, 38);
             this.Label1.TabIndex = 1;
-            this.Label1.Text = "Setting Management";
+            this.Label1.Text = "ការកំណត់ផ្សេងៗ";
             // 
             // Panel3
             // 
@@ -224,14 +224,14 @@
             this.btnMemberList.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnMemberList.FlatAppearance.BorderSize = 0;
             this.btnMemberList.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMemberList.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMemberList.Font = new System.Drawing.Font("Khmer OS Content", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMemberList.ForeColor = System.Drawing.Color.White;
             this.btnMemberList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMemberList.Location = new System.Drawing.Point(0, 0);
+            this.btnMemberList.Location = new System.Drawing.Point(4, -2);
             this.btnMemberList.Name = "btnMemberList";
             this.btnMemberList.Size = new System.Drawing.Size(216, 30);
             this.btnMemberList.TabIndex = 1;
-            this.btnMemberList.Text = "Setting Information &List";
+            this.btnMemberList.Text = "ពត៍មានការកំណត់ផ្សេងៗ";
             this.btnMemberList.UseVisualStyleBackColor = false;
             // 
             // Panel4
@@ -262,6 +262,7 @@
             this.dgvSetting.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSetting.Location = new System.Drawing.Point(5, 258);
             this.dgvSetting.Name = "dgvSetting";
+            this.dgvSetting.ReadOnly = true;
             this.dgvSetting.RowHeadersVisible = false;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             this.dgvSetting.RowsDefaultCellStyle = dataGridViewCellStyle2;
@@ -286,6 +287,7 @@
             this.Name = "FrmSetting";
             this.Text = "FrmSetting";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmSetting_Load);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.Panel1.ResumeLayout(false);

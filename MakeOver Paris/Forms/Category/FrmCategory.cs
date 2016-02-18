@@ -35,7 +35,7 @@ namespace MakeOver_Paris.Forms.Category
             {
                 if (txtName.Text == "")
                 {
-                    MessageBox.Show("Can not empty");
+                    MessageBox.Show("សូមបំពេញពត៏មានឲ្យបានត្រឹមត្រូវ!!!");
                 }
                 else
                 {
@@ -48,7 +48,7 @@ namespace MakeOver_Paris.Forms.Category
                     }
                     else
                     {
-                        MessageBox.Show("Transaction fail!!!");
+                        MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
                     }
                 }
             }
@@ -89,14 +89,21 @@ namespace MakeOver_Paris.Forms.Category
 
         private void dgvCategory_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnDelete.Enabled = true;
-            id = System.Convert.ToInt32(dgvCategory.CurrentRow.Cells[0].Value);
-            txtName.Text = dgvCategory.CurrentRow.Cells[1].Value.ToString();
+            try
+            {
+                id = System.Convert.ToInt32(dgvCategory.CurrentRow.Cells[0].Value);
+                txtName.Text = dgvCategory.CurrentRow.Cells[1].Value.ToString();
+                btnDelete.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
         }
 
         private void deleteAction_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure to delete this item?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("តើអ្នកពិតជាចង់លុបទិន្នន័យនេះមែនទេ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (new CategoryDAO().DeleteCategory(id))
                 {
@@ -107,7 +114,7 @@ namespace MakeOver_Paris.Forms.Category
                 }
                 else
                 {
-                    MessageBox.Show("Transaction fail!!");
+                    MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
                 }
             }
             else
@@ -125,6 +132,17 @@ namespace MakeOver_Paris.Forms.Category
             bs.Filter = "categoryname LIKE '%" + txtSearch.Text + "%'";
             dgvCategory.DataSource = bs;
         }
+
+        private void FrmCategory_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Back)
+            {
+                btnBack_Click(sender, e);
+            }
+                
+        }
+
+      
 
     }
 }

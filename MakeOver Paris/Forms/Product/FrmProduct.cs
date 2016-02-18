@@ -69,7 +69,7 @@ namespace MakeOver_Paris.Forms.Product
                     ||  txtReturnQuantity.Text.Trim() == ""
                 )
                 {
-                    MessageBox.Show("All fields is reuqied and can't be empty!");
+                    MessageBox.Show("សូមបំពេញពត៏មានឲ្យបានត្រឹមត្រូវ!!!");
                 }
                 else
                 {
@@ -86,7 +86,7 @@ namespace MakeOver_Paris.Forms.Product
                     }
                     else
                     {
-                        MessageBox.Show("Transaction fail!!!");
+                        MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
                     }
                 }
             }
@@ -100,7 +100,7 @@ namespace MakeOver_Paris.Forms.Product
                    || txtReturnQuantity.Text.Trim() == ""
                )
                 {
-                    MessageBox.Show("All fields is reuqied and can't be empty!");
+                    MessageBox.Show("សូមបំពេញពត៏មានឲ្យបានត្រឹមត្រូវ!!!");
                 }
                 else
                 {
@@ -127,7 +127,7 @@ namespace MakeOver_Paris.Forms.Product
                     }
                     else
                     {
-                        MessageBox.Show("Transaction fail!!!");
+                        MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
                     }
                 }
 
@@ -196,7 +196,7 @@ namespace MakeOver_Paris.Forms.Product
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure to delete this item?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("តើអ្នកពិតជាចង់លុបទិន្នន័យនេះមែនទេ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (new DAO.ProductDAO().deleteProduct(id))
                 {
@@ -215,7 +215,7 @@ namespace MakeOver_Paris.Forms.Product
                 }
                 else
                 {
-                    MessageBox.Show("Transaction fail!!");
+                    MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
                 }
             }
             else
