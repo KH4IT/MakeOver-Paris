@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnMain = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnTransaction = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnSale = new System.Windows.Forms.Button();
@@ -42,17 +44,19 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnMain
             // 
             this.pnMain.AutoSize = true;
+            this.pnMain.Controls.Add(this.panel1);
             this.pnMain.Controls.Add(this.button1);
             this.pnMain.Controls.Add(this.btnTransaction);
-            this.pnMain.Controls.Add(this.pictureBox1);
             this.pnMain.Controls.Add(this.btnSale);
             this.pnMain.Controls.Add(this.btnProduct);
             this.pnMain.Controls.Add(this.btnSetting);
@@ -62,13 +66,26 @@
             this.pnMain.Controls.Add(this.Label5);
             this.pnMain.Controls.Add(this.lblDateAndTime);
             this.pnMain.Controls.Add(this.lblUsername);
-            this.pnMain.Controls.Add(this.Label1);
-            this.pnMain.Controls.Add(this.Label2);
             this.pnMain.Location = new System.Drawing.Point(-6, -1);
             this.pnMain.Name = "pnMain";
             this.pnMain.Size = new System.Drawing.Size(1306, 660);
             this.pnMain.TabIndex = 14;
             this.pnMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnMain_Paint);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(952, 284);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(290, 108);
+            this.button1.TabIndex = 43;
+            this.button1.Text = "របាយការណ៍";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // btnTransaction
             // 
@@ -89,13 +106,14 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MakeOver_Paris.Properties.Resources.shop;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 18);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(57, 67);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.WaitOnLoad = true;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnSale
             // 
@@ -207,8 +225,9 @@
             // lblDateAndTime
             // 
             this.lblDateAndTime.AutoSize = true;
+            this.lblDateAndTime.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblDateAndTime.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateAndTime.Location = new System.Drawing.Point(15, 462);
+            this.lblDateAndTime.Location = new System.Drawing.Point(0, 621);
             this.lblDateAndTime.Name = "lblDateAndTime";
             this.lblDateAndTime.Size = new System.Drawing.Size(248, 39);
             this.lblDateAndTime.TabIndex = 15;
@@ -217,47 +236,52 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
+            this.lblUsername.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI Light", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(1090, 10);
+            this.lblUsername.Location = new System.Drawing.Point(1107, 0);
             this.lblUsername.Name = "lblUsername";
+            this.lblUsername.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblUsername.Size = new System.Drawing.Size(199, 32);
             this.lblUsername.TabIndex = 24;
             this.lblUsername.Text = "Chheang Vuthea";
+            this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Label1
             // 
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(68, 2);
+            this.Label1.Location = new System.Drawing.Point(71, 19);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(582, 65);
             this.Label1.TabIndex = 13;
             this.Label1.Text = "POS Management System";
+            this.Label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // Label2
             // 
             this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(666, 37);
+            this.Label2.Location = new System.Drawing.Point(669, 54);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(88, 21);
             this.Label2.TabIndex = 14;
             this.Label2.Text = "Version 1.0";
+            this.Label2.Click += new System.EventHandler(this.Label2_Click);
             // 
-            // button1
+            // panel1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(952, 284);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(290, 108);
-            this.button1.TabIndex = 43;
-            this.button1.Text = "របាយការណ៍";
-            this.button1.UseVisualStyleBackColor = false;
+            this.panel1.Controls.Add(this.Label1);
+            this.panel1.Controls.Add(this.Label2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1107, 101);
+            this.panel1.TabIndex = 44;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FrmMain
             // 
@@ -274,6 +298,8 @@
             this.pnMain.ResumeLayout(false);
             this.pnMain.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,5 +322,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         internal System.Windows.Forms.Button btnTransaction;
         internal System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
