@@ -30,10 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnMain = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.Label1 = new System.Windows.Forms.Label();
+            this.Label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnTransaction = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnSale = new System.Windows.Forms.Button();
             this.btnProduct = new System.Windows.Forms.Button();
             this.btnSetting = new System.Windows.Forms.Button();
             this.btnCategory = new System.Windows.Forms.Button();
@@ -42,22 +45,19 @@
             this.Label5 = new System.Windows.Forms.Label();
             this.lblDateAndTime = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
-            this.Label1 = new System.Windows.Forms.Label();
-            this.Label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pnMain.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnMain
             // 
             this.pnMain.AutoSize = true;
+            this.pnMain.Controls.Add(this.button2);
             this.pnMain.Controls.Add(this.panel1);
             this.pnMain.Controls.Add(this.button1);
             this.pnMain.Controls.Add(this.btnTransaction);
-            this.pnMain.Controls.Add(this.btnSale);
             this.pnMain.Controls.Add(this.btnProduct);
             this.pnMain.Controls.Add(this.btnSetting);
             this.pnMain.Controls.Add(this.btnCategory);
@@ -72,6 +72,67 @@
             this.pnMain.TabIndex = 14;
             this.pnMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnMain_Paint);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Green;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(64, 398);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(1178, 108);
+            this.button2.TabIndex = 45;
+            this.button2.Text = "ការលក់ទំនិញ";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.Label1);
+            this.panel1.Controls.Add(this.Label2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1107, 101);
+            this.panel1.TabIndex = 44;
+            // 
+            // Label1
+            // 
+            this.Label1.AutoSize = true;
+            this.Label1.BackColor = System.Drawing.Color.White;
+            this.Label1.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.Location = new System.Drawing.Point(71, 19);
+            this.Label1.Name = "Label1";
+            this.Label1.Size = new System.Drawing.Size(368, 65);
+            this.Label1.TabIndex = 13;
+            this.Label1.Text = "MakeOver Paris";
+            this.Label1.Click += new System.EventHandler(this.Label1_Click);
+            // 
+            // Label2
+            // 
+            this.Label2.AutoSize = true;
+            this.Label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label2.Location = new System.Drawing.Point(445, 54);
+            this.Label2.Name = "Label2";
+            this.Label2.Size = new System.Drawing.Size(88, 21);
+            this.Label2.TabIndex = 14;
+            this.Label2.Text = "Version 1.0";
+            this.Label2.Click += new System.EventHandler(this.Label2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MakeOver_Paris.Properties.Resources.shop;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(57, 67);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 41;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.WaitOnLoad = true;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
@@ -80,7 +141,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(952, 284);
+            this.button1.Location = new System.Drawing.Point(656, 284);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(290, 108);
             this.button1.TabIndex = 43;
@@ -95,41 +156,13 @@
             this.btnTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTransaction.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTransaction.ForeColor = System.Drawing.Color.White;
-            this.btnTransaction.Location = new System.Drawing.Point(656, 284);
+            this.btnTransaction.Location = new System.Drawing.Point(360, 284);
             this.btnTransaction.Name = "btnTransaction";
             this.btnTransaction.Size = new System.Drawing.Size(290, 108);
             this.btnTransaction.TabIndex = 42;
             this.btnTransaction.Text = "ប្រតិបត្តិការ";
             this.btnTransaction.UseVisualStyleBackColor = false;
             this.btnTransaction.Click += new System.EventHandler(this.btnTransaction_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::MakeOver_Paris.Properties.Resources.shop;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 18);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 41;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.WaitOnLoad = true;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // btnSale
-            // 
-            this.btnSale.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
-            this.btnSale.FlatAppearance.BorderSize = 0;
-            this.btnSale.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
-            this.btnSale.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSale.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSale.ForeColor = System.Drawing.Color.White;
-            this.btnSale.Location = new System.Drawing.Point(360, 284);
-            this.btnSale.Name = "btnSale";
-            this.btnSale.Size = new System.Drawing.Size(290, 108);
-            this.btnSale.TabIndex = 40;
-            this.btnSale.Text = "ការលក់ទំនិញ";
-            this.btnSale.UseVisualStyleBackColor = false;
-            this.btnSale.Click += new System.EventHandler(this.btnSale_Click);
             // 
             // btnProduct
             // 
@@ -246,39 +279,6 @@
             this.lblUsername.Text = "Chheang Vuthea";
             this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // Label1
-            // 
-            this.Label1.AutoSize = true;
-            this.Label1.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(71, 19);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(582, 65);
-            this.Label1.TabIndex = 13;
-            this.Label1.Text = "POS Management System";
-            this.Label1.Click += new System.EventHandler(this.Label1_Click);
-            // 
-            // Label2
-            // 
-            this.Label2.AutoSize = true;
-            this.Label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(669, 54);
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(88, 21);
-            this.Label2.TabIndex = 14;
-            this.Label2.Text = "Version 1.0";
-            this.Label2.Click += new System.EventHandler(this.Label2_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.Label1);
-            this.panel1.Controls.Add(this.Label2);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1107, 101);
-            this.panel1.TabIndex = 44;
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
@@ -297,9 +297,9 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.pnMain.ResumeLayout(false);
             this.pnMain.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -318,11 +318,11 @@
         internal System.Windows.Forms.Button btnCategory;
         internal System.Windows.Forms.Button btnSetting;
         internal System.Windows.Forms.Button btnProduct;
-        internal System.Windows.Forms.Button btnSale;
         private System.Windows.Forms.PictureBox pictureBox1;
         internal System.Windows.Forms.Button btnTransaction;
         internal System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Timer timer1;
+        internal System.Windows.Forms.Button button2;
     }
 }
