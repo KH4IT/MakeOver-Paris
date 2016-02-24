@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MakeOver_Paris.DAO;
+using MakeOver_Paris.DTO;
 
 namespace MakeOver_Paris.Forms.Member
 {
     public partial class FrmMembers : Form
     {
+        private int id;
         public FrmMembers()
         {
             InitializeComponent();
@@ -49,37 +52,70 @@ namespace MakeOver_Paris.Forms.Member
             dgvMember.DataSource = bs;
         }
 
-        private void btnAddMember_Click(object sender, EventArgs e)
-        {
-            //btnAddMember.BackColor = Color.White;
-            //btnAddMember.ForeColor = Color.Black;
-            FrmAddMember frmAddMember = new FrmAddMember();
-            frmAddMember.Show();
-            this.Hide();
-        }
-
-        private void btnUpdateMember_Click(object sender, EventArgs e)
-        {
-            FrmUpdateMember frmUpdateMember = new FrmUpdateMember();
-            frmUpdateMember.txtID.Text = dgvMember.CurrentRow.Cells[0].Value.ToString();
-            frmUpdateMember.txtCode.Text = dgvMember.CurrentRow.Cells[1].Value.ToString();
-            frmUpdateMember.txtName.Text = dgvMember.CurrentRow.Cells[2].Value.ToString();
-            frmUpdateMember.txtPhoneNumber.Text = dgvMember.CurrentRow.Cells[3].Value.ToString();
-            frmUpdateMember.txtDiscountRate.Text = dgvMember.CurrentRow.Cells[4].Value.ToString();
-            frmUpdateMember.Show();
-            this.Hide();
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnBack_Click_1(object sender, EventArgs e)
         {
             Forms.FrmMain frmMain = new Forms.FrmMain();
             frmMain.Show();
             this.Close();
         }
 
-        private void dgvMember_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void FrmMembers_KeyDown(object sender, KeyEventArgs e)
         {
-
+            if (e.KeyCode == Keys.Escape)
+            {
+                btnBack_Click_1(sender, e);
+            }
         }
+
+        private void txtDiscountRate_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void txtDiscountRate_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.AllowOnlyDecimalNumber(sender, e);
+        }
+
+        private void Save_Click(object sender, EventArgs e)
+        {
+            if (id == 0)
+            {
+                if (txtName.Text == "")
+                {
+                    MessageBox.Show("សូមបំពេញពត៏មានឲ្យបានត្រឹមត្រូវ!!!");
+                }
+                else
+                {
+                    DTO.Category category = new DTO.Category(txtName.Text);
+                    if (new MemberDAO().addMember())
+                    {
+                        txtName.Clear();
+                        dgvCategory.DataSource = new DAO.CategoryDAO().GetAllCategories().Tables[0];
+                        id = 0;
+                    }
+                    else
+                    {
+                        MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
+                    }
+                }
+            }
+            else
+            {
+                DTO.Category cat = new DTO.Category(id, txtName.Text);
+                if (new CategoryDAO().UdateCategory(cat))
+                {
+                    txtName.Clear();
+                    dgvCategory.DataSource = new DAO.CategoryDAO().GetAllCategories().Tables[0];
+                    id = 0;
+                    btnDelete.Enabled = false;
+                }
+                else
+                {
+
+                }
+            }
+        }
+
     }
 }
