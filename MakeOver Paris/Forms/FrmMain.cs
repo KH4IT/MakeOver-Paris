@@ -35,24 +35,9 @@ namespace MakeOver_Paris.Forms
 
         }
 
-        private void btnStaff_Click(object sender, EventArgs e)
-        {
-           
-            frmParent parent = new frmParent();
-            parent.Show();
-           
-        }
-
         private void pnMain_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            
-            frmParent parent = new frmParent();
-            parent.Show();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -60,27 +45,9 @@ namespace MakeOver_Paris.Forms
             
         }
 
-        private void textBox2_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                frmParent parent = new frmParent();
-                parent.Show();
-            }
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
           
-        }
-
-        private void textBox1_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                frmParent parent = new frmParent();
-                parent.Show();
-            }
         }
 
         private void Label5_Click(object sender, EventArgs e)
@@ -123,13 +90,6 @@ namespace MakeOver_Paris.Forms
         {
             Forms.Product.FrmProduct frmProduct = new Forms.Product.FrmProduct();
             frmProduct.Show();
-            this.Close();
-        }
-
-        private void btnSale_Click(object sender, EventArgs e)
-        {
-            Forms.Sale.FrmSale frmSale = new Forms.Sale.FrmSale();
-            frmSale.Show();
             this.Close();
         }
 

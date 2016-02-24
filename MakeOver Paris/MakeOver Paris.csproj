@@ -118,12 +118,6 @@
     <Compile Include="Forms\Product\FrmProduct.Designer.cs">
       <DependentUpon>FrmProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Sale\FrmSale.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Sale\FrmSale.Designer.cs">
-      <DependentUpon>FrmSale.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Sale\FrmFrontSaleOffice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,66 +141,6 @@
     </Compile>
     <Compile Include="Forms\Transaction\frmTransaction.Designer.cs">
       <DependentUpon>frmTransaction.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmParent.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmParent.Designer.cs">
-      <DependentUpon>frmParent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmCategory.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmCategory.Designer.cs">
-      <DependentUpon>frmCategory.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmMember.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMember.Designer.cs">
-      <DependentUpon>frmMember.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmSale.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSale.Designer.cs">
-      <DependentUpon>frmSale.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmProduct.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmProduct.Designer.cs">
-      <DependentUpon>frmProduct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmSetting.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSetting.Designer.cs">
-      <DependentUpon>frmSetting.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmStaff.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmStaff.Designer.cs">
-      <DependentUpon>frmStaff.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmSplash.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmSplash.Designer.cs">
-      <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -239,9 +173,6 @@
     <EmbeddedResource Include="Forms\Sale\FrmFrontSaleOffice.resx">
       <DependentUpon>FrmFrontSaleOffice.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Sale\FrmSale.resx">
-      <DependentUpon>FrmSale.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Setting\FrmSetting.resx">
       <DependentUpon>FrmSetting.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,36 +181,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Transaction\frmTransaction.resx">
       <DependentUpon>frmTransaction.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmParent.resx">
-      <DependentUpon>frmParent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmCategory.resx">
-      <DependentUpon>frmCategory.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMember.resx">
-      <DependentUpon>frmMember.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmSale.resx">
-      <DependentUpon>frmSale.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmProduct.resx">
-      <DependentUpon>frmProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmSetting.resx">
-      <DependentUpon>frmSetting.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmStaff.resx">
-      <DependentUpon>frmStaff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmSplash.resx">
-      <DependentUpon>frmSplash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
