@@ -121,7 +121,9 @@ namespace MakeOver_Paris.Forms
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Forms.Sale.FrmFrontSaleOffice frmFrontSaleOffice = new Forms.Sale.FrmFrontSaleOffice();
+            frmFrontSaleOffice.Show();
+            this.Close();
         }
 
         private void button2_KeyDown(object sender, KeyEventArgs e)

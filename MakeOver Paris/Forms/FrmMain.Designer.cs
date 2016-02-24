@@ -125,7 +125,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::MakeOver_Paris.Properties.Resources.shop;
+            this.pictureBox1.Image = global::MakeOver_Paris.Properties.Resources.paris;
             this.pictureBox1.Location = new System.Drawing.Point(12, 18);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(57, 67);

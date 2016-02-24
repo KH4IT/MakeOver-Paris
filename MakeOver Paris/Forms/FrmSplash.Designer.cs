@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.pnlSplashScreen = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlSplashScreen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -60,17 +60,6 @@
             this.label3.Size = new System.Drawing.Size(354, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "This software has been developed by KH4IT.";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::MakeOver_Paris.Properties.Resources.shop;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(229, 297);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.WaitOnLoad = true;
             // 
             // label2
             // 
@@ -98,6 +87,17 @@
             // 
             this.timer1.Interval = 2000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MakeOver_Paris.Properties.Resources.paris;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(229, 297);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.WaitOnLoad = true;
             // 
             // FrmSplash
             // 
