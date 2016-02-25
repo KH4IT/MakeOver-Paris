@@ -118,11 +118,41 @@
     <Compile Include="Forms\Report\FrmReport.Designer.cs">
       <DependentUpon>FrmReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Report\rpt_Cashbook.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Report\rpt_Cashbook1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_Cashbook.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Report\rpt_ListOfProducts.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Report\rpt_ListOfProducts1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_ListOfProducts.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Forms\Sale\FrmFrontSaleOffice.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Sale\FrmFrontSaleOffice.Designer.cs">
       <DependentUpon>FrmFrontSaleOffice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sale\FrmPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sale\FrmPay.designer.cs">
+      <DependentUpon>FrmPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sale\FrmSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sale\FrmSale.designer.cs">
+      <DependentUpon>FrmSale.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Setting\FrmSetting.cs">
       <SubType>Form</SubType>
@@ -170,8 +200,22 @@
     <EmbeddedResource Include="Forms\Report\FrmReport.resx">
       <DependentUpon>FrmReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Report\rpt_Cashbook.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_Cashbook1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Report\rpt_ListOfProducts.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_ListOfProducts1.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sale\FrmFrontSaleOffice.resx">
       <DependentUpon>FrmFrontSaleOffice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sale\FrmPay.resx">
+      <DependentUpon>FrmPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sale\FrmSale.resx">
+      <DependentUpon>FrmSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Setting\FrmSetting.resx">
       <DependentUpon>FrmSetting.cs</DependentUpon>
