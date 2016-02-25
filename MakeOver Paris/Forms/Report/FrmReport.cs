@@ -16,5 +16,10 @@ namespace MakeOver_Paris.Forms.Report
         {
             InitializeComponent();
         }
+
+        private void Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

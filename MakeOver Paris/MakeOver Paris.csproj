@@ -94,23 +94,11 @@
     <Compile Include="Forms\FrmSplash.Designer.cs">
       <DependentUpon>FrmSplash.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Member\FrmAddMember.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Member\FrmAddMember.Designer.cs">
-      <DependentUpon>FrmAddMember.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Member\FrmMembers.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Member\FrmMembers.designer.cs">
       <DependentUpon>FrmMembers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Member\FrmUpdateMember.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Member\FrmUpdateMember.designer.cs">
-      <DependentUpon>FrmUpdateMember.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Product\FrmProduct.cs">
       <SubType>Form</SubType>
@@ -164,14 +152,8 @@
     <EmbeddedResource Include="Forms\FrmSplash.resx">
       <DependentUpon>FrmSplash.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Member\FrmAddMember.resx">
-      <DependentUpon>FrmAddMember.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Member\FrmMembers.resx">
       <DependentUpon>FrmMembers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Member\FrmUpdateMember.resx">
-      <DependentUpon>FrmUpdateMember.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Product\FrmProduct.resx">
       <DependentUpon>FrmProduct.cs</DependentUpon>
