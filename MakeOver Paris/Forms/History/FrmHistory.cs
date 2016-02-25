@@ -8,21 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MakeOver_Paris.Forms.Report
+namespace MakeOver_Paris.Forms.History
 {
-    public partial class FrmReport : Form
+    public partial class FrmHistory : Form
     {
-        public FrmReport()
+        public FrmHistory()
         {
             InitializeComponent();
-        }
-
-        private void FrmReport_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Escape)
-            {
-                btnBack_Click(sender, e);
-            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -30,6 +22,14 @@ namespace MakeOver_Paris.Forms.Report
             Forms.FrmMain frmMain = new Forms.FrmMain();
             frmMain.Show();
             this.Close();
+        }
+
+        private void FrmHistory_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                btnBack_Click(sender, e);
+            }
         }
     }
 }

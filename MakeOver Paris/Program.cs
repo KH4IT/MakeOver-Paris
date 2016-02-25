@@ -16,7 +16,7 @@ namespace MakeOver_Paris
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.Report.FrmReport());
+            Application.Run(new Forms.FrmSplash());
         }
     }
 }

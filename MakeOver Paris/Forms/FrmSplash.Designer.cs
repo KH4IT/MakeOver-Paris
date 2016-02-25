@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.pnlSplashScreen = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlSplashScreen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,12 +61,23 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "This software has been developed by KH4IT.";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MakeOver_Paris.Properties.Resources.paris;
+            this.pictureBox1.Location = new System.Drawing.Point(77, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(229, 297);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.WaitOnLoad = true;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Light", 36F, System.Drawing.FontStyle.Italic);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(458, 95);
+            this.label2.Location = new System.Drawing.Point(460, 136);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(467, 65);
             this.label2.TabIndex = 1;
@@ -77,7 +88,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Light", 48F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(305, 9);
+            this.label1.Location = new System.Drawing.Point(307, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(757, 86);
             this.label1.TabIndex = 0;
@@ -87,17 +98,6 @@
             // 
             this.timer1.Interval = 2000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::MakeOver_Paris.Properties.Resources.paris;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(229, 297);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.WaitOnLoad = true;
             // 
             // FrmSplash
             // 

@@ -102,5 +102,19 @@ namespace MakeOver_Paris.Forms
                 this.Close();
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Forms.History.FrmHistory frmHistory = new Forms.History.FrmHistory();
+            frmHistory.Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Forms.Report.FrmReport frmReport = new Forms.Report.FrmReport();
+            frmReport.Show();
+            this.Close();
+        }
     }
 }

@@ -87,6 +87,7 @@
             this.button3.TabIndex = 46;
             this.button3.Text = "កំណត់ត្រាការលក់";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -139,9 +140,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MakeOver_Paris.Properties.Resources.paris;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(21, 18);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 67);
+            this.pictureBox1.Size = new System.Drawing.Size(53, 80);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
@@ -161,6 +162,7 @@
             this.button1.TabIndex = 43;
             this.button1.Text = "របាយការណ៍";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnTransaction
             // 
