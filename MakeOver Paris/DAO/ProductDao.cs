@@ -154,11 +154,12 @@ namespace MakeOver_Paris.DAO
                                           , (SELECT staffname FROM staffs WHERE staffs.staffid = products.createdby) AS createdby
                                           , (SELECT staffname FROM staffs WHERE staffs.staffid = products.updatedby) AS createdby
                                           , createddate
+                                          , updateddate
+                                          , categoryname 
                                           , description 
                                           , remark
-                                          , updateddate
-                                          , categoryid 
-                                    FROM products ";
+                                    FROM products 
+                                    LEFT JOIN categories ON products.categoryid = categories.categoryid";
                 DataSet ds = DBUtility.ExecuteQuery(SQL);
                 return ds;
             }
@@ -275,6 +276,29 @@ namespace MakeOver_Paris.DAO
                 }
             }
             return null;
+        }
+
+        public DataSet getAllProductsSold(String startDate, String endDate)
+        {
+            try
+            {
+                const string SQL = @"SELECT 
+                                           P.productid
+                                         , P.productname
+                                         , SUM(ID.productid)
+                                     FROM products P 
+                                     INNER JOIN invoicedetail ID ON P.productid=ID.productid
+                                     INNER JOIN invoices I ON ID.invoiceid=I.invoiceId
+                                     WHERE I.invoicedate BETWEEN @p1 AND @p2
+                                     GROUP BY P.productid";
+                DataSet ds = DBUtility.ExecuteQuery(SQL, startDate, endDate);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
         }
 
     }

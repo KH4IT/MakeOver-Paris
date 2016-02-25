@@ -135,5 +135,38 @@ namespace MakeOver_Paris.DAO
 			
 		}
 
+        public DataSet GetAllCashBook(String startDate, String endDate)
+        {
+            try
+            {
+                List<Transaction> transactions = new List<Transaction>();
+                String sql = @"SELECT 
+								transactionid
+                                , transactiondate
+								, incomeamount
+								, expenseamount
+								, staffname
+								, remark
+                            FROM transactions
+                            INNER JOIN staffs
+                            ON staffs.staffid = transactions.createdby 
+                            WHERE transactiondate BETWEEN @p1 AND @p2
+                            ORDER BY transactiondate";
+                DataSet ds = DBUtility.ExecuteQuery(sql, startDate, endDate);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+
+        }
+
+
+        internal DataSet GetAllCashBook(char p1, char p2)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

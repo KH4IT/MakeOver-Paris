@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Collections;
 using MakeOver_Paris.DTO;
 using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace MakeOver_Paris.DAO
 {
@@ -141,6 +142,27 @@ namespace MakeOver_Paris.DAO
             return null;
         }
 
-
+        public DataSet getAllInvoices()
+        {
+            try
+            {
+                String sql = @"SELECT 
+                                    I.invoiceid
+                                  , I.invoicedate
+                                  , S.staffname
+                                  , SUM(ID.quantity*ID.priceout)
+                               FROM invoices I 
+                               INNER JOIN staffs S ON I.staffid=S.staffid
+                               INNER JOIN invoicedetail ID ON I.invoiceid=ID.invoiceid
+                               GROUP BY ID.productid";
+                DataSet ds = DBUtility.ExecuteQuery(sql);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+        }
     }
 }
