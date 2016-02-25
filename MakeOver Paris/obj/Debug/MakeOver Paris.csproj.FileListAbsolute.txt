@@ -166,3 +166,4 @@ D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Pa
 D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.pdb
 D:\Make OverParis\newversion\MakeOver-Paris\MakeOver Paris\bin\Debug\MySql.Data.dll
 C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.FrmFrontSaleOffice.resources
+C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Report.FrmReport.resources
