@@ -219,6 +219,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\logo.png" />
+    <None Include="Resources\logo.png" />
     <None Include="Resources\shop.png" />
     <None Include="Resources\User-icon1.png" />
     <None Include="Resources\settings_big_1x.png" />
@@ -242,7 +243,6 @@
     <None Include="Resources\loginfrm.png" />
     <None Include="Resources\btnLogin.png" />
     <None Include="Resources\lock_and_key.png" />
-    <Content Include="Resources\logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

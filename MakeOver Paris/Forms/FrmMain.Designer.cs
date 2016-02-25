@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnMain = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.Label1 = new System.Windows.Forms.Label();
@@ -54,6 +55,7 @@
             // pnMain
             // 
             this.pnMain.AutoSize = true;
+            this.pnMain.Controls.Add(this.button3);
             this.pnMain.Controls.Add(this.button2);
             this.pnMain.Controls.Add(this.panel1);
             this.pnMain.Controls.Add(this.button1);
@@ -70,7 +72,21 @@
             this.pnMain.Name = "pnMain";
             this.pnMain.Size = new System.Drawing.Size(1306, 660);
             this.pnMain.TabIndex = 14;
-            this.pnMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnMain_Paint);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(952, 284);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(290, 108);
+            this.button3.TabIndex = 46;
+            this.button3.Text = "កំណត់ត្រាការលក់";
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -87,7 +103,6 @@
             this.button2.Text = "ការលក់ទំនិញ";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            this.button2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button2_KeyDown);
             // 
             // panel1
             // 
@@ -110,7 +125,6 @@
             this.Label1.Size = new System.Drawing.Size(368, 65);
             this.Label1.TabIndex = 13;
             this.Label1.Text = "MakeOver Paris";
-            this.Label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // Label2
             // 
@@ -121,7 +135,6 @@
             this.Label2.Size = new System.Drawing.Size(88, 21);
             this.Label2.TabIndex = 14;
             this.Label2.Text = "Version 1.0";
-            this.Label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // pictureBox1
             // 
@@ -133,7 +146,6 @@
             this.pictureBox1.TabIndex = 41;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.WaitOnLoad = true;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // button1
             // 
@@ -328,5 +340,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Timer timer1;
         internal System.Windows.Forms.Button button2;
+        internal System.Windows.Forms.Button button3;
     }
 }

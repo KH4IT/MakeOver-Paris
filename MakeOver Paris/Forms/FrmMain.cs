@@ -30,26 +30,6 @@ namespace MakeOver_Paris.Forms
             timer1.Interval = 1000;
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnMain_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-          
-        }
-
         private void Label5_Click(object sender, EventArgs e)
         {
             UserSession.Session.Staff = null;
@@ -100,20 +80,6 @@ namespace MakeOver_Paris.Forms
             this.Close();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label2_Click(object sender, EventArgs e)
-        {
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblDateAndTime.Text = DateTime.Now.ToString("dd-MMMM-yyyy HH:mm:ss tt");
@@ -126,17 +92,13 @@ namespace MakeOver_Paris.Forms
             this.Close();
         }
 
-        private void button2_KeyDown(object sender, KeyEventArgs e)
-        {
-        
-        }
-
         private void FrmMain_KeyDown(object sender, KeyEventArgs e)
         {
+            
             if (e.KeyCode == Keys.Space)
             {
-                Forms.Transaction.frmTransaction frmTransaction = new Forms.Transaction.frmTransaction();
-                frmTransaction.Show();
+                Forms.Sale.FrmFrontSaleOffice frmFrontSaleOffice = new Forms.Sale.FrmFrontSaleOffice();
+                frmFrontSaleOffice.Show();
                 this.Close();
             }
         }

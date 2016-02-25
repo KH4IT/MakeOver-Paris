@@ -55,7 +55,9 @@ namespace MakeOver_Paris.Forms
                     }
                     else
                     {
-                        MessageBox.Show("I am Saler");
+                        Forms.Sale.FrmFrontSaleOffice frmFrontSaleOffice = new Forms.Sale.FrmFrontSaleOffice();
+                        frmFrontSaleOffice.Show();
+                        this.Close();
                     }
                 }
                 else
