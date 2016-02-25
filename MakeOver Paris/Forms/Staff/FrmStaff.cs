@@ -116,12 +116,19 @@ namespace MakeOver_Paris.Forms.Staff
 
         private void dgvStaff_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnDelete.Enabled = true;
-            id = System.Convert.ToInt32(dgvStaff.CurrentRow.Cells[0].Value);
-            txtName.Text = dgvStaff.CurrentRow.Cells[1].Value.ToString();
-            txtPassword.Text = dgvStaff.CurrentRow.Cells[2].Value.ToString();
-            txtType.Text = dgvStaff.CurrentRow.Cells[3].Value.ToString();
-            txtCommission.Text = dgvStaff.CurrentRow.Cells[5].Value.ToString();
+            try
+            {
+                btnDelete.Enabled = true;
+                id = System.Convert.ToInt32(dgvStaff.CurrentRow.Cells[0].Value);
+                txtName.Text = dgvStaff.CurrentRow.Cells[1].Value.ToString();
+                txtPassword.Text = dgvStaff.CurrentRow.Cells[2].Value.ToString();
+                txtType.Text = dgvStaff.CurrentRow.Cells[3].Value.ToString();
+                txtCommission.Text = dgvStaff.CurrentRow.Cells[5].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

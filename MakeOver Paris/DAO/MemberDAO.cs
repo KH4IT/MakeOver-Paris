@@ -220,6 +220,36 @@ namespace MakeOver_Paris.DAO
                 return null;
             }
         }
-
+        public bool DeleteMember(int memberId)
+        {
+            MySqlConnection cnn = DBUtility.getConnection();
+            if (cnn != null)
+            {
+                try
+                {
+                    cnn.Open();
+                    const string SQL = @"DELETE FROM 
+											members 
+										WHERE 
+											memberid = @memberid";
+                    MySqlCommand command = new MySqlCommand(SQL, cnn);
+                    command.Prepare();
+                    command.Parameters.AddWithValue("@memberid", memberId);
+                    if (command.ExecuteNonQuery() > 0)
+                    {
+                        return true;
+                    }
+                }
+                catch (MySqlException e)
+                {
+                    Console.WriteLine(e);
+                }
+                finally
+                {
+                    cnn.Close();
+                }
+            }
+            return false;
+        }
     }
 }

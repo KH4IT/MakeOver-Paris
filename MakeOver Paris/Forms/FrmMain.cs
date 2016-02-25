@@ -118,5 +118,25 @@ namespace MakeOver_Paris.Forms
         {
             lblDateAndTime.Text = DateTime.Now.ToString("dd-MMMM-yyyy HH:mm:ss tt");
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_KeyDown(object sender, KeyEventArgs e)
+        {
+        
+        }
+
+        private void FrmMain_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Space)
+            {
+                Forms.Transaction.frmTransaction frmTransaction = new Forms.Transaction.frmTransaction();
+                frmTransaction.Show();
+                this.Close();
+            }
+        }
     }
 }

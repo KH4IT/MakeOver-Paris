@@ -30,7 +30,6 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvStaff = new System.Windows.Forms.DataGridView();
             this.Panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtType = new System.Windows.Forms.ComboBox();
@@ -52,48 +51,15 @@
             this.Label1 = new System.Windows.Forms.Label();
             this.Panel3 = new System.Windows.Forms.Panel();
             this.Panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
+            this.dgvStaff = new System.Windows.Forms.DataGridView();
             this.Panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.Panel5.SuspendLayout();
             this.Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvStaff
-            // 
-            this.dgvStaff.AllowUserToAddRows = false;
-            this.dgvStaff.AllowUserToDeleteRows = false;
-            this.dgvStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvStaff.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvStaff.BackgroundColor = System.Drawing.Color.White;
-            this.dgvStaff.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.HotPink;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStaff.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvStaff.Location = new System.Drawing.Point(5, 280);
-            this.dgvStaff.MultiSelect = false;
-            this.dgvStaff.Name = "dgvStaff";
-            this.dgvStaff.ReadOnly = true;
-            this.dgvStaff.RowHeadersVisible = false;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            this.dgvStaff.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvStaff.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvStaff.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.dgvStaff.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
-            this.dgvStaff.RowTemplate.Height = 30;
-            this.dgvStaff.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStaff.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStaff.Size = new System.Drawing.Size(1000, 376);
-            this.dgvStaff.TabIndex = 0;
-            this.dgvStaff.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStaff_CellDoubleClick);
             // 
             // Panel4
             // 
@@ -132,9 +98,9 @@
             this.txtType.Items.AddRange(new object[] {
             "admin",
             "staff"});
-            this.txtType.Location = new System.Drawing.Point(178, 78);
+            this.txtType.Location = new System.Drawing.Point(186, 78);
             this.txtType.Name = "txtType";
-            this.txtType.Size = new System.Drawing.Size(300, 28);
+            this.txtType.Size = new System.Drawing.Size(500, 28);
             this.txtType.TabIndex = 20;
             // 
             // btnDelete
@@ -146,7 +112,7 @@
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.Location = new System.Drawing.Point(797, 164);
@@ -165,7 +131,7 @@
             this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.Location = new System.Drawing.Point(903, 164);
@@ -180,11 +146,11 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label6.Location = new System.Drawing.Point(74, 116);
+            this.label6.Location = new System.Drawing.Point(77, 114);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 24);
+            this.label6.Size = new System.Drawing.Size(97, 27);
             this.label6.TabIndex = 10;
             this.label6.Text = "អត្រាភាគរយ:";
             // 
@@ -192,9 +158,9 @@
             // 
             this.txtCommission.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCommission.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCommission.Location = new System.Drawing.Point(178, 112);
+            this.txtCommission.Location = new System.Drawing.Point(186, 112);
             this.txtCommission.Name = "txtCommission";
-            this.txtCommission.Size = new System.Drawing.Size(300, 27);
+            this.txtCommission.Size = new System.Drawing.Size(500, 27);
             this.txtCommission.TabIndex = 9;
             this.txtCommission.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCommission_KeyDown);
             this.txtCommission.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCommission_KeyPress);
@@ -203,11 +169,11 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label5.Location = new System.Drawing.Point(109, 81);
+            this.label5.Location = new System.Drawing.Point(118, 78);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 24);
+            this.label5.Size = new System.Drawing.Size(60, 27);
             this.label5.TabIndex = 8;
             this.label5.Text = "ប្រភេទ:";
             // 
@@ -215,11 +181,11 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label4.Location = new System.Drawing.Point(82, 49);
+            this.label4.Location = new System.Drawing.Point(88, 47);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(82, 24);
+            this.label4.Size = new System.Drawing.Size(92, 27);
             this.label4.TabIndex = 6;
             this.label4.Text = "លេខសំងាត់​:";
             // 
@@ -227,21 +193,21 @@
             // 
             this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(178, 45);
+            this.txtPassword.Location = new System.Drawing.Point(186, 45);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(300, 27);
+            this.txtPassword.Size = new System.Drawing.Size(500, 27);
             this.txtPassword.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label3.Location = new System.Drawing.Point(120, 16);
+            this.label3.Location = new System.Drawing.Point(122, 14);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 24);
+            this.label3.Size = new System.Drawing.Size(56, 27);
             this.label3.TabIndex = 4;
             this.label3.Text = "ឈ្មោះ:";
             // 
@@ -249,20 +215,20 @@
             // 
             this.txtName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(178, 12);
+            this.txtName.Location = new System.Drawing.Point(186, 12);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(300, 27);
+            this.txtName.Size = new System.Drawing.Size(500, 27);
             this.txtName.TabIndex = 3;
             // 
             // Label2
             // 
             this.Label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Label2.AutoSize = true;
-            this.Label2.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label2.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.Label2.Location = new System.Drawing.Point(55, 251);
+            this.Label2.Location = new System.Drawing.Point(57, 243);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(59, 24);
+            this.Label2.Size = new System.Drawing.Size(65, 27);
             this.Label2.TabIndex = 2;
             this.Label2.Text = "ស្វែងរក:";
             // 
@@ -270,9 +236,9 @@
             // 
             this.txtSearch.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(128, 247);
+            this.txtSearch.Location = new System.Drawing.Point(128, 243);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(300, 27);
+            this.txtSearch.Size = new System.Drawing.Size(500, 27);
             this.txtSearch.TabIndex = 1;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -333,10 +299,10 @@
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Font = new System.Drawing.Font("Khmer OS Content", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.Font = new System.Drawing.Font("Khmer OS Content", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.Location = new System.Drawing.Point(62, 12);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(159, 38);
+            this.Label1.Size = new System.Drawing.Size(180, 43);
             this.Label1.TabIndex = 1;
             this.Label1.Text = "គ្រប់គ្រងបុក្គលិក";
             // 
@@ -360,6 +326,40 @@
             this.Panel1.Size = new System.Drawing.Size(1008, 729);
             this.Panel1.TabIndex = 3;
             // 
+            // dgvStaff
+            // 
+            this.dgvStaff.AllowUserToAddRows = false;
+            this.dgvStaff.AllowUserToDeleteRows = false;
+            this.dgvStaff.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvStaff.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvStaff.BackgroundColor = System.Drawing.Color.White;
+            this.dgvStaff.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.HotPink;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStaff.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvStaff.Location = new System.Drawing.Point(5, 280);
+            this.dgvStaff.MultiSelect = false;
+            this.dgvStaff.Name = "dgvStaff";
+            this.dgvStaff.ReadOnly = true;
+            this.dgvStaff.RowHeadersVisible = false;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            this.dgvStaff.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvStaff.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvStaff.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.dgvStaff.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.dgvStaff.RowTemplate.Height = 30;
+            this.dgvStaff.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStaff.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvStaff.Size = new System.Drawing.Size(1000, 376);
+            this.dgvStaff.TabIndex = 0;
+            this.dgvStaff.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStaff_CellDoubleClick);
+            // 
             // FrmStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -375,7 +375,6 @@
             this.Text = "FrmStaff";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmStaff_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
             this.Panel4.ResumeLayout(false);
             this.Panel4.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -385,13 +384,13 @@
             this.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStaff)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        internal System.Windows.Forms.DataGridView dgvStaff;
         internal System.Windows.Forms.Panel Panel4;
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.TextBox txtSearch;
@@ -413,5 +412,6 @@
         internal System.Windows.Forms.Button btnDelete;
         internal System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.ComboBox txtType;
+        internal System.Windows.Forms.DataGridView dgvStaff;
     }
 }

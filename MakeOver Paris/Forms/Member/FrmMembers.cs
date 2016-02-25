@@ -36,20 +36,10 @@ namespace MakeOver_Paris.Forms.Member
             dgvMember.Columns[8].Visible = false;
 
             // TODO: TO SET THE COLUMN NAME OF THE DataGridView
-            Utility.setGridHeaderText("ID|Code|Name|Phone Number|Discount Rate|Created Date|Created By",dgvMember);
+            Utility.setGridHeaderText("ល.រ|លេខកូដ|ឈ្មោះ|ទូរសព្ទ័|អត្រាភាគរយ|កាលបរិច្ជេទចាប់ផ្តើម|ដោយ",dgvMember);
 
             // TODO: TO SET THE WIDTH SIZE OF THE DataGridView
             Utility.setGridHeaderWidth("30|70|150|100|100|100|150", dgvMember);
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            BindingSource bs = new BindingSource();
-            bs.DataSource = dgvMember.DataSource;
-            bs.Filter = "membername LIKE '%" + txtSearch.Text + "%' OR "
-                      + "createdby LIKE '%" + txtSearch.Text + "%' OR "
-                      + "phonenumber LIKE '%" + txtSearch.Text + "%' ";
-            dgvMember.DataSource = bs;
         }
 
         private void btnBack_Click_1(object sender, EventArgs e)
@@ -81,17 +71,32 @@ namespace MakeOver_Paris.Forms.Member
         {
             if (id == 0)
             {
-                if (txtName.Text == "")
+                if (txtName.Text == "" || txtPhone.Text == "" || txtCode.Text == "")
                 {
                     MessageBox.Show("សូមបំពេញពត៏មានឲ្យបានត្រឹមត្រូវ!!!");
                 }
                 else
                 {
-                    DTO.Category category = new DTO.Category(txtName.Text);
-                    if (new MemberDAO().addMember())
+                    DTO.Member member = new DTO.Member();
+                    member.Membername = txtName.Text;
+                    member.MemberCode = txtCode.Text;
+                    member.Phonenumber = txtPhone.Text;
+                    DTO.Staff staff = new DTO.Staff();
+                    staff.Staffid = UserSession.Session.Staff.Staffid;
+                    member.Createdby = staff;
+                    decimal discount = 0;
+                    if (txtDiscountRate.Text != "")
+                    {
+                        discount = System.Convert.ToDecimal(txtDiscountRate.Text);
+                    }
+                    member.Discountrate = discount;
+                    if (new MemberDAO().addMember(member))
                     {
                         txtName.Clear();
-                        dgvCategory.DataSource = new DAO.CategoryDAO().GetAllCategories().Tables[0];
+                        txtCode.Clear();
+                        txtDiscountRate.Clear();
+                        txtPhone.Clear();
+                        dgvMember.DataSource = new DAO.MemberDAO().getAllMembersWithDataSet().Tables[0];
                         id = 0;
                     }
                     else
@@ -102,18 +107,84 @@ namespace MakeOver_Paris.Forms.Member
             }
             else
             {
-                DTO.Category cat = new DTO.Category(id, txtName.Text);
-                if (new CategoryDAO().UdateCategory(cat))
+                DTO.Member member = new DTO.Member();
+                member.Membername = txtName.Text;
+                member.MemberCode = txtCode.Text;
+                member.Phonenumber = txtPhone.Text;
+                DTO.Staff staff = new DTO.Staff();
+                staff.Staffid = UserSession.Session.Staff.Staffid;
+                member.Updatedby = staff;
+                member.Memberid = id;
+                decimal discount = 0;
+                if (txtDiscountRate.Text != "")
+                {
+                    discount = System.Convert.ToDecimal(txtDiscountRate.Text);
+                }
+                member.Discountrate = discount;
+                if (new MemberDAO().updateMemeber(member))
                 {
                     txtName.Clear();
-                    dgvCategory.DataSource = new DAO.CategoryDAO().GetAllCategories().Tables[0];
+                    txtCode.Clear();
+                    txtDiscountRate.Clear();
+                    txtPhone.Clear();
+                    dgvMember.DataSource = new DAO.MemberDAO().getAllMembersWithDataSet().Tables[0];
                     id = 0;
-                    btnDelete.Enabled = false;
+                    delete.Enabled = false;
                 }
                 else
                 {
-
+                    MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
                 }
+            }
+        }
+
+        private void txtSearch_TextChanged_1(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dgvMember.DataSource;
+            bs.Filter = "membername LIKE '%" + txtSearch.Text + "%'";
+            dgvMember.DataSource = bs;
+        }
+
+        private void dgvMember_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                id = System.Convert.ToInt32(dgvMember.CurrentRow.Cells[0].Value.ToString());
+                txtCode.Text = dgvMember.CurrentRow.Cells[1].Value.ToString();
+                txtName.Text = dgvMember.CurrentRow.Cells[2].Value.ToString();
+                txtPhone.Text = dgvMember.CurrentRow.Cells[3].Value.ToString();
+                txtDiscountRate.Text = dgvMember.CurrentRow.Cells[4].Value.ToString();
+                delete.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("តើអ្នកពិតជាចង់លុបទិន្នន័យនេះមែនទេ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (new MemberDAO().DeleteMember(id))
+                {
+                    txtName.Clear();
+                    txtCode.Clear();
+                    txtDiscountRate.Clear();
+                    txtPhone.Clear();
+                    delete.Enabled = false;
+                    dgvMember.DataSource = new DAO.MemberDAO().getAllMembersWithDataSet().Tables[0];
+                    id = 0;
+                }
+                else
+                {
+                    MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
+                }
+            }
+            else
+            {
+                // user clicked no
             }
         }
 

@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Panel1 = new System.Windows.Forms.Panel();
             this.Panel2 = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.PictureBox();
@@ -114,10 +115,10 @@
             // Label1
             // 
             this.Label1.AutoSize = true;
-            this.Label1.Font = new System.Drawing.Font("Khmer OS Content", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label1.Font = new System.Drawing.Font("Khmer OS Content", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.Location = new System.Drawing.Point(62, 10);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(174, 38);
+            this.Label1.Size = new System.Drawing.Size(197, 43);
             this.Label1.TabIndex = 1;
             this.Label1.Text = "ការគ្រប់គ្រង់ទំនិញ";
             // 
@@ -205,11 +206,11 @@
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.label12.Location = new System.Drawing.Point(541, 163);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(92, 24);
+            this.label12.Size = new System.Drawing.Size(103, 27);
             this.label12.TabIndex = 37;
             this.label12.Text = "បរិមាណប្តុវិញ:";
             // 
@@ -217,9 +218,9 @@
             // 
             this.txtReturnQuantity.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtReturnQuantity.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReturnQuantity.Location = new System.Drawing.Point(645, 159);
+            this.txtReturnQuantity.Location = new System.Drawing.Point(648, 159);
             this.txtReturnQuantity.Name = "txtReturnQuantity";
-            this.txtReturnQuantity.Size = new System.Drawing.Size(300, 27);
+            this.txtReturnQuantity.Size = new System.Drawing.Size(327, 27);
             this.txtReturnQuantity.TabIndex = 36;
             this.txtReturnQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtReturnQuantity_KeyPress);
             // 
@@ -227,11 +228,11 @@
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.label11.Location = new System.Drawing.Point(88, 103);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(55, 24);
+            this.label11.Size = new System.Drawing.Size(60, 27);
             this.label11.TabIndex = 35;
             this.label11.Text = "ប្រភេទ:";
             // 
@@ -239,11 +240,11 @@
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.label10.Location = new System.Drawing.Point(581, 91);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(57, 24);
+            this.label10.Size = new System.Drawing.Size(65, 27);
             this.label10.TabIndex = 34;
             this.label10.Text = "សំគាល់:";
             // 
@@ -251,10 +252,10 @@
             // 
             this.txtRemark.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtRemark.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRemark.Location = new System.Drawing.Point(645, 87);
+            this.txtRemark.Location = new System.Drawing.Point(648, 87);
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";
-            this.txtRemark.Size = new System.Drawing.Size(300, 66);
+            this.txtRemark.Size = new System.Drawing.Size(327, 66);
             this.txtRemark.TabIndex = 33;
             // 
             // cboCategory
@@ -262,20 +263,20 @@
             this.cboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCategory.FormattingEnabled = true;
-            this.cboCategory.Location = new System.Drawing.Point(157, 101);
+            this.cboCategory.Location = new System.Drawing.Point(162, 101);
             this.cboCategory.Name = "cboCategory";
-            this.cboCategory.Size = new System.Drawing.Size(300, 26);
+            this.cboCategory.Size = new System.Drawing.Size(363, 26);
             this.cboCategory.TabIndex = 32;
             // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.label8.Location = new System.Drawing.Point(48, 203);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 24);
+            this.label8.Size = new System.Drawing.Size(103, 27);
             this.label8.TabIndex = 31;
             this.label8.Text = "តម្លៃលក់ចេញ:";
             // 
@@ -283,9 +284,9 @@
             // 
             this.txtPriceOut.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPriceOut.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPriceOut.Location = new System.Drawing.Point(157, 199);
+            this.txtPriceOut.Location = new System.Drawing.Point(162, 199);
             this.txtPriceOut.Name = "txtPriceOut";
-            this.txtPriceOut.Size = new System.Drawing.Size(300, 27);
+            this.txtPriceOut.Size = new System.Drawing.Size(363, 27);
             this.txtPriceOut.TabIndex = 30;
             this.txtPriceOut.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPriceOut_KeyPress);
             // 
@@ -293,11 +294,11 @@
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.label9.Location = new System.Drawing.Point(82, 137);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(63, 24);
+            this.label9.Size = new System.Drawing.Size(71, 27);
             this.label9.TabIndex = 29;
             this.label9.Text = "បរិមាណ:";
             // 
@@ -305,9 +306,9 @@
             // 
             this.txtQuantity.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtQuantity.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantity.Location = new System.Drawing.Point(157, 133);
+            this.txtQuantity.Location = new System.Drawing.Point(162, 133);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(300, 27);
+            this.txtQuantity.Size = new System.Drawing.Size(363, 27);
             this.txtQuantity.TabIndex = 28;
             this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantity_KeyPress);
             // 
@@ -315,11 +316,11 @@
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.label7.Location = new System.Drawing.Point(99, 73);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 24);
+            this.label7.Size = new System.Drawing.Size(56, 27);
             this.label7.TabIndex = 27;
             this.label7.Text = "ឈ្មោះ:";
             // 
@@ -327,20 +328,20 @@
             // 
             this.txtName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtName.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(157, 69);
+            this.txtName.Location = new System.Drawing.Point(162, 69);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(300, 27);
+            this.txtName.Size = new System.Drawing.Size(363, 27);
             this.txtName.TabIndex = 26;
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.label5.Location = new System.Drawing.Point(55, 170);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 24);
+            this.label5.Size = new System.Drawing.Size(98, 27);
             this.label5.TabIndex = 25;
             this.label5.Text = "តម្លៃទិញចូល:";
             // 
@@ -348,9 +349,9 @@
             // 
             this.txtPriceIn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPriceIn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPriceIn.Location = new System.Drawing.Point(157, 166);
+            this.txtPriceIn.Location = new System.Drawing.Point(162, 166);
             this.txtPriceIn.Name = "txtPriceIn";
-            this.txtPriceIn.Size = new System.Drawing.Size(300, 27);
+            this.txtPriceIn.Size = new System.Drawing.Size(363, 27);
             this.txtPriceIn.TabIndex = 24;
             this.txtPriceIn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPriceIn_KeyPress);
             // 
@@ -358,11 +359,11 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.label6.Location = new System.Drawing.Point(51, 40);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 24);
+            this.label6.Size = new System.Drawing.Size(109, 27);
             this.label6.TabIndex = 23;
             this.label6.Text = "លេខកូដទំនិញ:";
             // 
@@ -370,20 +371,20 @@
             // 
             this.txtProductCode.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtProductCode.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtProductCode.Location = new System.Drawing.Point(157, 36);
+            this.txtProductCode.Location = new System.Drawing.Point(162, 36);
             this.txtProductCode.Name = "txtProductCode";
-            this.txtProductCode.Size = new System.Drawing.Size(300, 27);
+            this.txtProductCode.Size = new System.Drawing.Size(363, 27);
             this.txtProductCode.TabIndex = 22;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.label4.Location = new System.Drawing.Point(572, 11);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 24);
+            this.label4.Size = new System.Drawing.Size(71, 27);
             this.label4.TabIndex = 21;
             this.label4.Text = "បរិយាយ:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -392,10 +393,10 @@
             // 
             this.txtDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDescription.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.Location = new System.Drawing.Point(645, 4);
+            this.txtDescription.Location = new System.Drawing.Point(648, 4);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(300, 77);
+            this.txtDescription.Size = new System.Drawing.Size(327, 77);
             this.txtDescription.TabIndex = 20;
             this.txtDescription.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -408,7 +409,7 @@
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.Location = new System.Drawing.Point(798, 198);
@@ -427,7 +428,7 @@
             this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.Location = new System.Drawing.Point(904, 198);
@@ -442,11 +443,11 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.label3.Location = new System.Drawing.Point(99, 8);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 24);
+            this.label3.Size = new System.Drawing.Size(55, 27);
             this.label3.TabIndex = 4;
             this.label3.Text = "បាកូដ:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -455,9 +456,9 @@
             // 
             this.txtBarcode.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtBarcode.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBarcode.Location = new System.Drawing.Point(157, 3);
+            this.txtBarcode.Location = new System.Drawing.Point(162, 3);
             this.txtBarcode.Name = "txtBarcode";
-            this.txtBarcode.Size = new System.Drawing.Size(300, 27);
+            this.txtBarcode.Size = new System.Drawing.Size(363, 27);
             this.txtBarcode.TabIndex = 3;
             this.txtBarcode.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -465,11 +466,11 @@
             // 
             this.Label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Label2.AutoSize = true;
-            this.Label2.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Label2.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.Label2.Location = new System.Drawing.Point(55, 299);
+            this.Label2.Location = new System.Drawing.Point(55, 295);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(59, 24);
+            this.Label2.Size = new System.Drawing.Size(65, 27);
             this.Label2.TabIndex = 2;
             this.Label2.Text = "ស្វែងរក:";
             // 
@@ -489,21 +490,29 @@
             this.dgvProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProduct.BackgroundColor = System.Drawing.Color.White;
             this.dgvProduct.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.HotPink;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.HotPink;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProduct.Location = new System.Drawing.Point(5, 330);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RowHeadersVisible = false;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            this.dgvProduct.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            this.dgvProduct.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProduct.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvProduct.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.dgvProduct.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));

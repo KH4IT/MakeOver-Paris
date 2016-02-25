@@ -86,6 +86,8 @@
             this.button2.TabIndex = 45;
             this.button2.Text = "ការលក់ទំនិញ";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.button2_KeyDown);
             // 
             // panel1
             // 
@@ -291,10 +293,12 @@
             this.ClientSize = new System.Drawing.Size(1294, 530);
             this.Controls.Add(this.pnMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "FrmMain";
             this.Text = "frmMain";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmMain_KeyDown);
             this.pnMain.ResumeLayout(false);
             this.pnMain.PerformLayout();
             this.panel1.ResumeLayout(false);

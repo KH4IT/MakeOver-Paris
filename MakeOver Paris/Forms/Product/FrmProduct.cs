@@ -130,35 +130,6 @@ namespace MakeOver_Paris.Forms.Product
                         MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
                     }
                 }
-
-
-                //if (txtTitle.Text.Trim() == "")
-                //{
-                //    MessageBox.Show("Title can't be empty");
-                //}
-                //else if (txtValue.Text.Trim() == "")
-                //{
-                //    MessageBox.Show("Value can't be empty");
-                //}
-                //else
-                //{
-                //    DTO.Setting setting = new DTO.Setting();
-                //    setting.Title = txtTitle.Text.Trim();
-                //    setting.Value = txtValue.Text.Trim();
-                //    setting.Settingid = id;
-                //    if (new DAO.SettingDao().updateSetting(setting))
-                //    {
-                //        txtTitle.Clear();
-                //        txtValue.Clear();
-                //        dgvSetting.DataSource = new DAO.SettingDao().getAllSettingDS().Tables[0];
-                //        id = 0;
-                //        btnDelete.Enabled = false;
-                //    }
-                //    else
-                //    {
-                //        MessageBox.Show("Transaction fail!!!");
-                //    }
-                //}
             }
         }
 
@@ -260,7 +231,7 @@ namespace MakeOver_Paris.Forms.Product
             cboCategory.DisplayMember = "categoryname";
             cboCategory.ValueMember = "categoryid";
             //CUSTOM GRID
-            Utility.setGridHeaderText("ល.រ|លេខទំនិញ|បារកូដ|ឈ្មោះ|បរិមាណ|តម្លៃទិញចូល $|តម្លៃលក់ចេញ $|បរិមាណប្តូរវិញ|បង្កើតដោយ|កែប្រែដោយ", dgvProduct);
+            Utility.setGridHeaderText("ល.រ|លេខទំនិញ|បារកូដ|ឈ្មោះ|បរិមាណ|តម្លៃទិញចូល|តម្លៃលក់ចេញ|បរិមាណប្តូរវិញ|បង្កើតដោយ|កែប្រែដោយ", dgvProduct);
             Utility.setGridHeaderWidth("30", dgvProduct);
             dgvProduct.Columns[10].Visible = false;
             dgvProduct.Columns[11].Visible = false;
