@@ -31,5 +31,29 @@ namespace MakeOver_Paris.Forms.History
                 btnBack_Click(sender, e);
             }
         }
+
+        private void FrmHistory_Load(object sender, EventArgs e)
+        {
+            DataSet invoices = new DAO.InvoiceDAO().getAllInvoices();
+            dgvReport.DataSource = invoices.Tables[0];
+            Utility.setGridHeaderText("លេខកូដវិក្ក័យប័ត្រ|កាលបរិច្ឆេទចេញវិក្ក័យប័ត្រ|ឈ្មោះអ្នកលក់|តម្លៃសរុប", dgvReport);
+            Utility.setGridHeaderWidth("100|200|300|200", dgvReport);
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dgvReport.DataSource;
+            bs.Filter = "staffname LIKE '%" + textBox1.Text + "%'";
+            dgvReport.DataSource = bs;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dgvReport.DataSource;
+            bs.Filter = "Convert(invoicedate,'System.String') LIKE '%" + textBox2.Text + "%'";
+            dgvReport.DataSource = bs;
+        }
     }
 }

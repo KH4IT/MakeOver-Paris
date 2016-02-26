@@ -305,6 +305,7 @@
             this.txtSearchByDate.Name = "txtSearchByDate";
             this.txtSearchByDate.Size = new System.Drawing.Size(300, 27);
             this.txtSearchByDate.TabIndex = 6;
+            this.txtSearchByDate.TextChanged += new System.EventHandler(this.txtSearchByDate_TextChanged);
             // 
             // Label2
             // 

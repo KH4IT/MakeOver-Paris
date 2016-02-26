@@ -154,7 +154,7 @@ namespace MakeOver_Paris.DAO
                                FROM invoices I 
                                INNER JOIN staffs S ON I.staffid=S.staffid
                                INNER JOIN invoicedetail ID ON I.invoiceid=ID.invoiceid
-                               GROUP BY ID.productid";
+                               GROUP BY I.invoiceid";
                 DataSet ds = DBUtility.ExecuteQuery(sql);
                 return ds;
             }

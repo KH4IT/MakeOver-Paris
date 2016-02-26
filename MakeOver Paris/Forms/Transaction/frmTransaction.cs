@@ -199,5 +199,13 @@ namespace MakeOver_Paris.Forms.Transaction
             }
         }
 
+        private void txtSearchByDate_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dgvTransaction.DataSource;
+            bs.Filter = "Convert(transactiondate,'System.String') LIKE '%" + txtSearchByDate.Text + "%'";
+            dgvTransaction.DataSource = bs;
+        }
+
     }
 }
