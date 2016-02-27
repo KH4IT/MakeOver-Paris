@@ -278,6 +278,59 @@ namespace MakeOver_Paris.DAO
             return null;
         }
 
+        public Product getProduct(String code)
+        {
+            MySqlConnection cnn = DBUtility.getConnection();
+            if (cnn != null)
+            {
+                try
+                {
+                    cnn.Open();
+                    const string SQL = "SELECT productid,productcode,barcode,productname,quantity,description,pricein,priceout,returnquantity,remark,createddate,createdby,updateddate,updatedby,categoryid FROM products WHERE productcode=@productcode OR barcode=@barcode;";
+                    MySqlCommand command = new MySqlCommand(SQL, cnn); command.Prepare();
+                    command.Parameters.AddWithValue("@productcode", code);
+                    command.Parameters.AddWithValue("@barcode", code);
+                    MySqlDataReader reader = command.ExecuteReader();
+                    Product product = null;
+                    while (reader.Read())
+                    {
+                        product = new Product();
+                        product.Productid = reader.GetInt16("productid");
+                        product.Productcode = DBUtility.SafeGetString(reader, "productcode");
+                        product.Barcode = DBUtility.SafeGetString(reader, "barcode");
+                        product.Productname = DBUtility.SafeGetString(reader, "productname");
+                        product.Quantity = reader.GetInt16("quantity");
+                        product.Description = DBUtility.SafeGetString(reader, "description");
+                        product.Pricein = reader.GetInt16("pricein");
+                        product.Priceout = reader.GetInt16("priceout");
+                        product.Returnquantity = reader.GetInt16("returnquantity");
+                        product.Remark = DBUtility.SafeGetString(reader, "remark");
+                        product.Createddate = reader.GetDateTime("createddate");
+                        Staff createdby = new Staff();
+                        createdby.Staffid = reader.GetInt16("createdby");
+                        Staff updatedby = new Staff();
+                        updatedby.Staffid = reader.GetInt16("updatedby");
+                        product.Createdby = createdby;
+                        product.Updatedby = updatedby;
+                        product.Updateddate = reader.GetDateTime("updateddate");
+                        Category category = new Category();
+                        category.Categoryid = reader.GetInt16("categoryid");
+                        product.Category = category;
+                    }
+                    return product;
+                }
+                catch (MySqlException e)
+                {
+                    Console.WriteLine(e);
+                }
+                finally
+                {
+                    cnn.Close();
+                }
+            }
+            return null;
+        }
+
         public DataSet getAllProductsSold(String startDate, String endDate)
         {
             try

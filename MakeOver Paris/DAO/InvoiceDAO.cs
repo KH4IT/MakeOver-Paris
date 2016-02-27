@@ -13,7 +13,7 @@ namespace MakeOver_Paris.DAO
     class InvoiceDAO
     {
 
-        public Boolean addInvoice(Invoice invoice)
+        public int addInvoice(Invoice invoice)
         {
             MySqlConnection con = DBUtility.getConnection();
             if (con != null)
@@ -50,11 +50,11 @@ namespace MakeOver_Paris.DAO
                         invDetailCommand.Parameters.AddWithValue("@pricein" + i, ((InvoiceDetail)invoice.InvoiceDetail[i]).Pricein);
                         invDetailCommand.Parameters.AddWithValue("@priceout" + i, ((InvoiceDetail)invoice.InvoiceDetail[i]).Priceout);
 
-                        String updateSql = "UPDATE Products SET quantity=quantity-@quantity WHERE productid=@productid";
+                        String updateSql = "UPDATE Products SET quantity=quantity-@quantity WHERE productid=@productid;";
                         MySqlCommand updateProductCommand = new MySqlCommand(updateSql, con);
                         updateProductCommand.Prepare();
                         updateProductCommand.Parameters.AddWithValue("@quantity", ((InvoiceDetail)invoice.InvoiceDetail[i]).Quantity);
-                        updateProductCommand.Parameters.AddWithValue("@productid" + i, ((InvoiceDetail)invoice.InvoiceDetail[i]).Product.Productid);
+                        updateProductCommand.Parameters.AddWithValue("@productid", ((InvoiceDetail)invoice.InvoiceDetail[i]).Product.Productid);
                         updateProductCommand.ExecuteNonQuery();
 
                         //Product p = new ProductDao().getProduct(((InvoiceDetail)invoice.InvoiceDetail[i]).Product.Productid);
@@ -64,7 +64,7 @@ namespace MakeOver_Paris.DAO
                     }
                     invDetailCommand.ExecuteNonQuery();
                     transaction.Commit();
-                    return true;
+                    return invoice.Invoiceid;
                 }
                 catch (MySqlException e)
                 {
@@ -76,7 +76,7 @@ namespace MakeOver_Paris.DAO
                     con.Close();
                 }
             }
-            return false;
+            return -1;
         }
 
         public Invoice getInvoice(int invoiceId)
@@ -164,5 +164,7 @@ namespace MakeOver_Paris.DAO
                 return null;
             }
         }
+
+
     }
 }
