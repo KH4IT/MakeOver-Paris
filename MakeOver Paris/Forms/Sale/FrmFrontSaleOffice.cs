@@ -158,9 +158,17 @@ namespace MakeOver_Paris.Forms.Sale
         {
             DataSet ds = new DAO.MemberDAO().getAllMembersWithDataSet();
             
+            //DataRow dr = new DataRow("SELECT");
+            //ds.Tables[0].Rows.InsertAt(,0);
             cboMember.DataSource = ds.Tables[0];
             cboMember.DisplayMember = "membername";
             cboMember.ValueMember = "memberid";
+            //cboMember.Items.Insert(0, "-Select-");
+
+        }
+
+        private void cboMember_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
 

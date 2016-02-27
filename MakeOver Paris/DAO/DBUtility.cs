@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
+using System.Configuration;
 
 namespace MakeOver_Paris.DAO
 {
@@ -17,7 +18,6 @@ namespace MakeOver_Paris.DAO
         {
             MySqlConnection con = null;
             string myConnectionString = "SERVER=127.0.0.1;UID=root;PWD=;DATABASE=makeover_db;Allow User Variables=True";
-
             try
             {
                 con = new MySql.Data.MySqlClient.MySqlConnection();
