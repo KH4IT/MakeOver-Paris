@@ -30,12 +30,12 @@ namespace MakeOver_Paris
             }
             try
             {
-                //DAO.DBUtility.getConnection().Open();
+                DAO.DBUtility.getConnection().Open();
                 Application.Run(new Forms.FrmSplash());
             }
             catch (Exception)
             {
-                //Application.Run(new Forms.Configuration.FrmDatabaseConfiguration());   
+                Application.Run(new Forms.Configuration.FrmDatabaseConfiguration());   
             }
         }
     }
