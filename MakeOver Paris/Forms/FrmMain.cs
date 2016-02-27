@@ -15,9 +15,7 @@ namespace MakeOver_Paris.Forms
     {
         public FrmMain()
         {
-            
             InitializeComponent();
-           
         }
 
         private void frmMain_Load(object sender, EventArgs e)
