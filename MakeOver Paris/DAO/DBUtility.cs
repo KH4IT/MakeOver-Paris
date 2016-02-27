@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Data;
+using Microsoft.Win32;
 using System.Configuration;
 
 namespace MakeOver_Paris.DAO
@@ -12,12 +13,12 @@ namespace MakeOver_Paris.DAO
     class DBUtility
     {
 
-        private static string cs = "SERVER=127.0.0.1;UID=root;PWD=;DATABASE=makeover_db;Allow User Variables=True";
+        private static string cs = Registry.GetValue(@"HKEY_CURRENT_USER\SOFTWARE\MAKEOVER_PARIS", "ConStr", "").ToString();//"SERVER=127.0.0.1;UID=root;PWD=;DATABASE=makeover_db;Allow User Variables=True";
 
-        public static MySqlConnection getConnection ()
+        public static MySqlConnection getConnection()
         {
             MySqlConnection con = null;
-            string myConnectionString = "SERVER=127.0.0.1;UID=root;PWD=;DATABASE=makeover_db;Allow User Variables=True";
+            string myConnectionString = Registry.GetValue(@"HKEY_CURRENT_USER\SOFTWARE\MAKEOVER_PARIS", "ConStr", "").ToString();//"SERVER=127.0.0.1;UID=root;PWD=;DATABASE=makeover_db;Allow User Variables=True";
             try
             {
                 con = new MySql.Data.MySqlClient.MySqlConnection();
@@ -43,7 +44,7 @@ namespace MakeOver_Paris.DAO
         // EXAMPLE: 
         //      DBUtility.ExecuteNonQuery("INSERT INTO tables VALUE(@p1,@p2,@p3)" ,1 ,2 ,3);
         public static Boolean ExecuteNonQuery(string sql, params object[] fields)
-        {  
+        {
             using (MySqlConnection cnn = new MySqlConnection(cs))
             {
                 MySqlCommand cmd = new MySqlCommand();

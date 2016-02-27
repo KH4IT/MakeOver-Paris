@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,26 @@ namespace MakeOver_Paris
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.FrmSplash());
+
+            string ConStr;
+
+            try
+            {
+                ConStr = Registry.GetValue(@"HKEY_CURRENT_USER\SOFTWARE\Wedding", "Server", "").ToString();
+            }
+            catch (Exception)
+            {
+
+            }
+            try
+            {
+                DAO.DBUtility.getConnection().Open();
+                Application.Run(new Forms.FrmSplash());
+            }
+            catch (Exception)
+            {
+                Application.Run(new Forms.Configuration.FrmDatabaseConfiguration());   
+            }
         }
     }
 }

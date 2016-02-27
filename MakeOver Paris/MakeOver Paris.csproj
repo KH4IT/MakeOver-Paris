@@ -78,6 +78,12 @@
     <Compile Include="Forms\Category\FrmCategory.Designer.cs">
       <DependentUpon>FrmCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Configuration\FrmDatabaseConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Configuration\FrmDatabaseConfiguration.Designer.cs">
+      <DependentUpon>FrmDatabaseConfiguration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     <Compile Include="Utility.cs" />
     <EmbeddedResource Include="Forms\Category\FrmCategory.resx">
       <DependentUpon>FrmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Configuration\FrmDatabaseConfiguration.resx">
+      <DependentUpon>FrmDatabaseConfiguration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
