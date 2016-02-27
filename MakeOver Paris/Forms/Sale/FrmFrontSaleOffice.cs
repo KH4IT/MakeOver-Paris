@@ -88,12 +88,7 @@ namespace MakeOver_Paris.Forms.Sale
                 }
 
             }
-            decimal total = 0;
-            for (int i = 0; i < grdItems.Rows.Count; i++)
-            {
-                total += decimal.Parse(grdItems.Rows[i].Cells[4].Value.ToString());
-            }
-            lblDollar.Text = total + "";
+            calculate();
         }
 
         private int checkInGrid(int productid)
@@ -139,11 +134,8 @@ namespace MakeOver_Paris.Forms.Sale
                     int invoiceid = insertToDB();
                     if (invoiceid != -1)
                     {
-                        decimal total = 0;
-                        for (int i = 0; i < grdItems.Rows.Count; i++)
-                        {
-                            total += decimal.Parse(grdItems.Rows[i].Cells[4].Value.ToString());
-                        }
+                        decimal total = decimal.Parse(lblDollar.Text.Substring(0, lblDollar.Text.Length-2));
+                        
                         
                         FrmPay frmPay = new FrmPay();
                         frmPay.txtTotal.Text = total.ToString();
@@ -178,8 +170,33 @@ namespace MakeOver_Paris.Forms.Sale
 
         private void cboMember_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cboMember.SelectedIndex != 0)
+            {
+                int memberid = (int)cboMember.SelectedValue;
+                DTO.Member member = new DAO.MemberDAO().getMemberById(memberid);
+                lblDiscount.Text = member.Discountrate + " %";
+            }
+            else
+            {
+                lblDiscount.Text = "0.00 %";
+            }
+            calculate();
 
         }
+
+        private void calculate()
+        {
+            decimal total = 0;
+            for (int i = 0; i < grdItems.Rows.Count; i++)
+            {
+                total += decimal.Parse(grdItems.Rows[i].Cells[4].Value.ToString());
+            }
+            total = (total * (100 - decimal.Parse(lblDiscount.Text.Substring(0, lblDiscount.Text.Length - 2))) / 100);
+            lblDollar.Text = total + "";
+            decimal rate = decimal.Parse(new DAO.SettingDao().getValue("ExchangeRate"));
+            lblRiel.Text = (decimal.Parse(lblDollar.Text) * rate).ToString();
+        }
+
 
 
 

@@ -137,7 +137,9 @@ namespace MakeOver_Paris.DAO
                 Staff updatedStaff = new Staff();
                 updatedStaff.Staffname = ds.Tables[0].Rows[0]["updatedby"].ToString();
                 member.Updatedby = updatedStaff;
-                member.Updateddate = (System.DateTime)ds.Tables[0].Rows[0]["updateddate"]; 
+                member.Updateddate = (System.DateTime)ds.Tables[0].Rows[0]["updateddate"];
+
+                member.Discountrate = decimal.Parse(ds.Tables[0].Rows[0]["discountrate"].ToString());
 
                 return member;
             }

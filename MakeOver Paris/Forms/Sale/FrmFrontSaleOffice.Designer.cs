@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -168,7 +168,7 @@
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.19037F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 89.80963F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 314F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 316F));
             this.tableLayoutPanel5.Controls.Add(this.txtCode, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.cboMember, 2, 0);
@@ -187,7 +187,7 @@
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(850, 27);
             this.txtCode.TabIndex = 25;
-            this.txtCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtName_KeyDown);
+            this.txtCode.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtName_KeyDown);
             // 
             // label5
             // 
@@ -206,7 +206,7 @@
             this.cboMember.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboMember.FormattingEnabled = true;
-            this.cboMember.Location = new System.Drawing.Point(958, 3);
+            this.cboMember.Location = new System.Drawing.Point(956, 3);
             this.cboMember.Name = "cboMember";
             this.cboMember.Size = new System.Drawing.Size(280, 28);
             this.cboMember.TabIndex = 27;
@@ -293,20 +293,20 @@
             this.c_remove,
             this.c_id,
             this.c_priceIn});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.HotPink;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdItems.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.HotPink;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdItems.DefaultCellStyle = dataGridViewCellStyle5;
             this.grdItems.Location = new System.Drawing.Point(3, 3);
             this.grdItems.Name = "grdItems";
             this.grdItems.ReadOnly = true;
             this.grdItems.RowHeadersVisible = false;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
-            this.grdItems.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            this.grdItems.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.grdItems.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grdItems.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.grdItems.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
@@ -442,6 +442,7 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(380, 505);
             this.tableLayoutPanel4.TabIndex = 24;
             // 
@@ -501,11 +502,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblDollar.AutoSize = true;
             this.lblDollar.Font = new System.Drawing.Font("Khmer OS Content", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDollar.Location = new System.Drawing.Point(307, 413);
+            this.lblDollar.Location = new System.Drawing.Point(331, 413);
             this.lblDollar.Name = "lblDollar";
-            this.lblDollar.Size = new System.Drawing.Size(70, 45);
+            this.lblDollar.Size = new System.Drawing.Size(46, 45);
             this.lblDollar.TabIndex = 3;
-            this.lblDollar.Text = "100 $";
+            this.lblDollar.Text = "0 $";
             this.lblDollar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblRiel
@@ -514,11 +515,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblRiel.AutoSize = true;
             this.lblRiel.Font = new System.Drawing.Font("Khmer OS Content", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRiel.Location = new System.Drawing.Point(245, 458);
+            this.lblRiel.Location = new System.Drawing.Point(337, 458);
             this.lblRiel.Name = "lblRiel";
-            this.lblRiel.Size = new System.Drawing.Size(132, 47);
+            this.lblRiel.Size = new System.Drawing.Size(40, 47);
             this.lblRiel.TabIndex = 5;
-            this.lblRiel.Text = "400000 រៀល";
+            this.lblRiel.Text = "0 ៛";
             this.lblRiel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tableLayoutPanel6
@@ -594,6 +595,7 @@
             this.Text = "FrontSaleOffice";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmFrontSaleOffice_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtName_KeyDown);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
