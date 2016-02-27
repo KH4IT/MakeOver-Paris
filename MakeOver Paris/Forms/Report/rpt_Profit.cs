@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MakeOver_Paris {
+namespace MakeOver_Paris.Forms.Report {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -16,14 +16,14 @@ namespace MakeOver_Paris {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class rpt_saleinvoice : ReportClass {
+    public class rpt_Profit : ReportClass {
         
-        public rpt_saleinvoice() {
+        public rpt_Profit() {
         }
         
         public override string ResourceName {
             get {
-                return "rpt_saleinvoice.rpt";
+                return "rpt_Profit.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace MakeOver_Paris {
         
         public override string FullResourceName {
             get {
-                return "MakeOver_Paris.rpt_saleinvoice.rpt";
+                return "MakeOver_Paris.Forms.Report.rpt_Profit.rpt";
             }
             set {
                 // Do nothing
@@ -90,17 +90,25 @@ namespace MakeOver_Paris {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_p_invoiceid {
+        public CrystalDecisions.Shared.IParameterField Parameter_p_enddate {
             get {
                 return this.DataDefinition.ParameterFields[0];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_p_startdate {
+            get {
+                return this.DataDefinition.ParameterFields[1];
             }
         }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class Cachedrpt_saleinvoice : Component, ICachedReport {
+    public class Cachedrpt_Profit : Component, ICachedReport {
         
-        public Cachedrpt_saleinvoice() {
+        public Cachedrpt_Profit() {
         }
         
         [Browsable(false)]
@@ -137,7 +145,7 @@ namespace MakeOver_Paris {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            rpt_saleinvoice rpt = new rpt_saleinvoice();
+            rpt_Profit rpt = new rpt_Profit();
             rpt.Site = this.Site;
             return rpt;
         }

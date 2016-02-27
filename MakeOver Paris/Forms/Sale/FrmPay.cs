@@ -21,15 +21,8 @@ namespace MakeOver_Paris.Forms.Sale
 
         private void FrmPay_Load(object sender, EventArgs e)
         {
-            txtRecieve.Focus();
-        }
-
-        private void txtRecieve_TextChanged(object sender, EventArgs e)
-        {
-            //Prevent String input
-            txtChange.Text = "";
-            if(txtRecieve.Text!="")
-                txtChange.Text = (decimal.Parse(txtRecieve.Text.ToString()) - decimal.Parse(txtTotal.Text.ToString())).ToString();
+            exchangerate = decimal.Parse(new DAO.SettingDao().getValue("ExchangeRate"));
+            txtTotalRiel.Text = (decimal.Parse(txtTotal.Text) * exchangerate).ToString();
         }
 
         private void btnPrint_Click(object sender, EventArgs e)
@@ -54,16 +47,63 @@ namespace MakeOver_Paris.Forms.Sale
 
             if (txtRecieve.Text != "")
             {
-                rpt_saleinvoice rpt = new rpt_saleinvoice();
-                rpt.SetParameterValue("p_invoiceid", invoiceid);
-                rpt.SetParameterValue("p_received", txtRecieve.Text);
-                rpt.PrintOptions.PaperSize = (CrystalDecisions.Shared.PaperSize)rawKind;
-                rpt.Refresh();
+                //MakeOver_Paris.rpt_saleinvoice rpt = new rpt_saleinvoice();
+                //rpt.SetParameterValue("p_invoiceid", invoiceid);
+                //rpt.SetParameterValue("p_received", decimal.Parse(txtRecieve.Text));
 
-
-                rpt.PrintToPrinter(1, false, 1, 1);
-                this.Close();
+                //rpt.PrintToPrinter(1, false, 1, 1);
+                //DTO.Transaction transaction = new DTO.Transaction();
+                //transaction.Incomeamount = decimal.Parse(txtTotal.Text);
+                //transaction.Createdby = UserSession.Session.Staff;
+                //transaction.Remark = "InvoiceID: " + invoiceid;
+                //new DAO.TransactionDAO().AddTransaction(transaction);
+                //this.Close();
             }
         }
+        decimal exchangerate = 0;
+        private void txtRecieve_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.AllowOnlyNumber(sender, e);
+        }
+
+        private void txtRecieveRiel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.AllowOnlyNumber(sender, e);
+        }
+
+        private void txtRecieve_TextChanged(object sender, EventArgs e)
+        {
+            txtChange.Text = "";
+            if (txtRecieve.Text != "" & txtRecieveRiel.Text != "")
+            {
+                decimal recievedRiel = decimal.Parse(txtRecieveRiel.Text);
+                decimal recievedDollar = decimal.Parse(txtRecieve.Text);
+                decimal recieved = recievedDollar + (recievedRiel / exchangerate);
+                txtChange.Text = (recieved - decimal.Parse(txtTotal.Text.ToString())).ToString();
+                txtChangeRiel.Text = (decimal.Parse(txtChange.Text) * exchangerate).ToString(); ;
+            }
+            else
+            {
+                txtRecieve.Text = "0";
+            }
+        }
+
+        private void txtRecieveRiel_TextChanged(object sender, EventArgs e)
+        {
+            txtChange.Text = "";
+            if (txtRecieve.Text != "" & txtRecieveRiel.Text != "")
+            {
+                decimal recievedRiel = decimal.Parse(txtRecieveRiel.Text);
+                decimal recievedDollar = decimal.Parse(txtRecieve.Text);
+                decimal recieved = recievedDollar + (recievedRiel / exchangerate);
+                txtChange.Text = (recieved - decimal.Parse(txtTotal.Text.ToString())).ToString();
+                txtChangeRiel.Text = (decimal.Parse(txtChange.Text) * exchangerate).ToString(); ;
+            }
+            else
+            {
+                txtRecieveRiel.Text = "0";
+            }
+        }
+        
     }
 }

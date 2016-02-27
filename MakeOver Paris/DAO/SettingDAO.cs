@@ -191,5 +191,37 @@ namespace MakeOver_Paris.DAO
             return null;
         }
 
+        public String getValue(String keyName)
+        {
+            MySqlConnection cnn = DBUtility.getConnection();
+            cnn.Open();
+            if (cnn != null)
+            {
+                try
+                {
+                    const string SQL = "SELECT value FROM settings WHERE title=@keyName;";
+                    MySqlCommand command = new MySqlCommand(SQL, cnn);
+                    command.Prepare();
+                    command.Parameters.AddWithValue("@keyName", keyName);
+                    MySqlDataReader reader = command.ExecuteReader();
+                    String value = "";
+                    while (reader.Read())
+                    {
+                        value = reader.GetString("value");
+                    }
+                    return value;
+                }
+                catch (MySqlException e)
+                {
+                    Console.WriteLine(e);
+                }
+                finally
+                {
+                    cnn.Close();
+                }
+            }
+            return null;
+        }
+
     }
 }

@@ -132,6 +132,18 @@
     <Compile Include="Forms\Sale\FrmFrontSaleOffice.Designer.cs">
       <DependentUpon>FrmFrontSaleOffice.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Sale\FrmPay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sale\FrmPay.designer.cs">
+      <DependentUpon>FrmPay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sale\FrmSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sale\FrmSale.designer.cs">
+      <DependentUpon>FrmSale.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Setting\FrmSetting.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +195,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sale\FrmFrontSaleOffice.resx">
       <DependentUpon>FrmFrontSaleOffice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sale\FrmPay.resx">
+      <DependentUpon>FrmPay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sale\FrmSale.resx">
+      <DependentUpon>FrmSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Setting\FrmSetting.resx">
       <DependentUpon>FrmSetting.cs</DependentUpon>
