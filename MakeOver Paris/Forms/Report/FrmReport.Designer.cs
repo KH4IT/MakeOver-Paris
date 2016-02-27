@@ -232,21 +232,25 @@
             // 
             this.dpStartDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dpStartDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dpStartDate.Location = new System.Drawing.Point(384, 3);
             this.dpStartDate.Name = "dpStartDate";
             this.dpStartDate.Size = new System.Drawing.Size(157, 22);
             this.dpStartDate.TabIndex = 3;
             this.dpStartDate.Visible = false;
+            this.dpStartDate.ValueChanged += new System.EventHandler(this.dpStartDate_ValueChanged);
             // 
             // dpEndDate
             // 
             this.dpEndDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dpEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dpEndDate.Location = new System.Drawing.Point(656, 3);
             this.dpEndDate.Name = "dpEndDate";
             this.dpEndDate.Size = new System.Drawing.Size(157, 22);
             this.dpEndDate.TabIndex = 4;
             this.dpEndDate.Visible = false;
+            this.dpEndDate.ValueChanged += new System.EventHandler(this.dpEndDate_ValueChanged);
             // 
             // lblStartDate
             // 

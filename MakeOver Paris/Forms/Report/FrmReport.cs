@@ -100,12 +100,17 @@ namespace MakeOver_Paris.Forms.Report
             else if (cbxReportType.SelectedIndex == 5)
             {
                 VisibleFilter();
-                DataSet dataSet = productDAO.getAllProductsSold("2015-01-01", "2016-01-01");
-                dgvReport.DataSource = dataSet.Tables[0];
-                Utility.setGridHeaderText("លេខកូដទំនិញ|ឈ្មោះទំនិញ|ចំនួនវិក្ក័យប័ត្រ", dgvReport);
-                Utility.setGridHeaderWidth("100|500|200", dgvReport);
+                filterProductSold(dpStartDate.Text, dpEndDate.Text);
             }
 
+        }
+
+        private void filterProductSold(string startDate, string endDate)
+        {
+            DataSet dataSet = productDAO.getAllProductsSold(startDate, endDate);
+            dgvReport.DataSource = dataSet.Tables[0];
+            Utility.setGridHeaderText("លេខកូដទំនិញ|ឈ្មោះទំនិញ|ចំនួនវិក្ក័យប័ត្រ", dgvReport);
+            Utility.setGridHeaderWidth("100|500|200", dgvReport);
         }
 
         private void VisibleFilter()
@@ -127,6 +132,17 @@ namespace MakeOver_Paris.Forms.Report
         private void btnPrint_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dpStartDate_ValueChanged(object sender, EventArgs e)
+        {
+            filterProductSold(dpStartDate.Text, dpEndDate.Text);
+        }
+
+        private void dpEndDate_ValueChanged(object sender, EventArgs e)
+        {
+            filterProductSold(dpStartDate.Text, dpEndDate.Text);
+            MessageBox.Show(dpEndDate.Text);
         }
 
     }
