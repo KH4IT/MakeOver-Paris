@@ -34,6 +34,14 @@ namespace MakeOver_Paris.Forms.Sale
             }
         }
 
+        private void FrmFrontSaleOffice_Load(object sender, EventArgs e)
+        {
+            DataSet da = new DAO.MemberDAO().getAllMembersWithDataSet();
+            cbMember.DataSource = da.Tables[0];
+            cbMember.DisplayMember = "membername";
+            cbMember.ValueMember = "memberid";
+        }
+
 
 
     }
