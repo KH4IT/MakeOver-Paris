@@ -118,11 +118,6 @@ namespace MakeOver_Paris.Forms.Setting
 
         }
 
-        private void Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void dgvSetting_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -137,14 +132,9 @@ namespace MakeOver_Paris.Forms.Setting
                 Console.WriteLine(ex);
             }
         }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void FrmSetting_Load(object sender, EventArgs e)
         {
+            txtTitle.Focus();
             Utility.setGridHeaderText("ល.រ|ឈ្មោះ|តម្លៃ",dgvSetting);
             Utility.setGridHeaderWidth("80",dgvSetting);
         }

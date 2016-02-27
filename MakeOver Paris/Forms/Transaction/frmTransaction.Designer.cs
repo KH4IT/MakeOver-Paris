@@ -34,6 +34,8 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtRemark = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -76,7 +78,7 @@
             this.btnSave.Location = new System.Drawing.Point(904, 161);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 30);
-            this.btnSave.TabIndex = 18;
+            this.btnSave.TabIndex = 3;
             this.btnSave.Text = "រក្សាទុក";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -95,6 +97,8 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.label8);
+            this.panel6.Controls.Add(this.label7);
             this.panel6.Controls.Add(this.txtRemark);
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.label4);
@@ -108,6 +112,28 @@
             this.panel6.Size = new System.Drawing.Size(1001, 197);
             this.panel6.TabIndex = 5;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(725, 49);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(21, 23);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "$";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(725, 14);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(21, 23);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "$";
+            // 
             // txtRemark
             // 
             this.txtRemark.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -116,7 +142,7 @@
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Size = new System.Drawing.Size(500, 95);
-            this.txtRemark.TabIndex = 24;
+            this.txtRemark.TabIndex = 2;
             // 
             // label5
             // 
@@ -149,7 +175,7 @@
             this.txtExpenseAmount.Location = new System.Drawing.Point(247, 46);
             this.txtExpenseAmount.Name = "txtExpenseAmount";
             this.txtExpenseAmount.Size = new System.Drawing.Size(500, 27);
-            this.txtExpenseAmount.TabIndex = 20;
+            this.txtExpenseAmount.TabIndex = 1;
             this.txtExpenseAmount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtExpenseAmount_KeyDown);
             this.txtExpenseAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExpenseAmount_KeyPress);
             this.txtExpenseAmount.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtExpenseAmount_KeyUp);
@@ -169,7 +195,7 @@
             this.btnDelete.Location = new System.Drawing.Point(798, 161);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 30);
-            this.btnDelete.TabIndex = 19;
+            this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Visible = false;
@@ -182,7 +208,7 @@
             this.txtIncomeAmount.Location = new System.Drawing.Point(247, 13);
             this.txtIncomeAmount.Name = "txtIncomeAmount";
             this.txtIncomeAmount.Size = new System.Drawing.Size(500, 27);
-            this.txtIncomeAmount.TabIndex = 3;
+            this.txtIncomeAmount.TabIndex = 0;
             this.txtIncomeAmount.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtIncomeAmount_KeyDown);
             this.txtIncomeAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIncomeAmount_KeyPress);
             this.txtIncomeAmount.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtIncomeAmount_KeyUp);
@@ -326,7 +352,7 @@
             this.txtSearch.Location = new System.Drawing.Point(182, 247);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(300, 27);
-            this.txtSearch.TabIndex = 1;
+            this.txtSearch.TabIndex = 5;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearchByName_TextChanged);
             // 
             // dgvTransaction
@@ -421,5 +447,7 @@
         internal System.Windows.Forms.TextBox txtRemark;
         internal System.Windows.Forms.Label label6;
         internal System.Windows.Forms.TextBox txtSearchByDate;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
     }
 }

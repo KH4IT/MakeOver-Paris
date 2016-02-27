@@ -70,7 +70,7 @@
             this.btnSave.Location = new System.Drawing.Point(904, 161);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 30);
-            this.btnSave.TabIndex = 18;
+            this.btnSave.TabIndex = 2;
             this.btnSave.Text = "រក្សាទុក";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -94,7 +94,7 @@
             this.txtTitle.Location = new System.Drawing.Point(185, 12);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.Size = new System.Drawing.Size(500, 27);
-            this.txtTitle.TabIndex = 3;
+            this.txtTitle.TabIndex = 0;
             // 
             // panel6
             // 
@@ -108,7 +108,6 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1001, 197);
             this.panel6.TabIndex = 5;
-            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // label4
             // 
@@ -129,7 +128,7 @@
             this.txtValue.Location = new System.Drawing.Point(185, 45);
             this.txtValue.Name = "txtValue";
             this.txtValue.Size = new System.Drawing.Size(500, 27);
-            this.txtValue.TabIndex = 20;
+            this.txtValue.TabIndex = 1;
             // 
             // btnDelete
             // 
@@ -146,7 +145,7 @@
             this.btnDelete.Location = new System.Drawing.Point(798, 161);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 30);
-            this.btnDelete.TabIndex = 19;
+            this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "លុប";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -161,7 +160,6 @@
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(1024, 749);
             this.Panel1.TabIndex = 5;
-            this.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // Panel2
             // 

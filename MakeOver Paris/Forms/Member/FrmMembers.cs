@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MakeOver_Paris.DAO;
 using MakeOver_Paris.DTO;
+using System.Text.RegularExpressions;
 
 namespace MakeOver_Paris.Forms.Member
 {
@@ -22,6 +23,7 @@ namespace MakeOver_Paris.Forms.Member
 
         private void FrmMembers_Load(object sender, EventArgs e)
         {
+            txtCode.Focus();
             // TODO: TO MAKE THE PANEL IN THE CENTER OF THE WINDOW
             Panel1.Left = (this.Width - Panel1.Width) / 2;
             Panel1.Top = (this.Height - Panel1.Height) / 2;
@@ -186,6 +188,11 @@ namespace MakeOver_Paris.Forms.Member
             {
                 // user clicked no
             }
+        }
+
+        private void txtPhone_TextChanged(object sender, EventArgs e)
+        {
+            
         }
 
     }

@@ -24,18 +24,11 @@ namespace MakeOver_Paris.Forms.Staff
           
         }
 
-   
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             Forms.FrmMain frmMain = new Forms.FrmMain();
             frmMain.Show();
             this.Close();
-        }
-
-        private void Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -161,11 +154,6 @@ namespace MakeOver_Paris.Forms.Staff
             dgvStaff.DataSource = bs;
         }
 
-        private void txtCommission_KeyDown(object sender, KeyEventArgs e)
-        {
-            
-        }
-
         private void txtCommission_KeyPress(object sender, KeyPressEventArgs e)
         {
             Utility.AllowOnlyDecimalNumber(sender, e);
@@ -177,6 +165,23 @@ namespace MakeOver_Paris.Forms.Staff
             {
                 btnBack_Click(sender, e);
             }
+        }
+
+        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkShowPassword.Checked)
+            {
+                txtPassword.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPassword.PasswordChar = '*';
+            }
+        }
+
+        private void FrmStaff_Load(object sender, EventArgs e)
+        {
+            txtName.Focus();
         }
 
         

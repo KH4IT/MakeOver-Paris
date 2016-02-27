@@ -21,41 +21,11 @@ namespace MakeOver_Paris.Forms.Product
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             Forms.FrmMain frmMain = new Forms.FrmMain();
             frmMain.Show();
             this.Close();
-        }
-
-        private void Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Panel4_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -131,11 +101,6 @@ namespace MakeOver_Paris.Forms.Product
                     }
                 }
             }
-        }
-
-        private void Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void dgvProduct_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -225,6 +190,7 @@ namespace MakeOver_Paris.Forms.Product
 
         private void FrmProduct_Load(object sender, EventArgs e)
         {
+            txtBarcode.Focus();
             // GET CATEGORIES
             DataSet da = new DAO.CategoryDAO().GetAllCategories();
             cboCategory.DataSource = da.Tables[0];

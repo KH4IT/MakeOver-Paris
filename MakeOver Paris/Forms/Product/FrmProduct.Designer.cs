@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Panel1 = new System.Windows.Forms.Panel();
             this.Panel2 = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.PictureBox();
@@ -65,6 +65,8 @@
             this.Label2 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
@@ -84,7 +86,6 @@
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(1024, 749);
             this.Panel1.TabIndex = 5;
-            this.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
             // Panel2
             // 
@@ -97,7 +98,6 @@
             this.Panel2.Name = "Panel2";
             this.Panel2.Size = new System.Drawing.Size(1024, 60);
             this.Panel2.TabIndex = 2;
-            this.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
             // btnBack
             // 
@@ -171,10 +171,11 @@
             this.Panel4.Name = "Panel4";
             this.Panel4.Size = new System.Drawing.Size(1008, 659);
             this.Panel4.TabIndex = 4;
-            this.Panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel4_Paint);
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.label14);
+            this.panel6.Controls.Add(this.label13);
             this.panel6.Controls.Add(this.label12);
             this.panel6.Controls.Add(this.txtReturnQuantity);
             this.panel6.Controls.Add(this.label11);
@@ -221,7 +222,7 @@
             this.txtReturnQuantity.Location = new System.Drawing.Point(648, 159);
             this.txtReturnQuantity.Name = "txtReturnQuantity";
             this.txtReturnQuantity.Size = new System.Drawing.Size(327, 27);
-            this.txtReturnQuantity.TabIndex = 36;
+            this.txtReturnQuantity.TabIndex = 9;
             this.txtReturnQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtReturnQuantity_KeyPress);
             // 
             // label11
@@ -256,7 +257,7 @@
             this.txtRemark.Multiline = true;
             this.txtRemark.Name = "txtRemark";
             this.txtRemark.Size = new System.Drawing.Size(327, 66);
-            this.txtRemark.TabIndex = 33;
+            this.txtRemark.TabIndex = 8;
             // 
             // cboCategory
             // 
@@ -266,7 +267,7 @@
             this.cboCategory.Location = new System.Drawing.Point(162, 101);
             this.cboCategory.Name = "cboCategory";
             this.cboCategory.Size = new System.Drawing.Size(363, 26);
-            this.cboCategory.TabIndex = 32;
+            this.cboCategory.TabIndex = 3;
             // 
             // label8
             // 
@@ -287,7 +288,7 @@
             this.txtPriceOut.Location = new System.Drawing.Point(162, 199);
             this.txtPriceOut.Name = "txtPriceOut";
             this.txtPriceOut.Size = new System.Drawing.Size(363, 27);
-            this.txtPriceOut.TabIndex = 30;
+            this.txtPriceOut.TabIndex = 6;
             this.txtPriceOut.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPriceOut_KeyPress);
             // 
             // label9
@@ -309,7 +310,7 @@
             this.txtQuantity.Location = new System.Drawing.Point(162, 133);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(363, 27);
-            this.txtQuantity.TabIndex = 28;
+            this.txtQuantity.TabIndex = 4;
             this.txtQuantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantity_KeyPress);
             // 
             // label7
@@ -331,7 +332,7 @@
             this.txtName.Location = new System.Drawing.Point(162, 69);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(363, 27);
-            this.txtName.TabIndex = 26;
+            this.txtName.TabIndex = 2;
             // 
             // label5
             // 
@@ -352,7 +353,7 @@
             this.txtPriceIn.Location = new System.Drawing.Point(162, 166);
             this.txtPriceIn.Name = "txtPriceIn";
             this.txtPriceIn.Size = new System.Drawing.Size(363, 27);
-            this.txtPriceIn.TabIndex = 24;
+            this.txtPriceIn.TabIndex = 5;
             this.txtPriceIn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPriceIn_KeyPress);
             // 
             // label6
@@ -374,7 +375,7 @@
             this.txtProductCode.Location = new System.Drawing.Point(162, 36);
             this.txtProductCode.Name = "txtProductCode";
             this.txtProductCode.Size = new System.Drawing.Size(363, 27);
-            this.txtProductCode.TabIndex = 22;
+            this.txtProductCode.TabIndex = 1;
             // 
             // label4
             // 
@@ -387,7 +388,6 @@
             this.label4.Size = new System.Drawing.Size(71, 27);
             this.label4.TabIndex = 21;
             this.label4.Text = "បរិយាយ:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtDescription
             // 
@@ -397,8 +397,7 @@
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(327, 77);
-            this.txtDescription.TabIndex = 20;
-            this.txtDescription.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtDescription.TabIndex = 7;
             // 
             // btnDelete
             // 
@@ -415,7 +414,7 @@
             this.btnDelete.Location = new System.Drawing.Point(798, 198);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 30);
-            this.btnDelete.TabIndex = 19;
+            this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "លុប";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -434,7 +433,7 @@
             this.btnSave.Location = new System.Drawing.Point(904, 198);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 30);
-            this.btnSave.TabIndex = 18;
+            this.btnSave.TabIndex = 10;
             this.btnSave.Text = "រក្សាទុក";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -450,7 +449,6 @@
             this.label3.Size = new System.Drawing.Size(55, 27);
             this.label3.TabIndex = 4;
             this.label3.Text = "បាកូដ:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtBarcode
             // 
@@ -459,8 +457,7 @@
             this.txtBarcode.Location = new System.Drawing.Point(162, 3);
             this.txtBarcode.Name = "txtBarcode";
             this.txtBarcode.Size = new System.Drawing.Size(363, 27);
-            this.txtBarcode.TabIndex = 3;
-            this.txtBarcode.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtBarcode.TabIndex = 0;
             // 
             // Label2
             // 
@@ -481,7 +478,7 @@
             this.txtSearch.Location = new System.Drawing.Point(128, 295);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(300, 27);
-            this.txtSearch.TabIndex = 1;
+            this.txtSearch.TabIndex = 12;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // dgvProduct
@@ -490,29 +487,29 @@
             this.dgvProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProduct.BackgroundColor = System.Drawing.Color.White;
             this.dgvProduct.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.HotPink;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.HotPink;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvProduct.Location = new System.Drawing.Point(5, 330);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RowHeadersVisible = false;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            this.dgvProduct.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            this.dgvProduct.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvProduct.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvProduct.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.dgvProduct.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
@@ -522,6 +519,28 @@
             this.dgvProduct.Size = new System.Drawing.Size(1000, 326);
             this.dgvProduct.TabIndex = 0;
             this.dgvProduct.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellDoubleClick);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Black;
+            this.label13.Location = new System.Drawing.Point(503, 168);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(21, 23);
+            this.label13.TabIndex = 23;
+            this.label13.Text = "$";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Black;
+            this.label14.Location = new System.Drawing.Point(503, 201);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(21, 23);
+            this.label14.TabIndex = 38;
+            this.label14.Text = "$";
             // 
             // FrmProduct
             // 
@@ -588,5 +607,7 @@
         internal System.Windows.Forms.TextBox txtPriceIn;
         internal System.Windows.Forms.Label label6;
         internal System.Windows.Forms.TextBox txtProductCode;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
     }
 }

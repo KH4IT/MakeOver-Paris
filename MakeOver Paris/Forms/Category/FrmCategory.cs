@@ -71,6 +71,7 @@ namespace MakeOver_Paris.Forms.Category
 
         private void FrmCategory_Load(object sender, EventArgs e)
         {
+            txtName.Focus();
             DataSet dataSet = new CategoryDAO().GetAllCategories();
             dgvCategory.DataSource = dataSet.Tables[0];
             Utility.setGridHeaderText("ល.រ|ឈ្មោះ",dgvCategory);

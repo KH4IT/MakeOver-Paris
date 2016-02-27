@@ -84,7 +84,7 @@
             this.button3.Location = new System.Drawing.Point(952, 284);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(290, 108);
-            this.button3.TabIndex = 46;
+            this.button3.TabIndex = 7;
             this.button3.Text = "កំណត់ត្រាការលក់";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
@@ -100,7 +100,7 @@
             this.button2.Location = new System.Drawing.Point(64, 398);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(1178, 108);
-            this.button2.TabIndex = 45;
+            this.button2.TabIndex = 8;
             this.button2.Text = "ការលក់ទំនិញ";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -113,7 +113,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1107, 101);
+            this.panel1.Size = new System.Drawing.Size(1138, 101);
             this.panel1.TabIndex = 44;
             // 
             // Label1
@@ -159,7 +159,7 @@
             this.button1.Location = new System.Drawing.Point(656, 284);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(290, 108);
-            this.button1.TabIndex = 43;
+            this.button1.TabIndex = 6;
             this.button1.Text = "របាយការណ៍";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -175,7 +175,7 @@
             this.btnTransaction.Location = new System.Drawing.Point(360, 284);
             this.btnTransaction.Name = "btnTransaction";
             this.btnTransaction.Size = new System.Drawing.Size(290, 108);
-            this.btnTransaction.TabIndex = 42;
+            this.btnTransaction.TabIndex = 5;
             this.btnTransaction.Text = "ប្រតិបត្តិការ";
             this.btnTransaction.UseVisualStyleBackColor = false;
             this.btnTransaction.Click += new System.EventHandler(this.btnTransaction_Click);
@@ -191,7 +191,7 @@
             this.btnProduct.Location = new System.Drawing.Point(64, 284);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Size = new System.Drawing.Size(290, 108);
-            this.btnProduct.TabIndex = 39;
+            this.btnProduct.TabIndex = 4;
             this.btnProduct.Text = "ទំនិញ";
             this.btnProduct.UseVisualStyleBackColor = false;
             this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
@@ -207,7 +207,7 @@
             this.btnSetting.Location = new System.Drawing.Point(952, 170);
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Size = new System.Drawing.Size(290, 108);
-            this.btnSetting.TabIndex = 38;
+            this.btnSetting.TabIndex = 3;
             this.btnSetting.Text = "ការកំណត់ផ្សេងៗ";
             this.btnSetting.UseVisualStyleBackColor = false;
             this.btnSetting.Click += new System.EventHandler(this.btnSetting_Click);
@@ -223,7 +223,7 @@
             this.btnCategory.Location = new System.Drawing.Point(656, 170);
             this.btnCategory.Name = "btnCategory";
             this.btnCategory.Size = new System.Drawing.Size(290, 108);
-            this.btnCategory.TabIndex = 37;
+            this.btnCategory.TabIndex = 2;
             this.btnCategory.Text = "ប្រភេទទំនិញ";
             this.btnCategory.UseVisualStyleBackColor = false;
             this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
@@ -239,7 +239,7 @@
             this.btnStaff.Location = new System.Drawing.Point(360, 170);
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.Size = new System.Drawing.Size(290, 108);
-            this.btnStaff.TabIndex = 36;
+            this.btnStaff.TabIndex = 1;
             this.btnStaff.Text = "បុគ្គលិក";
             this.btnStaff.UseVisualStyleBackColor = false;
             this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click_1);
@@ -255,7 +255,7 @@
             this.btnMember.Location = new System.Drawing.Point(64, 170);
             this.btnMember.Name = "btnMember";
             this.btnMember.Size = new System.Drawing.Size(290, 108);
-            this.btnMember.TabIndex = 35;
+            this.btnMember.TabIndex = 0;
             this.btnMember.Text = "សមាជិក";
             this.btnMember.UseVisualStyleBackColor = false;
             this.btnMember.Click += new System.EventHandler(this.btnMember_Click);
@@ -267,7 +267,7 @@
             this.Label5.Location = new System.Drawing.Point(1205, 42);
             this.Label5.Name = "Label5";
             this.Label5.Size = new System.Drawing.Size(82, 25);
-            this.Label5.TabIndex = 25;
+            this.Label5.TabIndex = 9;
             this.Label5.Text = "Log out";
             this.Label5.Click += new System.EventHandler(this.Label5_Click);
             // 
@@ -287,12 +287,12 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI Light", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(1107, 0);
+            this.lblUsername.Location = new System.Drawing.Point(1138, 0);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblUsername.Size = new System.Drawing.Size(199, 32);
+            this.lblUsername.Size = new System.Drawing.Size(168, 32);
             this.lblUsername.TabIndex = 24;
-            this.lblUsername.Text = "Chheang Vuthea";
+            this.lblUsername.Text = "KH4IT Co., Ltd";
             this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // timer1

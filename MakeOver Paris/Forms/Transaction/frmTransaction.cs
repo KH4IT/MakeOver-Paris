@@ -114,6 +114,7 @@ namespace MakeOver_Paris.Forms.Transaction
 
         private void frmTransaction_Load(object sender, EventArgs e)
         {
+            txtIncomeAmount.Focus();
             DataSet dataSet = new TransactionDAO().GetAllTransactions();
             dgvTransaction.DataSource = dataSet.Tables[0];
             Utility.setGridHeaderText("ល.រ|កាលបរិច្ឆេទ|ចំនូល|ចំណាយ|ប្រតិបត្តិដោយ|សគាល់", dgvTransaction);

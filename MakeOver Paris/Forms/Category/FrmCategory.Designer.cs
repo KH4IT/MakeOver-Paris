@@ -70,7 +70,7 @@
             this.btnSave.Location = new System.Drawing.Point(880, 71);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(100, 30);
-            this.btnSave.TabIndex = 18;
+            this.btnSave.TabIndex = 1;
             this.btnSave.Text = "រក្សាទុក";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -94,7 +94,7 @@
             this.txtName.Location = new System.Drawing.Point(189, 18);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(500, 27);
-            this.txtName.TabIndex = 3;
+            this.txtName.TabIndex = 0;
             this.txtName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtName_KeyDown);
             // 
             // panel6
@@ -123,7 +123,7 @@
             this.btnDelete.Location = new System.Drawing.Point(774, 71);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 30);
-            this.btnDelete.TabIndex = 19;
+            this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "លុប";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.deleteAction_Click);
@@ -243,7 +243,7 @@
             this.txtSearch.Location = new System.Drawing.Point(115, 161);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(500, 27);
-            this.txtSearch.TabIndex = 1;
+            this.txtSearch.TabIndex = 3;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // dgvCategory
