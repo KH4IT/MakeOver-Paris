@@ -190,9 +190,47 @@ namespace MakeOver_Paris.Forms.Member
             }
         }
 
-        private void txtPhone_TextChanged(object sender, EventArgs e)
+        private void txtPhone_Leave(object sender, EventArgs e)
         {
-            
+            if (txtPhone.Text != string.Empty)
+            {
+                //get the data from the textbox
+                string TextBoxData = txtPhone.Text;
+                //use a string builder
+                StringBuilder StringBldr = new StringBuilder(TextBoxData);
+                //remove any "," strings already in the field in case the user put them in
+                StringBldr.Replace(",", "");
+                //find out how long the textbox data is
+                int TextLength = StringBldr.Length;
+
+                //use 3 here to put a "," every 3 characters
+                while (TextLength > 3)
+                {
+                    StringBldr.Insert(TextLength - 3, "-");
+                    TextLength = TextLength - 3;
+                }
+                char f = TextBoxData.FirstOrDefault();
+                if (f == '0')
+                {
+                    StringBldr.Remove(0, 1);
+                    txtPhone.Text = "(+855) " + StringBldr.ToString();
+                }
+                else
+                {
+                    txtPhone.Text = "(+855) " + StringBldr.ToString();
+                }
+                //txtPhone.Text = "(+855) " + StringBldr.ToString();
+            }
+        }
+
+        private void txtPhone_Enter(object sender, EventArgs e)
+        {
+            txtPhone.Clear();
+        }
+
+        private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Utility.AllowOnlyNumber(sender, e);
         }
 
     }

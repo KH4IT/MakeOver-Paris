@@ -140,9 +140,9 @@
             this.Label1.Font = new System.Drawing.Font("Khmer OS Content", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.Location = new System.Drawing.Point(62, 10);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(164, 43);
+            this.Label1.Size = new System.Drawing.Size(198, 43);
             this.Label1.TabIndex = 1;
-            this.Label1.Text = "កំណត់ត្រាលក់";
+            this.Label1.Text = "កំណត់ត្រាការលក់";
             // 
             // Panel3
             // 
