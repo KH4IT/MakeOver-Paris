@@ -342,9 +342,9 @@ namespace MakeOver_Paris.DAO
                                      FROM products P 
                                      INNER JOIN invoicedetail ID ON P.productid=ID.productid
                                      INNER JOIN invoices I ON ID.invoiceid=I.invoiceId
-                                     WHERE I.invoicedate BETWEEN @p1 AND @p2
+                                     WHERE DATE(I.invoicedate) BETWEEN @p1 AND @p2
                                      GROUP BY P.productid";
-                DataSet ds = DBUtility.ExecuteQuery(SQL, startDate, endDate);
+                DataSet ds = DBUtility.ExecuteQuery(SQL, Convert.ToDateTime(startDate).ToString("yyyy-MM-dd"), Convert.ToDateTime(endDate).ToString("yyyy-MM-dd"));
                 return ds;
             }
             catch (Exception ex)

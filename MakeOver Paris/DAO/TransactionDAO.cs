@@ -150,9 +150,9 @@ namespace MakeOver_Paris.DAO
                             FROM transactions
                             INNER JOIN staffs
                             ON staffs.staffid = transactions.createdby 
-                            WHERE transactiondate BETWEEN @p1 AND @p2
+                            WHERE DATE(transactiondate) BETWEEN @p1 AND @p2
                             ORDER BY transactiondate";
-                DataSet ds = DBUtility.ExecuteQuery(sql, startDate, endDate);
+                DataSet ds = DBUtility.ExecuteQuery(sql, Convert.ToDateTime(startDate).ToString("yyyy-MM-dd"), Convert.ToDateTime(endDate).ToString("yyyy-MM-dd"));
                 return ds;
             }
             catch (Exception ex)

@@ -81,12 +81,9 @@ namespace MakeOver_Paris.Forms.Report
             else if (cbxReportType.SelectedIndex == 3)
             {
                 // TODO: TO GET ALL THE MEMBERS
-                InvisibleFilter();
-                DataSet dataSet = transactionDAO.GetAllCashBook("2015-01-01","2016-01-01");
-
-                dgvReport.DataSource = dataSet.Tables[0];
-                Utility.setGridHeaderText("ល.រ|កាលបរិច្ឆេទ|ចំនូល|ចំណាយ|ប្រតិបត្តិដោយ|សគាល់", dgvReport);
-                Utility.setGridHeaderWidth("100", dgvReport);
+                //InvisibleFilter();
+                VisibleFilter();
+                getAllCashBook();
             }
             else if (cbxReportType.SelectedIndex == 4)
             {
@@ -136,14 +133,35 @@ namespace MakeOver_Paris.Forms.Report
 
         private void dpStartDate_ValueChanged(object sender, EventArgs e)
         {
-            filterProductSold(dpStartDate.Text, dpEndDate.Text);
+            if (cbxReportType.SelectedIndex == 3)
+            {
+                getAllCashBook();
+            }
+            else if (cbxReportType.SelectedIndex == 5)
+            {
+                filterProductSold(dpStartDate.Text, dpEndDate.Text);
+            }
         }
 
         private void dpEndDate_ValueChanged(object sender, EventArgs e)
         {
-            filterProductSold(dpStartDate.Text, dpEndDate.Text);
-            MessageBox.Show(dpEndDate.Text);
+            if (cbxReportType.SelectedIndex == 3)
+            {
+                getAllCashBook();
+            }
+            else if (cbxReportType.SelectedIndex == 5)
+            {
+                filterProductSold(dpStartDate.Text, dpEndDate.Text);
+            }
+            MessageBox.Show(Convert.ToDateTime(dpEndDate.Text).ToString("yyyy-MM-dd"));
         }
 
+        private void getAllCashBook()
+        {
+            DataSet dataSet = transactionDAO.GetAllCashBook(dpStartDate.Text, dpEndDate.Text);
+            dgvReport.DataSource = dataSet.Tables[0];
+            Utility.setGridHeaderText("ល.រ|កាលបរិច្ឆេទ|ចំនូល|ចំណាយ|ប្រតិបត្តិដោយ|សគាល់", dgvReport);
+            Utility.setGridHeaderWidth("100", dgvReport);
+        }
     }
 }

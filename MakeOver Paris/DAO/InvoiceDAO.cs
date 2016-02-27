@@ -147,7 +147,7 @@ namespace MakeOver_Paris.DAO
             try
             {
                 String sql = @"SELECT 
-                                    I.invoiceid
+                                    CONCAT('I',LPAD(I.invoiceid,9,'0')) AS invoiceid
                                   , I.invoicedate
                                   , S.staffname
                                   , SUM(ID.quantity*ID.priceout)
