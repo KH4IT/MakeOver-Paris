@@ -31,5 +31,10 @@ namespace MakeOver_Paris.Forms.Report
             frmMain.Show();
             this.Close();
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

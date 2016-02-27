@@ -25,17 +25,9 @@ namespace MakeOver_Paris.Forms
             this.pnMain.Left = (this.Width - this.pnMain.Width) / 2;
             this.pnMain.Top = (this.Height - this.pnMain.Height) / 2;
             lblDateAndTime.Text = DateTime.Now.ToString("dd-MMMM-yyyy HH:mm:ss tt");
-            lblUsername.Text = "Welcome to, " + UserSession.Session.Staff.Staffname;
+            lblUsername.Text = "សួស្តីអ្នកប្រើប្រាស់ឈ្មោះ " + UserSession.Session.Staff.Staffname;
             timer1.Enabled = true;
             timer1.Interval = 1000;
-        }
-
-        private void Label5_Click(object sender, EventArgs e)
-        {
-            UserSession.Session.Staff = null;
-            Forms.FrmLogin form = new Forms.FrmLogin();
-            form.Show();
-            this.Close();
         }
 
         private void btnMember_Click(object sender, EventArgs e)
@@ -114,6 +106,14 @@ namespace MakeOver_Paris.Forms
         {
             Forms.Report.FrmReport frmReport = new Forms.Report.FrmReport();
             frmReport.Show();
+            this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            UserSession.Session.Staff = null;
+            Forms.FrmLogin form = new Forms.FrmLogin();
+            form.Show();
             this.Close();
         }
     }

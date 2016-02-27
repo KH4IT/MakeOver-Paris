@@ -43,10 +43,10 @@
             this.btnCategory = new System.Windows.Forms.Button();
             this.btnStaff = new System.Windows.Forms.Button();
             this.btnMember = new System.Windows.Forms.Button();
-            this.Label5 = new System.Windows.Forms.Label();
             this.lblDateAndTime = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button4 = new System.Windows.Forms.Button();
             this.pnMain.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -55,6 +55,7 @@
             // pnMain
             // 
             this.pnMain.AutoSize = true;
+            this.pnMain.Controls.Add(this.button4);
             this.pnMain.Controls.Add(this.button3);
             this.pnMain.Controls.Add(this.button2);
             this.pnMain.Controls.Add(this.panel1);
@@ -65,7 +66,6 @@
             this.pnMain.Controls.Add(this.btnCategory);
             this.pnMain.Controls.Add(this.btnStaff);
             this.pnMain.Controls.Add(this.btnMember);
-            this.pnMain.Controls.Add(this.Label5);
             this.pnMain.Controls.Add(this.lblDateAndTime);
             this.pnMain.Controls.Add(this.lblUsername);
             this.pnMain.Location = new System.Drawing.Point(-6, -1);
@@ -113,7 +113,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1138, 101);
+            this.panel1.Size = new System.Drawing.Size(1135, 101);
             this.panel1.TabIndex = 44;
             // 
             // Label1
@@ -260,17 +260,6 @@
             this.btnMember.UseVisualStyleBackColor = false;
             this.btnMember.Click += new System.EventHandler(this.btnMember_Click);
             // 
-            // Label5
-            // 
-            this.Label5.AutoSize = true;
-            this.Label5.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label5.Location = new System.Drawing.Point(1205, 42);
-            this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(82, 25);
-            this.Label5.TabIndex = 9;
-            this.Label5.Text = "Log out";
-            this.Label5.Click += new System.EventHandler(this.Label5_Click);
-            // 
             // lblDateAndTime
             // 
             this.lblDateAndTime.AutoSize = true;
@@ -286,11 +275,11 @@
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lblUsername.Font = new System.Drawing.Font("Segoe UI Light", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(1138, 0);
+            this.lblUsername.Font = new System.Drawing.Font("Khmer OS Content", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Location = new System.Drawing.Point(1135, 0);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblUsername.Size = new System.Drawing.Size(168, 32);
+            this.lblUsername.Size = new System.Drawing.Size(171, 38);
             this.lblUsername.TabIndex = 24;
             this.lblUsername.Text = "KH4IT Co., Ltd";
             this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -298,6 +287,20 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Red;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(1173, 39);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(103, 27);
+            this.button4.TabIndex = 45;
+            this.button4.Text = "Log out";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // FrmMain
             // 
@@ -326,7 +329,6 @@
         #endregion
 
         internal System.Windows.Forms.Panel pnMain;
-        internal System.Windows.Forms.Label Label5;
         internal System.Windows.Forms.Label lblDateAndTime;
         internal System.Windows.Forms.Label lblUsername;
         internal System.Windows.Forms.Label Label1;
@@ -343,5 +345,6 @@
         private System.Windows.Forms.Timer timer1;
         internal System.Windows.Forms.Button button2;
         internal System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }
