@@ -55,5 +55,15 @@ namespace MakeOver_Paris.Forms.History
             bs.Filter = "Convert(invoicedate,'System.String') LIKE '%" + textBox2.Text + "%'";
             dgvReport.DataSource = bs;
         }
+
+        private void btnPrintInvoice_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPrintReport_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

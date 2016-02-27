@@ -47,6 +47,7 @@ namespace MakeOver_Paris.Forms.Report
         {
             if (cbxReportType.SelectedIndex == 0)
             {
+                InvisibleFilter();
                 DataSet dataSet = staffDAO.GetAllStaffs();
                 dgvReport.DataSource = dataSet.Tables[0];
                 Utility.setGridHeaderText("ល.រ|ឈ្មោះ|លេខសម្ងាត់|ប្រភេទ|ថ្ងៃចូលធ្វើការ|អត្រាចំណាញ", dgvReport);
@@ -57,6 +58,7 @@ namespace MakeOver_Paris.Forms.Report
             }
             else if (cbxReportType.SelectedIndex == 1)
             {
+                InvisibleFilter();
                 // TODO: TO GET ALL THE MEMBERS
                 DataSet ds = memberDAO.getAllMembersWithDataSet();
 
@@ -71,6 +73,7 @@ namespace MakeOver_Paris.Forms.Report
             }
             else if (cbxReportType.SelectedIndex == 2)
             {
+                InvisibleFilter();
                 dgvReport.DataSource = productDAO.getAllProductDS().Tables[0];
                 Utility.setGridHeaderText("ល.រ|លេខទំនិញ|បារកូដ|ឈ្មោះ|បរិមាណ|តម្លៃទិញចូល|តម្លៃលក់ចេញ|បរិមាណប្តូរវិញ|បង្កើតដោយ|កែប្រែដោយ|កាលបរិច្ឆេទបង្កើត|កាលបរិច្ឆេទកែប្រែ|ប្រភេទ|បរិយាយ|កំណត់ចំណាំ", dgvReport);
                 Utility.setGridHeaderWidth("30", dgvReport);
@@ -78,7 +81,7 @@ namespace MakeOver_Paris.Forms.Report
             else if (cbxReportType.SelectedIndex == 3)
             {
                 // TODO: TO GET ALL THE MEMBERS
-                
+                InvisibleFilter();
                 DataSet dataSet = transactionDAO.GetAllCashBook("2015-01-01","2016-01-01");
 
                 dgvReport.DataSource = dataSet.Tables[0];
@@ -87,6 +90,7 @@ namespace MakeOver_Paris.Forms.Report
             }
             else if (cbxReportType.SelectedIndex == 4)
             {
+                InvisibleFilter();
                 // TODO: TO GET ALL THE MEMBERS
                 DataSet dataSet = invoiceDAO.getAllInvoices();
                 dgvReport.DataSource = dataSet.Tables[0];
@@ -95,12 +99,29 @@ namespace MakeOver_Paris.Forms.Report
             }
             else if (cbxReportType.SelectedIndex == 5)
             {
+                VisibleFilter();
                 DataSet dataSet = productDAO.getAllProductsSold("2015-01-01", "2016-01-01");
                 dgvReport.DataSource = dataSet.Tables[0];
                 Utility.setGridHeaderText("លេខកូដទំនិញ|ឈ្មោះទំនិញ|ចំនួនវិក្ក័យប័ត្រ", dgvReport);
                 Utility.setGridHeaderWidth("100|500|200", dgvReport);
             }
 
+        }
+
+        private void VisibleFilter()
+        {
+            lblEndDate.Visible = true;
+            lblStartDate.Visible = true;
+            dpEndDate.Visible = true;
+            dpStartDate.Visible = true;
+        }
+
+        private void InvisibleFilter()
+        {
+            lblEndDate.Visible = false;
+            lblStartDate.Visible = false;
+            dpEndDate.Visible = false;
+            dpStartDate.Visible = false;
         }
 
         private void btnPrint_Click(object sender, EventArgs e)

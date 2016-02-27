@@ -10,7 +10,6 @@ namespace MakeOver_Paris
     // TODO: TO CREATE FOR ALL THE UTILITY FUNCTION
     public static class Utility
     {
-
         // TODO: TO SET THE COLUMN HEADER TITLE OF THE DATA GRID VIEW
         public static void setGridHeaderText(String str, System.Windows.Forms.DataGridView grid)
         {

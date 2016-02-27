@@ -19,10 +19,19 @@ namespace MakeOver_Paris.Forms.Sale
 
         private void button1_Click(object sender, EventArgs e)
         {
-            UserSession.Session.Staff = null;
-            Forms.FrmLogin form = new Forms.FrmLogin();
-            form.Show();
-            this.Close();
+            if (UserSession.Session.Staff.Stafftype.ToLower() == "admin")
+            {
+                Forms.FrmMain frmMain = new Forms.FrmMain();
+                frmMain.Show();
+                this.Close();
+            }
+            else
+            {
+                UserSession.Session.Staff = null;
+                Forms.FrmLogin form = new Forms.FrmLogin();
+                form.Show();
+                this.Close();
+            }
         }
 
         private int insertToDB()
