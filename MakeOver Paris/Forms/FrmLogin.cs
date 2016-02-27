@@ -43,11 +43,11 @@ namespace MakeOver_Paris.Forms
             }
             else
             {
-                DTO.Staff staff = new StaffDAO().Login(txtUsername.Text.Trim(), txtPassword.Text.Trim());
+                DTO.Staff staff = new StaffDAO().Login(txtUsername.Text.Trim().ToLower(), txtPassword.Text.Trim());
                 if (staff != null)
                 {
                     UserSession.Session.Staff = staff;
-                    if (UserSession.Session.Staff.Stafftype == "admin")
+                    if (UserSession.Session.Staff.Stafftype.ToLower() == "admin")
                     {
                         Forms.FrmMain frmMain = new Forms.FrmMain();
                         frmMain.Show();

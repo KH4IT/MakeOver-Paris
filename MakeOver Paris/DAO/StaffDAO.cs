@@ -178,7 +178,7 @@ namespace MakeOver_Paris.DAO
                                          FROM
                                             staffs
                                          WHERE
-                                            staffname = @staffname
+                                            staffname = LOWER(@staffname)
                                          AND
                                             staffpassword = @staffpassword";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
