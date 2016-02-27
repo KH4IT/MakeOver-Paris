@@ -16,14 +16,14 @@ namespace MakeOver_Paris {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class rpt_saleinvoice : ReportClass {
+    public class rpt_test : ReportClass {
         
-        public rpt_saleinvoice() {
+        public rpt_test() {
         }
         
         public override string ResourceName {
             get {
-                return "rpt_saleinvoice.rpt";
+                return "rpt_test.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace MakeOver_Paris {
         
         public override string FullResourceName {
             get {
-                return "MakeOver_Paris.rpt_saleinvoice.rpt";
+                return "MakeOver_Paris.rpt_test.rpt";
             }
             set {
                 // Do nothing
@@ -106,9 +106,9 @@ namespace MakeOver_Paris {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class Cachedrpt_saleinvoice : Component, ICachedReport {
+    public class Cachedrpt_test : Component, ICachedReport {
         
-        public Cachedrpt_saleinvoice() {
+        public Cachedrpt_test() {
         }
         
         [Browsable(false)]
@@ -145,7 +145,7 @@ namespace MakeOver_Paris {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            rpt_saleinvoice rpt = new rpt_saleinvoice();
+            rpt_test rpt = new rpt_test();
             rpt.Site = this.Site;
             return rpt;
         }

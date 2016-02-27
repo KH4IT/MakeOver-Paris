@@ -43,21 +43,25 @@ namespace MakeOver_Paris.Forms.Sale
                     System.Reflection.BindingFlags.NonPublic).GetValue(doctoprint.PrinterSettings.PaperSizes[i]));
                     break;
                 }
+                
             }
 
             if (txtRecieve.Text != "")
             {
                 //MakeOver_Paris.rpt_saleinvoice rpt = new rpt_saleinvoice();
-                //rpt.SetParameterValue("p_invoiceid", invoiceid);
-                //rpt.SetParameterValue("p_received", decimal.Parse(txtRecieve.Text));
+                MakeOver_Paris.rpt_test rpt = new rpt_test();
+                rpt.Refresh();
+                rpt.SetParameterValue("p_invoiceid", invoiceid);
+                rpt.SetParameterValue("p_received", decimal.Parse(txtRecieve.Text));
 
-                //rpt.PrintToPrinter(1, false, 1, 1);
-                //DTO.Transaction transaction = new DTO.Transaction();
-                //transaction.Incomeamount = decimal.Parse(txtTotal.Text);
-                //transaction.Createdby = UserSession.Session.Staff;
-                //transaction.Remark = "InvoiceID: " + invoiceid;
-                //new DAO.TransactionDAO().AddTransaction(transaction);
-                //this.Close();
+                //rpt.PrintOptions.PaperSize = CrystalDecisions.Shared.PaperSize.PaperA5;
+                rpt.PrintToPrinter(1, false, 0, 0);
+                DTO.Transaction transaction = new DTO.Transaction();
+                transaction.Incomeamount = decimal.Parse(txtTotal.Text);
+                transaction.Createdby = UserSession.Session.Staff;
+                transaction.Remark = "InvoiceID: " + invoiceid;
+                new DAO.TransactionDAO().AddTransaction(transaction);
+                this.Close();
             }
         }
         decimal exchangerate = 0;

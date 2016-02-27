@@ -22,7 +22,7 @@ namespace MakeOver_Paris
 
             try
             {
-                ConStr = Registry.GetValue(@"HKEY_CURRENT_USER\SOFTWARE\Wedding", "Server", "").ToString();
+                ConStr = Registry.GetValue(@"HKEY_CURRENT_USER\SOFTWARE\MAKEOVER_PARIS", "ConStr", "").ToString();
             }
             catch (Exception)
             {
@@ -30,12 +30,12 @@ namespace MakeOver_Paris
             }
             try
             {
-                DAO.DBUtility.getConnection().Open();
+                //DAO.DBUtility.getConnection().Open();
                 Application.Run(new Forms.FrmSplash());
             }
             catch (Exception)
             {
-                Application.Run(new Forms.Configuration.FrmDatabaseConfiguration());   
+                //Application.Run(new Forms.Configuration.FrmDatabaseConfiguration());   
             }
         }
     }

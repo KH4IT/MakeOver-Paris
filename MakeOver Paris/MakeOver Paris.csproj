@@ -206,6 +206,12 @@
       <DependentUpon>rpt_saleinvoice.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="rpt_test.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_test.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UserSession.cs" />
     <Compile Include="Utility.cs" />
     <EmbeddedResource Include="Forms\Category\FrmCategory.resx">
@@ -284,6 +290,10 @@
     <EmbeddedResource Include="rpt_saleinvoice.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rpt_saleinvoice.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_test.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_test.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
