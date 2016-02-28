@@ -73,6 +73,7 @@
             this.txt_pwd.PasswordChar = '*';
             this.txt_pwd.Size = new System.Drawing.Size(270, 26);
             this.txt_pwd.TabIndex = 1;
+            this.txt_pwd.MouseLeave += new System.EventHandler(this.txt_pwd_MouseLeave);
             // 
             // lbl_uid
             // 
@@ -91,6 +92,7 @@
             this.txt_uid.Name = "txt_uid";
             this.txt_uid.Size = new System.Drawing.Size(270, 26);
             this.txt_uid.TabIndex = 0;
+            this.txt_uid.MouseLeave += new System.EventHandler(this.txt_uid_MouseLeave);
             // 
             // label4
             // 
@@ -150,6 +152,7 @@
             this.txt_server.Name = "txt_server";
             this.txt_server.Size = new System.Drawing.Size(270, 26);
             this.txt_server.TabIndex = 0;
+            this.txt_server.MouseLeave += new System.EventHandler(this.txt_server_MouseLeave);
             // 
             // label1
             // 
