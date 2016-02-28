@@ -197,6 +197,35 @@ namespace MakeOver_Paris.Forms.Sale
             lblRiel.Text = (decimal.Parse(lblDollar.Text) * rate).ToString();
         }
 
+        private void grdItems_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 5)
+            {
+                grdItems.Rows.RemoveAt(e.RowIndex);
+                for (int i = 1; i < grdItems.RowCount; i++)
+                {
+                    grdItems.Rows[i - 1].Cells[0].Value = i;
+                }
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            int invoiceid = insertToDB();
+            if (invoiceid != -1)
+            {
+                decimal total = decimal.Parse(lblDollar.Text.Substring(0, lblDollar.Text.Length - 2));
+
+
+                FrmPay frmPay = new FrmPay();
+                frmPay.txtTotal.Text = total.ToString();
+                frmPay.invoiceid = invoiceid;
+                frmPay.ShowDialog();
+                grdItems.Rows.Clear();
+            }
+            count_enter = 0;
+        }
+
 
 
 

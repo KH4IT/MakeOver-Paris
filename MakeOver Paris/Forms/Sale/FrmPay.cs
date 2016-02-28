@@ -108,6 +108,11 @@ namespace MakeOver_Paris.Forms.Sale
                 txtRecieveRiel.Text = "0";
             }
         }
+
+        private void FrmPay_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+        }
         
     }
 }

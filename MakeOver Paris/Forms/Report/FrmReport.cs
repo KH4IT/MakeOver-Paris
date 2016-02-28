@@ -128,7 +128,40 @@ namespace MakeOver_Paris.Forms.Report
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-
+            String dirUrl = new DAO.SettingDao().getValue("SaveAddress");
+            System.IO.Directory.CreateDirectory(dirUrl);
+            switch (cbxReportType.SelectedIndex)
+            {
+                case 0:
+                    rpt_ListStaff staffs = new rpt_ListStaff();
+                    staffs.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.Excel, dirUrl + "Staff_" + DateTime.Now.ToShortDateString() + ".xls");
+                    break;
+                case 1:
+                    rpt_ListMembers listmember = new rpt_ListMembers();
+                    listmember.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.Excel, dirUrl + "Member_" + DateTime.Now.ToShortDateString() + ".xls");
+                    break;
+                case 2:
+                    rpt_ListOfProducts products = new rpt_ListOfProducts();
+                    products.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.Excel, dirUrl + "Product_" + DateTime.Now.ToShortDateString() + ".xls");
+                    break;
+                case 3:
+                    rpt_Cashbook cashbook = new rpt_Cashbook();
+                    cashbook.SetParameterValue("p_startdate", dpStartDate.Text);
+                    cashbook.SetParameterValue("p_enddate", dpEndDate.Text);
+                    cashbook.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.Excel, dirUrl + "Cashbook_" + DateTime.Now.ToShortDateString() + ".xls");
+                    break;
+                case 4:
+                    rpt_ListInvoice invoices = new rpt_ListInvoice();
+                    invoices.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.Excel, dirUrl + "List of Invoice_" + DateTime.Now.ToShortDateString() + ".xls");
+                    break;
+                case 5:
+                    rpt_ListProductSold productSold = new rpt_ListProductSold();
+                    productSold.SetParameterValue("p_startdate", dpStartDate.Text);
+                    productSold.SetParameterValue("p_enddate", dpEndDate.Text);
+                    productSold.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.Excel, dirUrl + "Product Sold_" + DateTime.Now.ToShortDateString() + ".xls");
+                    break;
+            }
+            System.Diagnostics.Process.Start(@dirUrl);
         }
 
         private void dpStartDate_ValueChanged(object sender, EventArgs e)
@@ -153,7 +186,7 @@ namespace MakeOver_Paris.Forms.Report
             {
                 filterProductSold(dpStartDate.Text, dpEndDate.Text);
             }
-            MessageBox.Show(Convert.ToDateTime(dpEndDate.Text).ToString("yyyy-MM-dd"));
+            //MessageBox.Show(Convert.ToDateTime(dpEndDate.Text).ToString("yyyy-MM-dd"));
         }
 
         private void getAllCashBook()

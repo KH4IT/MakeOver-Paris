@@ -280,6 +280,7 @@
             this.Name = "FrmPay";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmPay";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmPay_FormClosing);
             this.Load += new System.EventHandler(this.FrmPay_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
