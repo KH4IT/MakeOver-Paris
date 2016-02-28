@@ -81,5 +81,46 @@ namespace MakeOver_Paris.Forms.Configuration
             }
         }
 
+        private void setComboDatabases()
+        {
+            try
+            {
+                string conStr = "SERVER=" + txt_server.Text + ";UID=" + txt_uid.Text + ";" + "PASSWORD=" + txt_pwd.Text + ";Allow User Variables=True";
+                MySqlConnection connection = new MySqlConnection(conStr);
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = "SHOW DATABASES;";
+                MySqlDataReader Reader;
+                connection.Open();
+                Reader = command.ExecuteReader();
+                cbo_database.Items.Clear();
+                while (Reader.Read())
+                {
+                    string row = "";
+                    for (int i = 0; i < Reader.FieldCount; i++)
+                        row += Reader.GetValue(i).ToString();
+                    cbo_database.Items.Add(row);
+                }
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+            }
+        }
+
+        private void txt_server_MouseLeave(object sender, EventArgs e)
+        {
+            setComboDatabases();
+        }
+
+        private void txt_uid_MouseLeave(object sender, EventArgs e)
+        {
+            setComboDatabases();
+        }
+
+        private void txt_pwd_MouseLeave(object sender, EventArgs e)
+        {
+            setComboDatabases();
+        }
+
     }
 }
