@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnMain = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -55,6 +57,8 @@
             // pnMain
             // 
             this.pnMain.AutoSize = true;
+            this.pnMain.Controls.Add(this.button6);
+            this.pnMain.Controls.Add(this.button5);
             this.pnMain.Controls.Add(this.button4);
             this.pnMain.Controls.Add(this.button3);
             this.pnMain.Controls.Add(this.button2);
@@ -73,6 +77,38 @@
             this.pnMain.Size = new System.Drawing.Size(1306, 660);
             this.pnMain.TabIndex = 14;
             // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Black;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(360, 284);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(290, 108);
+            this.button6.TabIndex = 47;
+            this.button6.Text = "សាខា";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Black;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(360, 170);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(290, 108);
+            this.button5.TabIndex = 46;
+            this.button5.Text = "ប្រភេទសមាជិក";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Red;
@@ -89,13 +125,13 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.button3.BackColor = System.Drawing.Color.Black;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(952, 284);
+            this.button3.Location = new System.Drawing.Point(64, 398);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(290, 108);
             this.button3.TabIndex = 7;
@@ -105,15 +141,15 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Green;
+            this.button2.BackColor = System.Drawing.Color.Red;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(64, 398);
+            this.button2.Location = new System.Drawing.Point(656, 398);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(1178, 108);
+            this.button2.Size = new System.Drawing.Size(586, 108);
             this.button2.TabIndex = 8;
             this.button2.Text = "ការលក់ទំនិញ";
             this.button2.UseVisualStyleBackColor = false;
@@ -137,15 +173,15 @@
             this.Label1.Font = new System.Drawing.Font("Segoe UI Semibold", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label1.Location = new System.Drawing.Point(71, 19);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(368, 65);
+            this.Label1.Size = new System.Drawing.Size(419, 65);
             this.Label1.TabIndex = 13;
-            this.Label1.Text = "MakeOver Paris";
+            this.Label1.Text = "MAKEOVER PARIS";
             // 
             // Label2
             // 
             this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(445, 54);
+            this.Label2.Location = new System.Drawing.Point(496, 54);
             this.Label2.Name = "Label2";
             this.Label2.Size = new System.Drawing.Size(88, 21);
             this.Label2.TabIndex = 14;
@@ -164,13 +200,13 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.button1.BackColor = System.Drawing.Color.Black;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(656, 284);
+            this.button1.Location = new System.Drawing.Point(952, 284);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(290, 108);
             this.button1.TabIndex = 6;
@@ -180,13 +216,13 @@
             // 
             // btnTransaction
             // 
-            this.btnTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnTransaction.BackColor = System.Drawing.Color.Black;
             this.btnTransaction.FlatAppearance.BorderSize = 0;
             this.btnTransaction.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
             this.btnTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTransaction.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTransaction.ForeColor = System.Drawing.Color.White;
-            this.btnTransaction.Location = new System.Drawing.Point(360, 284);
+            this.btnTransaction.Location = new System.Drawing.Point(656, 284);
             this.btnTransaction.Name = "btnTransaction";
             this.btnTransaction.Size = new System.Drawing.Size(290, 108);
             this.btnTransaction.TabIndex = 5;
@@ -196,13 +232,13 @@
             // 
             // btnProduct
             // 
-            this.btnProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnProduct.BackColor = System.Drawing.Color.Black;
             this.btnProduct.FlatAppearance.BorderSize = 0;
             this.btnProduct.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
             this.btnProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnProduct.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProduct.ForeColor = System.Drawing.Color.White;
-            this.btnProduct.Location = new System.Drawing.Point(64, 284);
+            this.btnProduct.Location = new System.Drawing.Point(952, 170);
             this.btnProduct.Name = "btnProduct";
             this.btnProduct.Size = new System.Drawing.Size(290, 108);
             this.btnProduct.TabIndex = 4;
@@ -212,13 +248,13 @@
             // 
             // btnSetting
             // 
-            this.btnSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnSetting.BackColor = System.Drawing.Color.Black;
             this.btnSetting.FlatAppearance.BorderSize = 0;
             this.btnSetting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
             this.btnSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSetting.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSetting.ForeColor = System.Drawing.Color.White;
-            this.btnSetting.Location = new System.Drawing.Point(952, 170);
+            this.btnSetting.Location = new System.Drawing.Point(360, 398);
             this.btnSetting.Name = "btnSetting";
             this.btnSetting.Size = new System.Drawing.Size(290, 108);
             this.btnSetting.TabIndex = 3;
@@ -228,7 +264,7 @@
             // 
             // btnCategory
             // 
-            this.btnCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnCategory.BackColor = System.Drawing.Color.Black;
             this.btnCategory.FlatAppearance.BorderSize = 0;
             this.btnCategory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
             this.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -244,13 +280,13 @@
             // 
             // btnStaff
             // 
-            this.btnStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnStaff.BackColor = System.Drawing.Color.Black;
             this.btnStaff.FlatAppearance.BorderSize = 0;
             this.btnStaff.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
             this.btnStaff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStaff.Font = new System.Drawing.Font("Khmer OS Content", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStaff.ForeColor = System.Drawing.Color.White;
-            this.btnStaff.Location = new System.Drawing.Point(360, 170);
+            this.btnStaff.Location = new System.Drawing.Point(64, 284);
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.Size = new System.Drawing.Size(290, 108);
             this.btnStaff.TabIndex = 1;
@@ -260,7 +296,7 @@
             // 
             // btnMember
             // 
-            this.btnMember.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnMember.BackColor = System.Drawing.Color.Black;
             this.btnMember.FlatAppearance.BorderSize = 0;
             this.btnMember.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(128)))), ((int)(((byte)(150)))));
             this.btnMember.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -346,5 +382,7 @@
         internal System.Windows.Forms.Button button2;
         internal System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        internal System.Windows.Forms.Button button6;
+        internal System.Windows.Forms.Button button5;
     }
 }

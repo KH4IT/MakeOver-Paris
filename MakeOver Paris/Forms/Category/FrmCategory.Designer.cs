@@ -59,7 +59,7 @@
             // btnSave
             // 
             this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnSave.BackColor = System.Drawing.Color.Black;
             this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnSave.FlatAppearance.BorderSize = 0;
@@ -67,9 +67,9 @@
             this.btnSave.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(880, 71);
+            this.btnSave.Location = new System.Drawing.Point(863, 61);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(100, 30);
+            this.btnSave.Size = new System.Drawing.Size(115, 40);
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "រក្សាទុក";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -120,9 +120,9 @@
             this.btnDelete.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(774, 71);
+            this.btnDelete.Location = new System.Drawing.Point(743, 61);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(100, 30);
+            this.btnDelete.Size = new System.Drawing.Size(115, 40);
             this.btnDelete.TabIndex = 2;
             this.btnDelete.Text = "លុប";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -177,7 +177,7 @@
             // Panel3
             // 
             this.Panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.Panel3.BackColor = System.Drawing.Color.Black;
             this.Panel3.Location = new System.Drawing.Point(0, 55);
             this.Panel3.Name = "Panel3";
             this.Panel3.Size = new System.Drawing.Size(1024, 5);
@@ -186,17 +186,17 @@
             // Panel5
             // 
             this.Panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.Panel5.BackColor = System.Drawing.Color.Black;
             this.Panel5.Controls.Add(this.btnMemberList);
             this.Panel5.Location = new System.Drawing.Point(8, 195);
             this.Panel5.Name = "Panel5";
-            this.Panel5.Size = new System.Drawing.Size(1007, 30);
+            this.Panel5.Size = new System.Drawing.Size(1007, 37);
             this.Panel5.TabIndex = 3;
             // 
             // btnMemberList
             // 
             this.btnMemberList.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnMemberList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnMemberList.BackColor = System.Drawing.Color.Black;
             this.btnMemberList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMemberList.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnMemberList.FlatAppearance.BorderSize = 0;
@@ -204,9 +204,9 @@
             this.btnMemberList.Font = new System.Drawing.Font("Khmer OS Content", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMemberList.ForeColor = System.Drawing.Color.White;
             this.btnMemberList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMemberList.Location = new System.Drawing.Point(8, -3);
+            this.btnMemberList.Location = new System.Drawing.Point(8, 0);
             this.btnMemberList.Name = "btnMemberList";
-            this.btnMemberList.Size = new System.Drawing.Size(134, 37);
+            this.btnMemberList.Size = new System.Drawing.Size(151, 37);
             this.btnMemberList.TabIndex = 1;
             this.btnMemberList.Text = "បញ្ជីប្រភេទទំនិញ";
             this.btnMemberList.UseVisualStyleBackColor = false;
@@ -277,7 +277,7 @@
             this.dgvCategory.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCategory.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvCategory.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.dgvCategory.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.dgvCategory.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Black;
             this.dgvCategory.RowTemplate.Height = 30;
             this.dgvCategory.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

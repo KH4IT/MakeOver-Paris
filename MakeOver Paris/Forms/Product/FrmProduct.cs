@@ -180,12 +180,12 @@ namespace MakeOver_Paris.Forms.Product
 
         private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.AllowOnlyNumber(sender, e);
+            Utility.AllowOnlyDecimalNumber(sender, e);
         }
 
         private void txtReturnQuantity_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.AllowOnlyNumber(sender, e);
+            Utility.AllowOnlyDecimalNumber(sender, e);
         }
 
         private void FrmProduct_Load(object sender, EventArgs e)
@@ -214,8 +214,5 @@ namespace MakeOver_Paris.Forms.Product
                 btnBack_Click(sender, e);
             }
         }
-
-      
-
     }
 }

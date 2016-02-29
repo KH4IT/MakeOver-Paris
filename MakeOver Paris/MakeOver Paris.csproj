@@ -72,6 +72,12 @@
     <Compile Include="DTO\Setting.cs" />
     <Compile Include="DTO\Staff.cs" />
     <Compile Include="DTO\Transaction.cs" />
+    <Compile Include="Forms\Branch\FrmBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Branch\FrmBranch.Designer.cs">
+      <DependentUpon>FrmBranch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Category\FrmCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,12 @@
     <Compile Include="Forms\Member\FrmMembers.designer.cs">
       <DependentUpon>FrmMembers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Member\FrmMemberType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Member\FrmMemberType.Designer.cs">
+      <DependentUpon>FrmMemberType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Product\FrmProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +150,12 @@
       <DependentUpon>rpt_Cashbook.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Forms\Report\rpt_ListInvoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_ListInvoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Forms\Report\rpt_ListMembers.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -154,6 +172,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>rpt_ListProductSold.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Report\rpt_ListStaff.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_ListStaff.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms\Report\rpt_Profit.cs">
@@ -214,6 +238,9 @@
     </Compile>
     <Compile Include="UserSession.cs" />
     <Compile Include="Utility.cs" />
+    <EmbeddedResource Include="Forms\Branch\FrmBranch.resx">
+      <DependentUpon>FrmBranch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Category\FrmCategory.resx">
       <DependentUpon>FrmCategory.cs</DependentUpon>
     </EmbeddedResource>
@@ -238,6 +265,9 @@
     <EmbeddedResource Include="Forms\Member\FrmMembers.resx">
       <DependentUpon>FrmMembers.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Member\FrmMemberType.resx">
+      <DependentUpon>FrmMemberType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Product\FrmProduct.resx">
       <DependentUpon>FrmProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,6 +277,10 @@
     <EmbeddedResource Include="Forms\Report\rpt_Cashbook.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rpt_Cashbook.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Report\rpt_ListInvoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_ListInvoice.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Report\rpt_ListMembers.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -259,6 +293,10 @@
     <EmbeddedResource Include="Forms\Report\rpt_ListProductSold.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rpt_ListProductSold.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Report\rpt_ListStaff.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_ListStaff.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Report\rpt_Profit.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

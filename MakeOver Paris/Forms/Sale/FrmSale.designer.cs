@@ -28,10 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.grdItems = new System.Windows.Forms.DataGridView();
+            this.c_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_productname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_remove = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.c_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_priceIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label11 = new System.Windows.Forms.Label();
             this.cboMember = new System.Windows.Forms.ComboBox();
             this.Panel1 = new System.Windows.Forms.Panel();
@@ -42,20 +50,12 @@
             this.btnMemberList = new System.Windows.Forms.Button();
             this.Panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.txtDiscount = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCode = new System.Windows.Forms.TextBox();
-            this.txtDiscount = new System.Windows.Forms.MaskedTextBox();
-            this.c_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_productname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_remove = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.c_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_priceIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdItems)).BeginInit();
             this.Panel1.SuspendLayout();
@@ -95,28 +95,72 @@
             this.c_remove,
             this.c_id,
             this.c_priceIn});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.HotPink;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdItems.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.HotPink;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdItems.DefaultCellStyle = dataGridViewCellStyle1;
             this.grdItems.Location = new System.Drawing.Point(5, 305);
             this.grdItems.Name = "grdItems";
             this.grdItems.RowHeadersVisible = false;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
-            this.grdItems.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            this.grdItems.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.grdItems.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grdItems.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.grdItems.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.grdItems.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Black;
             this.grdItems.RowTemplate.Height = 30;
             this.grdItems.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.grdItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.grdItems.Size = new System.Drawing.Size(1000, 351);
             this.grdItems.TabIndex = 0;
             this.grdItems.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdItems_CellClick);
+            // 
+            // c_number
+            // 
+            this.c_number.HeaderText = "ល.រ.";
+            this.c_number.Name = "c_number";
+            // 
+            // c_productname
+            // 
+            this.c_productname.HeaderText = "ឈ្មោះ​ផលិតផល";
+            this.c_productname.Name = "c_productname";
+            // 
+            // c_quantity
+            // 
+            this.c_quantity.HeaderText = "បរិមាណ";
+            this.c_quantity.Name = "c_quantity";
+            // 
+            // c_price
+            // 
+            this.c_price.HeaderText = "តម្លៃ";
+            this.c_price.Name = "c_price";
+            // 
+            // c_subtotal
+            // 
+            this.c_subtotal.HeaderText = "តម្លៃ​សរុប";
+            this.c_subtotal.Name = "c_subtotal";
+            // 
+            // c_remove
+            // 
+            this.c_remove.HeaderText = "លុប​ចោល";
+            this.c_remove.Name = "c_remove";
+            this.c_remove.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.c_remove.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // c_id
+            // 
+            this.c_id.HeaderText = "productid";
+            this.c_id.Name = "c_id";
+            this.c_id.Visible = false;
+            // 
+            // c_priceIn
+            // 
+            this.c_priceIn.HeaderText = "pricein";
+            this.c_priceIn.Name = "c_priceIn";
+            this.c_priceIn.Visible = false;
             // 
             // label11
             // 
@@ -236,6 +280,16 @@
             this.panel6.Size = new System.Drawing.Size(1001, 218);
             this.panel6.TabIndex = 5;
             // 
+            // txtDiscount
+            // 
+            this.txtDiscount.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtDiscount.Location = new System.Drawing.Point(900, 4);
+            this.txtDiscount.Mask = "##%";
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.Size = new System.Drawing.Size(100, 27);
+            this.txtDiscount.TabIndex = 38;
+            this.txtDiscount.Text = "00";
+            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -307,60 +361,6 @@
             this.txtCode.TabIndex = 3;
             this.txtCode.TextChanged += new System.EventHandler(this.txtCode_TextChanged);
             this.txtCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCode_KeyDown);
-            // 
-            // txtDiscount
-            // 
-            this.txtDiscount.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.txtDiscount.Location = new System.Drawing.Point(900, 4);
-            this.txtDiscount.Mask = "##%";
-            this.txtDiscount.Name = "txtDiscount";
-            this.txtDiscount.Size = new System.Drawing.Size(100, 27);
-            this.txtDiscount.TabIndex = 38;
-            this.txtDiscount.Text = "00";
-            // 
-            // c_number
-            // 
-            this.c_number.HeaderText = "ល.រ.";
-            this.c_number.Name = "c_number";
-            // 
-            // c_productname
-            // 
-            this.c_productname.HeaderText = "ឈ្មោះ​ផលិតផល";
-            this.c_productname.Name = "c_productname";
-            // 
-            // c_quantity
-            // 
-            this.c_quantity.HeaderText = "បរិមាណ";
-            this.c_quantity.Name = "c_quantity";
-            // 
-            // c_price
-            // 
-            this.c_price.HeaderText = "តម្លៃ";
-            this.c_price.Name = "c_price";
-            // 
-            // c_subtotal
-            // 
-            this.c_subtotal.HeaderText = "តម្លៃ​សរុប";
-            this.c_subtotal.Name = "c_subtotal";
-            // 
-            // c_remove
-            // 
-            this.c_remove.HeaderText = "លុប​ចោល";
-            this.c_remove.Name = "c_remove";
-            this.c_remove.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.c_remove.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // c_id
-            // 
-            this.c_id.HeaderText = "productid";
-            this.c_id.Name = "c_id";
-            this.c_id.Visible = false;
-            // 
-            // c_priceIn
-            // 
-            this.c_priceIn.HeaderText = "pricein";
-            this.c_priceIn.Name = "c_priceIn";
-            this.c_priceIn.Visible = false;
             // 
             // FrmSale
             // 

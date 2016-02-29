@@ -40,7 +40,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtExpenseAmount = new System.Windows.Forms.TextBox();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.txtIncomeAmount = new System.Windows.Forms.TextBox();
             this.Panel1 = new System.Windows.Forms.Panel();
             this.Panel2 = new System.Windows.Forms.Panel();
@@ -67,7 +66,7 @@
             // btnSave
             // 
             this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnSave.BackColor = System.Drawing.Color.Black;
             this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnSave.FlatAppearance.BorderSize = 0;
@@ -75,9 +74,9 @@
             this.btnSave.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(904, 161);
+            this.btnSave.Location = new System.Drawing.Point(863, 138);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(100, 30);
+            this.btnSave.Size = new System.Drawing.Size(115, 40);
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "រក្សាទុក";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -103,7 +102,6 @@
             this.panel6.Controls.Add(this.label5);
             this.panel6.Controls.Add(this.label4);
             this.panel6.Controls.Add(this.txtExpenseAmount);
-            this.panel6.Controls.Add(this.btnDelete);
             this.panel6.Controls.Add(this.btnSave);
             this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.txtIncomeAmount);
@@ -180,27 +178,6 @@
             this.txtExpenseAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtExpenseAmount_KeyPress);
             this.txtExpenseAmount.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtExpenseAmount_KeyUp);
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDelete.BackColor = System.Drawing.Color.Red;
-            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDelete.Enabled = false;
-            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Khmer OS Content", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(798, 161);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(100, 30);
-            this.btnDelete.TabIndex = 4;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Visible = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // txtIncomeAmount
             // 
             this.txtIncomeAmount.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -262,7 +239,7 @@
             // Panel3
             // 
             this.Panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.Panel3.BackColor = System.Drawing.Color.Black;
             this.Panel3.Location = new System.Drawing.Point(0, 55);
             this.Panel3.Name = "Panel3";
             this.Panel3.Size = new System.Drawing.Size(1024, 5);
@@ -271,17 +248,17 @@
             // Panel5
             // 
             this.Panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.Panel5.BackColor = System.Drawing.Color.Black;
             this.Panel5.Controls.Add(this.btnMemberList);
             this.Panel5.Location = new System.Drawing.Point(8, 279);
             this.Panel5.Name = "Panel5";
-            this.Panel5.Size = new System.Drawing.Size(1007, 30);
+            this.Panel5.Size = new System.Drawing.Size(1007, 37);
             this.Panel5.TabIndex = 3;
             // 
             // btnMemberList
             // 
             this.btnMemberList.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnMemberList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnMemberList.BackColor = System.Drawing.Color.Black;
             this.btnMemberList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMemberList.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnMemberList.FlatAppearance.BorderSize = 0;
@@ -289,7 +266,7 @@
             this.btnMemberList.Font = new System.Drawing.Font("Khmer OS Content", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMemberList.ForeColor = System.Drawing.Color.White;
             this.btnMemberList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMemberList.Location = new System.Drawing.Point(8, -4);
+            this.btnMemberList.Location = new System.Drawing.Point(8, -1);
             this.btnMemberList.Name = "btnMemberList";
             this.btnMemberList.Size = new System.Drawing.Size(128, 34);
             this.btnMemberList.TabIndex = 1;
@@ -365,7 +342,7 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvTransaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -386,7 +363,7 @@
             this.dgvTransaction.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTransaction.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvTransaction.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.dgvTransaction.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.dgvTransaction.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Black;
             this.dgvTransaction.RowTemplate.Height = 30;
             this.dgvTransaction.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvTransaction.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -428,7 +405,6 @@
         internal System.Windows.Forms.Button btnSave;
         internal System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel6;
-        internal System.Windows.Forms.Button btnDelete;
         internal System.Windows.Forms.Panel Panel1;
         internal System.Windows.Forms.Panel Panel2;
         internal System.Windows.Forms.PictureBox btnBack;

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label3 = new System.Windows.Forms.Label();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -129,9 +129,9 @@
             this.delete.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delete.ForeColor = System.Drawing.Color.White;
             this.delete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.delete.Location = new System.Drawing.Point(776, 156);
+            this.delete.Location = new System.Drawing.Point(749, 149);
             this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(100, 30);
+            this.delete.Size = new System.Drawing.Size(115, 40);
             this.delete.TabIndex = 5;
             this.delete.Text = "លុប";
             this.delete.UseVisualStyleBackColor = false;
@@ -140,7 +140,7 @@
             // Save
             // 
             this.Save.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Save.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.Save.BackColor = System.Drawing.Color.Black;
             this.Save.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Save.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.Save.FlatAppearance.BorderSize = 0;
@@ -148,9 +148,9 @@
             this.Save.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Save.ForeColor = System.Drawing.Color.White;
             this.Save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Save.Location = new System.Drawing.Point(882, 156);
+            this.Save.Location = new System.Drawing.Point(870, 149);
             this.Save.Name = "Save";
-            this.Save.Size = new System.Drawing.Size(100, 30);
+            this.Save.Size = new System.Drawing.Size(115, 40);
             this.Save.TabIndex = 4;
             this.Save.Text = "រក្សាទុក";
             this.Save.UseVisualStyleBackColor = false;
@@ -300,7 +300,7 @@
             // Panel3
             // 
             this.Panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.Panel3.BackColor = System.Drawing.Color.Black;
             this.Panel3.Location = new System.Drawing.Point(0, 55);
             this.Panel3.Name = "Panel3";
             this.Panel3.Size = new System.Drawing.Size(1024, 5);
@@ -309,17 +309,17 @@
             // Panel5
             // 
             this.Panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.Panel5.BackColor = System.Drawing.Color.Black;
             this.Panel5.Controls.Add(this.btnMemberList);
             this.Panel5.Location = new System.Drawing.Point(12, 290);
             this.Panel5.Name = "Panel5";
-            this.Panel5.Size = new System.Drawing.Size(1007, 30);
+            this.Panel5.Size = new System.Drawing.Size(1007, 38);
             this.Panel5.TabIndex = 3;
             // 
             // btnMemberList
             // 
             this.btnMemberList.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnMemberList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnMemberList.BackColor = System.Drawing.Color.Black;
             this.btnMemberList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMemberList.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnMemberList.FlatAppearance.BorderSize = 0;
@@ -327,7 +327,7 @@
             this.btnMemberList.Font = new System.Drawing.Font("Khmer OS Content", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMemberList.ForeColor = System.Drawing.Color.White;
             this.btnMemberList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMemberList.Location = new System.Drawing.Point(8, -3);
+            this.btnMemberList.Location = new System.Drawing.Point(8, 1);
             this.btnMemberList.Name = "btnMemberList";
             this.btnMemberList.Size = new System.Drawing.Size(134, 37);
             this.btnMemberList.TabIndex = 1;
@@ -375,32 +375,32 @@
             this.dgvMember.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMember.BackgroundColor = System.Drawing.Color.White;
             this.dgvMember.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMember.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMember.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMember.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.HotPink;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMember.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.HotPink;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMember.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMember.Location = new System.Drawing.Point(5, 302);
             this.dgvMember.Name = "dgvMember";
             this.dgvMember.ReadOnly = true;
             this.dgvMember.RowHeadersVisible = false;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            this.dgvMember.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            this.dgvMember.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvMember.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvMember.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.dgvMember.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.dgvMember.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Black;
             this.dgvMember.RowTemplate.Height = 30;
             this.dgvMember.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMember.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

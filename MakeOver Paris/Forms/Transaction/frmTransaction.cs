@@ -103,7 +103,6 @@ namespace MakeOver_Paris.Forms.Transaction
                     txtExpenseAmount.Enabled = true;
                     dgvTransaction.DataSource = new DAO.TransactionDAO().GetAllTransactions().Tables[0];
                     id = 0;
-                    btnDelete.Enabled = false;
                 }
                 else
                 {
@@ -179,7 +178,6 @@ namespace MakeOver_Paris.Forms.Transaction
                 txtIncomeAmount.Text = dgvTransaction.CurrentRow.Cells[2].Value.ToString();
                 txtExpenseAmount.Text = dgvTransaction.CurrentRow.Cells[3].Value.ToString();
                 txtRemark.Text = dgvTransaction.CurrentRow.Cells[5].Value.ToString();
-                btnDelete.Enabled = true;
             }
             catch (Exception ex)
             {

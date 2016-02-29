@@ -56,7 +56,7 @@ namespace MakeOver_Paris.Forms.Configuration
             }
             catch (Exception ex)
             {
-                MessageBox.Show("CONNECTION FAILED!!!");
+                MessageBox.Show("CONNECTION FAILED!!!"+ ex.ToString());
             }
         }
 

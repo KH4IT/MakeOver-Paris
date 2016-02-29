@@ -154,7 +154,7 @@
             // btnSave
             // 
             this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnSave.BackColor = System.Drawing.Color.Black;
             this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnSave.FlatAppearance.BorderSize = 0;
@@ -295,7 +295,7 @@
             this.dgvStaff.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvStaff.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvStaff.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.dgvStaff.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.dgvStaff.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Black;
             this.dgvStaff.RowTemplate.Height = 30;
             this.dgvStaff.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvStaff.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -306,17 +306,17 @@
             // Panel5
             // 
             this.Panel5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.Panel5.BackColor = System.Drawing.Color.Black;
             this.Panel5.Controls.Add(this.btnMemberList);
             this.Panel5.Location = new System.Drawing.Point(0, 269);
             this.Panel5.Name = "Panel5";
-            this.Panel5.Size = new System.Drawing.Size(1007, 30);
+            this.Panel5.Size = new System.Drawing.Size(1007, 38);
             this.Panel5.TabIndex = 3;
             // 
             // btnMemberList
             // 
             this.btnMemberList.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnMemberList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.btnMemberList.BackColor = System.Drawing.Color.Black;
             this.btnMemberList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnMemberList.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnMemberList.FlatAppearance.BorderSize = 0;
@@ -324,7 +324,7 @@
             this.btnMemberList.Font = new System.Drawing.Font("Khmer OS Content", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMemberList.ForeColor = System.Drawing.Color.White;
             this.btnMemberList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMemberList.Location = new System.Drawing.Point(-1, -4);
+            this.btnMemberList.Location = new System.Drawing.Point(-1, 0);
             this.btnMemberList.Name = "btnMemberList";
             this.btnMemberList.Size = new System.Drawing.Size(176, 36);
             this.btnMemberList.TabIndex = 1;
@@ -364,12 +364,12 @@
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(180, 43);
             this.Label1.TabIndex = 1;
-            this.Label1.Text = "គ្រប់គ្រងបុក្គលិក";
+            this.Label1.Text = "គ្រប់គ្រងបុគ្គលិក";
             // 
             // Panel3
             // 
             this.Panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.Panel3.BackColor = System.Drawing.Color.Black;
             this.Panel3.Location = new System.Drawing.Point(0, 55);
             this.Panel3.Name = "Panel3";
             this.Panel3.Size = new System.Drawing.Size(1024, 5);

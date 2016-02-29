@@ -114,5 +114,19 @@ namespace MakeOver_Paris.Forms
             form.Show();
             this.Close();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Forms.Member.FrmMemberType frmMemberType = new Forms.Member.FrmMemberType();
+            frmMemberType.Show();
+            this.Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Forms.Branch.FrmBranch frmBranch = new Forms.Branch.FrmBranch();
+            frmBranch.Show();
+            this.Close();
+        }
     }
 }

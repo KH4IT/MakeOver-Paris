@@ -85,6 +85,7 @@ namespace MakeOver_Paris.Forms.Setting
                             dgvSetting.DataSource = new DAO.SettingDao().getAllSettingDS().Tables[0];
                             id = 0;
                             btnDelete.Enabled = false;
+                            txtTitle.ReadOnly = false;
                         }
                         else
                         {
@@ -126,6 +127,7 @@ namespace MakeOver_Paris.Forms.Setting
                 txtTitle.Text = dgvSetting.CurrentRow.Cells[1].Value.ToString();
                 txtValue.Text = dgvSetting.CurrentRow.Cells[2].Value.ToString();
                 btnDelete.Enabled = true;
+                txtTitle.ReadOnly = true;
             }
             catch (Exception ex)
             {

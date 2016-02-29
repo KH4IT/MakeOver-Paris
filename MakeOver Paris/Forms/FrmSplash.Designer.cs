@@ -41,6 +41,7 @@
             // 
             // pnlSplashScreen
             // 
+            this.pnlSplashScreen.BackColor = System.Drawing.Color.White;
             this.pnlSplashScreen.Controls.Add(this.label3);
             this.pnlSplashScreen.Controls.Add(this.pictureBox1);
             this.pnlSplashScreen.Controls.Add(this.label2);
@@ -54,7 +55,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Italic);
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(827, 275);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(354, 25);
@@ -64,9 +65,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MakeOver_Paris.Properties.Resources.paris;
-            this.pictureBox1.Location = new System.Drawing.Point(77, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(107, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(229, 297);
+            this.pictureBox1.Size = new System.Drawing.Size(194, 297);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -76,19 +77,19 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Light", 36F, System.Drawing.FontStyle.Italic);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(460, 136);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(445, 160);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(467, 65);
+            this.label2.Size = new System.Drawing.Size(389, 65);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Make Over Paris Shop";
+            this.label2.Text = "MAKEOVER PARIS";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Light", 48F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(307, 50);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(292, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(757, 86);
             this.label1.TabIndex = 0;
@@ -103,7 +104,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(186)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1184, 305);
             this.Controls.Add(this.pnlSplashScreen);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
