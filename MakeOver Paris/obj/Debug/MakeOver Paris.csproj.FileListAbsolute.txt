@@ -167,3 +167,4 @@ D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.FrmSa
 C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Configuration.FrmDatabaseConfiguration.resources
 C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Branch.FrmBranch.resources
 C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Member.FrmMemberType.resources
+C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Product.ProductInStock.resources

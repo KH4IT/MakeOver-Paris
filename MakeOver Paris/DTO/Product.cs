@@ -27,19 +27,17 @@ namespace MakeOver_Paris.DTO
 
         public Product() { }
 
-        public Product(int productid, String productcode, String barcode , String productname ,  decimal quantity ,String description  ,
-            decimal pricein ,decimal priceout,decimal returnquantity  ,String remark  ,Staff createdby , Staff updatedby ,Category category )
+        public Product(int productid, String productcode, String barcode , String productname ,String description  ,
+            decimal pricein ,decimal priceout, String remark  ,Staff createdby , Staff updatedby ,Category category )
         {
             this.productid = productid;
             this.productcode = productcode;
             this.barcode = barcode;
             this.productcode = productcode;
             this.productname = productname;
-            this.quantity = quantity;
             this.description = description;
             this.pricein = pricein;
             this.priceout = priceout;
-            this.returnquantity = returnquantity;
             this.remark = remark;
             this.createdby = createdby;
             this.updatedby = updatedby;

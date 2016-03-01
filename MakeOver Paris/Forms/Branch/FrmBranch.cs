@@ -23,5 +23,13 @@ namespace MakeOver_Paris.Forms.Branch
             frmMain.Show();
             this.Close();
         }
+
+        private void FrmBranch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                btnBack_Click(sender, e);
+            }
+        }
     }
 }

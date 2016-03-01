@@ -128,5 +128,12 @@ namespace MakeOver_Paris.Forms
             frmBranch.Show();
             this.Close();
         }
+
+        private void btnProductStock_Click(object sender, EventArgs e)
+        {
+            Forms.Product.ProductInStock productInStock = new Forms.Product.ProductInStock();
+            productInStock.Show();
+            this.Close();
+        }
     }
 }

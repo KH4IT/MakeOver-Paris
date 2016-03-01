@@ -33,10 +33,8 @@ namespace MakeOver_Paris.Forms.Product
             if (id == 0)
             {
                 if (    txtBarcode.Text.Trim() == ""    || txtProductCode.Text.Trim() == ""
-                    ||  txtName.Text.Trim()  == ""     // || cboCategory.SelectedValue == ""
-                    ||  txtQuantity.Text.Trim() == ""   
+                    ||  txtName.Text.Trim()  == ""     // || cboCategory.SelectedValue == "" 
                     ||  txtPriceIn.Text.Trim() == ""    || txtPriceOut.Text.Trim() == ""
-                    ||  txtReturnQuantity.Text.Trim() == ""
                 )
                 {
                     MessageBox.Show("សូមបំពេញពត៏មានឲ្យបានត្រឹមត្រូវ!!!");
@@ -45,10 +43,11 @@ namespace MakeOver_Paris.Forms.Product
                 {
                     DTO.Staff staff = new DTO.Staff();
                     staff.Staffid = UserSession.Session.Staff.Staffid;// Data.user.Staffid;
+                    MessageBox.Show(staff.Staffid+"");
                     DTO.Category cate = new DTO.Category();
                     cate.Categoryid = (int)cboCategory.SelectedValue;
-                    DTO.Product product = new DTO.Product(0, txtProductCode.Text.Trim(), txtBarcode.Text.Trim(), txtName.Text.Trim(), Decimal.Parse(txtQuantity.Text.Trim()), txtDescription.Text.Trim(),
-                       Decimal.Parse(txtPriceIn.Text.Trim()), Decimal.Parse(txtPriceOut.Text.Trim()), Decimal.Parse(txtReturnQuantity.Text.Trim()), txtRemark.Text.Trim(), staff, staff, cate);
+                    DTO.Product product = new DTO.Product(0,txtProductCode.Text.Trim(), txtBarcode.Text.Trim(), txtName.Text.Trim(), txtDescription.Text.Trim(),
+                    Decimal.Parse(txtPriceIn.Text.Trim()), Decimal.Parse(txtPriceOut.Text.Trim()), txtRemark.Text.Trim(), staff, staff, cate);
                     if (new DAO.ProductDAO().addProduct(product))
                     {
                         dgvProduct.DataSource = new DAO.ProductDAO().getAllProductDS().Tables[0];
@@ -65,9 +64,7 @@ namespace MakeOver_Paris.Forms.Product
 
                 if (txtBarcode.Text.Trim() == "" || txtProductCode.Text.Trim() == ""
                    || txtName.Text.Trim() == ""     // || cboCategory.SelectedValue == ""
-                   || txtQuantity.Text.Trim() == ""
                    || txtPriceIn.Text.Trim() == "" || txtPriceOut.Text.Trim() == ""
-                   || txtReturnQuantity.Text.Trim() == ""
                )
                 {
                     MessageBox.Show("សូមបំពេញពត៏មានឲ្យបានត្រឹមត្រូវ!!!");
@@ -78,22 +75,20 @@ namespace MakeOver_Paris.Forms.Product
                     staff.Staffid = UserSession.Session.Staff.Staffid;// Data.user.Staffid;
                     DTO.Category cate = new DTO.Category();
                     cate.Categoryid = (int)cboCategory.SelectedValue;
-                    DTO.Product product = new DTO.Product(id, txtProductCode.Text.Trim(), txtBarcode.Text.Trim(), txtName.Text.Trim(), Decimal.Parse(txtQuantity.Text.Trim()), txtDescription.Text.Trim(),
-                       Decimal.Parse(txtPriceIn.Text.Trim()), Decimal.Parse(txtPriceOut.Text.Trim()), Decimal.Parse(txtReturnQuantity.Text.Trim()), txtRemark.Text.Trim(), staff, staff, cate);
+                    DTO.Product product = new DTO.Product(id, txtProductCode.Text.Trim(), txtBarcode.Text.Trim(), txtName.Text.Trim(), txtDescription.Text.Trim(),
+                       Decimal.Parse(txtPriceIn.Text.Trim()), Decimal.Parse(txtPriceOut.Text.Trim()), txtRemark.Text.Trim(), staff, staff, cate);
                     if (new DAO.ProductDAO().updateProduct(product))
                     {
                         txtProductCode.Clear();
                         txtBarcode.Clear();
                         txtName.Clear();
-                        txtQuantity.Clear();
                         txtDescription.Clear();
                         txtPriceIn.Clear();
                         txtPriceOut.Clear();
-                        txtReturnQuantity.Clear();
                         txtRemark.Clear();
                         dgvProduct.DataSource = new DAO.ProductDAO().getAllProductDS().Tables[0];
                         id = 0;
-                        btnDelete.Enabled = false;
+                        delete.Visible = false;
                     }
                     else
                     {
@@ -107,56 +102,22 @@ namespace MakeOver_Paris.Forms.Product
         {
             try
             {
+                delete.Visible = true;
                 id = System.Convert.ToInt32(dgvProduct.CurrentRow.Cells[0].Value);
                 txtProductCode.Text = dgvProduct.CurrentRow.Cells[1].Value.ToString();
                 txtBarcode.Text = dgvProduct.CurrentRow.Cells[2].Value.ToString();
                 txtName.Text = dgvProduct.CurrentRow.Cells[3].Value.ToString();
-                txtQuantity.Text = dgvProduct.CurrentRow.Cells[4].Value.ToString();
                 txtDescription.Text = dgvProduct.CurrentRow.Cells[11].Value.ToString();
-                txtPriceIn.Text = dgvProduct.CurrentRow.Cells[5].Value.ToString();
-                txtPriceOut.Text = dgvProduct.CurrentRow.Cells[6].Value.ToString();
-                txtReturnQuantity.Text = dgvProduct.CurrentRow.Cells[7].Value.ToString();
+                txtPriceIn.Text = dgvProduct.CurrentRow.Cells[4].Value.ToString();
+                txtPriceOut.Text = dgvProduct.CurrentRow.Cells[5].Value.ToString();
                 txtRemark.Text = dgvProduct.CurrentRow.Cells[12].Value.ToString();
                 cboCategory.SelectedValue = dgvProduct.CurrentRow.Cells[14].Value.ToString();
-                btnDelete.Enabled = true;
+                
             }
             catch (Exception ex)
             {
          
                 Console.Write(ex);
-            }
-            
-
-
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("តើអ្នកពិតជាចង់លុបទិន្នន័យនេះមែនទេ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                if (new DAO.ProductDAO().deleteProduct(id))
-                {
-                    txtProductCode.Text = dgvProduct.CurrentRow.Cells[1].Value.ToString();
-                    txtBarcode.Text = dgvProduct.CurrentRow.Cells[2].Value.ToString();
-                    txtName.Text = dgvProduct.CurrentRow.Cells[3].Value.ToString();
-                    txtQuantity.Text = dgvProduct.CurrentRow.Cells[4].Value.ToString();
-                    txtDescription.Text = dgvProduct.CurrentRow.Cells[11].Value.ToString();
-                    txtPriceIn.Text = dgvProduct.CurrentRow.Cells[6].Value.ToString();
-                    txtPriceOut.Text = dgvProduct.CurrentRow.Cells[7].Value.ToString();
-                    txtReturnQuantity.Text = dgvProduct.CurrentRow.Cells[8].Value.ToString();
-                    txtRemark.Text = dgvProduct.CurrentRow.Cells[12].Value.ToString();
-                    id = 0;
-                    btnDelete.Enabled = false;
-                    dgvProduct.DataSource = new DAO.ProductDAO().getAllProductDS().Tables[0];
-                }
-                else
-                {
-                    MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
-                }
-            }
-            else
-            {
-                // user clicked no
             }
         }
 
@@ -197,14 +158,13 @@ namespace MakeOver_Paris.Forms.Product
             cboCategory.DisplayMember = "categoryname";
             cboCategory.ValueMember = "categoryid";
             //CUSTOM GRID
-            Utility.setGridHeaderText("ល.រ|លេខទំនិញ|បារកូដ|ឈ្មោះ|បរិមាណ|តម្លៃទិញចូល|តម្លៃលក់ចេញ|បរិមាណប្តូរវិញ|បង្កើតដោយ|កែប្រែដោយ", dgvProduct);
+            Utility.setGridHeaderText("ល.រ|លេខទំនិញ|បារកូដ|ឈ្មោះ|តម្លៃទិញចូល|តម្លៃលក់ចេញ|បង្កើតដោយ|កែប្រែដោយ", dgvProduct);
             Utility.setGridHeaderWidth("30", dgvProduct);
             dgvProduct.Columns[10].Visible = false;
             dgvProduct.Columns[11].Visible = false;
             dgvProduct.Columns[12].Visible = false;
-            dgvProduct.Columns[13].Visible = false;
-            dgvProduct.Columns[14].Visible = false;
- 
+            delete.Visible = false;
+
         }
 
         private void FrmProduct_KeyDown(object sender, KeyEventArgs e)
@@ -212,6 +172,35 @@ namespace MakeOver_Paris.Forms.Product
             if (e.KeyCode == Keys.Escape)
             {
                 btnBack_Click(sender, e);
+            }
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("តើអ្នកពិតជាចង់លុបទិន្នន័យនេះមែនទេ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (new DAO.ProductDAO().deleteProduct(id))
+                {
+                    txtProductCode.Clear();
+                    txtBarcode.Clear();
+                    txtName.Clear();
+                    txtDescription.Clear();
+                    txtPriceIn.Clear();
+                    txtPriceOut.Clear();
+                    txtRemark.Clear();
+                    id = 0;
+                    delete.Visible = false;
+                    dgvProduct.DataSource = new DAO.ProductDAO().getAllProductDS().Tables[0];
+                    
+                }
+                else
+                {
+                    MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
+                }
+            }
+            else
+            {
+                // user clicked no
             }
         }
     }

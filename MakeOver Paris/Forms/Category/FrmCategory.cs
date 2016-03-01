@@ -60,7 +60,7 @@ namespace MakeOver_Paris.Forms.Category
                     txtName.Clear();
                     dgvCategory.DataSource = new DAO.CategoryDAO().GetAllCategories().Tables[0];
                     id = 0;
-                    btnDelete.Enabled = false;
+                    btnDelete.Visible = false;
                 }
                 else
                 {
@@ -94,7 +94,7 @@ namespace MakeOver_Paris.Forms.Category
             {
                 id = System.Convert.ToInt32(dgvCategory.CurrentRow.Cells[0].Value);
                 txtName.Text = dgvCategory.CurrentRow.Cells[1].Value.ToString();
-                btnDelete.Enabled = true;
+                btnDelete.Visible = true;
             }
             catch (Exception ex)
             {
@@ -109,7 +109,7 @@ namespace MakeOver_Paris.Forms.Category
                 if (new CategoryDAO().DeleteCategory(id))
                 {
                     txtName.Clear();
-                    btnDelete.Enabled = false;
+                    btnDelete.Visible = false;
                     dgvCategory.DataSource = new DAO.CategoryDAO().GetAllCategories().Tables[0];
                     id = 0;
                 }
