@@ -148,7 +148,7 @@ namespace MakeOver_Paris.DAO
 
             try
             {
-                List<Staff> staff = new List<Staff>();
+                //List<Staff> staff = new List<Staff>();
                 String sql = @"SELECT staffid, staffname, staffpassword, stafftype, lastlogin, commisionrate FROM staffs";
                 DataSet ds = DBUtility.ExecuteQuery(sql);
                 return ds;
@@ -207,5 +207,25 @@ namespace MakeOver_Paris.DAO
             }
             return staff;
         }
+
+        public DataSet getStaffComission(int staffid, string startDate, string endDate)
+        {
+            try
+            {
+                String sql = @"SELECT I.Invoiceid, I.InvoiceDate, P.Productname, ID.Quantity, TRUNCATE(ID.PriceOut, 2), TRUNCATE((ID.Quantity*ID.Priceout), 2) AS Subtotal, TRUNCATE(((S.commisionrate/100)*ID.Quantity*ID.Priceout), 2) Commision 
+                                FROM Staffs S INNER JOIN Invoices I ON I.staffid=S.staffid 
+                                INNER JOIN InvoiceDetail ID ON I.Invoiceid=ID.Invoiceid 
+                                INNER JOIN Products P ON ID.Productid=P.Productid
+                                WHERE S.StaffID=@p1 AND I.Invoicedate BETWEEN @p2 AND @p3";
+                DataSet ds = DBUtility.ExecuteQuery(sql, staffid, Convert.ToDateTime(startDate).ToString("yyyy-MM-dd"), Convert.ToDateTime(endDate).ToString("yyyy-MM-dd"));
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+        }
+
     }
 }

@@ -26,6 +26,14 @@ namespace MakeOver_Paris.Forms.Report
             transactionDAO = new DAO.TransactionDAO();
             memberDAO = new DAO.MemberDAO();
             staffDAO = new DAO.StaffDAO();
+            DataSet ds = new DAO.StaffDAO().GetAllStaffs();
+
+            //DataRow dr = new DataRow("SELECT");
+            //ds.Tables[0].Rows.InsertAt(,0);
+            cboStaffs.DataSource = ds.Tables[0];
+            cboStaffs.DisplayMember = "staffname";
+            cboStaffs.ValueMember = "staffid";
+            //cboMember.Items.Insert(0, "-Select-");
         }
 
         private void FrmReport_KeyDown(object sender, KeyEventArgs e)
@@ -45,6 +53,7 @@ namespace MakeOver_Paris.Forms.Report
 
         private void cbxReportType_SelectedIndexChanged(object sender, EventArgs e)
         {
+            cboStaffs.Visible = false;
             if (cbxReportType.SelectedIndex == 0)
             {
                 InvisibleFilter();
@@ -98,6 +107,11 @@ namespace MakeOver_Paris.Forms.Report
             {
                 VisibleFilter();
                 filterProductSold(dpStartDate.Text, dpEndDate.Text);
+            }
+            else if (cbxReportType.SelectedIndex == 6) 
+            {
+                cboStaffs.Visible = true;
+                VisibleFilter();
             }
 
         }
@@ -160,6 +174,14 @@ namespace MakeOver_Paris.Forms.Report
                     productSold.SetParameterValue("p_enddate", dpEndDate.Text);
                     productSold.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.Excel, dirUrl + "Product Sold_" + DateTime.Now.ToShortDateString() + ".xls");
                     break;
+                case 6:
+                    rpt_StaffProfit staffprofit = new rpt_StaffProfit();
+                    int staffid = (int)cboStaffs.SelectedValue;
+                    staffprofit.SetParameterValue("p_staffid", staffid);
+                    staffprofit.SetParameterValue("p_startdate", dpStartDate.Text);
+                    staffprofit.SetParameterValue("p_enddate", dpEndDate.Text);
+                    staffprofit.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.Excel, dirUrl + "Staff Profit _" + DateTime.Now.ToShortDateString() + ".xls");
+                    break;
             }
             System.Diagnostics.Process.Start(@dirUrl);
         }
@@ -174,6 +196,10 @@ namespace MakeOver_Paris.Forms.Report
             {
                 filterProductSold(dpStartDate.Text, dpEndDate.Text);
             }
+            else if (cbxReportType.SelectedIndex == 6)
+            {
+                filterStaffComission();
+            }
         }
 
         private void dpEndDate_ValueChanged(object sender, EventArgs e)
@@ -186,6 +212,10 @@ namespace MakeOver_Paris.Forms.Report
             {
                 filterProductSold(dpStartDate.Text, dpEndDate.Text);
             }
+            else if (cbxReportType.SelectedIndex == 6)
+            {
+                filterStaffComission();
+            }
             //MessageBox.Show(Convert.ToDateTime(dpEndDate.Text).ToString("yyyy-MM-dd"));
         }
 
@@ -195,6 +225,28 @@ namespace MakeOver_Paris.Forms.Report
             dgvReport.DataSource = dataSet.Tables[0];
             Utility.setGridHeaderText("ល.រ|កាលបរិច្ឆេទ|ចំនូល|ចំណាយ|ប្រតិបត្តិដោយ|សគាល់", dgvReport);
             Utility.setGridHeaderWidth("100", dgvReport);
+        }
+
+        private void cboStaffs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            filterStaffComission();
+        }
+
+        private void filterStaffComission()
+        {
+            int staffid = -1;
+            try
+            {
+                 staffid = (int)cboStaffs.SelectedValue;
+            }
+            catch (Exception e){}
+            if (staffid < 0)
+            {
+                return;
+            }
+            dgvReport.DataSource = staffDAO.getStaffComission(staffid, dpStartDate.Text, dpEndDate.Text).Tables[0];
+            Utility.setGridHeaderText("លេខ​វិក័យបត្រ|កាល​បរិច្ឆេទ|មុខ​ទំនិញ|បរិមាណ|តម្លៃរាយ|តម្លៃ​សរុប|កម្រៃ", dgvReport);
+            Utility.setGridHeaderWidth("200", dgvReport);
         }
     }
 }
