@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -46,27 +46,28 @@
             this.P = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.grdItems = new System.Windows.Forms.DataGridView();
-            this.c_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_productname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_remove = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.c_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.c_priceIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSave = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblDiscount = new System.Windows.Forms.Label();
+            this.txtDiscount = new System.Windows.Forms.MaskedTextBox();
             this.lblDollar = new System.Windows.Forms.Label();
             this.lblRiel = new System.Windows.Forms.Label();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.c_number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_productname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_remove = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.c_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.c_priceIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
@@ -117,7 +118,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(273, 24);
             this.label10.TabIndex = 45;
-            this.label10.Text = "ទនាក់ទំនង: 086 43 16 16 / 017 22 07 07";
+            this.label10.Text = "ទំនាក់ទំនង: 086 43 16 16 / 017 22 07 07";
             // 
             // label11
             // 
@@ -165,7 +166,7 @@
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.19037F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 89.80963F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 318F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 321F));
             this.tableLayoutPanel5.Controls.Add(this.txtCode, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.cboMember, 2, 0);
@@ -180,9 +181,9 @@
             // txtCode
             // 
             this.txtCode.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCode.Location = new System.Drawing.Point(100, 3);
+            this.txtCode.Location = new System.Drawing.Point(99, 3);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(848, 27);
+            this.txtCode.Size = new System.Drawing.Size(846, 27);
             this.txtCode.TabIndex = 25;
             this.txtCode.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtName_KeyDown);
             // 
@@ -203,7 +204,7 @@
             this.cboMember.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboMember.FormattingEnabled = true;
-            this.cboMember.Location = new System.Drawing.Point(954, 3);
+            this.cboMember.Location = new System.Drawing.Point(951, 3);
             this.cboMember.Name = "cboMember";
             this.cboMember.Size = new System.Drawing.Size(280, 28);
             this.cboMember.TabIndex = 27;
@@ -274,24 +275,25 @@
             this.c_productname,
             this.c_quantity,
             this.c_price,
+            this.c_Discount,
             this.c_subtotal,
             this.c_remove,
             this.c_id,
             this.c_priceIn});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.HotPink;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdItems.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.HotPink;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdItems.DefaultCellStyle = dataGridViewCellStyle3;
             this.grdItems.Location = new System.Drawing.Point(3, 3);
             this.grdItems.Name = "grdItems";
             this.grdItems.ReadOnly = true;
             this.grdItems.RowHeadersVisible = false;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            this.grdItems.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
+            this.grdItems.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.grdItems.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grdItems.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.grdItems.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Black;
@@ -301,58 +303,6 @@
             this.grdItems.Size = new System.Drawing.Size(896, 505);
             this.grdItems.TabIndex = 1;
             this.grdItems.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdItems_CellClick);
-            // 
-            // c_number
-            // 
-            this.c_number.HeaderText = "ល.រ.";
-            this.c_number.Name = "c_number";
-            this.c_number.ReadOnly = true;
-            // 
-            // c_productname
-            // 
-            this.c_productname.HeaderText = "ឈ្មោះ​ផលិតផល";
-            this.c_productname.Name = "c_productname";
-            this.c_productname.ReadOnly = true;
-            // 
-            // c_quantity
-            // 
-            this.c_quantity.HeaderText = "បរិមាណ";
-            this.c_quantity.Name = "c_quantity";
-            this.c_quantity.ReadOnly = true;
-            // 
-            // c_price
-            // 
-            this.c_price.HeaderText = "តម្លៃ";
-            this.c_price.Name = "c_price";
-            this.c_price.ReadOnly = true;
-            // 
-            // c_subtotal
-            // 
-            this.c_subtotal.HeaderText = "តម្លៃ​សរុប";
-            this.c_subtotal.Name = "c_subtotal";
-            this.c_subtotal.ReadOnly = true;
-            // 
-            // c_remove
-            // 
-            this.c_remove.HeaderText = "លុប​ចោល";
-            this.c_remove.Name = "c_remove";
-            this.c_remove.ReadOnly = true;
-            this.c_remove.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.c_remove.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // c_id
-            // 
-            this.c_id.HeaderText = "productid";
-            this.c_id.Name = "c_id";
-            this.c_id.ReadOnly = true;
-            this.c_id.Visible = false;
-            // 
-            // c_priceIn
-            // 
-            this.c_priceIn.HeaderText = "pricein";
-            this.c_priceIn.Name = "c_priceIn";
-            this.c_priceIn.ReadOnly = true;
-            this.c_priceIn.Visible = false;
             // 
             // tableLayoutPanel2
             // 
@@ -398,7 +348,7 @@
             this.tableLayoutPanel4.Controls.Add(this.label7, 0, 3);
             this.tableLayoutPanel4.Controls.Add(this.label1, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.label2, 0, 2);
-            this.tableLayoutPanel4.Controls.Add(this.lblDiscount, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.txtDiscount, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.lblDollar, 1, 2);
             this.tableLayoutPanel4.Controls.Add(this.lblRiel, 1, 3);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel6, 1, 0);
@@ -449,19 +399,19 @@
             this.label2.Text = "សរុប($) :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lblDiscount
+            // txtDiscount
             // 
-            this.lblDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDiscount.AutoSize = true;
-            this.lblDiscount.Font = new System.Drawing.Font("Khmer OS Content", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiscount.Location = new System.Drawing.Point(130, 368);
-            this.lblDiscount.Name = "lblDiscount";
-            this.lblDiscount.Size = new System.Drawing.Size(247, 45);
-            this.lblDiscount.TabIndex = 2;
-            this.lblDiscount.Text = "0.00 %";
-            this.lblDiscount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.txtDiscount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDiscount.Font = new System.Drawing.Font("Khmer OS Content", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiscount.Location = new System.Drawing.Point(130, 371);
+            this.txtDiscount.Mask = "#0.00 %";
+            this.txtDiscount.Name = "txtDiscount";
+            this.txtDiscount.Size = new System.Drawing.Size(247, 36);
+            this.txtDiscount.TabIndex = 2;
+            this.txtDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lblDollar
             // 
@@ -546,6 +496,64 @@
             this.panel1.Size = new System.Drawing.Size(1288, 768);
             this.panel1.TabIndex = 0;
             // 
+            // c_number
+            // 
+            this.c_number.HeaderText = "ល.រ.";
+            this.c_number.Name = "c_number";
+            this.c_number.ReadOnly = true;
+            // 
+            // c_productname
+            // 
+            this.c_productname.HeaderText = "ឈ្មោះ​ផលិតផល";
+            this.c_productname.Name = "c_productname";
+            this.c_productname.ReadOnly = true;
+            // 
+            // c_quantity
+            // 
+            this.c_quantity.HeaderText = "បរិមាណ";
+            this.c_quantity.Name = "c_quantity";
+            this.c_quantity.ReadOnly = true;
+            // 
+            // c_price
+            // 
+            this.c_price.HeaderText = "តម្លៃ";
+            this.c_price.Name = "c_price";
+            this.c_price.ReadOnly = true;
+            // 
+            // c_Discount
+            // 
+            this.c_Discount.HeaderText = "បញ្ចុះតម្លៃ %";
+            this.c_Discount.Name = "c_Discount";
+            this.c_Discount.ReadOnly = true;
+            // 
+            // c_subtotal
+            // 
+            this.c_subtotal.HeaderText = "តម្លៃ​សរុប";
+            this.c_subtotal.Name = "c_subtotal";
+            this.c_subtotal.ReadOnly = true;
+            // 
+            // c_remove
+            // 
+            this.c_remove.HeaderText = "លុប​ចោល";
+            this.c_remove.Name = "c_remove";
+            this.c_remove.ReadOnly = true;
+            this.c_remove.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.c_remove.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // c_id
+            // 
+            this.c_id.HeaderText = "productid";
+            this.c_id.Name = "c_id";
+            this.c_id.ReadOnly = true;
+            this.c_id.Visible = false;
+            // 
+            // c_priceIn
+            // 
+            this.c_priceIn.HeaderText = "pricein";
+            this.c_priceIn.Name = "c_priceIn";
+            this.c_priceIn.ReadOnly = true;
+            this.c_priceIn.Visible = false;
+            // 
             // FrmFrontSaleOffice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
@@ -601,7 +609,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblDiscount;
+        private System.Windows.Forms.MaskedTextBox txtDiscount;
         private System.Windows.Forms.Label lblDollar;
         private System.Windows.Forms.Label lblRiel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
@@ -612,16 +620,15 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-
-
+        private System.Windows.Forms.ComboBox cboMember;
         private System.Windows.Forms.DataGridViewTextBoxColumn c_number;
         private System.Windows.Forms.DataGridViewTextBoxColumn c_productname;
         private System.Windows.Forms.DataGridViewTextBoxColumn c_quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn c_price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn c_Discount;
         private System.Windows.Forms.DataGridViewTextBoxColumn c_subtotal;
         private System.Windows.Forms.DataGridViewButtonColumn c_remove;
         private System.Windows.Forms.DataGridViewTextBoxColumn c_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn c_priceIn;
-        private System.Windows.Forms.ComboBox cboMember;
     }
 }

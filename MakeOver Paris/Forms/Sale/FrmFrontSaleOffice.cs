@@ -42,10 +42,10 @@ namespace MakeOver_Paris.Forms.Sale
             {
                 DTO.InvoiceDetail d = new DTO.InvoiceDetail();
                 DTO.Product p = new DTO.Product();
-                p.Productid = int.Parse(grdItems.Rows[i].Cells[6].Value.ToString());
+                p.Productid = int.Parse(grdItems.Rows[i].Cells[7].Value.ToString());
                 d.Quantity = int.Parse(grdItems.Rows[i].Cells[2].Value.ToString());
-                d.Priceout = decimal.Parse(grdItems.Rows[i].Cells[3].Value.ToString());
-                d.Pricein = decimal.Parse(grdItems.Rows[i].Cells[7].Value.ToString());
+                d.Priceout = decimal.Parse(grdItems.Rows[i].Cells[5].Value.ToString())/decimal.Parse(grdItems.Rows[i].Cells[2].Value.ToString());
+                d.Pricein = decimal.Parse(grdItems.Rows[i].Cells[8].Value.ToString());
                 d.Product = p;
                 details.Add(d);
             }
@@ -80,7 +80,7 @@ namespace MakeOver_Paris.Forms.Sale
                 if (product.Quantity > int.Parse(grdItems.Rows[row].Cells[2].Value.ToString()))
                 {
                     grdItems.Rows[row].Cells[2].Value = int.Parse(grdItems.Rows[row].Cells[2].Value.ToString()) + 1;
-                    grdItems.Rows[row].Cells[4].Value = decimal.Parse(grdItems.Rows[row].Cells[2].Value.ToString()) * decimal.Parse(grdItems.Rows[row].Cells[3].Value.ToString());
+                    grdItems.Rows[row].Cells[5].Value = (decimal.Parse(grdItems.Rows[row].Cells[2].Value.ToString()) * decimal.Parse(grdItems.Rows[row].Cells[3].Value.ToString())*decimal.Parse(grdItems.Rows[row].Cells[4].Value.ToString())/100);
                 }
                 else
                 {
@@ -174,11 +174,11 @@ namespace MakeOver_Paris.Forms.Sale
             {
                 int memberid = (int)cboMember.SelectedValue;
                 DTO.Member member = new DAO.MemberDAO().getMemberById(memberid);
-                lblDiscount.Text = member.Discountrate + " %";
+                txtDiscount.Text = member.Discountrate + " %";
             }
             else
             {
-                lblDiscount.Text = "0.00 %";
+                txtDiscount.Text = "0.00 %";
             }
             calculate();
 
@@ -189,9 +189,9 @@ namespace MakeOver_Paris.Forms.Sale
             decimal total = 0;
             for (int i = 0; i < grdItems.Rows.Count; i++)
             {
-                total += decimal.Parse(grdItems.Rows[i].Cells[4].Value.ToString());
+                total += decimal.Parse(grdItems.Rows[i].Cells[5].Value.ToString());
             }
-            total = (total * (100 - decimal.Parse(lblDiscount.Text.Substring(0, lblDiscount.Text.Length - 2))) / 100);
+            total = (total * (100 - decimal.Parse(txtDiscount.Text.Substring(0, txtDiscount.Text.Length - 2))) / 100);
             lblDollar.Text = total + "";
             decimal rate = decimal.Parse(new DAO.SettingDao().getValue("ExchangeRate"));
             lblRiel.Text = (decimal.Parse(lblDollar.Text) * rate).ToString();
@@ -199,7 +199,7 @@ namespace MakeOver_Paris.Forms.Sale
 
         private void grdItems_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 5)
+            if (e.ColumnIndex == 6)
             {
                 grdItems.Rows.RemoveAt(e.RowIndex);
                 for (int i = 1; i < grdItems.RowCount; i++)
