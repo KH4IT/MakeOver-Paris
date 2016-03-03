@@ -34,6 +34,9 @@
   <PropertyGroup>
     <StartupObject>MakeOver_Paris.Program</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
@@ -62,6 +65,7 @@
     <Compile Include="DAO\ProductDao.cs" />
     <Compile Include="DAO\SettingDao.cs" />
     <Compile Include="DAO\StaffDAO.cs" />
+    <Compile Include="DAO\StoreDAO.cs" />
     <Compile Include="DAO\TransactionDAO.cs" />
     <Compile Include="Data.cs" />
     <Compile Include="DTO\Category.cs" />
@@ -71,6 +75,7 @@
     <Compile Include="DTO\Product.cs" />
     <Compile Include="DTO\Setting.cs" />
     <Compile Include="DTO\Staff.cs" />
+    <Compile Include="DTO\Store.cs" />
     <Compile Include="DTO\Transaction.cs" />
     <Compile Include="Forms\Branch\FrmBranch.cs">
       <SubType>Form</SubType>
@@ -364,6 +369,7 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="icon.ico" />
     <Content Include="images\logo.png" />
     <None Include="Resources\logo.png" />
     <None Include="Resources\shop.png" />

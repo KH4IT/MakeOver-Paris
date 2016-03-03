@@ -109,7 +109,6 @@
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDelete.BackColor = System.Drawing.Color.Red;
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDelete.Enabled = false;
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -122,6 +121,7 @@
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "លុប";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Visible = false;
             // 
             // Panel1
             // 

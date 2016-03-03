@@ -80,7 +80,7 @@ namespace MakeOver_Paris.Forms.Staff
                     clearForm();
                     listStaff();
                     id = 0;
-                    btnDelete.Enabled = false;
+                    btnDelete.Visible = false;
                 }
                 else
                 {
@@ -131,7 +131,7 @@ namespace MakeOver_Paris.Forms.Staff
                 if (new StaffDAO().DeleteStaff(id))
                 {
                     clearForm();
-                    btnDelete.Enabled = false;
+                    btnDelete.Visible = false;
                     listStaff();
                     id = 0;
                 }

@@ -131,7 +131,7 @@ namespace MakeOver_Paris.Forms.Member
                     txtPhone.Clear();
                     dgvMember.DataSource = new DAO.MemberDAO().getAllMembersWithDataSet().Tables[0];
                     id = 0;
-                    delete.Enabled = false;
+                    delete.Visible = false;
                 }
                 else
                 {
@@ -157,7 +157,7 @@ namespace MakeOver_Paris.Forms.Member
                 txtName.Text = dgvMember.CurrentRow.Cells[2].Value.ToString();
                 txtPhone.Text = dgvMember.CurrentRow.Cells[3].Value.ToString();
                 txtDiscountRate.Text = dgvMember.CurrentRow.Cells[4].Value.ToString();
-                delete.Enabled = true;
+                delete.Visible = true;
             }
             catch (Exception ex)
             {
@@ -175,7 +175,7 @@ namespace MakeOver_Paris.Forms.Member
                     txtCode.Clear();
                     txtDiscountRate.Clear();
                     txtPhone.Clear();
-                    delete.Enabled = false;
+                    delete.Visible = false;
                     dgvMember.DataSource = new DAO.MemberDAO().getAllMembersWithDataSet().Tables[0];
                     id = 0;
                 }

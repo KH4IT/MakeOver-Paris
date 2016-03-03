@@ -84,7 +84,7 @@ namespace MakeOver_Paris.Forms.Setting
                             txtValue.Clear();
                             dgvSetting.DataSource = new DAO.SettingDao().getAllSettingDS().Tables[0];
                             id = 0;
-                            btnDelete.Enabled = false;
+                            btnDelete.Visible = false;
                             txtTitle.ReadOnly = false;
                         }
                         else
@@ -105,7 +105,7 @@ namespace MakeOver_Paris.Forms.Setting
                     txtValue.Clear();
                     dgvSetting.DataSource = new DAO.SettingDao().getAllSettingDS().Tables[0];
                     id = 0;
-                    btnDelete.Enabled = false;
+                    btnDelete.Visible = false;
                 }
                 else
                 {
@@ -126,7 +126,7 @@ namespace MakeOver_Paris.Forms.Setting
                 id = System.Convert.ToInt32(dgvSetting.CurrentRow.Cells[0].Value);
                 txtTitle.Text = dgvSetting.CurrentRow.Cells[1].Value.ToString();
                 txtValue.Text = dgvSetting.CurrentRow.Cells[2].Value.ToString();
-                btnDelete.Enabled = true;
+                btnDelete.Visible = true;
                 txtTitle.ReadOnly = true;
             }
             catch (Exception ex)
