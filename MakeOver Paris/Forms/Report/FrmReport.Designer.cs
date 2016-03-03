@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dgvReport = new System.Windows.Forms.DataGridView();
             this.Panel2 = new System.Windows.Forms.Panel();
@@ -38,6 +38,7 @@
             this.Label1 = new System.Windows.Forms.Label();
             this.Panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.cboStaffs = new System.Windows.Forms.ComboBox();
             this.cbxReportType = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnPrint = new System.Windows.Forms.Button();
@@ -45,7 +46,6 @@
             this.dpEndDate = new System.Windows.Forms.DateTimePicker();
             this.lblStartDate = new System.Windows.Forms.Label();
             this.lblEndDate = new System.Windows.Forms.Label();
-            this.cboStaffs = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).BeginInit();
             this.Panel2.SuspendLayout();
@@ -78,30 +78,30 @@
             this.dgvReport.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvReport.BackgroundColor = System.Drawing.Color.White;
             this.dgvReport.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReport.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.HotPink;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvReport.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.HotPink;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvReport.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvReport.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvReport.Location = new System.Drawing.Point(8, 187);
             this.dgvReport.Name = "dgvReport";
             this.dgvReport.ReadOnly = true;
             this.dgvReport.RowHeadersVisible = false;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
-            this.dgvReport.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            this.dgvReport.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvReport.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvReport.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
             this.dgvReport.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Black;
@@ -185,6 +185,19 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1092, 44);
             this.tableLayoutPanel2.TabIndex = 5;
+            // 
+            // cboStaffs
+            // 
+            this.cboStaffs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cboStaffs.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboStaffs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboStaffs.FormattingEnabled = true;
+            this.cboStaffs.Location = new System.Drawing.Point(112, 3);
+            this.cboStaffs.Name = "cboStaffs";
+            this.cboStaffs.Size = new System.Drawing.Size(157, 28);
+            this.cboStaffs.TabIndex = 7;
+            this.cboStaffs.Visible = false;
+            this.cboStaffs.SelectedIndexChanged += new System.EventHandler(this.cboStaffs_SelectedIndexChanged);
             // 
             // cbxReportType
             // 
@@ -279,19 +292,6 @@
             this.lblEndDate.TabIndex = 6;
             this.lblEndDate.Text = "ដល់ថ្ងៃទី:";
             this.lblEndDate.Visible = false;
-            // 
-            // cboStaffs
-            // 
-            this.cboStaffs.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cboStaffs.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboStaffs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboStaffs.FormattingEnabled = true;
-            this.cboStaffs.Location = new System.Drawing.Point(112, 3);
-            this.cboStaffs.Name = "cboStaffs";
-            this.cboStaffs.Size = new System.Drawing.Size(157, 28);
-            this.cboStaffs.TabIndex = 7;
-            this.cboStaffs.Visible = false;
-            this.cboStaffs.SelectedIndexChanged += new System.EventHandler(this.cboStaffs_SelectedIndexChanged);
             // 
             // FrmReport
             // 

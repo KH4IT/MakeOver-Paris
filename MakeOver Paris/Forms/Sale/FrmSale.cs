@@ -52,7 +52,7 @@ namespace MakeOver_Paris.Forms.Sale
                 if (txtCode.Text != "")
                 {
                     count_enter = 0;
-                    DTO.Product product = new DAO.ProductDAO().getProduct(txtCode.Text);
+                    DTO.Product product = null;// new DAO.ProductDAO().getProduct(txtCode.Text);
                     if (product != null)
                     {
                         addToGrid(product);

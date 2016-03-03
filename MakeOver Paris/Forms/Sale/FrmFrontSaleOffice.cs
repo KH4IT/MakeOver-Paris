@@ -49,11 +49,10 @@ namespace MakeOver_Paris.Forms.Sale
                 d.Product = p;
                 details.Add(d);
             }
-            Data.user = new DTO.Staff();
-            Data.user = UserSession.Session.Staff;
+            
             DTO.Member member = new DTO.Member();
             member.Memberid = 1;            ///
-            invoice.Staff = Data.user;
+            invoice.Staff = UserSession.Session.Staff;
             invoice.Member = member;
             invoice.Remark = "";
             //invoice.Discount = int.Parse(txtDiscount.Text.Replace("%", ""));
@@ -68,7 +67,7 @@ namespace MakeOver_Paris.Forms.Sale
             {
                 if (product.Quantity >= 1)
                 {
-                    grdItems.Rows.Add(grdItems.RowCount + 1, product.Productname, 1, product.Priceout, product.Priceout, "-", product.Productid, product.Pricein);
+                    grdItems.Rows.Add(grdItems.RowCount + 1, product.Productname, 1, product.Priceout, 0, product.Priceout, "-", product.Productid, product.Pricein);
                 }
                 else
                 {
@@ -80,7 +79,9 @@ namespace MakeOver_Paris.Forms.Sale
                 if (product.Quantity > int.Parse(grdItems.Rows[row].Cells[2].Value.ToString()))
                 {
                     grdItems.Rows[row].Cells[2].Value = int.Parse(grdItems.Rows[row].Cells[2].Value.ToString()) + 1;
-                    grdItems.Rows[row].Cells[5].Value = (decimal.Parse(grdItems.Rows[row].Cells[2].Value.ToString()) * decimal.Parse(grdItems.Rows[row].Cells[3].Value.ToString())*decimal.Parse(grdItems.Rows[row].Cells[4].Value.ToString())/100);
+                    decimal subtotal = (decimal.Parse(grdItems.Rows[row].Cells[2].Value.ToString()) * decimal.Parse(grdItems.Rows[row].Cells[3].Value.ToString()));
+                    decimal discount = subtotal*decimal.Parse(grdItems.Rows[row].Cells[4].Value.ToString())/100;
+                    grdItems.Rows[row].Cells[5].Value = subtotal - discount;
                 }
                 else
                 {
@@ -96,7 +97,7 @@ namespace MakeOver_Paris.Forms.Sale
             int row = -1;
             for (int i = 0; i < grdItems.RowCount; i++)
             {
-                if (grdItems.Rows[i].Cells[6].Value.ToString() == (productid + ""))
+                if (grdItems.Rows[i].Cells[7].Value.ToString() == (productid + ""))
                 {
                     row = i;
                     break;
@@ -114,7 +115,7 @@ namespace MakeOver_Paris.Forms.Sale
                 if (txtCode.Text != "")
                 {
                     count_enter = 0;
-                    DTO.Product product = new DAO.ProductDAO().getProduct(txtCode.Text);
+                    DTO.Product product = new DAO.ProductDAO().getProduct(txtCode.Text, UserSession.Session.Staff.StoreId);
                     if (product != null)
                     {
                         addToGrid(product);
@@ -224,6 +225,16 @@ namespace MakeOver_Paris.Forms.Sale
                 grdItems.Rows.Clear();
             }
             count_enter = 0;
+        }
+
+        private void txtDiscount_Leave(object sender, EventArgs e)
+        {
+            calculate();
+        }
+
+        private void btnCheckProduct_Click(object sender, EventArgs e)
+        {
+            new FrmCheckProduct().Show();
         }
 
 

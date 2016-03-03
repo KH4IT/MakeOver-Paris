@@ -273,7 +273,7 @@ namespace MakeOver_Paris.DAO
             return null;
         }
 
-        public Product getProduct(String code)
+        public Product getProduct(String code, int storeid)
         {
             MySqlConnection cnn = DBUtility.getConnection();
             if (cnn != null)
@@ -281,10 +281,11 @@ namespace MakeOver_Paris.DAO
                 try
                 {
                     cnn.Open();
-                    const string SQL = "SELECT productid,productcode,barcode,productname,description,pricein,priceout,remark,createddate,createdby,updateddate,updatedby,categoryid FROM products WHERE productcode=@productcode OR barcode=@barcode;";
+                    const string SQL = "SELECT P.productid,productcode,barcode,productname,description,pricein,priceout,remark,createddate,createdby,updateddate,updatedby,categoryid, Quantity, ReturnQuantity FROM products P LEFT JOIN StoreProduct SP ON P.productid=SP.productid WHERE (productcode=@productcode OR barcode=@barcode) AND Storeid=@storeid;";
                     MySqlCommand command = new MySqlCommand(SQL, cnn); command.Prepare();
                     command.Parameters.AddWithValue("@productcode", code);
                     command.Parameters.AddWithValue("@barcode", code);
+                    command.Parameters.AddWithValue("@storeid", storeid);
                     MySqlDataReader reader = command.ExecuteReader();
                     Product product = null;
                     while (reader.Read())
@@ -294,11 +295,11 @@ namespace MakeOver_Paris.DAO
                         product.Productcode = DBUtility.SafeGetString(reader, "productcode");
                         product.Barcode = DBUtility.SafeGetString(reader, "barcode");
                         product.Productname = DBUtility.SafeGetString(reader, "productname");
-                       // product.Quantity = reader.GetInt16("quantity");
+                        product.Quantity = reader.GetInt16("quantity");
                         product.Description = DBUtility.SafeGetString(reader, "description");
                         product.Pricein = reader.GetInt16("pricein");
                         product.Priceout = reader.GetInt16("priceout");
-                        //product.Returnquantity = reader.GetInt16("returnquantity");
+                        product.Returnquantity = reader.GetInt16("returnquantity");
                         product.Remark = DBUtility.SafeGetString(reader, "remark");
                         product.Createddate = reader.GetDateTime("createddate");
                         Staff createdby = new Staff();
