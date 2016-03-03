@@ -41,7 +41,7 @@ namespace MakeOver_Paris.DTO
         {
             this.stroreId = storeId;
             this.stroreName = storeName;
-            this.StoreAddress = StoreAddress;
+            this.storeAddress = storeAddress;
         }
     }
 }

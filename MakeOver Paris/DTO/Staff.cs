@@ -55,6 +55,15 @@ namespace MakeOver_Paris.DTO
             get { return commisionrate; }
             set { commisionrate = value; }
         }
+
+        private int storeId;
+
+        public int StoreId
+        {
+            get { return storeId; }
+            set { storeId = value; }
+        }
+
         public Staff() { }
 
         public Staff(int staffid, string staffname, string staffpassword, string stafftype, DateTime lastlogin, int comisionrate)
@@ -66,7 +75,6 @@ namespace MakeOver_Paris.DTO
             this.lastlogin = lastlogin;
             this.commisionrate = comisionrate;
         }
-
 
     }
 }

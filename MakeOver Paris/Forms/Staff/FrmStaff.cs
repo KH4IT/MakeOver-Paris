@@ -55,6 +55,7 @@ namespace MakeOver_Paris.Forms.Staff
                     staff.Stafftype = txtType.Text;
                     staff.Commisionrate = System.Convert.ToDecimal(txtCommission.Text);
                     staff.Lastlogin = System.DateTime.Today;
+                    staff.StoreId = (int)cbStock.SelectedValue;
                     if (new StaffDAO().AddStaff(staff))
                     {
                         clearForm();
@@ -75,6 +76,7 @@ namespace MakeOver_Paris.Forms.Staff
                 staff.Staffpassword = txtPassword.Text;
                 staff.Stafftype = txtType.Text;
                 staff.Commisionrate = System.Convert.ToDecimal(txtCommission.Text);
+                staff.StoreId = (int)cbStock.SelectedValue;
                 if (new StaffDAO().UpdateStaff(staff))
                 {
                     clearForm();
@@ -100,7 +102,7 @@ namespace MakeOver_Paris.Forms.Staff
         {
             DataSet dataSet = new StaffDAO().GetAllStaffs();
             dgvStaff.DataSource = dataSet.Tables[0];
-            Utility.setGridHeaderText("ល.រ|ឈ្មោះ|លេខសម្ងាត់|ប្រភេទ|ថ្ងៃចូល|អត្រាចំណាញ", dgvStaff);
+            Utility.setGridHeaderText("ល.រ|ឈ្មោះ|ប្រភេទ|ថ្ងៃចូល|អត្រាចំណាញ|ស្តុក", dgvStaff);
             if (dgvStaff.Rows.Count > 0)
             {
                 dgvStaff.Columns["staffpassword"].Visible = false;
@@ -111,12 +113,13 @@ namespace MakeOver_Paris.Forms.Staff
         {
             try
             {
-                btnDelete.Enabled = true;
+                btnDelete.Visible = true;
                 id = System.Convert.ToInt32(dgvStaff.CurrentRow.Cells[0].Value);
                 txtName.Text = dgvStaff.CurrentRow.Cells[1].Value.ToString();
-                txtPassword.Text = dgvStaff.CurrentRow.Cells[2].Value.ToString();
-                txtType.Text = dgvStaff.CurrentRow.Cells[3].Value.ToString();
-                txtCommission.Text = dgvStaff.CurrentRow.Cells[5].Value.ToString();
+                txtPassword.Text = dgvStaff.CurrentRow.Cells[6].Value.ToString();
+                txtType.Text = dgvStaff.CurrentRow.Cells[2].Value.ToString();
+                txtCommission.Text = dgvStaff.CurrentRow.Cells[4].Value.ToString();
+                cbStock.Text = dgvStaff.CurrentRow.Cells[5].Value.ToString();
             }
             catch (Exception ex)
             {
@@ -182,6 +185,10 @@ namespace MakeOver_Paris.Forms.Staff
         private void FrmStaff_Load(object sender, EventArgs e)
         {
             txtName.Focus();
+            DataSet da = new DAO.StoreDAO().GetAllStores();
+            cbStock.DataSource = da.Tables[0];
+            cbStock.DisplayMember = "storename";
+            cbStock.ValueMember = "storeid";
         }
 
         

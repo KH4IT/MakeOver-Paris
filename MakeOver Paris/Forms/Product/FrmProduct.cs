@@ -157,6 +157,11 @@ namespace MakeOver_Paris.Forms.Product
             cboCategory.DataSource = da.Tables[0];
             cboCategory.DisplayMember = "categoryname";
             cboCategory.ValueMember = "categoryid";
+            // GET STORE
+            //DataSet d = new DAO.StoreDAO().GetAllStores();
+            //cbBranch.DataSource = d.Tables[0];
+            //cbBranch.DisplayMember = "storename";
+            //cbBranch.ValueMember = "storeid";
             //CUSTOM GRID
             Utility.setGridHeaderText("ល.រ|លេខទំនិញ|បារកូដ|ឈ្មោះ|តម្លៃទិញចូល|តម្លៃលក់ចេញ|បង្កើតដោយ|កែប្រែដោយ", dgvProduct);
             Utility.setGridHeaderWidth("30", dgvProduct);

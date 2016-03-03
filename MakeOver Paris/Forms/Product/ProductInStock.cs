@@ -31,5 +31,25 @@ namespace MakeOver_Paris.Forms.Product
                 btnBack_Click(sender, e);
             }
         }
+
+        private void Save_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ProductInStock_Load(object sender, EventArgs e)
+        {
+            DataSet d = new DAO.StoreDAO().GetAllStores();
+            cbStock.DataSource = d.Tables[0];
+            cbStock.DisplayMember = "storename";
+            cbStock.ValueMember = "storeid";
+            DataSet da = new DAO.ProductDAO().getAllProductDS();
+            cbProduct.DataSource = da.Tables[0];
+            cbProduct.DisplayMember = "productname";
+            cbProduct.ValueMember = "productid";
+
+        }
+
+
     }
 }

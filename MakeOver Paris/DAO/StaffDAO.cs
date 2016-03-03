@@ -22,7 +22,7 @@ namespace MakeOver_Paris.DAO
                 try
                 {
                     
-                    const string SQL = @"INSERT INTO staffs(staffname, staffpassword, stafftype, lastlogin, commisionrate) VALUES(@staffname, @staffpassword, @stafftype, @lastlogin, @commisionrate);";
+                    const string SQL = @"INSERT INTO staffs(staffname, staffpassword, stafftype, lastlogin, commisionrate, storeid) VALUES(@staffname, @staffpassword, @stafftype, @lastlogin, @commisionrate, @storeid);";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
                     command.Parameters.AddWithValue("@staffname", staff.Staffname);
@@ -30,6 +30,7 @@ namespace MakeOver_Paris.DAO
                     command.Parameters.AddWithValue("@stafftype", staff.Stafftype);
                     command.Parameters.AddWithValue("@lastlogin", staff.Lastlogin);
                     command.Parameters.AddWithValue("@commisionrate", staff.Commisionrate);
+                    command.Parameters.AddWithValue(@"storeid", staff.StoreId);
                     if (command.ExecuteNonQuery() > 0)
                     {
                         transaction.Commit();
@@ -87,7 +88,7 @@ namespace MakeOver_Paris.DAO
                 try
                 {
                     cnn.Open();
-                    const string SQL = "UPDATE staffs SET staffname = @staffname, staffpassword = @staffpassword, stafftype= @stafftype, commisionrate= @commisionrate where staffid= @staffid";
+                    const string SQL = "UPDATE staffs SET staffname = @staffname, staffpassword = @staffpassword, stafftype= @stafftype, commisionrate= @commisionrate, storeid=@storeid where staffid= @staffid";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
                     command.Parameters.AddWithValue("@staffname", staff.Staffname);
@@ -95,6 +96,7 @@ namespace MakeOver_Paris.DAO
                     command.Parameters.AddWithValue("@stafftype", staff.Stafftype);                    
                     command.Parameters.AddWithValue("@commisionrate", staff.Commisionrate);
                     command.Parameters.AddWithValue("@staffid", staff.Staffid);
+                    command.Parameters.AddWithValue("@storeid", staff.StoreId);
                     if (command.ExecuteNonQuery() > 0)
                     {
                         return true;
@@ -114,42 +116,9 @@ namespace MakeOver_Paris.DAO
 
         public DataSet GetAllStaffs()
         {
-            //MySqlConnection cnn = DBUtility.getConnection();
-            //if (cnn != null)
-            //{
-            //    try
-            //    {
-            //        cnn.Open();
-            //        const string SQL = "SELECT staffid, staffname, staffpassword, stafftype, lastlogin, comissionrate FROM staff";
-            //        MySqlCommand command = new MySqlCommand(SQL, cnn);
-            //        MySqlDataReader reader = command.ExecuteReader();
-            //        ArrayList staffs = new ArrayList();
-            //        Staff staff = null;
-            //        while (reader.Read())
-            //        {
-            //            staff = new Staff(reader.GetInt16("staffid"), reader.GetString("staffname"),
-            //                              reader.GetString("staffpassword"), reader.GetString("stafftype"),
-            //                              reader.GetDateTime("lastlogin"), reader.GetDecimal("comissionrate"));
-            //            staffs.Add(staffs);
-            //        }
-            //        return staffs;
-            //    }
-            //    catch (MySqlException e)
-            //    {
-            //        Console.WriteLine(e);
-            //    }
-            //    finally
-            //    {
-            //        cnn.Close();
-            //    }
-            //}
-
-            //return null;
-
             try
             {
-                //List<Staff> staff = new List<Staff>();
-                String sql = @"SELECT staffid, staffname, staffpassword, stafftype, lastlogin, commisionrate FROM staffs";
+                String sql = @"SELECT staffid, staffname, stafftype, lastlogin, commisionrate,storename, staffpassword FROM staffs LEFT JOIN stores ON stores.storeid = staffs.storeid";
                 DataSet ds = DBUtility.ExecuteQuery(sql);
                 return ds;
             }
