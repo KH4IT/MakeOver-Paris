@@ -163,6 +163,35 @@ namespace MakeOver_Paris.DAO
 
         }
 
+        public decimal getBalance(){
+            MySqlConnection cnn = DBUtility.getConnection();
+            if (cnn != null)
+            {
+                cnn.Open();
+                MySqlTransaction trans = cnn.BeginTransaction();
+                try
+                {
+                    const string SQL = @"select SUM(incomeamount)-SUM(expenseamount) FROM Transactions;";
+                    MySqlCommand command = new MySqlCommand(SQL, cnn);
+                    MySqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        return reader.GetDecimal(0);
+                    }
+                    
+                }
+                catch (MySqlException e)
+                {
+                    Console.WriteLine(e);
+                }
+                finally
+                {
+                    cnn.Close();
+                }
+            }
+            return 0;
+        }
+
 
         internal DataSet GetAllCashBook(char p1, char p2)
         {

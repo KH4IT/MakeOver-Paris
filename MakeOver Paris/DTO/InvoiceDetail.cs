@@ -45,5 +45,14 @@ namespace MakeOver_Paris.DTO
             get { return priceout; }
             set { priceout = value; }
         }
+
+        private decimal dicount;
+
+        public decimal Dicount
+        {
+            get { return dicount; }
+            set { dicount = value; }
+        }
+
     }
 }

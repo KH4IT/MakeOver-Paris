@@ -109,6 +109,9 @@ namespace MakeOver_Paris.Forms.Transaction
 
                 }
             }
+
+            getBalance();
+
         }
 
         private void frmTransaction_Load(object sender, EventArgs e)
@@ -118,6 +121,7 @@ namespace MakeOver_Paris.Forms.Transaction
             dgvTransaction.DataSource = dataSet.Tables[0];
             Utility.setGridHeaderText("ល.រ|កាលបរិច្ឆេទ|ចំនូល|ចំណាយ|ប្រតិបត្តិដោយ|សគាល់", dgvTransaction);
             Utility.setGridHeaderWidth("100", dgvTransaction);
+            getBalance();
         }
 
         private void txtSearchByName_TextChanged(object sender, EventArgs e)
@@ -204,6 +208,11 @@ namespace MakeOver_Paris.Forms.Transaction
             bs.DataSource = dgvTransaction.DataSource;
             bs.Filter = "Convert(transactiondate,'System.String') LIKE '%" + txtSearchByDate.Text + "%'";
             dgvTransaction.DataSource = bs;
+        }
+
+        private void getBalance()
+        {
+            lblBalance.Text = "$ " + new TransactionDAO().getBalance().ToString();
         }
 
     }

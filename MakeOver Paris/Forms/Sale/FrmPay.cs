@@ -55,13 +55,13 @@ namespace MakeOver_Paris.Forms.Sale
                 rpt.SetParameterValue("p_received", decimal.Parse(txtRecieve.Text));
 
                 //rpt.PrintOptions.PaperSize = CrystalDecisions.Shared.PaperSize.PaperA5;
-                rpt.PrintToPrinter(1, false, 0, 0);
+                //rpt.PrintToPrinter(1, false, 0, 0);
                 DTO.Transaction transaction = new DTO.Transaction();
                 transaction.Incomeamount = decimal.Parse(txtTotal.Text);
                 transaction.Createdby = UserSession.Session.Staff;
                 transaction.Remark = "InvoiceID: " + invoiceid;
                 new DAO.TransactionDAO().AddTransaction(transaction);
-                this.Close();
+                this.Dispose();
             }
         }
         decimal exchangerate = 0;

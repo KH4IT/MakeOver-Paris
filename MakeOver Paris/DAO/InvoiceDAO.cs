@@ -34,7 +34,7 @@ namespace MakeOver_Paris.DAO
                     StringBuilder sb = new StringBuilder("INSERT INTO InvoiceDetail VALUES");
                     for (int i = 0; i < invoice.InvoiceDetail.Count; i++)
                     {
-                        sb.AppendFormat("(@invoiceid{0}, @productid{0}, @quanity{0}, @pricein{0}, @priceout{0}),", i);
+                        sb.AppendFormat("(@invoiceid{0}, @productid{0}, @quanity{0}, @pricein{0}, @priceout{0}, @discount{0}),", i);
                     }
                     sb.Replace(",", ";", sb.Length - 1, 1);
 
@@ -49,12 +49,14 @@ namespace MakeOver_Paris.DAO
                         invDetailCommand.Parameters.AddWithValue("@quanity" + i, ((InvoiceDetail)invoice.InvoiceDetail[i]).Quantity);
                         invDetailCommand.Parameters.AddWithValue("@pricein" + i, ((InvoiceDetail)invoice.InvoiceDetail[i]).Pricein);
                         invDetailCommand.Parameters.AddWithValue("@priceout" + i, ((InvoiceDetail)invoice.InvoiceDetail[i]).Priceout);
+                        invDetailCommand.Parameters.AddWithValue("@discount" + i, ((InvoiceDetail)invoice.InvoiceDetail[i]).Dicount);
 
-                        String updateSql = "UPDATE Products SET quantity=quantity-@quantity WHERE productid=@productid;";
+                        String updateSql = "UPDATE StoreProduct SET quantity=quantity-@quantity WHERE productid=@productid AND Storeid=@storeid;";
                         MySqlCommand updateProductCommand = new MySqlCommand(updateSql, con);
                         updateProductCommand.Prepare();
                         updateProductCommand.Parameters.AddWithValue("@quantity", ((InvoiceDetail)invoice.InvoiceDetail[i]).Quantity);
                         updateProductCommand.Parameters.AddWithValue("@productid", ((InvoiceDetail)invoice.InvoiceDetail[i]).Product.Productid);
+                        updateProductCommand.Parameters.AddWithValue("@storeid", invoice.Staff.StoreId);
                         updateProductCommand.ExecuteNonQuery();
 
                         //Product p = new ProductDao().getProduct(((InvoiceDetail)invoice.InvoiceDetail[i]).Product.Productid);
@@ -87,7 +89,7 @@ namespace MakeOver_Paris.DAO
             {
                 try
                 {
-                    MySqlCommand cmdInv = new MySqlCommand("SELECT I.invoiceid, I.invoicedate, I.remark, I.discount, ID.quantity, ID.pricein, ID.priceout, S.staffid, S.staffname, S.stafftype, M.memberid, M.membername, M.membercode, M.phonenumber, M.createddate, P.productid, P.productcode, P.barcode, P.productname, P.quantity, P.description FROM Invoices I INNER JOIN InvoiceDetail ID ON I.invoiceid=ID.invoiceid INNER JOIN Products P ON ID.productid=P.productid INNER JOIN Staffs S ON I.Staffid=S.Staffid INNER JOIN Members M ON I.memberid=M.memberid WHERE I.invoiceid=" + invoiceId, con);
+                    MySqlCommand cmdInv = new MySqlCommand("SELECT I.invoiceid, I.invoicedate, I.remark, I.discount, ID.quantity, ID.pricein, ID.priceout, ID.discount id_discount, S.staffid, S.staffname, S.stafftype, M.memberid, M.membername, M.membercode, M.phonenumber, M.createddate, P.productid, P.productcode, P.barcode, P.productname, P.quantity, P.description FROM Invoices I INNER JOIN InvoiceDetail ID ON I.invoiceid=ID.invoiceid INNER JOIN Products P ON ID.productid=P.productid INNER JOIN Staffs S ON I.Staffid=S.Staffid INNER JOIN Members M ON I.memberid=M.memberid WHERE I.invoiceid=" + invoiceId, con);
                     MySqlDataReader drInv = cmdInv.ExecuteReader();
                     ArrayList arrInvDetail = new ArrayList();
                     Invoice inv = new Invoice();
@@ -112,6 +114,7 @@ namespace MakeOver_Paris.DAO
                         invDetail.Pricein = drInv.GetDecimal("pricein");
                         invDetail.Priceout = drInv.GetDecimal("priceout");
                         invDetail.Quantity = drInv.GetDecimal("quantity");
+                        invDetail.Dicount = drInv.GetDecimal("id_discount");
 
                         arrInvDetail.Add(invDetail);
 
@@ -150,7 +153,7 @@ namespace MakeOver_Paris.DAO
                                     CONCAT('I',LPAD(I.invoiceid,9,'0')) AS invoiceid
                                   , I.invoicedate
                                   , S.staffname
-                                  , SUM(ID.quantity*ID.priceout)
+                                  , SUM(ID.quantity*(ID.priceout*(100-Id.discount)))*(100-I.Discount)
                                FROM invoices I 
                                INNER JOIN staffs S ON I.staffid=S.staffid
                                INNER JOIN invoicedetail ID ON I.invoiceid=ID.invoiceid

@@ -44,7 +44,8 @@ namespace MakeOver_Paris.Forms.Sale
                 DTO.Product p = new DTO.Product();
                 p.Productid = int.Parse(grdItems.Rows[i].Cells[7].Value.ToString());
                 d.Quantity = int.Parse(grdItems.Rows[i].Cells[2].Value.ToString());
-                d.Priceout = decimal.Parse(grdItems.Rows[i].Cells[5].Value.ToString())/decimal.Parse(grdItems.Rows[i].Cells[2].Value.ToString());
+                d.Priceout = decimal.Parse(grdItems.Rows[i].Cells[3].Value.ToString());
+                d.Dicount = decimal.Parse(grdItems.Rows[i].Cells[4].Value.ToString());
                 d.Pricein = decimal.Parse(grdItems.Rows[i].Cells[8].Value.ToString());
                 d.Product = p;
                 details.Add(d);
@@ -136,7 +137,6 @@ namespace MakeOver_Paris.Forms.Sale
                     if (invoiceid != -1)
                     {
                         decimal total = decimal.Parse(lblDollar.Text.Substring(0, lblDollar.Text.Length-2));
-                        
                         
                         FrmPay frmPay = new FrmPay();
                         frmPay.txtTotal.Text = total.ToString();
@@ -237,6 +237,17 @@ namespace MakeOver_Paris.Forms.Sale
             new FrmCheckProduct().Show();
         }
 
+        private void grdItems_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            row_calculate(e.RowIndex);
+        }
+
+        private void row_calculate(int row)
+        {
+            decimal subtotal = (decimal.Parse(grdItems.Rows[row].Cells[2].Value.ToString()) * decimal.Parse(grdItems.Rows[row].Cells[3].Value.ToString()));
+            decimal discount = subtotal * decimal.Parse(grdItems.Rows[row].Cells[4].Value.ToString()) / 100;
+            grdItems.Rows[row].Cells[5].Value = subtotal - discount;
+        }
 
 
 

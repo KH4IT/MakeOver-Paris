@@ -62,20 +62,24 @@
     <Compile Include="DAO\DBUtility.cs" />
     <Compile Include="DAO\InvoiceDAO.cs" />
     <Compile Include="DAO\MemberDAO.cs" />
+    <Compile Include="DAO\MemberTypeDAO.cs" />
     <Compile Include="DAO\ProductDao.cs" />
     <Compile Include="DAO\SettingDao.cs" />
     <Compile Include="DAO\StaffDAO.cs" />
     <Compile Include="DAO\StoreDAO.cs" />
+    <Compile Include="DAO\StoreProductDAO.cs" />
     <Compile Include="DAO\TransactionDAO.cs" />
     <Compile Include="Data.cs" />
     <Compile Include="DTO\Category.cs" />
     <Compile Include="DTO\Invoice.cs" />
     <Compile Include="DTO\InvoiceDetail.cs" />
     <Compile Include="DTO\Member.cs" />
+    <Compile Include="DTO\MemberType.cs" />
     <Compile Include="DTO\Product.cs" />
     <Compile Include="DTO\Setting.cs" />
     <Compile Include="DTO\Staff.cs" />
     <Compile Include="DTO\Store.cs" />
+    <Compile Include="DTO\StoreProduct.cs" />
     <Compile Include="DTO\Transaction.cs" />
     <Compile Include="Forms\Branch\FrmBranch.cs">
       <SubType>Form</SubType>
@@ -197,6 +201,18 @@
       <DependentUpon>rpt_Profit.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Forms\Report\rpt_StaffProfit.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_StaffProfit.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Sale\FrmCheckProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sale\FrmCheckProduct.Designer.cs">
+      <DependentUpon>FrmCheckProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Sale\FrmFrontSaleOffice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,6 +331,13 @@
     <EmbeddedResource Include="Forms\Report\rpt_Profit.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rpt_Profit.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Report\rpt_StaffProfit.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_StaffProfit.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sale\FrmCheckProduct.resx">
+      <DependentUpon>FrmCheckProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sale\FrmFrontSaleOffice.resx">
       <DependentUpon>FrmFrontSaleOffice.cs</DependentUpon>
