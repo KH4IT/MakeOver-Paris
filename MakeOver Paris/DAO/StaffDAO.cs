@@ -144,6 +144,7 @@ namespace MakeOver_Paris.DAO
                                             , staffpassword
                                             , stafftype
                                             , lastlogin
+                                            , storeid
                                          FROM
                                             staffs
                                          WHERE
@@ -162,6 +163,7 @@ namespace MakeOver_Paris.DAO
                         staff.Staffname = reader.GetString("staffname");
                         staff.Staffpassword = reader.GetString("staffpassword");
                         staff.Stafftype = reader.GetString("stafftype");
+                        staff.StoreId = reader.GetInt16("storeid");
                         staff.Lastlogin = reader.GetDateTime("lastlogin");
                     }
                 }
