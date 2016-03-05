@@ -55,6 +55,7 @@ namespace MakeOver_Paris.Forms.Report
         {
             try
             {
+                dgvReport.Rows.Clear();
                 cboStaffs.Visible = false;
                 if (cbxReportType.SelectedIndex == 0)
                 {

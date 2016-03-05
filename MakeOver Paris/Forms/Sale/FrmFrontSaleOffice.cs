@@ -234,7 +234,8 @@ namespace MakeOver_Paris.Forms.Sale
 
         private void btnCheckProduct_Click(object sender, EventArgs e)
         {
-            new FrmCheckProduct().Show();
+            //new FrmCheckProduct().Show();
+            new FrmCheckProductNew().Show();
         }
 
         private void grdItems_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -251,7 +252,8 @@ namespace MakeOver_Paris.Forms.Sale
 
         private void btnExchangeProduct_Click(object sender, EventArgs e)
         {
-            new FrmExchageProduct().Show();
+            //new FrmExchageProduct().Show();
+            new FrmExchangeProductNew().Show();
         }
 
 
