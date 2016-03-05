@@ -41,6 +41,8 @@
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="MySql.Data">
@@ -48,6 +50,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -128,6 +132,18 @@
     </Compile>
     <Compile Include="Forms\History\FrmInvoiceDetail.Designer.cs">
       <DependentUpon>FrmInvoiceDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\History\FrmInvoiceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\History\FrmInvoiceView.Designer.cs">
+      <DependentUpon>FrmInvoiceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\History\rpt_invoice.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_invoice.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms\Member\FrmMembers.cs">
       <SubType>Form</SubType>
@@ -213,6 +229,24 @@
     <Compile Include="Forms\Sale\FrmCheckProduct.Designer.cs">
       <DependentUpon>FrmCheckProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Sale\FrmCheckProductNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sale\FrmCheckProductNew.Designer.cs">
+      <DependentUpon>FrmCheckProductNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sale\FrmExchageProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sale\FrmExchageProduct.Designer.cs">
+      <DependentUpon>FrmExchageProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Sale\FrmExchangeProductNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Sale\FrmExchangeProductNew.Designer.cs">
+      <DependentUpon>FrmExchangeProductNew.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Sale\FrmFrontSaleOffice.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,6 +323,13 @@
     <EmbeddedResource Include="Forms\History\FrmInvoiceDetail.resx">
       <DependentUpon>FrmInvoiceDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\History\FrmInvoiceView.resx">
+      <DependentUpon>FrmInvoiceView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\History\rpt_invoice.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_invoice.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Member\FrmMembers.resx">
       <DependentUpon>FrmMembers.cs</DependentUpon>
     </EmbeddedResource>
@@ -338,6 +379,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sale\FrmCheckProduct.resx">
       <DependentUpon>FrmCheckProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sale\FrmCheckProductNew.resx">
+      <DependentUpon>FrmCheckProductNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sale\FrmExchageProduct.resx">
+      <DependentUpon>FrmExchageProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Sale\FrmExchangeProductNew.resx">
+      <DependentUpon>FrmExchangeProductNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Sale\FrmFrontSaleOffice.resx">
       <DependentUpon>FrmFrontSaleOffice.cs</DependentUpon>

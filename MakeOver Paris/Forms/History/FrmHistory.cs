@@ -67,7 +67,7 @@ namespace MakeOver_Paris.Forms.History
 
         private void cancelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("តើ​នក​ពិត​ជា​ចង់​លុបវិកយបរ​នេះ​មែន​ឬ​ទេ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("តើ​អ្នកពិតជាចង់លុបវិក្កយបត្រនេះមែនឬទេ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 new DAO.InvoiceDAO().cancelInvoice(int.Parse(dgvReport.Rows[dgvReport.CurrentRow.Index].Cells[0].Value.ToString().Substring(7)));
                 FrmHistory_Load(sender, e);

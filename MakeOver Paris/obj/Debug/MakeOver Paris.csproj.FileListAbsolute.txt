@@ -187,3 +187,11 @@ E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.F
 E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Setting.FrmSetting.resources
 E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Staff.FrmStaff.resources
 E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Transaction.frmTransaction.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Branch.FrmBranch.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Member.FrmMemberType.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Product.ProductInStock.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.FrmCheckProduct.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.History.FrmInvoiceView.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.FrmExchageProduct.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.FrmCheckProductNew.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.FrmExchangeProductNew.resources
