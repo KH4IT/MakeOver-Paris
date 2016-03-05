@@ -45,6 +45,7 @@ namespace MakeOver_Paris.Forms.Sale
                 }
                 
             }
+            MessageBox.Show(invoiceid.ToString());
 
             if (txtRecieve.Text != "")
             {
