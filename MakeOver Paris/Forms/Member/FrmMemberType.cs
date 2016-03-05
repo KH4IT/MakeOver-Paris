@@ -45,7 +45,8 @@ namespace MakeOver_Paris.Forms.Member
                 }
                 else
                 {
-                    DTO.MemberType memberType = new DTO.MemberType(txtTitle.Text);
+                    DTO.MemberType memberType = new MemberType(txtTitle.Text);
+                  
                     if (new MemberTypeDAO().AddMemberType(memberType))
                     {
                         txtTitle.Clear();
