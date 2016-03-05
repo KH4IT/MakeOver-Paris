@@ -43,7 +43,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnPrintInvoice = new System.Windows.Forms.Button();
-            this.btnPrintReport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.Panel2.SuspendLayout();
@@ -74,7 +73,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvReport.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvReport.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvReport.Location = new System.Drawing.Point(8, 209);
+            this.dgvReport.Location = new System.Drawing.Point(8, 197);
             this.dgvReport.Name = "dgvReport";
             this.dgvReport.ReadOnly = true;
             this.dgvReport.RowHeadersVisible = false;
@@ -86,7 +85,7 @@
             this.dgvReport.RowTemplate.Height = 30;
             this.dgvReport.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvReport.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvReport.Size = new System.Drawing.Size(1034, 603);
+            this.dgvReport.Size = new System.Drawing.Size(1034, 567);
             this.dgvReport.TabIndex = 6;
             // 
             // tableLayoutPanel1
@@ -105,7 +104,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1050, 820);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1050, 772);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // Panel2
@@ -116,7 +115,7 @@
             this.Panel2.Controls.Add(this.btnBack);
             this.Panel2.Controls.Add(this.Label1);
             this.Panel2.Controls.Add(this.Panel3);
-            this.Panel2.Location = new System.Drawing.Point(8, 32);
+            this.Panel2.Location = new System.Drawing.Point(8, 30);
             this.Panel2.Name = "Panel2";
             this.Panel2.Size = new System.Drawing.Size(1034, 65);
             this.Panel2.TabIndex = 3;
@@ -159,34 +158,32 @@
             this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.ColumnCount = 7;
+            this.tableLayoutPanel2.ColumnCount = 6;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel2.Controls.Add(this.label3, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.textBox1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.textBox2, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnPrintInvoice, 5, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btnPrintReport, 6, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(8, 153);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(8, 144);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1034, 50);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1034, 47);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Khmer OS Content", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(312, 0);
+            this.label3.Location = new System.Drawing.Point(367, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 50);
+            this.label3.Size = new System.Drawing.Size(114, 29);
             this.label3.TabIndex = 5;
             this.label3.Text = "តាមរយះថ្ងៃខែ:";
             // 
@@ -194,9 +191,9 @@
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(106, 3);
+            this.textBox1.Location = new System.Drawing.Point(124, 3);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 29);
+            this.textBox1.Size = new System.Drawing.Size(237, 29);
             this.textBox1.TabIndex = 3;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -206,17 +203,17 @@
             this.label2.Font = new System.Drawing.Font("Khmer OS Content", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 50);
+            this.label2.Size = new System.Drawing.Size(114, 47);
             this.label2.TabIndex = 4;
-            this.label2.Text = "តាមរយះបុក្គលិក:";
+            this.label2.Text = "តាមរយះបុគ្គលិក:";
             // 
             // textBox2
             // 
             this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(415, 3);
+            this.textBox2.Location = new System.Drawing.Point(488, 3);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 29);
+            this.textBox2.Size = new System.Drawing.Size(237, 29);
             this.textBox2.TabIndex = 6;
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -225,37 +222,22 @@
             this.btnPrintInvoice.BackColor = System.Drawing.Color.Black;
             this.btnPrintInvoice.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnPrintInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrintInvoice.Font = new System.Drawing.Font("Khmer OS Content", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintInvoice.Font = new System.Drawing.Font("Khmer OS Content", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintInvoice.ForeColor = System.Drawing.Color.White;
-            this.btnPrintInvoice.Location = new System.Drawing.Point(724, 3);
+            this.btnPrintInvoice.Location = new System.Drawing.Point(852, 3);
             this.btnPrintInvoice.Name = "btnPrintInvoice";
-            this.btnPrintInvoice.Size = new System.Drawing.Size(149, 44);
+            this.btnPrintInvoice.Size = new System.Drawing.Size(179, 41);
             this.btnPrintInvoice.TabIndex = 7;
-            this.btnPrintInvoice.Text = "ព្រីនវិក័យប័ត្រ";
+            this.btnPrintInvoice.Text = "ព្រីនម្តងទៀត";
             this.btnPrintInvoice.UseVisualStyleBackColor = false;
             this.btnPrintInvoice.Click += new System.EventHandler(this.btnPrintInvoice_Click_1);
-            // 
-            // btnPrintReport
-            // 
-            this.btnPrintReport.BackColor = System.Drawing.Color.Black;
-            this.btnPrintReport.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPrintReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrintReport.Font = new System.Drawing.Font("Khmer OS Content", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintReport.ForeColor = System.Drawing.Color.White;
-            this.btnPrintReport.Location = new System.Drawing.Point(879, 3);
-            this.btnPrintReport.Name = "btnPrintReport";
-            this.btnPrintReport.Size = new System.Drawing.Size(152, 44);
-            this.btnPrintReport.TabIndex = 8;
-            this.btnPrintReport.Text = "ព្រីនរបាយការណ៍";
-            this.btnPrintReport.UseVisualStyleBackColor = false;
-            this.btnPrintReport.Click += new System.EventHandler(this.btnPrintReport_Click_1);
             // 
             // FrmHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1050, 820);
+            this.ClientSize = new System.Drawing.Size(1050, 772);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
@@ -299,6 +281,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnPrintInvoice;
-        private System.Windows.Forms.Button btnPrintReport;
     }
 }
