@@ -23,15 +23,21 @@ namespace MakeOver_Paris
             try
             {
                 ConStr = Registry.GetValue(@"HKEY_CURRENT_USER\SOFTWARE\MAKEOVER_PARIS", "ConStr", "").ToString();
+                DAO.DBUtility.getConnection().Open();
             }
             catch (Exception)
             {
-
+                Application.Run(new Forms.Configuration.FrmDatabaseConfiguration());
             }
+            finally
+            {
+                DAO.DBUtility.getConnection().Close();
+            }
+            Application.Run(new Forms.FrmSplash());
             //try
             //{
-                DAO.DBUtility.getConnection().Open();
-                Application.Run(new Forms.FrmSplash());
+                
+                //
            // }
             //catch (Exception)
             //{
