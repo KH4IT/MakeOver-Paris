@@ -38,6 +38,8 @@ namespace MakeOver_Paris.Forms.History
             dgvReport.DataSource = invoices.Tables[0];
             Utility.setGridHeaderText("លេខកូដវិក្ក័យប័ត្រ|កាលបរិច្ឆេទចេញវិក្ក័យប័ត្រ|ឈ្មោះអ្នកលក់|តម្លៃសរុប", dgvReport);
             Utility.setGridHeaderWidth("100|200|300|200", dgvReport);
+            dgvReport.Columns["id"].Visible= false;
+               
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -58,12 +60,10 @@ namespace MakeOver_Paris.Forms.History
 
         private void btnPrintInvoice_Click_1(object sender, EventArgs e)
         {
-
+            Forms.History.FrmInvoiceView invoiceView = new Forms.History.FrmInvoiceView();
+            invoiceView.id = System.Convert.ToInt32(dgvReport.CurrentRow.Cells["id"].Value.ToString());
+            invoiceView.Show();
         }
 
-        private void btnPrintReport_Click_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -154,6 +154,7 @@ namespace MakeOver_Paris.DAO
                                   , I.invoicedate
                                   , S.staffname
                                   , SUM(ID.quantity*(ID.priceout*(100-Id.discount)))*(100-I.Discount)
+                                  , I.invoiceid AS id
                                FROM invoices I 
                                INNER JOIN staffs S ON I.staffid=S.staffid
                                INNER JOIN invoicedetail ID ON I.invoiceid=ID.invoiceid
