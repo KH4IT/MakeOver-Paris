@@ -168,7 +168,7 @@
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.19037F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 89.80963F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 332F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 334F));
             this.tableLayoutPanel5.Controls.Add(this.txtCode, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.cboMember, 2, 0);
@@ -185,7 +185,7 @@
             this.txtCode.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCode.Location = new System.Drawing.Point(98, 3);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(836, 27);
+            this.txtCode.Size = new System.Drawing.Size(834, 27);
             this.txtCode.TabIndex = 25;
             this.txtCode.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtName_KeyDown);
             // 
@@ -206,7 +206,7 @@
             this.cboMember.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboMember.FormattingEnabled = true;
-            this.cboMember.Location = new System.Drawing.Point(940, 3);
+            this.cboMember.Location = new System.Drawing.Point(938, 3);
             this.cboMember.Name = "cboMember";
             this.cboMember.Size = new System.Drawing.Size(280, 28);
             this.cboMember.TabIndex = 27;

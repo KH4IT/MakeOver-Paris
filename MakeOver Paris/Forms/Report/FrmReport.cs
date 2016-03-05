@@ -55,7 +55,6 @@ namespace MakeOver_Paris.Forms.Report
         {
             try
             {
-                dgvReport.Rows.Clear();
                 cboStaffs.Visible = false;
                 if (cbxReportType.SelectedIndex == 0)
                 {
@@ -163,31 +162,31 @@ namespace MakeOver_Paris.Forms.Report
                 {
                     case 0:
                         rpt_ListStaff staffs = new rpt_ListStaff();
-                        staffs.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.Excel, dirUrl + "Staff_" + currentDate + ".xls");
+                        staffs.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, dirUrl + "Staff_" + currentDate + ".pdf");
                         break;
                     case 1:
                         rpt_ListMembers listmember = new rpt_ListMembers();
-                        listmember.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.Excel, dirUrl + "Member_" + currentDate + ".xls");
+                        listmember.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, dirUrl + "Member_" + currentDate + ".pdf");
                         break;
                     case 2:
                         rpt_ListOfProducts products = new rpt_ListOfProducts();
-                        products.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.Excel, dirUrl + "Product_" + currentDate + ".xls");
+                        products.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, dirUrl + "Product_" + currentDate + ".pdf");
                         break;
                     case 3:
                         rpt_Cashbook cashbook = new rpt_Cashbook();
                         cashbook.SetParameterValue("p_startdate", dpStartDate.Text);
                         cashbook.SetParameterValue("p_enddate", dpEndDate.Text);
-                        cashbook.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.Excel, dirUrl + "Cashbook_" + currentDate + ".xls");
+                        cashbook.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, dirUrl + "Cashbook_" + currentDate + ".pdf");
                         break;
                     case 4:
                         rpt_ListInvoice invoices = new rpt_ListInvoice();
-                        invoices.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.Excel, dirUrl + "List of Invoice_" + currentDate + ".xls");
+                        invoices.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, dirUrl + "List of Invoice_" + currentDate + ".pdf");
                         break;
                     case 5:
                         rpt_ListProductSold productSold = new rpt_ListProductSold();
                         productSold.SetParameterValue("p_startdate", dpStartDate.Text);
                         productSold.SetParameterValue("p_enddate", dpEndDate.Text);
-                        productSold.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.Excel, dirUrl + "Product Sold_" + currentDate + ".xls");
+                        productSold.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, dirUrl + "Product Sold_" + currentDate + ".pdf");
                         break;
                     case 6:
                         rpt_StaffProfit staffprofit = new rpt_StaffProfit();
@@ -195,7 +194,7 @@ namespace MakeOver_Paris.Forms.Report
                         staffprofit.SetParameterValue("p_staffid", staffid);
                         staffprofit.SetParameterValue("p_startdate", dpStartDate.Text);
                         staffprofit.SetParameterValue("p_enddate", dpEndDate.Text);
-                        staffprofit.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.Excel, dirUrl + "Staff Profit _" + currentDate + ".xls");
+                        staffprofit.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, dirUrl + "Staff Profit _" + currentDate + ".pdf");
                         break;
                 }
                 System.Diagnostics.Process.Start(@dirUrl);

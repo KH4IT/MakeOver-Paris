@@ -45,7 +45,7 @@ namespace MakeOver_Paris.Forms.Product
                 }
                 else
                 {
-                    DTO.StoreProduct storeProduct = new DTO.StoreProduct((int)cbStock.SelectedValue, (int)cbProduct.SelectedValue, System.Convert.ToDecimal(txtQuantity.Text+0), System.Convert.ToDecimal(txtQuantityReturn.Text));
+                    DTO.StoreProduct storeProduct = new DTO.StoreProduct((int)cbStock.SelectedValue, (int)cbProduct.SelectedValue, System.Convert.ToDecimal(txtQuantity.Text), System.Convert.ToDecimal(txtQuantityReturn.Text));
                     if (new StoreProductDAO().AddStoreProduct(storeProduct))
                     {
                         txtQuantity.Clear();

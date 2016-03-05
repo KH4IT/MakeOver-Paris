@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.pnMain = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.btnProductStock = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -58,6 +59,7 @@
             // pnMain
             // 
             this.pnMain.AutoSize = true;
+            this.pnMain.Controls.Add(this.button7);
             this.pnMain.Controls.Add(this.btnProductStock);
             this.pnMain.Controls.Add(this.button6);
             this.pnMain.Controls.Add(this.button5);
@@ -78,6 +80,20 @@
             this.pnMain.Name = "pnMain";
             this.pnMain.Size = new System.Drawing.Size(1306, 660);
             this.pnMain.TabIndex = 14;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(1141, 41);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(158, 27);
+            this.button7.TabIndex = 49;
+            this.button7.Text = "Change Password";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // btnProductStock
             // 
@@ -133,9 +149,9 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(1173, 39);
+            this.button4.Location = new System.Drawing.Point(1141, 74);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(103, 27);
+            this.button4.Size = new System.Drawing.Size(158, 27);
             this.button4.TabIndex = 45;
             this.button4.Text = "Log out";
             this.button4.UseVisualStyleBackColor = false;
@@ -403,5 +419,6 @@
         internal System.Windows.Forms.Button button6;
         internal System.Windows.Forms.Button button5;
         internal System.Windows.Forms.Button btnProductStock;
+        private System.Windows.Forms.Button button7;
     }
 }

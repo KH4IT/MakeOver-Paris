@@ -33,12 +33,12 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
+            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.lineShape1 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.lineShape2 = new Microsoft.VisualBasic.PowerPacks.LineShape();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -97,6 +97,14 @@
             this.shapeContainer1.TabIndex = 4;
             this.shapeContainer1.TabStop = false;
             // 
+            // lineShape2
+            // 
+            this.lineShape2.Name = "lineShape2";
+            this.lineShape2.X1 = 21;
+            this.lineShape2.X2 = 361;
+            this.lineShape2.Y1 = 256;
+            this.lineShape2.Y2 = 253;
+            // 
             // lineShape1
             // 
             this.lineShape1.Name = "lineShape1";
@@ -140,14 +148,6 @@
             this.label5.Size = new System.Drawing.Size(149, 13);
             this.label5.TabIndex = 8;
             this.label5.Text = "FB: Makeover paris Cambodia";
-            // 
-            // lineShape2
-            // 
-            this.lineShape2.Name = "lineShape2";
-            this.lineShape2.X1 = 21;
-            this.lineShape2.X2 = 361;
-            this.lineShape2.Y1 = 256;
-            this.lineShape2.Y2 = 253;
             // 
             // FrmInvoiceDetail
             // 

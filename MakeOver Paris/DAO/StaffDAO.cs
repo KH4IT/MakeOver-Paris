@@ -22,7 +22,7 @@ namespace MakeOver_Paris.DAO
                 try
                 {
                     
-                    const string SQL = @"INSERT INTO staffs(staffname, staffpassword, stafftype, lastlogin, commisionrate, storeid) VALUES(@staffname, @staffpassword, @stafftype, @lastlogin, @commisionrate, @storeid);";
+                    const string SQL = @"INSERT INTO staffs(staffname, staffpassword, stafftype, lastlogin, commisionrate, storeid) VALUES(LOWER(@staffname), @staffpassword, @stafftype, @lastlogin, @commisionrate, @storeid);";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
                     command.Parameters.AddWithValue("@staffname", staff.Staffname);
@@ -198,5 +198,38 @@ namespace MakeOver_Paris.DAO
             }
         }
 
+        public Boolean ChangePassword(DTO.Staff staff)
+        {
+            MySqlConnection cnn = DBUtility.getConnection();
+            if (cnn != null)
+            {
+                try
+                {
+                    cnn.Open();
+                    const string SQL = "UPDATE staffs SET staffpassword = @p1, staffname= LOWER(@staffname) WHERE staffid = @staffid";
+                    MySqlCommand command = new MySqlCommand(SQL, cnn);
+                    command.Prepare();
+                    command.Parameters.AddWithValue("@staffid", staff.Staffid);
+                    command.Parameters.AddWithValue("@staffname", staff.Staffname);
+                    command.Parameters.AddWithValue("@p1", staff.Staffpassword);
+                    if (command.ExecuteNonQuery() > 0)
+                    {
+                        return true;
+                    }
+                }
+                catch (MySqlException e)
+                {
+                    Console.WriteLine(e);
+                }
+                finally
+                {
+                    cnn.Close();
+                }
+            }
+            return false;
+        }
+
     }
+
+
 }

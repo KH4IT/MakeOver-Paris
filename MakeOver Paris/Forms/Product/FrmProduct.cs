@@ -41,6 +41,12 @@ namespace MakeOver_Paris.Forms.Product
                 }
                 else
                 {
+                    DAO.ProductDAO productDAO = new DAO.ProductDAO();
+                    if (productDAO.checkProduct(txtProductCode.Text))
+                    {
+                        MessageBox.Show("លេខកូដទំនិញរបស់លោកអ្នកមានរួចហើយ សូមបញ្ចូលលេខកូដទំនិញផ្សេង");
+                        return;
+                    }
                     DTO.Staff staff = new DTO.Staff();
                     staff.Staffid = UserSession.Session.Staff.Staffid;// Data.user.Staffid;
                     DTO.Category cate = new DTO.Category();

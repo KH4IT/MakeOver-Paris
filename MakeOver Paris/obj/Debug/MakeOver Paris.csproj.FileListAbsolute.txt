@@ -22,7 +22,6 @@ D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.pdb
 D:\KH4IT\MakeOver-Paris\MakeOver Paris\bin\Debug\MakeOver Paris.exe
 D:\KH4IT\MakeOver-Paris\MakeOver Paris\bin\Debug\MakeOver Paris.pdb
 D:\KH4IT\MakeOver-Paris\MakeOver Paris\bin\Debug\MySql.Data.dll
-D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.csprojResolveAssemblyReference.cache
 D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Properties.Resources.resources
 D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.csproj.GenerateResource.Cache
 D:\Make OverParis\MakeOver-Paris\MakeOver Paris\bin\Debug\MakeOver Paris.exe.config
@@ -195,3 +194,4 @@ D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.History.Fr
 D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.FrmExchageProduct.resources
 D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.FrmCheckProductNew.resources
 D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.FrmExchangeProductNew.resources
+D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Staff.FrmChangePassword.resources

@@ -163,8 +163,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 8;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.55311F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.35531F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.93407F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.974359F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -192,9 +192,9 @@
             this.cboStaffs.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboStaffs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboStaffs.FormattingEnabled = true;
-            this.cboStaffs.Location = new System.Drawing.Point(112, 3);
+            this.cboStaffs.Location = new System.Drawing.Point(151, 3);
             this.cboStaffs.Name = "cboStaffs";
-            this.cboStaffs.Size = new System.Drawing.Size(157, 28);
+            this.cboStaffs.Size = new System.Drawing.Size(118, 28);
             this.cboStaffs.TabIndex = 7;
             this.cboStaffs.Visible = false;
             this.cboStaffs.SelectedIndexChanged += new System.EventHandler(this.cboStaffs_SelectedIndexChanged);
@@ -224,9 +224,9 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 0);
+            this.label2.Location = new System.Drawing.Point(5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 44);
+            this.label2.Size = new System.Drawing.Size(140, 27);
             this.label2.TabIndex = 2;
             this.label2.Text = "ប្រភេទរបាយការណ៍:";
             // 
@@ -237,9 +237,9 @@
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.Font = new System.Drawing.Font("Khmer OS Content", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Location = new System.Drawing.Point(928, 3);
+            this.btnPrint.Location = new System.Drawing.Point(929, 3);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(161, 38);
+            this.btnPrint.Size = new System.Drawing.Size(160, 38);
             this.btnPrint.TabIndex = 1;
             this.btnPrint.Text = "ព្រីន";
             this.btnPrint.UseVisualStyleBackColor = false;
@@ -262,7 +262,7 @@
             this.dpEndDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dpEndDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dpEndDate.Location = new System.Drawing.Point(819, 3);
+            this.dpEndDate.Location = new System.Drawing.Point(820, 3);
             this.dpEndDate.Name = "dpEndDate";
             this.dpEndDate.Size = new System.Drawing.Size(103, 22);
             this.dpEndDate.TabIndex = 4;
@@ -286,7 +286,7 @@
             this.lblEndDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEndDate.AutoSize = true;
             this.lblEndDate.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndDate.Location = new System.Drawing.Point(742, 0);
+            this.lblEndDate.Location = new System.Drawing.Point(743, 0);
             this.lblEndDate.Name = "lblEndDate";
             this.lblEndDate.Size = new System.Drawing.Size(71, 27);
             this.lblEndDate.TabIndex = 6;

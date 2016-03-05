@@ -135,5 +135,20 @@ namespace MakeOver_Paris.Forms
             productInStock.Show();
             this.Close();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            new Forms.Staff.FrmChangePassword().Show();
+
+
+            //if (new DAO.StaffDAO().ChangePassword(Data.user))
+            //{
+            //    MessageBox.Show("លេខសំងាត់របស់លោកអ្នកបានកែប្រែដោយជោគជ័យ");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("លេខសំងាត់របស់លោកអ្នកបានកែប្រែដោយជោគជ័យ");
+            //}
+        }
     }
 }

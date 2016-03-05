@@ -364,5 +364,37 @@ namespace MakeOver_Paris.DAO
                 return null;
             }
         }
+
+        public Boolean checkProduct(String productCode)
+        {
+            MySqlConnection cnn = DBUtility.getConnection();
+            if (cnn != null)
+            {
+                try
+                {
+                    cnn.Open();
+                    const string SQL = "SELECT COUNT(productcode) AS COUNT FROM products WHERE productcode=@productcode;";
+                    MySqlCommand command = new MySqlCommand(SQL, cnn); command.Prepare();
+                    command.Parameters.AddWithValue("@productcode", productCode);
+                    MySqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        if (reader.GetInt16("COUNT") > 0)
+                        {
+                            return true;
+                        }
+                    }
+                }
+                catch (MySqlException e)
+                {
+                    Console.WriteLine(e);
+                }
+                finally
+                {
+                    cnn.Close();
+                }
+            }
+            return false;
+        }
     }
 }

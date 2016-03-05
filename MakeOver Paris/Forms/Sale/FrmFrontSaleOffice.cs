@@ -248,6 +248,7 @@ namespace MakeOver_Paris.Forms.Sale
             decimal subtotal = (decimal.Parse(grdItems.Rows[row].Cells[2].Value.ToString()) * decimal.Parse(grdItems.Rows[row].Cells[3].Value.ToString()));
             decimal discount = subtotal * decimal.Parse(grdItems.Rows[row].Cells[4].Value.ToString()) / 100;
             grdItems.Rows[row].Cells[5].Value = subtotal - discount;
+            calculate();
         }
 
         private void btnExchangeProduct_Click(object sender, EventArgs e)
