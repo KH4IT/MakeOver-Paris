@@ -89,7 +89,7 @@ namespace MakeOver_Paris.DAO
             {
                 try
                 {
-                    MySqlCommand cmdInv = new MySqlCommand("SELECT I.invoiceid, I.invoicedate, I.remark, I.discount, ID.quantity, ID.pricein, ID.priceout, ID.discount id_discount, S.staffid, S.staffname, S.stafftype, M.memberid, M.membername, M.membercode, M.phonenumber, M.createddate, P.productid, P.productcode, P.barcode, P.productname, P.quantity, P.description FROM Invoices I INNER JOIN InvoiceDetail ID ON I.invoiceid=ID.invoiceid INNER JOIN Products P ON ID.productid=P.productid INNER JOIN Staffs S ON I.Staffid=S.Staffid INNER JOIN Members M ON I.memberid=M.memberid WHERE I.invoiceid=" + invoiceId, con);
+                    MySqlCommand cmdInv = new MySqlCommand("SELECT I.invoiceid, I.invoicedate, I.remark, I.discount, ID.quantity, ID.pricein, ID.priceout, ID.discount id_discount, S.staffid, S.staffname, S.stafftype, M.memberid, M.membername, M.membercode, M.phonenumber, M.createddate, P.productid, P.productcode, P.barcode, P.productname, P.description FROM Invoices I INNER JOIN InvoiceDetail ID ON I.invoiceid=ID.invoiceid INNER JOIN Products P ON ID.productid=P.productid INNER JOIN Staffs S ON I.Staffid=S.Staffid INNER JOIN Members M ON I.memberid=M.memberid WHERE I.invoiceid=" + invoiceId, con);
                     MySqlDataReader drInv = cmdInv.ExecuteReader();
                     ArrayList arrInvDetail = new ArrayList();
                     Invoice inv = new Invoice();
@@ -166,6 +166,83 @@ namespace MakeOver_Paris.DAO
                 Console.WriteLine(ex.ToString());
                 return null;
             }
+        }
+
+        public void exchangeProduct(int invoiceid, int oldProductId, int newProductId, decimal quantity)
+        {
+            /*
+             * Reduce Invoice Detail on Old Product
+             * -> Increase quantity in stock
+             * If(NewProduct exist) -> += quantity
+             * else -> insert to InvoiceDetail
+             * -> Reduce quantity in stock
+            */
+            MySqlConnection con = DBUtility.getConnection();
+            if (con != null)
+                con.Open();
+            {
+                try
+                {
+                    //Reduce Quantity of OldProduct in Invoice
+                    String sql = "UPDATE InvoiceDetail SET Quantity=Quantity-@quantity WHERE Invoiceid=@invoiceid AND ProductId=@productid";
+                    MySqlCommand invCommand = new MySqlCommand(sql, con);
+                    invCommand.Prepare();
+                    invCommand.Parameters.AddWithValue("@quantity", quantity);
+                    invCommand.Parameters.AddWithValue("@invoiceid", invoiceid);
+                    invCommand.Parameters.AddWithValue("@productid", oldProductId);
+                    invCommand.ExecuteNonQuery();
+
+                    //Increase Quantity of OldProduct in Stock
+                    String addProductSql = "UPDATE StoreProduct SET Quantity=Quantity+@quantity WHERE ProductId=@productid AND StoreId=(SELECT StoreID FROM Staffs WHERE Staffid=(SELECT Staffid FROM Invoices WHERE Invoiceid=@invoiceid))";
+                    MySqlCommand addProductCommand = new MySqlCommand(addProductSql, con);
+                    addProductCommand.Prepare();
+                    addProductCommand.Parameters.AddWithValue("@quantity", quantity);
+                    addProductCommand.Parameters.AddWithValue("@invoiceid", invoiceid);
+                    addProductCommand.Parameters.AddWithValue("@productid", oldProductId);
+                    addProductCommand.ExecuteNonQuery();
+
+                    //Increase Quantity of newProduct in Invoice
+                    String newProductSql = "UPDATE InvoiceDetail SET Quantity=Quantity+@quantity WHERE Invoiceid=@invoiceid AND ProductId=@productid";
+                    MySqlCommand newProductCommand = new MySqlCommand(newProductSql, con);
+                    newProductCommand.Prepare();
+                    newProductCommand.Parameters.AddWithValue("@quantity", quantity);
+                    newProductCommand.Parameters.AddWithValue("@invoiceid", invoiceid);
+                    newProductCommand.Parameters.AddWithValue("@productid", newProductId);
+                    int row = newProductCommand.ExecuteNonQuery();
+
+                    if (row == 0)
+                    {
+                        //Increase Quantity of newProduct in Invoice
+                        String addInvoiceDetailSql = "INSERT INTO InvoiceDetail VALUES(@invoiceid, @productid, @quantity, (SELECT Pricein FROM Products WHERE Productid=@productid), (SELECT Priceout FROM Products WHERE Productid=@productid), (SELECT ID2.Discount FROM InvoiceDetail ID2 WHERE Productid=@oldproductid AND Invoiceid=@invoiceid))";
+                        MySqlCommand newInvoiceDetailCommand = new MySqlCommand(addInvoiceDetailSql, con);
+                        newInvoiceDetailCommand.Prepare();
+                        newInvoiceDetailCommand.Parameters.AddWithValue("@quantity", quantity);
+                        newInvoiceDetailCommand.Parameters.AddWithValue("@invoiceid", invoiceid);
+                        newInvoiceDetailCommand.Parameters.AddWithValue("@productid", newProductId);
+                        newInvoiceDetailCommand.Parameters.AddWithValue("@oldproductid", oldProductId);
+                        newInvoiceDetailCommand.ExecuteNonQuery();
+                    }
+
+                    //Increase Quantity of OldProduct in Stock
+                    String reduceProductSql = "UPDATE StoreProduct SET Quantity=Quantity-@quantity WHERE ProductId=@productid AND StoreId=(SELECT StoreID FROM Staffs WHERE Staffid=(SELECT Staffid FROM Invoices WHERE Invoiceid=@invoiceid))";
+                    MySqlCommand reduceProductCommand = new MySqlCommand(reduceProductSql, con);
+                    reduceProductCommand.Prepare();
+                    reduceProductCommand.Parameters.AddWithValue("@quantity", quantity);
+                    reduceProductCommand.Parameters.AddWithValue("@invoiceid", invoiceid);
+                    reduceProductCommand.Parameters.AddWithValue("@productid", newProductId);
+                    reduceProductCommand.ExecuteNonQuery();
+                    
+                }
+                catch (MySqlException e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }            
+            
         }
 
 

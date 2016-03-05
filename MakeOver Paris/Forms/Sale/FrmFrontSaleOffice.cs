@@ -249,6 +249,11 @@ namespace MakeOver_Paris.Forms.Sale
             grdItems.Rows[row].Cells[5].Value = subtotal - discount;
         }
 
+        private void btnExchangeProduct_Click(object sender, EventArgs e)
+        {
+            new FrmExchageProduct().Show();
+        }
+
 
 
     }

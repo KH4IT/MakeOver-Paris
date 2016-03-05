@@ -350,5 +350,19 @@ namespace MakeOver_Paris.DAO
             }
         }
 
+        public DataSet getSamePriceProduct(int productid)
+        {
+            try
+            {
+                string SQL = ("SELECT * FROM Products WHERE Priceout = (SELECT Priceout FROM Products WHERE Productid=" + productid + ")");
+                DataSet ds = DBUtility.ExecuteQuery(SQL);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+        }
     }
 }

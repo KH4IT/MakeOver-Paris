@@ -56,6 +56,7 @@
             this.c_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.c_priceIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnExchangeProduct = new System.Windows.Forms.Button();
             this.btnCheckProduct = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
@@ -167,7 +168,7 @@
             this.tableLayoutPanel5.ColumnCount = 3;
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.19037F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 89.80963F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 326F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 328F));
             this.tableLayoutPanel5.Controls.Add(this.txtCode, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.cboMember, 2, 0);
@@ -182,9 +183,9 @@
             // txtCode
             // 
             this.txtCode.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCode.Location = new System.Drawing.Point(99, 3);
+            this.txtCode.Location = new System.Drawing.Point(98, 3);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(841, 27);
+            this.txtCode.Size = new System.Drawing.Size(840, 27);
             this.txtCode.TabIndex = 25;
             this.txtCode.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtName_KeyDown);
             // 
@@ -205,7 +206,7 @@
             this.cboMember.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMember.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboMember.FormattingEnabled = true;
-            this.cboMember.Location = new System.Drawing.Point(946, 3);
+            this.cboMember.Location = new System.Drawing.Point(944, 3);
             this.cboMember.Name = "cboMember";
             this.cboMember.Size = new System.Drawing.Size(280, 28);
             this.cboMember.TabIndex = 27;
@@ -366,6 +367,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableLayoutPanel2.Controls.Add(this.btnExchangeProduct, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnCheckProduct, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnSave, 0, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 514);
@@ -374,6 +376,25 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(896, 57);
             this.tableLayoutPanel2.TabIndex = 20;
+            // 
+            // btnExchangeProduct
+            // 
+            this.btnExchangeProduct.BackColor = System.Drawing.Color.Black;
+            this.btnExchangeProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExchangeProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnExchangeProduct.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnExchangeProduct.FlatAppearance.BorderSize = 0;
+            this.btnExchangeProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExchangeProduct.Font = new System.Drawing.Font("Khmer OS Content", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExchangeProduct.ForeColor = System.Drawing.Color.White;
+            this.btnExchangeProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExchangeProduct.Location = new System.Drawing.Point(361, 3);
+            this.btnExchangeProduct.Name = "btnExchangeProduct";
+            this.btnExchangeProduct.Size = new System.Drawing.Size(173, 51);
+            this.btnExchangeProduct.TabIndex = 21;
+            this.btnExchangeProduct.Text = "ប្ដូរ​ទំនិញ";
+            this.btnExchangeProduct.UseVisualStyleBackColor = false;
+            this.btnExchangeProduct.Click += new System.EventHandler(this.btnExchangeProduct_Click);
             // 
             // btnCheckProduct
             // 
@@ -390,7 +411,7 @@
             this.btnCheckProduct.Name = "btnCheckProduct";
             this.btnCheckProduct.Size = new System.Drawing.Size(173, 51);
             this.btnCheckProduct.TabIndex = 20;
-            this.btnCheckProduct.Text = "គិតលុយ";
+            this.btnCheckProduct.Text = "ឆែក​ស្ដុក";
             this.btnCheckProduct.UseVisualStyleBackColor = false;
             this.btnCheckProduct.Click += new System.EventHandler(this.btnCheckProduct_Click);
             // 
@@ -650,5 +671,6 @@
         private System.Windows.Forms.DataGridViewButtonColumn c_remove;
         private System.Windows.Forms.DataGridViewTextBoxColumn c_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn c_priceIn;
+        internal System.Windows.Forms.Button btnExchangeProduct;
     }
 }
