@@ -65,5 +65,14 @@ namespace MakeOver_Paris.Forms.History
             invoiceView.Show();
         }
 
+        private void cancelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("តើ​នក​ពិត​ជា​ចង់​លុបវិកយបរ​នេះ​មែន​ឬ​ទេ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                new DAO.InvoiceDAO().cancelInvoice(int.Parse(dgvReport.Rows[dgvReport.CurrentRow.Index].Cells[0].Value.ToString().Substring(7)));
+                FrmHistory_Load(sender, e);
+            }
+        }
+
     }
 }

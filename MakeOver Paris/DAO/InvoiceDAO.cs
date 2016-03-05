@@ -129,7 +129,7 @@ namespace MakeOver_Paris.DAO
 
                         inv.Staff = staff;
                         inv.Member = member;
-                    }
+                    }   
                     inv.InvoiceDetail = arrInvDetail;
                     return inv;
                 }
@@ -246,6 +246,62 @@ namespace MakeOver_Paris.DAO
             
         }
 
+        public void cancelInvoice(int invoiceid)
+        {
+            /*
+             * Increase Quantity in Stock
+             * Get Total Amount
+             * Remove invoiceDetail by invoiceid
+             * Remove invoice by invoiceid
+             * Add tansaction withdrawal with Remark: Cancel Invoice...
+             */
+            MySqlConnection con = DBUtility.getConnection();
+            if (con != null)
+                con.Open();
+            {
+                try
+                {
+                    Invoice invoice = getInvoice(invoiceid);
+                    decimal total = 0;
+                    for (int i = 0; i < invoice.InvoiceDetail.Count; i++)
+                    {
+
+                        InvoiceDetail invoiceDetail = ((InvoiceDetail)invoice.InvoiceDetail[i]);
+                        total += (invoiceDetail.Priceout * invoiceDetail.Quantity * (100 - invoiceDetail.Dicount));
+
+                        String addProductSql = "UPDATE StoreProduct SET Quantity=Quantity+@quantity WHERE ProductId=@productid AND StoreId=(SELECT StoreID FROM Staffs WHERE Staffid=(SELECT Staffid FROM Invoices WHERE Invoiceid=@invoiceid))";
+                        MySqlCommand addProductCommand = new MySqlCommand(addProductSql, con);
+                        addProductCommand.Prepare();
+                        addProductCommand.Parameters.AddWithValue("@quantity", ((InvoiceDetail)invoice.InvoiceDetail[i]).Quantity);
+                        addProductCommand.Parameters.AddWithValue("@invoiceid", invoiceid);
+                        addProductCommand.Parameters.AddWithValue("@productid", ((InvoiceDetail)invoice.InvoiceDetail[i]).Product.Productid);
+                        addProductCommand.ExecuteNonQuery();
+                    }
+                    String removeDetailSql = "DELETE FROM InvoiceDetail WHERE InvoiceId=" + invoiceid;
+                    MySqlCommand removeDetailCommand = new MySqlCommand(removeDetailSql, con);
+                    removeDetailCommand.ExecuteNonQuery();
+
+                    String removeInvoiceSql = "DELETE FROM Invoices WHERE InvoiceId=" + invoiceid;
+                    MySqlCommand removeInvoiceCommand = new MySqlCommand(removeInvoiceSql, con);
+                    removeInvoiceCommand.ExecuteNonQuery();
+
+                    Transaction t = new Transaction();
+                    t.Incomeamount = 0;
+                    t.Expenseamount = total;
+                    t.Createdby = UserSession.Session.Staff;
+                    t.Remark = "Cancel on InvoiceID: " + invoiceid;
+                    new TransactionDAO().AddTransaction(t);
+                }
+                catch (MySqlException e)
+                {
+                    Console.WriteLine(e.ToString());
+                }
+                finally
+                {
+                    con.Close();
+                }
+            }
+        }
 
     }
 }
