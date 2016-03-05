@@ -43,13 +43,13 @@ namespace MakeOver_Paris.Forms.Product
                 {
                     DTO.Staff staff = new DTO.Staff();
                     staff.Staffid = UserSession.Session.Staff.Staffid;// Data.user.Staffid;
-                    MessageBox.Show(staff.Staffid+"");
                     DTO.Category cate = new DTO.Category();
                     cate.Categoryid = (int)cboCategory.SelectedValue;
                     DTO.Product product = new DTO.Product(0,txtProductCode.Text.Trim(), txtBarcode.Text.Trim(), txtName.Text.Trim(), txtDescription.Text.Trim(),
                     Decimal.Parse(txtPriceIn.Text.Trim()), Decimal.Parse(txtPriceOut.Text.Trim()), txtRemark.Text.Trim(), staff, staff, cate);
                     if (new DAO.ProductDAO().addProduct(product))
                     {
+                        ClearForm();
                         dgvProduct.DataSource = new DAO.ProductDAO().getAllProductDS().Tables[0];
                         id = 0;
                     }
@@ -79,13 +79,7 @@ namespace MakeOver_Paris.Forms.Product
                        Decimal.Parse(txtPriceIn.Text.Trim()), Decimal.Parse(txtPriceOut.Text.Trim()), txtRemark.Text.Trim(), staff, staff, cate);
                     if (new DAO.ProductDAO().updateProduct(product))
                     {
-                        txtProductCode.Clear();
-                        txtBarcode.Clear();
-                        txtName.Clear();
-                        txtDescription.Clear();
-                        txtPriceIn.Clear();
-                        txtPriceOut.Clear();
-                        txtRemark.Clear();
+                        ClearForm();
                         dgvProduct.DataSource = new DAO.ProductDAO().getAllProductDS().Tables[0];
                         id = 0;
                         delete.Visible = false;
@@ -96,6 +90,17 @@ namespace MakeOver_Paris.Forms.Product
                     }
                 }
             }
+        }
+
+        private void ClearForm()
+        {
+            txtProductCode.Clear();
+            txtBarcode.Clear();
+            txtName.Clear();
+            txtDescription.Clear();
+            txtPriceIn.Clear();
+            txtPriceOut.Clear();
+            txtRemark.Clear();
         }
 
         private void dgvProduct_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -186,13 +191,7 @@ namespace MakeOver_Paris.Forms.Product
             {
                 if (new DAO.ProductDAO().deleteProduct(id))
                 {
-                    txtProductCode.Clear();
-                    txtBarcode.Clear();
-                    txtName.Clear();
-                    txtDescription.Clear();
-                    txtPriceIn.Clear();
-                    txtPriceOut.Clear();
-                    txtRemark.Clear();
+                    ClearForm();
                     id = 0;
                     delete.Visible = false;
                     dgvProduct.DataSource = new DAO.ProductDAO().getAllProductDS().Tables[0];

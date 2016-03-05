@@ -60,7 +60,7 @@ namespace MakeOver_Paris.DAO
             return false;
         }
 
-        public bool DeleteStoreProduct(int storeProductId)
+        public bool DeleteStoreProduct(int storeProductId, int productId)
         {
             MySqlConnection cnn = DBUtility.getConnection();
             if (cnn != null)
@@ -71,10 +71,12 @@ namespace MakeOver_Paris.DAO
                     const string SQL = @"DELETE FROM 
 											storeproduct 
 										WHERE 
-											storeid = @storeid";
+											storeid = @storeid
+                                        AND productid = @productid";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
                     command.Parameters.AddWithValue("@storeid", storeProductId);
+                    command.Parameters.AddWithValue("@productid", productId);
                     if (command.ExecuteNonQuery() > 0)
                     {
                         return true;

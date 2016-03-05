@@ -23,30 +23,37 @@ namespace MakeOver_Paris.Forms.Member
 
         private void FrmMembers_Load(object sender, EventArgs e)
         {
-            txtCode.Focus();
-            // TODO: TO MAKE THE PANEL IN THE CENTER OF THE WINDOW
-            Panel1.Left = (this.Width - Panel1.Width) / 2;
-            Panel1.Top = (this.Height - Panel1.Height) / 2;
+            try
+            {
+                txtCode.Focus();
+                // TODO: TO MAKE THE PANEL IN THE CENTER OF THE WINDOW
+                Panel1.Left = (this.Width - Panel1.Width) / 2;
+                Panel1.Top = (this.Height - Panel1.Height) / 2;
 
-            // TODO: TO GET ALL THE MEMBERS
-            DAO.MemberDAO memberDAO = new DAO.MemberDAO();
-            DataSet ds = memberDAO.getAllMembersWithDataSet();
-            DataSet da = new DAO.MemberTypeDAO().GetAllMemberTypes();
-            cbMemberType.DataSource = da.Tables[0];
-            cbMemberType.DisplayMember = "membertypename";
-            cbMemberType.ValueMember = "membertypeid";
-            // TODO: TO BIND DATASET TO THE DataGridView
-            dgvMember.DataSource = ds.Tables[0];
-            dgvMember.Columns[8].Visible = false;
-            dgvMember.Columns[9].Visible = false;
+                // TODO: TO GET ALL THE MEMBERS
+                DAO.MemberDAO memberDAO = new DAO.MemberDAO();
+                DataSet ds = memberDAO.getAllMembersWithDataSet();
+                DataSet da = new DAO.MemberTypeDAO().GetAllMemberTypes();
+                cbMemberType.DataSource = da.Tables[0];
+                cbMemberType.DisplayMember = "membertypename";
+                cbMemberType.ValueMember = "membertypeid";
+                // TODO: TO BIND DATASET TO THE DataGridView
+                dgvMember.DataSource = ds.Tables[0];
+                dgvMember.Columns[8].Visible = false;
+                dgvMember.Columns[9].Visible = false;
 
-            dgvMember.Columns[10].Visible = false;
+                dgvMember.Columns[10].Visible = false;
 
-            // TODO: TO SET THE COLUMN NAME OF THE DataGridView
-            Utility.setGridHeaderText("ល.រ|លេខកូដ|ឈ្មោះ|ទូរសព្ទ័|អត្រាភាគរយ|កាលបរិច្ជេទចាប់ផ្តើម|ដោយ|ប្រភេទសមាជិក",dgvMember);
+                // TODO: TO SET THE COLUMN NAME OF THE DataGridView
+                Utility.setGridHeaderText("ល.រ|លេខកូដ|ឈ្មោះ|ទូរសព្ទ័|អត្រាភាគរយ|កាលបរិច្ជេទចាប់ផ្តើម|ដោយ|ប្រភេទសមាជិក", dgvMember);
 
-            // TODO: TO SET THE WIDTH SIZE OF THE DataGridView
-            Utility.setGridHeaderWidth("50|70|100|170|150|180|150|200", dgvMember);
+                // TODO: TO SET THE WIDTH SIZE OF THE DataGridView
+                Utility.setGridHeaderWidth("50|70|100|170|150|180|150|200", dgvMember);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
 
         private void btnBack_Click_1(object sender, EventArgs e)

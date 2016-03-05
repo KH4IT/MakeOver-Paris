@@ -50,6 +50,9 @@ namespace MakeOver_Paris.Forms.Configuration
                 MySqlConnection cnn = DAO.DBUtility.getConnection();
                 cnn.Open();
                 MessageBox.Show("CONNECTION SUCCESSFULLY!!!");
+                //Application.Exit();
+                //Application.Run(new Forms.FrmSplash());
+                DAO.DBUtility.ConnectionString = Registry.GetValue(@"HKEY_CURRENT_USER\SOFTWARE\MAKEOVER_PARIS", "ConStr", "").ToString();
                 FrmSplash frmSplash = new FrmSplash();
                 frmSplash.Show();
                 this.Hide();

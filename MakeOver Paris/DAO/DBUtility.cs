@@ -7,6 +7,7 @@ using MySql.Data.MySqlClient;
 using System.Data;
 using Microsoft.Win32;
 using System.Configuration;
+using System.Windows.Forms;
 
 namespace MakeOver_Paris.DAO
 {
@@ -15,10 +16,18 @@ namespace MakeOver_Paris.DAO
 
         private static string cs = Registry.GetValue(@"HKEY_CURRENT_USER\SOFTWARE\MAKEOVER_PARIS", "ConStr", "").ToString();//"SERVER=127.0.0.1;UID=root;PWD=;DATABASE=makeover_db;Allow User Variables=True";
 
+        public static string ConnectionString
+        {
+            get { return cs; }
+            set { cs = value; }
+        }
+
+
         public static MySqlConnection getConnection()
         {
             MySqlConnection con = null;
             string myConnectionString = Registry.GetValue(@"HKEY_CURRENT_USER\SOFTWARE\MAKEOVER_PARIS", "ConStr", "").ToString();//"SERVER=127.0.0.1;UID=root;PWD=;DATABASE=makeover_db;Allow User Variables=True";
+
             try
             {
                 con = new MySql.Data.MySqlClient.MySqlConnection();
