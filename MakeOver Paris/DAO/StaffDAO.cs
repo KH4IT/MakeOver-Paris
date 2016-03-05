@@ -118,7 +118,7 @@ namespace MakeOver_Paris.DAO
         {
             try
             {
-                String sql = @"SELECT staffid, staffname, stafftype, lastlogin, commisionrate,storename, staffpassword FROM staffs LEFT JOIN stores ON stores.storeid = staffs.storeid";
+                String sql = @"SELECT staffid, staffname, stafftype, lastlogin, commisionrate,storename, staffpassword FROM staffs LEFT JOIN stores ON stores.storeid = staffs.storeid WHERE staffname != 'admin'";
                 DataSet ds = DBUtility.ExecuteQuery(sql);
                 return ds;
             }

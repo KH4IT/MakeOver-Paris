@@ -36,13 +36,15 @@ namespace MakeOver_Paris.DAO
                                             , phonenumber
                                             , createddate
                                             , createdby
-                                            , discountrate)             
+                                            , discountrate
+                                            , membertypeid)             
                                        VALUES(@memberName
                                             , @memberCode
                                             , @phoneNumber
                                             , NOW()
                                             , @createdBy
-                                            , @discountRate)";
+                                            , @discountRate
+                                            , @membertypeid)";
                         MySqlCommand cmd = new MySqlCommand(sql, cnn);
                         cmd.Prepare();
                         cmd.Parameters.AddWithValue("@memberName", member.Membername);
@@ -53,6 +55,7 @@ namespace MakeOver_Paris.DAO
                         //cmd.Parameters.AddWithValue("@updatedDate", member.Updateddate);
                         //.Parameters.AddWithValue("@updatedBy", member.Updatedby);
                         cmd.Parameters.AddWithValue("@discountRate", member.Discountrate);
+                        cmd.Parameters.AddWithValue("@membertypeid", member.MemberTypeId);
                         int result = cmd.ExecuteNonQuery();
                         transaction.Commit();
                         if (result != 0)
@@ -95,8 +98,9 @@ namespace MakeOver_Paris.DAO
                                     , updateddate = NOW()
                                     , updatedby = @p4
                                     , discountrate = @p5
-                                WHERE memberid = @p6";
-                return DBUtility.ExecuteNonQuery(sql, member.Membername, member.MemberCode, member.Phonenumber, member.Updatedby.Staffid, member.Discountrate, member.Memberid);
+                                    , membertypeid = @p6
+                                WHERE memberid = @p7";
+                return DBUtility.ExecuteNonQuery(sql, member.Membername, member.MemberCode, member.Phonenumber, member.Updatedby.Staffid, member.Discountrate, member.MemberTypeId, member.Memberid);
             }
             catch (Exception ex)
             {
@@ -120,6 +124,8 @@ namespace MakeOver_Paris.DAO
                                     , updateddate
                                     , (SELECT staffname FROM staffs WHERE staffs.staffid = members.updatedby) AS updatedby
                                     , discountrate
+                                    , (SELECT membertypeid FROM membertypes WHERE membertypes.membertypeid = members.membertypeid) AS membertypeid
+                                    , (SELECT membertypename FROM membertypes WHERE membertypes.membertypeid = members.membertypeid) AS membertypename
                                 FROM members 
                                 WHERE memberid = @p1";
                 DataSet ds = DBUtility.ExecuteQuery(sql, id);
@@ -211,9 +217,10 @@ namespace MakeOver_Paris.DAO
                                 , discountrate
                                 , createddate
                                 , (SELECT staffname FROM staffs WHERE staffs.staffid = members.createdby) AS createdby
+                                , (SELECT membertypename FROM membertypes WHERE membertypes.membertypeid = members.membertypeid) AS membertypename
                                 , updateddate
                                 , (SELECT staffname FROM staffs WHERE staffs.staffid = members.updatedby) AS updatedby
-                               
+                                , (SELECT membertypeid FROM membertypes WHERE membertypes.membertypeid = members.membertypeid) AS membertypeid
                             FROM members";
                 DataSet ds = DBUtility.ExecuteQuery(sql);
                 return ds;

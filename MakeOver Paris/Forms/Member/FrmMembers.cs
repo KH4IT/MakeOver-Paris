@@ -31,17 +31,22 @@ namespace MakeOver_Paris.Forms.Member
             // TODO: TO GET ALL THE MEMBERS
             DAO.MemberDAO memberDAO = new DAO.MemberDAO();
             DataSet ds = memberDAO.getAllMembersWithDataSet();
-
+            DataSet da = new DAO.MemberTypeDAO().GetAllMemberTypes();
+            cbMemberType.DataSource = da.Tables[0];
+            cbMemberType.DisplayMember = "membertypename";
+            cbMemberType.ValueMember = "membertypeid";
             // TODO: TO BIND DATASET TO THE DataGridView
             dgvMember.DataSource = ds.Tables[0];
-            dgvMember.Columns[7].Visible = false;
             dgvMember.Columns[8].Visible = false;
+            dgvMember.Columns[9].Visible = false;
+
+            dgvMember.Columns[10].Visible = false;
 
             // TODO: TO SET THE COLUMN NAME OF THE DataGridView
-            Utility.setGridHeaderText("ល.រ|លេខកូដ|ឈ្មោះ|ទូរសព្ទ័|អត្រាភាគរយ|កាលបរិច្ជេទចាប់ផ្តើម|ដោយ",dgvMember);
+            Utility.setGridHeaderText("ល.រ|លេខកូដ|ឈ្មោះ|ទូរសព្ទ័|អត្រាភាគរយ|កាលបរិច្ជេទចាប់ផ្តើម|ដោយ|ប្រភេទសមាជិក",dgvMember);
 
             // TODO: TO SET THE WIDTH SIZE OF THE DataGridView
-            Utility.setGridHeaderWidth("30|70|150|100|100|100|150", dgvMember);
+            Utility.setGridHeaderWidth("50|70|100|170|150|180|150|200", dgvMember);
         }
 
         private void btnBack_Click_1(object sender, EventArgs e)
@@ -86,6 +91,7 @@ namespace MakeOver_Paris.Forms.Member
                     DTO.Staff staff = new DTO.Staff();
                     staff.Staffid = UserSession.Session.Staff.Staffid;
                     member.Createdby = staff;
+                    member.MemberTypeId = (int)cbMemberType.SelectedValue;
                     decimal discount = 0;
                     if (txtDiscountRate.Text != "")
                     {
@@ -123,6 +129,7 @@ namespace MakeOver_Paris.Forms.Member
                     discount = System.Convert.ToDecimal(txtDiscountRate.Text);
                 }
                 member.Discountrate = discount;
+                member.MemberTypeId = (int)cbMemberType.SelectedValue;
                 if (new MemberDAO().updateMemeber(member))
                 {
                     txtName.Clear();
@@ -157,6 +164,7 @@ namespace MakeOver_Paris.Forms.Member
                 txtName.Text = dgvMember.CurrentRow.Cells[2].Value.ToString();
                 txtPhone.Text = dgvMember.CurrentRow.Cells[3].Value.ToString();
                 txtDiscountRate.Text = dgvMember.CurrentRow.Cells[4].Value.ToString();
+                cbMemberType.Text = dgvMember.CurrentRow.Cells[7].Value.ToString();
                 delete.Visible = true;
             }
             catch (Exception ex)

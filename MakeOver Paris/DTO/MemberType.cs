@@ -28,5 +28,11 @@ namespace MakeOver_Paris.DTO
         {
             this.memberTypeName = memberTypeName;
         }
+
+        public MemberType(int memberTypeId, string memberTypeName)
+        {
+            this.memberTypeId = memberTypeId;
+            this.memberTypeName = memberTypeName;
+        }
     }
 }

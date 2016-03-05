@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Label2 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.dgvMember = new System.Windows.Forms.DataGridView();
+            this.dgvStoreProduct = new System.Windows.Forms.DataGridView();
             this.delete = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -55,7 +55,7 @@
             this.Panel5 = new System.Windows.Forms.Panel();
             this.btnMemberList = new System.Windows.Forms.Button();
             this.Panel4 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStoreProduct)).BeginInit();
             this.panel6.SuspendLayout();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
@@ -85,43 +85,44 @@
             this.txtSearch.Size = new System.Drawing.Size(500, 27);
             this.txtSearch.TabIndex = 6;
             // 
-            // dgvMember
+            // dgvStoreProduct
             // 
-            this.dgvMember.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgvMember.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMember.BackgroundColor = System.Drawing.Color.White;
-            this.dgvMember.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMember.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvMember.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.HotPink;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMember.DefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvMember.Location = new System.Drawing.Point(5, 302);
-            this.dgvMember.Name = "dgvMember";
-            this.dgvMember.ReadOnly = true;
-            this.dgvMember.RowHeadersVisible = false;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
-            this.dgvMember.RowsDefaultCellStyle = dataGridViewCellStyle9;
-            this.dgvMember.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvMember.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.dgvMember.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Black;
-            this.dgvMember.RowTemplate.Height = 30;
-            this.dgvMember.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMember.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMember.Size = new System.Drawing.Size(1000, 345);
-            this.dgvMember.TabIndex = 0;
+            this.dgvStoreProduct.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgvStoreProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvStoreProduct.BackgroundColor = System.Drawing.Color.White;
+            this.dgvStoreProduct.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStoreProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvStoreProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.HotPink;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStoreProduct.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvStoreProduct.Location = new System.Drawing.Point(5, 302);
+            this.dgvStoreProduct.Name = "dgvStoreProduct";
+            this.dgvStoreProduct.ReadOnly = true;
+            this.dgvStoreProduct.RowHeadersVisible = false;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            this.dgvStoreProduct.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvStoreProduct.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvStoreProduct.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.dgvStoreProduct.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Black;
+            this.dgvStoreProduct.RowTemplate.Height = 30;
+            this.dgvStoreProduct.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvStoreProduct.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvStoreProduct.Size = new System.Drawing.Size(1000, 345);
+            this.dgvStoreProduct.TabIndex = 0;
+            this.dgvStoreProduct.DoubleClick += new System.EventHandler(this.dgvStoreProduct_DoubleClick);
             // 
             // delete
             // 
@@ -141,6 +142,7 @@
             this.delete.Text = "លុប";
             this.delete.UseVisualStyleBackColor = false;
             this.delete.Visible = false;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
             // Save
             // 
@@ -392,7 +394,7 @@
             this.Panel4.Controls.Add(this.panel6);
             this.Panel4.Controls.Add(this.Label2);
             this.Panel4.Controls.Add(this.txtSearch);
-            this.Panel4.Controls.Add(this.dgvMember);
+            this.Panel4.Controls.Add(this.dgvStoreProduct);
             this.Panel4.ForeColor = System.Drawing.Color.White;
             this.Panel4.Location = new System.Drawing.Point(6, 68);
             this.Panel4.Name = "Panel4";
@@ -414,7 +416,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ProductInStock_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ProductInStock_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvMember)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStoreProduct)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.Panel1.ResumeLayout(false);
@@ -432,7 +434,7 @@
 
         internal System.Windows.Forms.Label Label2;
         internal System.Windows.Forms.TextBox txtSearch;
-        internal System.Windows.Forms.DataGridView dgvMember;
+        internal System.Windows.Forms.DataGridView dgvStoreProduct;
         internal System.Windows.Forms.Button delete;
         internal System.Windows.Forms.Button Save;
         private System.Windows.Forms.Panel panel6;

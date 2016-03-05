@@ -75,5 +75,14 @@ namespace MakeOver_Paris.DTO
             set { discountrate = value; }
         }
 
+        private int memberTypeId;
+
+        public int MemberTypeId
+        {
+            get { return memberTypeId; }
+            set { memberTypeId = value; }
+        }
+
+
     }
 }

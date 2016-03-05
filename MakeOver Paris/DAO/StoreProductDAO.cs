@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MakeOver_Paris.DAO;
 using MakeOver_Paris.DTO;
+using MakeOver_Paris.DAO;
 using System.Data;
+using System.Data.SqlClient;
 using MySql.Data.MySqlClient;
 
 namespace MakeOver_Paris.DAO
 {
-    class MemberTypeDAO
+    class StoreProductDAO
     {
-        public bool AddMemberType(MemberType memberType)
+        public bool AddStoreProduct(StoreProduct storeProduct)
         {
             MySqlConnection cnn = DBUtility.getConnection();
             if (cnn != null)
@@ -22,15 +23,24 @@ namespace MakeOver_Paris.DAO
                 try
                 {
                     const string SQL = @"INSERT INTO 
-											membertypes(
-												membertypename
+											storeproduct(
+												storeid
+                                                , productid
+                                                , quantity
+                                                , returnquantity
 											) 
 										VALUES(
-											@membertypename
+											@storeid
+                                            , @productid
+                                            , @quantity
+                                            , @returnquantity
 										);";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
-                    command.Parameters.AddWithValue("@membertypename", memberType.MemberTypeName);
+                    command.Parameters.AddWithValue("@storeid", storeProduct.StoreId);
+                    command.Parameters.AddWithValue(@"productid", storeProduct.ProductId);
+                    command.Parameters.AddWithValue(@"quantity", storeProduct.Quantity);
+                    command.Parameters.AddWithValue(@"returnquantity", storeProduct.ReturnQuantity);
                     if (command.ExecuteNonQuery() > 0)
                     {
                         transaction.Commit();
@@ -50,7 +60,7 @@ namespace MakeOver_Paris.DAO
             return false;
         }
 
-        public bool DeleteMemberType(int memberTypeId)
+        public bool DeleteStoreProduct(int storeProductId)
         {
             MySqlConnection cnn = DBUtility.getConnection();
             if (cnn != null)
@@ -59,12 +69,12 @@ namespace MakeOver_Paris.DAO
                 {
                     cnn.Open();
                     const string SQL = @"DELETE FROM 
-											membertypes 
+											storeproduct 
 										WHERE 
-											membertypeid = @membertypeid";
+											storeid = @storeid";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
-                    command.Parameters.AddWithValue("@membertypeid", memberTypeId);
+                    command.Parameters.AddWithValue("@storeid", storeProductId);
                     if (command.ExecuteNonQuery() > 0)
                     {
                         return true;
@@ -82,7 +92,7 @@ namespace MakeOver_Paris.DAO
             return false;
         }
 
-        public bool UdateMemberType(MemberType memberType)
+        public bool UdateStoreProduct(StoreProduct storeProduct)
         {
             MySqlConnection cnn = DBUtility.getConnection();
             if (cnn != null)
@@ -91,15 +101,20 @@ namespace MakeOver_Paris.DAO
                 {
                     cnn.Open();
                     const string SQL = @"UPDATE 
-											membertypes 
+											storeproduct 
 										SET 
-											membertypename = @membertypename 
+											storeid = @storeid
+                                            , productid = @productid
+                                            , quantity = @quantity
+                                            , returnquantity = @returnquantity 
 										WHERE 
-											membertypeid = @membertypeid";
+											storeid = @storeid";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
-                    command.Parameters.AddWithValue("@membertypename", memberType.MemberTypeName);
-                    command.Parameters.AddWithValue("@membertypeid", memberType.MemberTypeId);
+                    command.Parameters.AddWithValue("@storeid", storeProduct.StoreId);
+                    command.Parameters.AddWithValue("@productid", storeProduct.ProductId);
+                    command.Parameters.AddWithValue(@"quantity", storeProduct.Quantity);
+                    command.Parameters.AddWithValue(@"returnquantity", storeProduct.ReturnQuantity);
                     if (command.ExecuteNonQuery() > 0)
                     {
                         return true;
@@ -117,14 +132,15 @@ namespace MakeOver_Paris.DAO
             return false;
         }
 
-        public DataSet GetAllMemberTypes()
+        public DataSet GetAllStoreProducts()
         {
             try
             {
-                List<Member> members = new List<Member>();
-                String sql = @"SELECT membertypeid
-                                , membertypename
-                            FROM membertypes";
+                String sql = @"SELECT (SELECT storename FROM stores WHERE stores.storeid = storeproduct.storeid) AS storename
+                                      , (SELECT productname FROM products WHERE products.productid = storeproduct.productid) AS productname
+                                      , quantity
+                                      , returnquantity
+                            FROM storeproduct";
                 DataSet ds = DBUtility.ExecuteQuery(sql);
                 return ds;
             }

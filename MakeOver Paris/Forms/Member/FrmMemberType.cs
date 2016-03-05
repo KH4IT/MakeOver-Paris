@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MakeOver_Paris.DAO;
+using MakeOver_Paris.DTO;
 
 namespace MakeOver_Paris.Forms.Member
 {
     public partial class FrmMemberType : Form
     {
+        private int id;
         public FrmMemberType()
         {
             InitializeComponent();
@@ -29,6 +32,69 @@ namespace MakeOver_Paris.Forms.Member
             if (e.KeyCode == Keys.Escape)
             {
                 btnBack_Click(sender, e);
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (id == 0)
+            {
+                if (txtTitle.Text == "")
+                {
+                    MessageBox.Show("សូមបំពេញពត៏មានឲ្យបានត្រឹមត្រូវ!!!");
+                }
+                else
+                {
+                    DTO.MemberType memberType = new DTO.MemberType(txtTitle.Text);
+                    if (new MemberTypeDAO().AddMemberType(memberType))
+                    {
+                        txtTitle.Clear();
+                        dgvMemberType.DataSource = new DAO.MemberTypeDAO().GetAllMemberTypes().Tables[0];
+                        id = 0;
+                    }
+                    else
+                    {
+                        MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
+                    }
+                }
+            }
+            else
+            {
+                DTO.MemberType memebrType = new DTO.MemberType(id, txtTitle.Text);
+                if (new MemberTypeDAO().UdateMemberType(memebrType))
+                {
+                    txtTitle.Clear();
+                    dgvMemberType.DataSource = new DAO.MemberTypeDAO().GetAllMemberTypes().Tables[0];
+                    id = 0;
+                    btnDelete.Visible = false;
+                }
+                else
+                {
+                    MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
+                }
+            }
+        }
+
+        private void FrmMemberType_Load(object sender, EventArgs e)
+        {
+            txtTitle.Focus();
+            DataSet dataSet = new MemberTypeDAO().GetAllMemberTypes();
+            dgvMemberType.DataSource = dataSet.Tables[0];
+            Utility.setGridHeaderText("ល.រ|ប្រភេទសមាជិក", dgvMemberType);
+            Utility.setGridHeaderWidth("100", dgvMemberType);
+        }
+
+        private void dgvMemberType_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                id = System.Convert.ToInt32(dgvMemberType.CurrentRow.Cells[0].Value);
+                txtTitle.Text = dgvMemberType.CurrentRow.Cells[1].Value.ToString();
+                btnDelete.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
         }
     }

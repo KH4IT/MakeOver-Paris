@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MakeOver_Paris.DAO;
+using MakeOver_Paris.DTO;
 
 namespace MakeOver_Paris.Forms.Product
 {
     public partial class ProductInStock : Form
     {
+        private int id;
         public ProductInStock()
         {
             InitializeComponent();
@@ -34,7 +37,44 @@ namespace MakeOver_Paris.Forms.Product
 
         private void Save_Click(object sender, EventArgs e)
         {
+            if (id == 0)
+            {
+                if (txtQuantity.Text == "")
+                {
+                    MessageBox.Show("សូមបំពេញពត៏មានឲ្យបានត្រឹមត្រូវ!!!");
+                }
+                else
+                {
+                    DTO.StoreProduct storeProduct = new DTO.StoreProduct((int)cbStock.SelectedValue, (int)cbProduct.SelectedValue, System.Convert.ToDecimal(txtQuantity.Text), System.Convert.ToDecimal(txtQuantityReturn.Text));
+                    if (new StoreProductDAO().AddStoreProduct(storeProduct))
+                    {
+                        txtQuantity.Clear();
+                        txtQuantityReturn.Clear();
+                        dgvStoreProduct.DataSource = new DAO.StoreProductDAO().GetAllStoreProducts().Tables[0];
+                        id = 0;
+                    }
+                    else
+                    {
+                        MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
+                    }
+                }
+            }
+            else
+            {
+                DTO.StoreProduct storeProduct = new DTO.StoreProduct((int)cbStock.SelectedValue, (int)cbProduct.SelectedValue, System.Convert.ToDecimal(txtQuantity.Text), System.Convert.ToDecimal(txtQuantityReturn.Text));
+                if (new StoreProductDAO().UdateStoreProduct(storeProduct))
+                {
+                    txtQuantity.Clear();
+                    txtQuantityReturn.Clear();
+                    dgvStoreProduct.DataSource = new DAO.StoreProductDAO().GetAllStoreProducts().Tables[0];
+                    id = 0;
+                    delete.Visible = false;
+                }
+                else
+                {
 
+                }
+            }
         }
 
         private void ProductInStock_Load(object sender, EventArgs e)
@@ -48,8 +88,51 @@ namespace MakeOver_Paris.Forms.Product
             cbProduct.DisplayMember = "productname";
             cbProduct.ValueMember = "productid";
 
+            DataSet dataSet = new StoreProductDAO().GetAllStoreProducts();
+            dgvStoreProduct.DataSource = dataSet.Tables[0];
+            Utility.setGridHeaderText("ឈ្មោះស្តុក|ឈ្មោះទំនិញ|បរិមាណ|បរិមាណប្តូវិញ", dgvStoreProduct);
+            Utility.setGridHeaderWidth("200|300", dgvStoreProduct);
+
         }
 
+        private void dgvStoreProduct_DoubleClick(object sender, EventArgs e)
+        {
+            try
+            {
+                //id = System.Convert.ToInt32(dgvStoreProduct.CurrentRow.Cells[0].Value);
+                cbStock.Text = dgvStoreProduct.CurrentRow.Cells[0].Value.ToString();
+                cbProduct.Text = dgvStoreProduct.CurrentRow.Cells[1].Value.ToString();
+                txtQuantity.Text = dgvStoreProduct.CurrentRow.Cells[2].Value.ToString();
+                txtQuantityReturn.Text = dgvStoreProduct.CurrentRow.Cells[3].Value.ToString();
+                delete.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+        }
 
+        private void delete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("តើអ្នកពិតជាចង់លុបទិន្នន័យនេះមែនទេ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (new StoreProductDAO().DeleteStoreProduct((int)cbStock.SelectedValue))
+                {
+                    txtQuantity.Clear();
+                    txtQuantityReturn.Clear();
+                    delete.Visible = false;
+                    dgvStoreProduct.DataSource = new DAO.StoreProductDAO().GetAllStoreProducts().Tables[0];
+                    id = 0;
+                }
+                else
+                {
+                    MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
+                }
+            }
+            else
+            {
+                // user clicked no
+            }
+        }
     }
 }

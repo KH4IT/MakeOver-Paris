@@ -71,6 +71,7 @@
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "រក្សាទុក";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label3
             // 
@@ -254,6 +255,7 @@
             this.dgvMemberType.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMemberType.Size = new System.Drawing.Size(1000, 485);
             this.dgvMemberType.TabIndex = 0;
+            this.dgvMemberType.DoubleClick += new System.EventHandler(this.dgvMemberType_DoubleClick);
             // 
             // FrmMemberType
             // 
@@ -268,6 +270,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmMemberType";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmMemberType_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmMemberType_KeyDown);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
