@@ -121,7 +121,7 @@ namespace MakeOver_Paris.DAO
 								, staffname
 								, remark
                             FROM transactions
-                            INNER JOIN 
+                            LEFT JOIN 
                                 staffs
                             ON staffs.staffid = transactions.createdby";
                 DataSet ds = DBUtility.ExecuteQuery(sql);
