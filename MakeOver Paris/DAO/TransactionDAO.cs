@@ -148,8 +148,7 @@ namespace MakeOver_Paris.DAO
 								, staffname
 								, remark
                             FROM transactions
-                            INNER JOIN staffs
-                            ON staffs.staffid = transactions.createdby 
+                            LEFT JOIN staffs ON staffs.staffid = transactions.createdby 
                             WHERE DATE(transactiondate) BETWEEN @p1 AND @p2
                             ORDER BY transactiondate";
                 DataSet ds = DBUtility.ExecuteQuery(sql, Convert.ToDateTime(startDate).ToString("yyyy-MM-dd"), Convert.ToDateTime(endDate).ToString("yyyy-MM-dd"));
