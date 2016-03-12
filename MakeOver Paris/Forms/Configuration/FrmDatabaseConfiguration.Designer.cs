@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDatabaseConfiguration));
             this.btn_exit = new System.Windows.Forms.Button();
             this.btn_configure = new System.Windows.Forms.Button();
             this.txt_pwd = new System.Windows.Forms.TextBox();
@@ -177,6 +178,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_server);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "FrmDatabaseConfiguration";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

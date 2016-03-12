@@ -31,10 +31,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMembers));
             this.label3 = new System.Windows.Forms.Label();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
+            this.cbMemberType = new System.Windows.Forms.ComboBox();
             this.delete = new System.Windows.Forms.Button();
             this.Save = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -56,8 +59,6 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.dgvMember = new System.Windows.Forms.DataGridView();
             this.Panel1 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.cbMemberType = new System.Windows.Forms.ComboBox();
             this.panel6.SuspendLayout();
             this.Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
@@ -110,6 +111,18 @@
             this.panel6.Size = new System.Drawing.Size(1001, 202);
             this.panel6.TabIndex = 5;
             // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label11.Location = new System.Drawing.Point(64, 142);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(114, 27);
+            this.label11.TabIndex = 37;
+            this.label11.Text = "ប្រភេទសមាជិក:";
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -120,6 +133,16 @@
             this.label13.Size = new System.Drawing.Size(26, 23);
             this.label13.TabIndex = 24;
             this.label13.Text = "%";
+            // 
+            // cbMemberType
+            // 
+            this.cbMemberType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMemberType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMemberType.FormattingEnabled = true;
+            this.cbMemberType.Location = new System.Drawing.Point(193, 142);
+            this.cbMemberType.Name = "cbMemberType";
+            this.cbMemberType.Size = new System.Drawing.Size(499, 26);
+            this.cbMemberType.TabIndex = 36;
             // 
             // delete
             // 
@@ -423,28 +446,6 @@
             this.Panel1.Size = new System.Drawing.Size(1032, 743);
             this.Panel1.TabIndex = 5;
             // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label11.Location = new System.Drawing.Point(64, 142);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(114, 27);
-            this.label11.TabIndex = 37;
-            this.label11.Text = "ប្រភេទសមាជិក:";
-            // 
-            // cbMemberType
-            // 
-            this.cbMemberType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMemberType.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMemberType.FormattingEnabled = true;
-            this.cbMemberType.Location = new System.Drawing.Point(193, 142);
-            this.cbMemberType.Name = "cbMemberType";
-            this.cbMemberType.Size = new System.Drawing.Size(499, 26);
-            this.cbMemberType.TabIndex = 36;
-            // 
             // FrmMembers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -453,6 +454,7 @@
             this.ClientSize = new System.Drawing.Size(1032, 743);
             this.Controls.Add(this.Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "FrmMembers";
             this.Text = "FrmMembers";

@@ -28,11 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmExchangeProductNew));
             this.Label2 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cboOldProduct = new System.Windows.Forms.ComboBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cboNewProduct = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtInvoiceCode = new System.Windows.Forms.TextBox();
@@ -42,10 +47,6 @@
             this.Label1 = new System.Windows.Forms.Label();
             this.Panel3 = new System.Windows.Forms.Panel();
             this.Panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cboNewProduct = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtQuantity = new System.Windows.Forms.TextBox();
             this.panel6.SuspendLayout();
             this.Panel1.SuspendLayout();
             this.Panel2.SuspendLayout();
@@ -84,7 +85,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(89, 27);
             this.label11.TabIndex = 35;
-            this.label11.Text = "ទំនីញចាស់ៈ";
+            this.label11.Text = "ទំនិញចាស់ៈ";
             // 
             // cboOldProduct
             // 
@@ -95,6 +96,7 @@
             this.cboOldProduct.Name = "cboOldProduct";
             this.cboOldProduct.Size = new System.Drawing.Size(398, 26);
             this.cboOldProduct.TabIndex = 3;
+            this.cboOldProduct.SelectedIndexChanged += new System.EventHandler(this.cboOldProduct_SelectedIndexChanged_1);
             // 
             // panel6
             // 
@@ -111,6 +113,49 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1001, 245);
             this.panel6.TabIndex = 5;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label5.Location = new System.Drawing.Point(219, 107);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(52, 27);
+            this.label5.TabIndex = 39;
+            this.label5.Text = "ចំនួនៈ";
+            // 
+            // txtQuantity
+            // 
+            this.txtQuantity.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtQuantity.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQuantity.Location = new System.Drawing.Point(300, 107);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(398, 27);
+            this.txtQuantity.TabIndex = 38;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.label4.Location = new System.Drawing.Point(203, 74);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 27);
+            this.label4.TabIndex = 37;
+            this.label4.Text = "ទំនិញថ្មីៈ";
+            // 
+            // cboNewProduct
+            // 
+            this.cboNewProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboNewProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboNewProduct.FormattingEnabled = true;
+            this.cboNewProduct.Location = new System.Drawing.Point(300, 75);
+            this.cboNewProduct.Name = "cboNewProduct";
+            this.cboNewProduct.Size = new System.Drawing.Size(398, 26);
+            this.cboNewProduct.TabIndex = 36;
             // 
             // btnSave
             // 
@@ -151,6 +196,7 @@
             this.txtInvoiceCode.Name = "txtInvoiceCode";
             this.txtInvoiceCode.Size = new System.Drawing.Size(398, 27);
             this.txtInvoiceCode.TabIndex = 0;
+            this.txtInvoiceCode.Leave += new System.EventHandler(this.txtInvoiceCode_Leave_1);
             // 
             // Panel1
             // 
@@ -217,49 +263,6 @@
             this.Panel4.Size = new System.Drawing.Size(1008, 313);
             this.Panel4.TabIndex = 4;
             // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label4.Location = new System.Drawing.Point(203, 74);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 27);
-            this.label4.TabIndex = 37;
-            this.label4.Text = "ទំនីញថ្មីៈ";
-            // 
-            // cboNewProduct
-            // 
-            this.cboNewProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboNewProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboNewProduct.FormattingEnabled = true;
-            this.cboNewProduct.Location = new System.Drawing.Point(300, 75);
-            this.cboNewProduct.Name = "cboNewProduct";
-            this.cboNewProduct.Size = new System.Drawing.Size(398, 26);
-            this.cboNewProduct.TabIndex = 36;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Khmer OS Content", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.label5.Location = new System.Drawing.Point(219, 107);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 27);
-            this.label5.TabIndex = 39;
-            this.label5.Text = "ចំនួនៈ";
-            // 
-            // txtQuantity
-            // 
-            this.txtQuantity.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtQuantity.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantity.Location = new System.Drawing.Point(300, 107);
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(398, 27);
-            this.txtQuantity.TabIndex = 38;
-            // 
             // FrmExchangeProductNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,6 +271,7 @@
             this.ClientSize = new System.Drawing.Size(1051, 745);
             this.Controls.Add(this.Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmExchangeProductNew";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmExchangeProductNew";

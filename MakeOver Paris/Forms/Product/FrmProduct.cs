@@ -174,11 +174,11 @@ namespace MakeOver_Paris.Forms.Product
             //cbBranch.DisplayMember = "storename";
             //cbBranch.ValueMember = "storeid";
             //CUSTOM GRID
-            Utility.setGridHeaderText("ល.រ|លេខទំនិញ|បារកូដ|ឈ្មោះ|តម្លៃទិញចូល|តម្លៃលក់ចេញ|បង្កើតដោយ|កែប្រែដោយ", dgvProduct);
+            Utility.setGridHeaderText("ល.រ|លេខទំនិញ|បារកូដ|ឈ្មោះ|តម្លៃទិញចូល|តម្លៃលក់ចេញ|បង្កើតដោយ|កែប្រែដោយ|បង្កើតថ្ងៃ|កែប្រែថ្ងៃ|បរិយាយ|កំណត់សំគាល់|ប្រភេទ|បិរយាយ|កំណត់សំគាល់", dgvProduct);
             Utility.setGridHeaderWidth("30", dgvProduct);
-            dgvProduct.Columns[10].Visible = false;
-            dgvProduct.Columns[11].Visible = false;
-            dgvProduct.Columns[12].Visible = false;
+            //dgvProduct.Columns[10].Visible = false;
+            //dgvProduct.Columns[11].Visible = false;
+            //dgvProduct.Columns[12].Visible = false;
             delete.Visible = false;
 
         }

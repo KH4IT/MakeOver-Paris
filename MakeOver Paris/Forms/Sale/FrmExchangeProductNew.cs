@@ -19,16 +19,23 @@ namespace MakeOver_Paris.Forms.Sale
 
         private void txtInvoiceCode_Leave(object sender, EventArgs e)
         {
-            cboOldProduct.Items.Clear();
-            //List Product from Invoice to Old Combo
-            int invoiceid = int.Parse(txtInvoiceCode.Text.Substring(9));
-
-            DTO.Invoice invoice = new DAO.InvoiceDAO().getInvoice(invoiceid);
-            for (int i = 0; i < invoice.InvoiceDetail.Count; i++)
+            try
             {
-                DTO.Product product = ((DTO.InvoiceDetail)invoice.InvoiceDetail[i]).Product;
-                Item item = new Item(product.Productname, product.Productid);
-                cboOldProduct.Items.Add(item);
+                cboOldProduct.Items.Clear();
+                //List Product from Invoice to Old Combo
+                int invoiceid = int.Parse(txtInvoiceCode.Text.Substring(2));
+
+                DTO.Invoice invoice = new DAO.InvoiceDAO().getInvoice(invoiceid);
+                for (int i = 0; i < invoice.InvoiceDetail.Count; i++)
+                {
+                    DTO.Product product = ((DTO.InvoiceDetail)invoice.InvoiceDetail[i]).Product;
+                    Item item = new Item(product.Productname, product.Productid);
+                    cboOldProduct.Items.Add(item);
+                }
+            }
+            catch (Exception e1)
+            {
+                MessageBox.Show("សូមបំពេញពត័មានឲ្យបានត្រឺមត្រូវ");
             }
 
         }
@@ -65,13 +72,26 @@ namespace MakeOver_Paris.Forms.Sale
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            new DAO.InvoiceDAO().exchangeProduct(int.Parse(txtInvoiceCode.Text.Substring(9)), ((Item)cboOldProduct.SelectedItem).Value, (int)cboNewProduct.SelectedValue, decimal.Parse(txtQuantity.Text));
+            if(txtQuantity.Text!=""){
+                new DAO.InvoiceDAO().exchangeProduct(int.Parse(txtInvoiceCode.Text.Substring(9)), ((Item)cboOldProduct.SelectedItem).Value, (int)cboNewProduct.SelectedValue, decimal.Parse(txtQuantity.Text));
+                this.Dispose();
+            }
 
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void txtInvoiceCode_Leave_1(object sender, EventArgs e)
+        {
+            txtInvoiceCode_Leave(sender, e);
+        }
+
+        private void cboOldProduct_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            cboOldProduct_SelectedIndexChanged(sender, e);
         }
     }
 }

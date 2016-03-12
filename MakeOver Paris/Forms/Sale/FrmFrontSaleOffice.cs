@@ -17,6 +17,7 @@ namespace MakeOver_Paris.Forms.Sale
             InitializeComponent();
         }
 
+        String oldValue = "";
         private void button1_Click(object sender, EventArgs e)
         {
             if (UserSession.Session.Staff.Stafftype.ToLower() == "admin")
@@ -240,7 +241,59 @@ namespace MakeOver_Paris.Forms.Sale
 
         private void grdItems_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            row_calculate(e.RowIndex);
+            for (int i = 0; i < grdItems.Rows.Count; i++)
+            {
+                for (int j = 0; j < grdItems.Rows[i].Cells.Count; j++)
+                {
+                    if (grdItems.Rows[i].Cells[j].Value==null)
+                    {
+                        grdItems.Rows[i].Cells[j].Value = 1;
+                    }
+                }
+            }
+            DTO.Product product = new DAO.ProductDAO().getProductById(grdItems.CurrentRow.Cells[7].Value.ToString(), UserSession.Session.Staff.StoreId);
+            if (product != null)
+            {
+                int row = checkInGrid(product.Productid);
+                if (row == -1)
+                {
+                    if (product.Quantity >= 1)
+                    {
+                        grdItems.Rows.Add(grdItems.RowCount + 1, product.Productname, 1, product.Priceout, 0, product.Priceout, "-", product.Productid, product.Pricein);
+                        row_calculate(e.RowIndex);
+                    }
+                    else
+                    {
+                        MessageBox.Show("No Product In Stock");
+                        //MessageBox.Show(grdItems.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
+                        //grdItems.Rows[row].Cells[2].Value = oldValue;
+                    }
+                }
+                else
+                {
+                    if (product.Quantity > int.Parse(grdItems.Rows[row].Cells[2].Value.ToString()))
+                    {
+                        grdItems.Rows[row].Cells[2].Value = int.Parse(grdItems.Rows[row].Cells[2].Value.ToString());
+                        decimal subtotal = (decimal.Parse(grdItems.Rows[row].Cells[2].Value.ToString()) * decimal.Parse(grdItems.Rows[row].Cells[3].Value.ToString()));
+                        decimal discount = subtotal * decimal.Parse(grdItems.Rows[row].Cells[4].Value.ToString()) / 100;
+                        row_calculate(e.RowIndex);
+                        grdItems.Rows[row].Cells[5].Value = subtotal - discount;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Not enought product in stock");
+                        //grdItems.CancelEdit();
+                        //grdItems.RefreshEdit();
+                        grdItems.Rows[row].Cells[2].Value = oldValue;
+                    }
+
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("No Product Found");
+            }
         }
 
         private void row_calculate(int row)
@@ -255,6 +308,24 @@ namespace MakeOver_Paris.Forms.Sale
         {
             //new FrmExchageProduct().Show();
             new FrmExchangeProductNew().Show();
+        }
+
+        private void grdItems_CellLeave(object sender, DataGridViewCellEventArgs e)
+        {
+        
+        }
+
+        private void grdItems_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            try
+            {
+                oldValue = grdItems[e.ColumnIndex, e.RowIndex].Value.ToString();
+                //MessageBox.Show(oldValue);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
 
 

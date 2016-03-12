@@ -24,8 +24,8 @@ namespace MakeOver_Paris.DAO
                 try
                 {
                    
-                    const string SQL = @"INSERT INTO products (productcode,barcode,productname,description,pricein,priceout,remark,createddate,createdby,categoryid)" +
-                                       "VALUES(@productcode,@barcode,@productname,@description,@pricein,@priceout,@remark,CURRENT_TIMESTAMP(),@createdby,@categoryid)";
+                    const string SQL = @"INSERT INTO products (productcode,barcode,productname,description,pricein,priceout,remark,createddate,createdby,categoryid,updateddate,updatedby)" +
+                                       "VALUES(@productcode,@barcode,@productname,@description,@pricein,@priceout,@remark,CURRENT_TIMESTAMP(),@createdby,@categoryid,CURRENT_TIMESTAMP(),@updatedby)";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
                     command.Parameters.AddWithValue("@productcode", product.Productcode);
@@ -37,6 +37,7 @@ namespace MakeOver_Paris.DAO
                     command.Parameters.AddWithValue("@remark", product.Remark);
                     command.Parameters.AddWithValue("@createdby", product.Createdby.Staffid);
                     command.Parameters.AddWithValue("@categoryid", product.Category.Categoryid);
+                    command.Parameters.AddWithValue("@updatedby", product.Createdby.Staffid);
                     if (command.ExecuteNonQuery() > 0)
                     {
                         transaction.Commit();
@@ -140,12 +141,14 @@ namespace MakeOver_Paris.DAO
         {
             try
             {
-                const string SQL = @"SELECT productid
+                const string SQL = @"SELECT products.productid
                                           , productcode
                                           , barcode
                                           , productname
+                                          , A.quantity
                                           , pricein
                                           , priceout
+                                          , A.returnquantity
                                           , (SELECT staffname FROM staffs WHERE staffs.staffid = products.createdby) AS createdby
                                           , (SELECT staffname FROM staffs WHERE staffs.staffid = products.updatedby) AS createdby
                                           , createddate
@@ -154,6 +157,7 @@ namespace MakeOver_Paris.DAO
                                           , description 
                                           , remark
                                     FROM products 
+                                    LEFT JOIN storeproduct A ON A.productid = products.productid
                                     LEFT JOIN categories ON products.categoryid = categories.categoryid";
                 DataSet ds = DBUtility.ExecuteQuery(SQL);
                 return ds;
@@ -297,8 +301,61 @@ namespace MakeOver_Paris.DAO
                         product.Productname = DBUtility.SafeGetString(reader, "productname");
                         product.Quantity = reader.GetInt16("quantity");
                         product.Description = DBUtility.SafeGetString(reader, "description");
-                        product.Pricein = reader.GetInt16("pricein");
-                        product.Priceout = reader.GetInt16("priceout");
+                        product.Pricein = reader.GetDecimal("pricein");
+                        product.Priceout = reader.GetDecimal("priceout");
+                        product.Returnquantity = reader.GetInt16("returnquantity");
+                        product.Remark = DBUtility.SafeGetString(reader, "remark");
+                        product.Createddate = reader.GetDateTime("createddate");
+                        Staff createdby = new Staff();
+                        createdby.Staffid = reader.GetInt16("createdby");
+                        Staff updatedby = new Staff();
+                        updatedby.Staffid = reader.GetInt16("updatedby");
+                        product.Createdby = createdby;
+                        product.Updatedby = updatedby;
+                        product.Updateddate = reader.GetDateTime("updateddate");
+                        Category category = new Category();
+                        category.Categoryid = reader.GetInt16("categoryid");
+                        product.Category = category;
+                    }
+                    return product;
+                }
+                catch (MySqlException e)
+                {
+                    Console.WriteLine(e);
+                }
+                finally
+                {
+                    cnn.Close();
+                }
+            }
+            return null;
+        }
+
+        public Product getProductById(String productId, int storeid)
+        {
+            MySqlConnection cnn = DBUtility.getConnection();
+            if (cnn != null)
+            {
+                try
+                {
+                    cnn.Open();
+                    const string SQL = "SELECT P.productid,productcode,barcode,productname,description,pricein,priceout,remark,createddate,createdby,updateddate,updatedby,categoryid, Quantity, ReturnQuantity FROM products P LEFT JOIN StoreProduct SP ON P.productid=SP.productid WHERE P.productid=@productId AND SP.storeid = @storeid;";
+                    MySqlCommand command = new MySqlCommand(SQL, cnn); command.Prepare();
+                    command.Parameters.AddWithValue("@productId", productId);
+                    command.Parameters.AddWithValue("@storeid", storeid);
+                    MySqlDataReader reader = command.ExecuteReader();
+                    Product product = null;
+                    while (reader.Read())
+                    {
+                        product = new Product();
+                        product.Productid = reader.GetInt16("productid");
+                        product.Productcode = DBUtility.SafeGetString(reader, "productcode");
+                        product.Barcode = DBUtility.SafeGetString(reader, "barcode");
+                        product.Productname = DBUtility.SafeGetString(reader, "productname");
+                        product.Quantity = reader.GetInt16("quantity");
+                        product.Description = DBUtility.SafeGetString(reader, "description");
+                        product.Pricein = reader.GetDecimal("pricein");
+                        product.Priceout = reader.GetDecimal("priceout");
                         product.Returnquantity = reader.GetInt16("returnquantity");
                         product.Remark = DBUtility.SafeGetString(reader, "remark");
                         product.Createddate = reader.GetDateTime("createddate");

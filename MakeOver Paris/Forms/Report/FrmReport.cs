@@ -115,7 +115,7 @@ namespace MakeOver_Paris.Forms.Report
                 }
                 else if (cbxReportType.SelectedIndex == 6)
                 {
-                    dgvReport.Rows.Clear();
+                    //filterStaffComission();
                     cboStaffs.Visible = true;
                     VisibleFilter();
                 }

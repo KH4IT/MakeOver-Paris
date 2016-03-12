@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -109,10 +109,10 @@
     <Compile Include="Forms\Branch\FrmBranch.Designer.cs">
       <DependentUpon>FrmBranch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Category\FrmCategory.cs">
+    <Compile Include="Forms\History\Category\FrmCategory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Category\FrmCategory.Designer.cs">
+    <Compile Include="Forms\History\Category\FrmCategory.Designer.cs">
       <DependentUpon>FrmCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Configuration\FrmDatabaseConfiguration.cs">
@@ -326,7 +326,7 @@
     <EmbeddedResource Include="Forms\Branch\FrmBranch.resx">
       <DependentUpon>FrmBranch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Category\FrmCategory.resx">
+    <EmbeddedResource Include="Forms\History\Category\FrmCategory.resx">
       <DependentUpon>FrmCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Configuration\FrmDatabaseConfiguration.resx">

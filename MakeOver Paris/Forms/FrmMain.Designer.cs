@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.pnMain = new System.Windows.Forms.Panel();
             this.button7 = new System.Windows.Forms.Button();
             this.btnProductStock = new System.Windows.Forms.Button();
@@ -380,6 +381,7 @@
             this.ClientSize = new System.Drawing.Size(1294, 530);
             this.Controls.Add(this.pnMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "FrmMain";
             this.Text = "frmMain";

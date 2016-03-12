@@ -98,5 +98,28 @@ namespace MakeOver_Paris.Forms.Member
                 Console.WriteLine(ex);
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("តើអ្នកពិតជាចង់លុបទិន្នន័យនេះមែនទេ?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (new MemberTypeDAO().DeleteMemberType(id))
+                {
+                    txtTitle.Clear();
+                    btnDelete.Visible = false;
+                    dgvMemberType.DataSource = new DAO.MemberTypeDAO().GetAllMemberTypes().Tables[0];
+                    id = 0;
+                }
+                else
+                {
+                    MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
+                }
+            }
+            else
+            {
+                // user clicked no
+            }
+            
+        }
     }
 }

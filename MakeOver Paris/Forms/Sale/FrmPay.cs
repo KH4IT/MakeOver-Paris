@@ -67,12 +67,12 @@ namespace MakeOver_Paris.Forms.Sale
         decimal exchangerate = 0;
         private void txtRecieve_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.AllowOnlyNumber(sender, e);
+            Utility.AllowOnlyDecimalNumber(sender, e);
         }
 
         private void txtRecieveRiel_KeyPress(object sender, KeyPressEventArgs e)
         {
-            Utility.AllowOnlyNumber(sender, e);
+            Utility.AllowOnlyDecimalNumber(sender, e);
         }
 
         private void txtRecieve_TextChanged(object sender, EventArgs e)

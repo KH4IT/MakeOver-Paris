@@ -33,9 +33,9 @@ namespace MakeOver_Paris.Forms.Sale
                             FROM ProductInStock;
 
 
-                            SET @sql = CONCAT('SELECT Productid, ProductName, ', @sql, ' 
+                            SET @sql = CONCAT('SELECT Productid, barcode AS Barcode, ProductName, ', @sql, ' 
                                               FROM ProductInStock 
-                                              GROUP BY ProductId, ProductName');
+                                              GROUP BY ProductId,2, ProductName');
 
                             PREPARE stmt FROM @sql;
                             EXECUTE stmt;
@@ -58,6 +58,22 @@ namespace MakeOver_Paris.Forms.Sale
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void txtProductBarcode_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView1.DataSource;
+            bs.Filter = "Barcode LIKE '%" + txtProductBarcode.Text + "%'";
+            dataGridView1.DataSource = bs;
+        }
+
+        private void txtProductName_TextChanged(object sender, EventArgs e)
+        {
+            BindingSource bs = new BindingSource();
+            bs.DataSource = dataGridView1.DataSource;
+            bs.Filter = "ProductName LIKE '%" + txtProductName.Text + "%'";
+            dataGridView1.DataSource = bs;
         }
     }
 }

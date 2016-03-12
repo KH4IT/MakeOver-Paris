@@ -187,7 +187,7 @@ namespace MakeOver_Paris.DAO
                                 FROM Staffs S INNER JOIN Invoices I ON I.staffid=S.staffid 
                                 INNER JOIN InvoiceDetail ID ON I.Invoiceid=ID.Invoiceid 
                                 INNER JOIN Products P ON ID.Productid=P.Productid
-                                WHERE S.StaffID=@p1 AND I.Invoicedate BETWEEN @p2 AND @p3";
+                                WHERE S.StaffID=@p1 AND DATE(I.Invoicedate) BETWEEN @p2 AND @p3";
                 DataSet ds = DBUtility.ExecuteQuery(sql, staffid, Convert.ToDateTime(startDate).ToString("yyyy-MM-dd"), Convert.ToDateTime(endDate).ToString("yyyy-MM-dd"));
                 return ds;
             }
