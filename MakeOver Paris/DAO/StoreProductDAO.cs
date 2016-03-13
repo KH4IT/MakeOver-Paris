@@ -19,6 +19,17 @@ namespace MakeOver_Paris.DAO
             if (cnn != null)
             {
                 cnn.Open();
+
+                MySqlCommand cmd_checkstock = new MySqlCommand("SELECT COUNT(*) FROM StoreProduct WHERE Storeid=@storeid AND productid=@Productid", cnn);
+                cmd_checkstock.Prepare();
+                cmd_checkstock.Parameters.AddWithValue("@storeid", storeProduct.StoreId);
+                cmd_checkstock.Parameters.AddWithValue("@productid", storeProduct.ProductId);
+                int record = int.Parse(cmd_checkstock.ExecuteScalar().ToString());
+                if (record > 0)
+                {
+                    return false;
+                }
+
                 MySqlTransaction transaction = cnn.BeginTransaction();
                 try
                 {
@@ -38,9 +49,9 @@ namespace MakeOver_Paris.DAO
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
                     command.Parameters.AddWithValue("@storeid", storeProduct.StoreId);
-                    command.Parameters.AddWithValue(@"productid", storeProduct.ProductId);
-                    command.Parameters.AddWithValue(@"quantity", storeProduct.Quantity);
-                    command.Parameters.AddWithValue(@"returnquantity", storeProduct.ReturnQuantity);
+                    command.Parameters.AddWithValue("@productid", storeProduct.ProductId);
+                    command.Parameters.AddWithValue("@quantity", storeProduct.Quantity);
+                    command.Parameters.AddWithValue("@returnquantity", storeProduct.ReturnQuantity);
                     if (command.ExecuteNonQuery() > 0)
                     {
                         transaction.Commit();
@@ -105,12 +116,10 @@ namespace MakeOver_Paris.DAO
                     const string SQL = @"UPDATE 
 											storeproduct 
 										SET 
-											storeid = @storeid
-                                            , productid = @productid
-                                            , quantity = @quantity
+                                              quantity = @quantity
                                             , returnquantity = @returnquantity 
 										WHERE 
-											storeid = @storeid";
+											storeid = @storeid AND productid = @productid";
                     MySqlCommand command = new MySqlCommand(SQL, cnn);
                     command.Prepare();
                     command.Parameters.AddWithValue("@storeid", storeProduct.StoreId);

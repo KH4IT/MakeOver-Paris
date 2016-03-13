@@ -14,7 +14,7 @@ namespace MakeOver_Paris.Forms.Product
 {
     public partial class ProductInStock : Form
     {
-        private int id;
+        private bool update;
         public ProductInStock()
         {
             InitializeComponent();
@@ -37,7 +37,7 @@ namespace MakeOver_Paris.Forms.Product
 
         private void Save_Click(object sender, EventArgs e)
         {
-            if (id == 0)
+            if (update == false)
             {
                 if (txtQuantity.Text == "" || txtQuantityReturn.Text == "")
                 {
@@ -51,11 +51,11 @@ namespace MakeOver_Paris.Forms.Product
                         txtQuantity.Clear();
                         txtQuantityReturn.Clear();
                         dgvStoreProduct.DataSource = new DAO.StoreProductDAO().GetAllStoreProducts().Tables[0];
-                        id = 0;
+                        update = false;
                     }
                     else
                     {
-                        MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!!");
+                        MessageBox.Show("ប្រតិបត្តិការណ៍បរាជ័យ!!! សូម​ធ្វើ​ការ​កែ​ប្រែ​លើ​ទិន្នន៍យចាស់");
                     }
                 }
             }
@@ -67,7 +67,7 @@ namespace MakeOver_Paris.Forms.Product
                     txtQuantity.Clear();
                     txtQuantityReturn.Clear();
                     dgvStoreProduct.DataSource = new DAO.StoreProductDAO().GetAllStoreProducts().Tables[0];
-                    id = 0;
+                    update = false;
                     delete.Visible = false;
                 }
                 else
@@ -99,7 +99,7 @@ namespace MakeOver_Paris.Forms.Product
         {
             try
             {
-                //id = System.Convert.ToInt32(dgvStoreProduct.CurrentRow.Cells[0].Value);
+                update = true;
                 cbStock.Text = dgvStoreProduct.CurrentRow.Cells[0].Value.ToString();
                 cbProduct.Text = dgvStoreProduct.CurrentRow.Cells[1].Value.ToString();
                 txtQuantity.Text = dgvStoreProduct.CurrentRow.Cells[2].Value.ToString();
@@ -125,7 +125,7 @@ namespace MakeOver_Paris.Forms.Product
                     txtQuantityReturn.Clear();
                     delete.Visible = false;
                     dgvStoreProduct.DataSource = new DAO.StoreProductDAO().GetAllStoreProducts().Tables[0];
-                    id = 0;
+                    update = false;
                 }
                 else
                 {

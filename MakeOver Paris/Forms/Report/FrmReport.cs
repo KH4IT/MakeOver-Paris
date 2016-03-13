@@ -88,7 +88,7 @@ namespace MakeOver_Paris.Forms.Report
                 {
                     InvisibleFilter();
                     dgvReport.DataSource = productDAO.getAllProductDS().Tables[0];
-                    Utility.setGridHeaderText("ល.រ|លេខទំនិញ|បារកូដ|ឈ្មោះ|បរិមាណ|តម្លៃទិញចូល|តម្លៃលក់ចេញ|បរិមាណប្តូរវិញ|បង្កើតដោយ|កែប្រែដោយ|កាលបរិច្ឆេទបង្កើត|កាលបរិច្ឆេទកែប្រែ|ប្រភេទ|បរិយាយ|កំណត់ចំណាំ", dgvReport);
+                    Utility.setGridHeaderText("ល.រ|លេខទំនិញ|បារកូដ|ឈ្មោះ|បរិមាណ|សាខា|តម្លៃទិញចូល|តម្លៃលក់ចេញ|បរិមាណប្តូរវិញ|បង្កើតដោយ|កែប្រែដោយ|កាលបរិច្ឆេទបង្កើត|កាលបរិច្ឆេទកែប្រែ|ប្រភេទ|បរិយាយ|កំណត់ចំណាំ", dgvReport);
                     Utility.setGridHeaderWidth("30", dgvReport);
                 }
                 else if (cbxReportType.SelectedIndex == 3)

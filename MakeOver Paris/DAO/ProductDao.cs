@@ -146,6 +146,7 @@ namespace MakeOver_Paris.DAO
                                           , barcode
                                           , productname
                                           , A.quantity
+                                          , S.Storename
                                           , pricein
                                           , priceout
                                           , A.returnquantity
@@ -158,6 +159,7 @@ namespace MakeOver_Paris.DAO
                                           , remark
                                     FROM products 
                                     LEFT JOIN storeproduct A ON A.productid = products.productid
+                                    LEFT JOIN STORES S ON A.Storeid = S.Storeid
                                     LEFT JOIN categories ON products.categoryid = categories.categoryid";
                 DataSet ds = DBUtility.ExecuteQuery(SQL);
                 return ds;

@@ -118,11 +118,11 @@ namespace MakeOver_Paris.Forms.Product
                 txtProductCode.Text = dgvProduct.CurrentRow.Cells[1].Value.ToString();
                 txtBarcode.Text = dgvProduct.CurrentRow.Cells[2].Value.ToString();
                 txtName.Text = dgvProduct.CurrentRow.Cells[3].Value.ToString();
-                txtDescription.Text = dgvProduct.CurrentRow.Cells[13].Value.ToString();
-                txtPriceIn.Text = dgvProduct.CurrentRow.Cells[4].Value.ToString();
-                txtPriceOut.Text = dgvProduct.CurrentRow.Cells[5].Value.ToString();
-                txtRemark.Text = dgvProduct.CurrentRow.Cells[14].Value.ToString();
-                cboCategory.SelectedValue = dgvProduct.CurrentRow.Cells[12].Value.ToString();
+                txtDescription.Text = dgvProduct.CurrentRow.Cells[14].Value.ToString();
+                txtPriceIn.Text = dgvProduct.CurrentRow.Cells[6].Value.ToString();
+                txtPriceOut.Text = dgvProduct.CurrentRow.Cells[7].Value.ToString();
+                txtRemark.Text = dgvProduct.CurrentRow.Cells[15].Value.ToString();
+                cboCategory.SelectedValue = dgvProduct.CurrentRow.Cells[13].Value.ToString();
                 
             }
             catch (Exception ex)
@@ -174,7 +174,7 @@ namespace MakeOver_Paris.Forms.Product
             //cbBranch.DisplayMember = "storename";
             //cbBranch.ValueMember = "storeid";
             //CUSTOM GRID
-            Utility.setGridHeaderText("ល.រ|លេខទំនិញ|បារកូដ|ឈ្មោះ|បរិមាណ|តម្លៃទិញចូល|តម្លៃលក់ចេញ|បរិមាណប្តូរវិញ|បង្កើតដោយ|កែប្រែដោយ|បង្កើតថ្ងៃ|កែប្រែថ្ងៃ|ប្រភេទ|បរិយាយ|កំណត់សំគាល់", dgvProduct);
+            Utility.setGridHeaderText("ល.រ|លេខទំនិញ|បារកូដ|ឈ្មោះ|បរិមាណ|សាខា|តម្លៃទិញចូល|តម្លៃលក់ចេញ|បរិមាណប្តូរវិញ|បង្កើតដោយ|កែប្រែដោយ|បង្កើតថ្ងៃ|កែប្រែថ្ងៃ|ប្រភេទ|បរិយាយ|កំណត់សំគាល់", dgvProduct);
             Utility.setGridHeaderWidth("30", dgvProduct);
             //dgvProduct.Columns[10].Visible = false;
             //dgvProduct.Columns[11].Visible = false;
