@@ -118,11 +118,11 @@ namespace MakeOver_Paris.Forms.Product
                 txtProductCode.Text = dgvProduct.CurrentRow.Cells[1].Value.ToString();
                 txtBarcode.Text = dgvProduct.CurrentRow.Cells[2].Value.ToString();
                 txtName.Text = dgvProduct.CurrentRow.Cells[3].Value.ToString();
-                txtDescription.Text = dgvProduct.CurrentRow.Cells[11].Value.ToString();
+                txtDescription.Text = dgvProduct.CurrentRow.Cells[13].Value.ToString();
                 txtPriceIn.Text = dgvProduct.CurrentRow.Cells[4].Value.ToString();
                 txtPriceOut.Text = dgvProduct.CurrentRow.Cells[5].Value.ToString();
-                txtRemark.Text = dgvProduct.CurrentRow.Cells[12].Value.ToString();
-                cboCategory.SelectedValue = dgvProduct.CurrentRow.Cells[14].Value.ToString();
+                txtRemark.Text = dgvProduct.CurrentRow.Cells[14].Value.ToString();
+                cboCategory.SelectedValue = dgvProduct.CurrentRow.Cells[12].Value.ToString();
                 
             }
             catch (Exception ex)
