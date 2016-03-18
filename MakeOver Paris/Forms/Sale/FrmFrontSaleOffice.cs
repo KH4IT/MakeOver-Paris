@@ -57,7 +57,7 @@ namespace MakeOver_Paris.Forms.Sale
             invoice.Staff = UserSession.Session.Staff;
             invoice.Member = member;
             invoice.Remark = "";
-            //invoice.Discount = int.Parse(txtDiscount.Text.Replace("%", ""));
+            invoice.Discount = decimal.Parse(txtDiscount.Text.Replace("%", "").Replace(" ",""));
             invoice.InvoiceDetail = details;
             return new DAO.InvoiceDAO().addInvoice(invoice);
         }
