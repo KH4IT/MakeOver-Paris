@@ -53,9 +53,15 @@ namespace MakeOver_Paris.Forms.Sale
                 rpt.Refresh();
                 rpt.SetParameterValue("p_invoiceid", invoiceid);
                 rpt.SetParameterValue("p_received", decimal.Parse(txtRecieve.Text));
-
-                rpt.PrintOptions.PaperSize = CrystalDecisions.Shared.PaperSize.PaperA5;
-                rpt.PrintToPrinter(1, false, 0, 0);
+                try
+                {
+                    rpt.PrintOptions.PaperSize = CrystalDecisions.Shared.PaperSize.PaperA5;
+                    rpt.PrintToPrinter(1, false, 0, 0);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.ToString());
+                }
                 DTO.Transaction transaction = new DTO.Transaction();
                 transaction.Incomeamount = decimal.Parse(txtTotal.Text);
                 transaction.Createdby = UserSession.Session.Staff;

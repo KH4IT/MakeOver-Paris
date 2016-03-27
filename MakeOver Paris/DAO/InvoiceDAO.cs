@@ -153,7 +153,7 @@ namespace MakeOver_Paris.DAO
                                     CONCAT('I',LPAD(I.invoiceid,9,'0')) AS invoiceid
                                   , I.invoicedate
                                   , S.staffname
-                                  , SUM(ID.quantity*(ID.priceout*(100-Id.discount)/100))
+                                  , FORMAT(SUM(ID.quantity*ID.priceout)-(SUM((ID.quantity*ID.priceout))*(I.discount/100)),2) 
                                   , I.invoiceid AS id
                                FROM invoices I 
                                INNER JOIN staffs S ON I.staffid=S.staffid

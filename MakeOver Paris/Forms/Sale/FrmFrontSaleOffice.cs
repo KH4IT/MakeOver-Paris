@@ -53,7 +53,7 @@ namespace MakeOver_Paris.Forms.Sale
             }
             
             DTO.Member member = new DTO.Member();
-            member.Memberid = 1;            ///
+            member.Memberid = (int)cboMember.SelectedValue;            ///
             invoice.Staff = UserSession.Session.Staff;
             invoice.Member = member;
             invoice.Remark = "";
@@ -327,7 +327,6 @@ namespace MakeOver_Paris.Forms.Sale
                 Console.WriteLine(ex.ToString());
             }
         }
-
 
 
     }

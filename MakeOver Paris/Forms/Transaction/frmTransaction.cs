@@ -116,12 +116,20 @@ namespace MakeOver_Paris.Forms.Transaction
 
         private void frmTransaction_Load(object sender, EventArgs e)
         {
-            txtIncomeAmount.Focus();
-            DataSet dataSet = new TransactionDAO().GetAllTransactions();
-            dgvTransaction.DataSource = dataSet.Tables[0];
-            Utility.setGridHeaderText("ល.រ|កាលបរិច្ឆេទ|ចំនូល|ចំណាយ|ប្រតិបត្តិដោយ|សគាល់", dgvTransaction);
-            Utility.setGridHeaderWidth("100", dgvTransaction);
-            getBalance();
+            try
+            {
+                txtIncomeAmount.Focus();
+                DataSet dataSet = new TransactionDAO().GetAllTransactions();
+                dgvTransaction.DataSource = dataSet.Tables[0];
+                Utility.setGridHeaderText("ល.រ|កាលបរិច្ឆេទ|ចំនូល|ចំណាយ|ប្រតិបត្តិដោយ|សគាល់", dgvTransaction);
+                Utility.setGridHeaderWidth("100", dgvTransaction);
+                getBalance();
+            }
+            catch (Exception ex)
+            {
+                lblBalance.Text = "$ 00.00";
+                Console.WriteLine(ex.ToString());
+            }
         }
 
         private void txtSearchByName_TextChanged(object sender, EventArgs e)
