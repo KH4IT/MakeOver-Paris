@@ -153,11 +153,12 @@ namespace MakeOver_Paris.DAO
                                     CONCAT('I',LPAD(I.invoiceid,9,'0')) AS invoiceid
                                   , I.invoicedate
                                   , S.staffname
-                                  , FORMAT(SUM(ID.quantity*ID.priceout)-(SUM((ID.quantity*ID.priceout))*(I.discount/100)),2) 
+                                  , FORMAT(SUM(ID.quantity*ID.priceout)-(SUM((ID.quantity*ID.priceout))*(I.discount/100))-(SUM((ID.quantity*ID.priceout))*(ID.discount/100)),2) 
                                   , I.invoiceid AS id
                                FROM invoices I 
                                INNER JOIN staffs S ON I.staffid=S.staffid
                                INNER JOIN invoicedetail ID ON I.invoiceid=ID.invoiceid
+                               INNER JOIN products P ON P.productid = ID.productid
                                GROUP BY I.invoiceid";
                 DataSet ds = DBUtility.ExecuteQuery(sql);
                 return ds;

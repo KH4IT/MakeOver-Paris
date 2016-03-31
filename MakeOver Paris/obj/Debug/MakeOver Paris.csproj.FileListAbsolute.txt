@@ -7,14 +7,6 @@ C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver P
 C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.csproj.GenerateResource.Cache
 C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.exe
 C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.pdb
-E:\workspace\MakeOver-Paris\MakeOver Paris\bin\Debug\MakeOver Paris.exe.config
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.exe
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.pdb
-E:\workspace\MakeOver-Paris\MakeOver Paris\bin\Debug\MakeOver Paris.exe
-E:\workspace\MakeOver-Paris\MakeOver Paris\bin\Debug\MakeOver Paris.pdb
-E:\workspace\MakeOver-Paris\MakeOver Paris\bin\Debug\MySql.Data.dll
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Properties.Resources.resources
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.csproj.GenerateResource.Cache
 D:\Make OverParis\MakeOver-Paris\MakeOver Paris\bin\Debug\MakeOver Paris.exe.config
 D:\Make OverParis\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.exe
 D:\Make OverParis\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.pdb
@@ -141,26 +133,6 @@ C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver P
 C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Branch.FrmBranch.resources
 C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Member.FrmMemberType.resources
 C:\Users\Bunrong\Documents\Visual Studio 2012\Projects\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Product.ProductInStock.resources
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Branch.FrmBranch.resources
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Category.FrmCategory.resources
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Configuration.FrmDatabaseConfiguration.resources
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.FrmLogin.resources
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.FrmMain.resources
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.FrmSplash.resources
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.History.FrmHistory.resources
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.History.FrmInvoiceDetail.resources
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Member.FrmMembers.resources
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Member.FrmMemberType.resources
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Product.FrmProduct.resources
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Product.ProductInStock.resources
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Report.FrmReport.resources
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.FrmCheckProduct.resources
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.FrmFrontSaleOffice.resources
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.FrmPay.resources
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.FrmSale.resources
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Setting.FrmSetting.resources
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Staff.FrmStaff.resources
-E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Transaction.frmTransaction.resources
 D:\KH4IT\MakeOver-Paris\MakeOver Paris\bin\Debug\MakeOver Paris.exe.config
 D:\KH4IT\MakeOver-Paris\MakeOver Paris\bin\Debug\MakeOver Paris.exe
 D:\KH4IT\MakeOver-Paris\MakeOver Paris\bin\Debug\MakeOver Paris.pdb
@@ -194,8 +166,36 @@ D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Properties.Resou
 D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.csproj.GenerateResource.Cache
 D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.exe
 D:\KH4IT\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.pdb
+E:\workspace\MakeOver-Paris\MakeOver Paris\bin\Debug\MakeOver Paris.exe.config
+E:\workspace\MakeOver-Paris\MakeOver Paris\bin\Debug\MakeOver Paris.exe
+E:\workspace\MakeOver-Paris\MakeOver Paris\bin\Debug\MakeOver Paris.pdb
+E:\workspace\MakeOver-Paris\MakeOver Paris\bin\Debug\MySql.Data.dll
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Branch.FrmBranch.resources
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Category.FrmCategory.resources
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Configuration.FrmDatabaseConfiguration.resources
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.FrmLogin.resources
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.FrmMain.resources
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.FrmSplash.resources
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.History.FrmHistory.resources
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.History.FrmInvoiceDetail.resources
 E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.History.FrmInvoiceView.resources
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Member.FrmMembers.resources
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Member.FrmMemberType.resources
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Product.FrmProduct.resources
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Product.ProductInStock.resources
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Report.FrmReport.resources
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.FrmCheckProduct.resources
 E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.FrmCheckProductNew.resources
 E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.FrmExchageProduct.resources
 E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.FrmExchangeProductNew.resources
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.FrmFrontSaleOffice.resources
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.FrmPay.resources
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Sale.FrmSale.resources
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Setting.FrmSetting.resources
 E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Staff.FrmChangePassword.resources
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Staff.FrmStaff.resources
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Forms.Transaction.frmTransaction.resources
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver_Paris.Properties.Resources.resources
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.csproj.GenerateResource.Cache
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.exe
+E:\workspace\MakeOver-Paris\MakeOver Paris\obj\Debug\MakeOver Paris.pdb

@@ -162,34 +162,41 @@ namespace MakeOver_Paris.Forms.Report
                 {
                     case 0:
                         rpt_ListStaff staffs = new rpt_ListStaff();
+                        staffs.Refresh();
                         staffs.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, dirUrl + "Staff_" + currentDate + ".pdf");
                         break;
                     case 1:
                         rpt_ListMembers listmember = new rpt_ListMembers();
+                        listmember.Refresh();
                         listmember.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, dirUrl + "Member_" + currentDate + ".pdf");
                         break;
                     case 2:
                         rpt_ListOfProducts products = new rpt_ListOfProducts();
+                        products.Refresh();
                         products.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, dirUrl + "Product_" + currentDate + ".pdf");
                         break;
                     case 3:
                         rpt_Cashbook cashbook = new rpt_Cashbook();
+                        cashbook.Refresh();
                         cashbook.SetParameterValue("p_startdate", dpStartDate.Text);
                         cashbook.SetParameterValue("p_enddate", dpEndDate.Text);
                         cashbook.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, dirUrl + "Cashbook_" + currentDate + ".pdf");
                         break;
                     case 4:
                         rpt_ListInvoice invoices = new rpt_ListInvoice();
+                        invoices.Refresh();
                         invoices.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, dirUrl + "List of Invoice_" + currentDate + ".pdf");
                         break;
                     case 5:
                         rpt_ListProductSold productSold = new rpt_ListProductSold();
+                        productSold.Refresh();
                         productSold.SetParameterValue("p_startdate", dpStartDate.Text);
                         productSold.SetParameterValue("p_enddate", dpEndDate.Text);
                         productSold.ExportToDisk(CrystalDecisions.Shared.ExportFormatType.PortableDocFormat, dirUrl + "Product Sold_" + currentDate + ".pdf");
                         break;
                     case 6:
                         rpt_StaffProfit staffprofit = new rpt_StaffProfit();
+                        staffprofit.Refresh();
                         int staffid = (int)cboStaffs.SelectedValue;
                         staffprofit.SetParameterValue("p_staffid", staffid);
                         staffprofit.SetParameterValue("p_startdate", dpStartDate.Text);
